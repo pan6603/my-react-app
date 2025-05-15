@@ -8,6 +8,7 @@ const HeaderWrapper = styled.header`
     max-width:1440px;
     width:100%;
     height:91px;
+    z-index: 999px;
 `
 
 const InnerHeader = styled.div`
