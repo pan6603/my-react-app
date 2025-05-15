@@ -61,6 +61,12 @@ const NavItemMenu = styled.li`
     margin: 0;
     font-weight: 400;
     cursor: pointer;
+    padding: 8px 12px; 
+
+    &:hover {
+        background-color: #f5f5f5;
+        border-radius: 54px; 
+    }
 `;
 
 
@@ -78,6 +84,12 @@ const IconEarthItem = styled(IconEarth)`
     width: 100%;
     height: 22px; 
     cursor: pointer;
+    padding: 8px 12px; 
+
+    &:hover {
+        background-color: #f5f5f5;
+        border-radius: 54px; 
+    }
 `
 
 const IconMoonItem = styled(IconMoon)`
@@ -85,6 +97,12 @@ const IconMoonItem = styled(IconMoon)`
     width: 100%;
     height: 22px; 
     cursor: pointer;
+    padding: 8px 12px; 
+
+    &:hover {
+        background-color: #f5f5f5;
+        border-radius: 54px; 
+    }
 ` 
 
 const IconMagnifierItem = styled(IconMagnifier)`
@@ -92,6 +110,12 @@ const IconMagnifierItem = styled(IconMagnifier)`
     width: 100%;
     height: 22px; 
     cursor: pointer;
+    padding: 8px 12px; 
+
+    &:hover {
+        background-color: #f5f5f5;
+        border-radius: 54px; 
+    }
 `
 
 
