@@ -34,6 +34,7 @@ const KakaoMainLogoImg = styled(KakaoLogoIcon)`
     max-width: 74px;
     width: 100%;
     height: 50px;
+    cursor: pointer;
 `
 
 const Navigation = styled.nav`
@@ -59,6 +60,7 @@ const NavigationList = styled.ul`
 const NavItemMenu = styled.li`
     margin: 0;
     font-weight: 400;
+    cursor: pointer;
 `;
 
 
@@ -75,18 +77,21 @@ const IconEarthItem = styled(IconEarth)`
     max-width: 22px;
     width: 100%;
     height: 22px; 
+    cursor: pointer;
 `
 
 const IconMoonItem = styled(IconMoon)`
     max-width: 22px;
     width: 100%;
     height: 22px; 
+    cursor: pointer;
 ` 
 
 const IconMagnifierItem = styled(IconMagnifier)`
     max-width: 22px;
     width: 100%;
     height: 22px; 
+    cursor: pointer;
 `
 
 
