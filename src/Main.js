@@ -5,6 +5,7 @@ const MainContainer = styled.main`
     width: 100%;
     height: 5457px;
     background-color: blue;
+    padding-top: 91px;
 `
 
 function Main() {

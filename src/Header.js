@@ -6,10 +6,12 @@ import {ReactComponent as KakaoLogoIcon} from "./img/logo/kakao_logo_icon.svg";
 import {ReactComponent as IconArrowLink} from "./img/nav/arrow_icon-icons.svg";
 
 const HeaderWrapper = styled.header`
+    background-color: white;
     max-width:1440px;
     width:100%;
     height:91px;
     z-index: 3000;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
