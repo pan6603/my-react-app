@@ -45,6 +45,26 @@ const SectionServiceItem = styled.div`
     height: 319px;
     display: flex;
     flex-direction: column;
+    background-color: red;
+`
+
+const TodaysKakaoMenuSectionServiceItem = styled.div`
+    max-width: 211px;
+    width: 100%;
+    height: 319px;
+    display: flex;
+    flex-direction: column;
+`
+
+const KakaoSectionServiceItemCategories = styled.div`
+    max-width: 211px;
+    width: 100%;
+    height: 319px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 33px;
 `
 
 const TodayKakaoText = styled.h3`
@@ -55,7 +75,7 @@ const TodayKakaoText = styled.h3`
     font-size: 26px;
     margin-top: 0;
 ` 
-const InnerService = styled.div`
+const TodaysKakaoMenuInnerService = styled.div`
     max-width: 211px;
     width: 100%;
     height: 156px;
@@ -77,7 +97,9 @@ const InnerServiceUlList = styled.div`
     width: 100%;
     height: 24px;
     display: flex;
+    align-items: center;
     gap: 2px;
+    cursor: pointer;
 `
 
 const InnerServiceUlListLink = styled.a`
@@ -85,25 +107,85 @@ const InnerServiceUlListLink = styled.a`
     font-weight: 400;
     text-decoration: none;
     letter-spacing: -.2px;
-    color: #333;
+    color: #757575;
     line-height: 1.78;
+
+    &:hover {
+        color: black;
+    }
 `
 
 const RightArrowIcon = styled.svg`
     width: 9px;
     height: 9px;
     fill: none;
-    class: ico_footerlink fff; 
     margin: 8px 0 0 4px
+
+    path {
+        stroke: #888;
+        transition: stroke 0.2s ease;
+    }
+
+    &:hover path {
+        stroke: black;
+    }
 `;
 
 const StyledOutlinkIcon = styled.svg`
     width: 9px;
     height: 9px;
     fill: none;
-    class: ico_outlink;
     margin: 8px 0 0 4px
+
+    path {
+        stroke: #888;
+        transition: stroke 0.2s ease;
+    }
+
+    &:hover path {
+        stroke: black;
+    }
 `;
+
+const KakaoInnerServiceCategories = styled.div`
+    max-width: 211px;
+    width: 100%;
+    height: 189px;
+`
+
+const SubTitle = styled.strong`
+    max-width: 129px;
+    width: 100%;
+    height: 28px;
+    font-size: 16px;
+    letter-spacing: -.5px;
+    color: black;
+
+`
+const KakaoMenuCategories = styled.div`
+    max-width: 211px;
+    width: 100%;
+    height: 189px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    gap: 3px;
+`
+
+const KakaoMenuCategoriesLink = styled.a`
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+    letter-spacing: -.2px;
+    color: #757575;
+    line-height: 1.78;
+
+    &:hover {
+        color: black;
+    }
+`
+
 
 function Footer () {
 
@@ -111,9 +193,9 @@ function Footer () {
         <FooterContainer>
             <InnerFooter>
                 <SectionService>
-                    <SectionServiceItem>
+                    <TodaysKakaoMenuSectionServiceItem>
                         <TodayKakaoText>오늘의 카카오</TodayKakaoText>
-                        <InnerService>
+                        <TodaysKakaoMenuInnerService>
                             <InnerServiceUl>
                                 <InnerServiceUlList>
                                     <InnerServiceUlListLink>카카오톡 공식 다운로드</InnerServiceUlListLink>
@@ -158,9 +240,23 @@ function Footer () {
                                     </StyledOutlinkIcon>
                                 </InnerServiceUlList>
                             </InnerServiceUl>
-                        </InnerService>
-                    </SectionServiceItem>
-                    <SectionServiceItem></SectionServiceItem>
+                        </TodaysKakaoMenuInnerService>
+                    </TodaysKakaoMenuSectionServiceItem>
+
+                    <KakaoSectionServiceItemCategories>
+                        <SubTitle>카카오 그룹의 서비스</SubTitle>
+                        <KakaoInnerServiceCategories>
+                            <KakaoMenuCategories>
+                                <KakaoMenuCategoriesLink>커뮤니케이션</KakaoMenuCategoriesLink>
+                                <KakaoMenuCategoriesLink>일상편의</KakaoMenuCategoriesLink>
+                                <KakaoMenuCategoriesLink>비즈니스</KakaoMenuCategoriesLink>
+                                <KakaoMenuCategoriesLink>쇼핑</KakaoMenuCategoriesLink>
+                                <KakaoMenuCategoriesLink>엔터테인먼트</KakaoMenuCategoriesLink>
+                                <KakaoMenuCategoriesLink>임팩트</KakaoMenuCategoriesLink>
+                            </KakaoMenuCategories>
+                        </KakaoInnerServiceCategories>
+                    </KakaoSectionServiceItemCategories>
+
                     <SectionServiceItem></SectionServiceItem>
                     <SectionServiceItem></SectionServiceItem>
                     <SectionServiceItem></SectionServiceItem>
