@@ -54,6 +54,7 @@ const TodaysKakaoMenuSectionServiceItem = styled.div`
     height: 319px;
     display: flex;
     flex-direction: column;
+    margin-left: 10px;
 `
 
 const KakaoSectionServiceItemCategories = styled.div`
@@ -65,6 +66,19 @@ const KakaoSectionServiceItemCategories = styled.div`
     justify-content: center;
     align-items: flex-start;
     margin-top: 33px;
+    margin-left: 10px;
+`
+
+const KakaoSectionServiceGroupCompanies = styled.div`
+    max-width: 211px;
+    width: 100%;
+    height: 319px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 33px;
+    margin-left: 10px;
 `
 
 const TodayKakaoText = styled.h3`
@@ -153,6 +167,12 @@ const KakaoInnerServiceCategories = styled.div`
     height: 189px;
 `
 
+const KakaoInnerServiceGroupCompanies = styled.div`
+    max-width: 211px;
+    width: 100%;
+    height: 189px;
+`
+
 const SubTitle = styled.strong`
     max-width: 129px;
     width: 100%;
@@ -163,6 +183,17 @@ const SubTitle = styled.strong`
 
 `
 const KakaoMenuCategories = styled.div`
+    max-width: 211px;
+    width: 100%;
+    height: 189px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    gap: 3px;
+`
+
+const KakaoMenuGroupCompanies = styled.div`
     max-width: 211px;
     width: 100%;
     height: 189px;
@@ -185,6 +216,38 @@ const KakaoMenuCategoriesLink = styled.a`
         color: black;
     }
 `
+
+const KakaoMenuGroupCompaniesItem = styled.a`
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+    letter-spacing: -.2px;
+    color: #757575;
+    line-height: 1.78;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    &:hover {
+        color: black;
+    }
+`
+
+const KakaoPayOutlinkIcon = styled.svg`
+  width: 9px;
+  height: 9px;
+  fill: none;
+
+  path {
+    stroke: #757575; 
+    stroke-width: 1;
+    transition: stroke 0.2s ease;
+  }
+
+  &:hover path {
+    stroke: black;
+  }
+`;
 
 
 function Footer () {
@@ -256,6 +319,60 @@ function Footer () {
                             </KakaoMenuCategories>
                         </KakaoInnerServiceCategories>
                     </KakaoSectionServiceItemCategories>
+
+                    <KakaoSectionServiceGroupCompanies>
+                        <SubTitle>카카오 그룹</SubTitle>
+                        <KakaoInnerServiceGroupCompanies>
+                            <KakaoMenuGroupCompanies>
+                                <KakaoMenuGroupCompaniesItem>카카오</KakaoMenuGroupCompaniesItem>
+                                <KakaoMenuGroupCompaniesItem>
+                                    카카오페이
+                                    <KakaoPayOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
+                                        <g fill="none" fillRule="evenodd">
+                                            <path d="M1.795 1.074L7.942 1.074 7.942 7.221M7.942 1.074L1.378 7.638" />
+                                        </g>
+                                    </KakaoPayOutlinkIcon>
+                                </KakaoMenuGroupCompaniesItem>
+
+                                <KakaoMenuGroupCompaniesItem>
+                                    카카오뱅크
+                                    <KakaoPayOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
+                                        <g fill="none" fillRule="evenodd">
+                                            <path d="M1.795 1.074L7.942 1.074 7.942 7.221M7.942 1.074L1.378 7.638" />
+                                        </g>
+                                    </KakaoPayOutlinkIcon>
+                                </KakaoMenuGroupCompaniesItem>
+
+                                <KakaoMenuGroupCompaniesItem>
+                                    카카오모빌리티
+                                    <KakaoPayOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
+                                        <g fill="none" fillRule="evenodd">
+                                            <path d="M1.795 1.074L7.942 1.074 7.942 7.221M7.942 1.074L1.378 7.638" />
+                                        </g>
+                                    </KakaoPayOutlinkIcon>
+                                </KakaoMenuGroupCompaniesItem>
+
+                                <KakaoMenuGroupCompaniesItem>
+                                    카카오스타일
+                                    <KakaoPayOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
+                                        <g fill="none" fillRule="evenodd">
+                                            <path d="M1.795 1.074L7.942 1.074 7.942 7.221M7.942 1.074L1.378 7.638" />
+                                        </g>
+                                    </KakaoPayOutlinkIcon>
+                                </KakaoMenuGroupCompaniesItem>
+
+                                <KakaoMenuGroupCompaniesItem>
+                                    카카오엔터테인먼트
+                                    <KakaoPayOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
+                                        <g fill="none" fillRule="evenodd">
+                                            <path d="M1.795 1.074L7.942 1.074 7.942 7.221M7.942 1.074L1.378 7.638" />
+                                        </g>
+                                    </KakaoPayOutlinkIcon>
+                                </KakaoMenuGroupCompaniesItem>
+
+                            </KakaoMenuGroupCompanies>
+                        </KakaoInnerServiceGroupCompanies>
+                    </KakaoSectionServiceGroupCompanies>
 
                     <SectionServiceItem></SectionServiceItem>
                     <SectionServiceItem></SectionServiceItem>
