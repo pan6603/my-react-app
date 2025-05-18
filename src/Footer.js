@@ -13,7 +13,7 @@ const FooterContainer = styled.footer`
 const InnerFooter = styled.div`
     max-width: 1316px;
     width: 100%;
-    height: 633px;
+    height: 533px;
     margin: 0 auto;
     padding: 81px 0 48px;
     display: flex;
@@ -31,21 +31,12 @@ const SectionService = styled.section`
     align-items: center;
 `
 
-const SectionRelation = styled.section`
-    max-width: 1316px;
-    width: 100%;
-    height: 65px;
-    background-color: red;
-    margin: 0 auto;
-`
-
-const SectionServiceItem = styled.div`
+const AccountSectionServiceItem = styled.div`
     max-width: 211px;
     width: 100%;
     height: 319px;
     display: flex;
     flex-direction: column;
-    background-color: red;
 `
 
 const TodaysKakaoMenuSectionServiceItem = styled.div`
@@ -81,6 +72,30 @@ const KakaoSectionServiceGroupCompanies = styled.div`
     margin-left: 10px;
 `
 
+const KaKaoSectionServiceAffiliates = styled.div`
+    max-width: 211px;
+    width: 100%;
+    height: 319px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 33px;
+    margin-left: 10px;
+`
+
+const IrMenuSectionServiceItem = styled.div`
+    max-width: 211px;
+    width: 100%;
+    height: 319px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 33px;
+    margin-left: 10px;
+`
+
 const TodayKakaoText = styled.h3`
     color: black;
     max-width: 143px;
@@ -93,7 +108,17 @@ const TodaysKakaoMenuInnerService = styled.div`
     max-width: 211px;
     width: 100%;
     height: 156px;
-   
+`
+
+const AccountInnerServiceItem = styled.div`
+    max-width: 211px;
+    width: 100%;
+    height: 319px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 33px;
 `
 
 const InnerServiceUl = styled.div`
@@ -167,7 +192,19 @@ const KakaoInnerServiceCategories = styled.div`
     height: 189px;
 `
 
+const IrMenuService = styled.div`
+    max-width: 211px;
+    width: 100%;
+    height: 189px;
+`
+
 const KakaoInnerServiceGroupCompanies = styled.div`
+    max-width: 211px;
+    width: 100%;
+    height: 189px;
+`
+
+const KaKaoInnerServiceAffiliates = styled.div`
     max-width: 211px;
     width: 100%;
     height: 189px;
@@ -190,7 +227,7 @@ const KakaoMenuCategories = styled.div`
     flex-direction: column; 
     justify-content: flex-start; 
     align-items: flex-start; 
-    gap: 3px;
+    gap: 5px;
 `
 
 const KakaoMenuGroupCompanies = styled.div`
@@ -201,7 +238,41 @@ const KakaoMenuGroupCompanies = styled.div`
     flex-direction: column; 
     justify-content: flex-start; 
     align-items: flex-start; 
-    gap: 3px;
+    gap: 5px;
+`
+
+const IrMenuGroup = styled.div`
+    max-width: 211px;
+    width: 100%;
+    height: 189px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    gap: 5px;
+`
+
+const KakaoMenuGroupAffiliates = styled.div`
+    max-width: 211px;
+    width: 100%;
+    height: 189px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    gap: 5px;
+    margin-top: 15px;
+`
+
+const AccountGroup = styled.div`
+    max-width: 211px;
+    width: 100%;
+    height: 189px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    gap: 5px;
 `
 
 const KakaoMenuCategoriesLink = styled.a`
@@ -211,6 +282,7 @@ const KakaoMenuCategoriesLink = styled.a`
     letter-spacing: -.2px;
     color: #757575;
     line-height: 1.78;
+    cursor: pointer;
 
     &:hover {
         color: black;
@@ -227,6 +299,58 @@ const KakaoMenuGroupCompaniesItem = styled.a`
     display: flex;
     align-items: center;
     gap: 4px;
+    cursor: pointer;
+
+    &:hover {
+        color: black;
+    }
+`
+
+const IrMenuGroupItem = styled.a`
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+    letter-spacing: -.2px;
+    color: #757575;
+    line-height: 1.78;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+
+    &:hover {
+        color: black;
+    }
+`
+
+const AccountGroupItem = styled.a`
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+    letter-spacing: -.2px;
+    color: #757575;
+    line-height: 1.78;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+
+    &:hover {
+        color: black;
+    }
+`
+
+const KakaoMenuGroupAffiliatesItem = styled.a`
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+    letter-spacing: -.2px;
+    color: #757575;
+    line-height: 1.78;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
 
     &:hover {
         color: black;
@@ -248,6 +372,54 @@ const KakaoPayOutlinkIcon = styled.svg`
     stroke: black;
   }
 `;
+
+const KakaoAffiliateOutlinkIcon = styled.svg`
+  width: 9px;
+  height: 9px;
+  fill: none;
+
+  path {
+    stroke: #757575; 
+    stroke-width: 1;
+    transition: stroke 0.2s ease;
+  }
+
+  &:hover path {
+    stroke: black;
+  }
+`;
+
+const IrMenuOutlinkIcon = styled.svg`
+    width: 9px;
+    height: 9px;
+    fill: none;
+
+    path {
+        stroke: #757575; 
+        stroke-width: 1;
+        transition: stroke 0.2s ease;
+    }
+
+    &:hover path {
+      stroke: black;
+    }
+`;
+
+const AccountOutlinkIcon = styled.svg`
+    width: 9px;
+    height: 9px;
+    fill: none;
+
+    path {
+        stroke: #757575; 
+        stroke-width: 1;
+        transition: stroke 0.2s ease;
+    }
+
+    &:hover path {
+      stroke: black;
+    }
+`
 
 
 function Footer () {
@@ -374,12 +546,193 @@ function Footer () {
                         </KakaoInnerServiceGroupCompanies>
                     </KakaoSectionServiceGroupCompanies>
 
-                    <SectionServiceItem></SectionServiceItem>
-                    <SectionServiceItem></SectionServiceItem>
-                    <SectionServiceItem></SectionServiceItem>
-                    <SectionServiceItem></SectionServiceItem>
+                    <KaKaoSectionServiceAffiliates>
+                        <KaKaoInnerServiceAffiliates>
+                            <KakaoMenuGroupAffiliates>
+                                <KakaoMenuGroupAffiliatesItem>
+                                    카카오게임즈 
+                                    <KakaoAffiliateOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
+                                        <g fill="none" fillRule="evenodd">
+                                            <path d="M1.795 1.074L7.942 1.074 7.942 7.221M7.942 1.074L1.378 7.638" />
+                                        </g>
+                                    </KakaoAffiliateOutlinkIcon>
+                                </KakaoMenuGroupAffiliatesItem>
+
+                                <KakaoMenuGroupAffiliatesItem>
+                                    카카오픽코마
+                                    <KakaoAffiliateOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
+                                        <g fill="none" fillRule="evenodd">
+                                            <path d="M1.795 1.074L7.942 1.074 7.942 7.221M7.942 1.074L1.378 7.638" />
+                                        </g>
+                                    </KakaoAffiliateOutlinkIcon>
+                                </KakaoMenuGroupAffiliatesItem>
+
+                                <KakaoMenuGroupAffiliatesItem>
+                                    카카오엔터프라이즈
+                                    <KakaoAffiliateOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
+                                        <g fill="none" fillRule="evenodd">
+                                            <path d="M1.795 1.074L7.942 1.074 7.942 7.221M7.942 1.074L1.378 7.638" />
+                                        </g>
+                                    </KakaoAffiliateOutlinkIcon>
+                                </KakaoMenuGroupAffiliatesItem>
+
+                                <KakaoMenuGroupAffiliatesItem>
+                                    카카오헬스케어
+                                    <KakaoAffiliateOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
+                                        <g fill="none" fillRule="evenodd">
+                                            <path d="M1.795 1.074L7.942 1.074 7.942 7.221M7.942 1.074L1.378 7.638" />
+                                        </g>
+                                    </KakaoAffiliateOutlinkIcon>
+                                </KakaoMenuGroupAffiliatesItem>
+
+                                <KakaoMenuGroupAffiliatesItem>
+                                    카카오벤처스
+                                    <KakaoAffiliateOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
+                                        <g fill="none" fillRule="evenodd">
+                                            <path d="M1.795 1.074L7.942 1.074 7.942 7.221M7.942 1.074L1.378 7.638" />
+                                        </g>
+                                    </KakaoAffiliateOutlinkIcon>
+                                </KakaoMenuGroupAffiliatesItem>
+
+                                <KakaoMenuGroupAffiliatesItem>
+                                    카카오인베스트먼트
+                                    <KakaoAffiliateOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
+                                        <g fill="none" fillRule="evenodd">
+                                            <path d="M1.795 1.074L7.942 1.074 7.942 7.221M7.942 1.074L1.378 7.638" />
+                                        </g>
+                                    </KakaoAffiliateOutlinkIcon>
+                                </KakaoMenuGroupAffiliatesItem>
+
+                                <KakaoMenuGroupAffiliatesItem>
+                                    링키지랩 
+                                    <KakaoAffiliateOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
+                                        <g fill="none" fillRule="evenodd">
+                                            <path d="M1.795 1.074L7.942 1.074 7.942 7.221M7.942 1.074L1.378 7.638" />
+                                        </g>
+                                    </KakaoAffiliateOutlinkIcon>
+                                </KakaoMenuGroupAffiliatesItem>
+                            </KakaoMenuGroupAffiliates>
+                        </KaKaoInnerServiceAffiliates>
+                    </KaKaoSectionServiceAffiliates>
+
+                    <IrMenuSectionServiceItem>
+                        <SubTitle>IR</SubTitle>
+                        <IrMenuService>
+                            <IrMenuGroup>
+                                <IrMenuGroupItem>
+                                    기업지배구조
+                                    <IrMenuOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
+                                        <g fill="none" fillRule="evenodd">
+                                            <path d="M1.795 1.074L7.942 1.074 7.942 7.221M7.942 1.074L1.378 7.638" />
+                                        </g>
+                                    </IrMenuOutlinkIcon>
+                                </IrMenuGroupItem>
+
+                                <IrMenuGroupItem>
+                                    주가정보
+                                    <IrMenuOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
+                                        <g fill="none" fillRule="evenodd">
+                                            <path d="M1.795 1.074L7.942 1.074 7.942 7.221M7.942 1.074L1.378 7.638" />
+                                        </g>
+                                    </IrMenuOutlinkIcon>
+                                </IrMenuGroupItem>
+
+                                <IrMenuGroupItem>
+                                    재무정보
+                                    <IrMenuOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
+                                        <g fill="none" fillRule="evenodd">
+                                            <path d="M1.795 1.074L7.942 1.074 7.942 7.221M7.942 1.074L1.378 7.638" />
+                                        </g>
+                                    </IrMenuOutlinkIcon>
+                                </IrMenuGroupItem>
+
+                                <IrMenuGroupItem>
+                                    IR행사
+                                    <IrMenuOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
+                                        <g fill="none" fillRule="evenodd">
+                                            <path d="M1.795 1.074L7.942 1.074 7.942 7.221M7.942 1.074L1.378 7.638" />
+                                        </g>
+                                    </IrMenuOutlinkIcon>
+                                </IrMenuGroupItem>
+
+                                <IrMenuGroupItem>
+                                    공시정보
+                                    <IrMenuOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
+                                        <g fill="none" fillRule="evenodd">
+                                            <path d="M1.795 1.074L7.942 1.074 7.942 7.221M7.942 1.074L1.378 7.638" />
+                                        </g>
+                                    </IrMenuOutlinkIcon>
+                                </IrMenuGroupItem>
+
+                                <IrMenuGroupItem>
+                                    공고
+                                    <IrMenuOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
+                                        <g fill="none" fillRule="evenodd">
+                                            <path d="M1.795 1.074L7.942 1.074 7.942 7.221M7.942 1.074L1.378 7.638" />
+                                        </g>
+                                    </IrMenuOutlinkIcon>
+                                </IrMenuGroupItem>
+                            </IrMenuGroup>
+                        </IrMenuService>
+                    </IrMenuSectionServiceItem>
+
+                    <AccountSectionServiceItem>
+                        <AccountInnerServiceItem>
+                            <SubTitle>계정 및 지원</SubTitle>
+                            <AccountGroup>
+                                <AccountGroupItem>
+                                    카카오계정
+                                    <AccountOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
+                                        <g fill="none" fillRule="evenodd">
+                                            <path d="M1.795 1.074L7.942 1.074 7.942 7.221M7.942 1.074L1.378 7.638" />
+                                        </g>
+                                    </AccountOutlinkIcon>
+                                </AccountGroupItem>
+                                <AccountGroupItem>
+                                    카카오 프라이버시
+                                    <AccountOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
+                                        <g fill="none" fillRule="evenodd">
+                                            <path d="M1.795 1.074L7.942 1.074 7.942 7.221M7.942 1.074L1.378 7.638" />
+                                        </g>
+                                    </AccountOutlinkIcon>
+                                </AccountGroupItem>
+                                <AccountGroupItem>
+                                    카카오 고객센터
+                                    <AccountOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
+                                        <g fill="none" fillRule="evenodd">
+                                            <path d="M1.795 1.074L7.942 1.074 7.942 7.221M7.942 1.074L1.378 7.638" />
+                                        </g>
+                                    </AccountOutlinkIcon>
+                                </AccountGroupItem>
+                                <AccountGroupItem>
+                                    다음 고객센터
+                                    <AccountOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
+                                        <g fill="none" fillRule="evenodd">
+                                            <path d="M1.795 1.074L7.942 1.074 7.942 7.221M7.942 1.074L1.378 7.638" />
+                                        </g>
+                                    </AccountOutlinkIcon>
+                                </AccountGroupItem>
+                                <AccountGroupItem>
+                                    커머스 고객센터
+                                    <AccountOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
+                                        <g fill="none" fillRule="evenodd">
+                                            <path d="M1.795 1.074L7.942 1.074 7.942 7.221M7.942 1.074L1.378 7.638" />
+                                        </g>
+                                    </AccountOutlinkIcon>
+                                </AccountGroupItem>
+                                <AccountGroupItem>
+                                    인재영입
+                                    <AccountOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
+                                        <g fill="none" fillRule="evenodd">
+                                            <path d="M1.795 1.074L7.942 1.074 7.942 7.221M7.942 1.074L1.378 7.638" />
+                                        </g>
+                                    </AccountOutlinkIcon>
+                                </AccountGroupItem>
+                            </AccountGroup>
+                        </AccountInnerServiceItem>
+                    </AccountSectionServiceItem>
                 </SectionService>
-                <SectionRelation></SectionRelation>
+                
             </InnerFooter>
         </FooterContainer>
     )
