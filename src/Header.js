@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import React, { useState, useEffect } from 'react'; 
 import {ReactComponent as IconEarth} from "./img/area/area-earth-icon.svg";
 import {ReactComponent as IconMoon} from "./img/area/area-moon-icon.svg";
 import {ReactComponent as IconMagnifier} from "./img/area/area-magnifier-icon.svg";
@@ -16,7 +17,9 @@ const HeaderWrapper = styled.header`
     left: 0;
     right: 0;
     border: 0;
-`
+
+    border-bottom: ${props => (props.isScrolled ? '1px solid #EAEAEA' : 'none')};
+`;
 
 const InnerHeader = styled.div`
     max-width:1316px;
@@ -157,8 +160,19 @@ const IconMagnifierItem = styled(IconMagnifier)`
 
 
 function Header () {
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 0);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll); // 클린업
+    }, []);
+ 
     return (  
-        <HeaderWrapper>
+        <HeaderWrapper isScrolled={isScrolled}>
             <InnerHeader>
                 <KakaoMainLogo>
                     <KakaoMainLogoImg />
