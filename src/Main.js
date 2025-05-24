@@ -125,7 +125,6 @@ const InnerSecondWidget = styled.div`
     overflow: hidden;
     position: relative;
     border-radius: 24px;
-
 `
 
 const SlickTrack = styled.div`
@@ -143,6 +142,36 @@ const SlickSlide = styled.div`
     position: absolute;
     cursor: pointer;
     background-color: #F0F0F0;
+`
+
+const SlickDots = styled.ul`
+    max-width: 64px;
+    width: 100%;
+    height: 24px;
+    background-color: blue;
+    position: absolute;
+    flex-direction: column;
+    left: 50%;
+    bottom: -2%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    display: inline-block;
+`
+
+const SelectedSlideIndex = styled.li`
+    max-width: 24px;
+    width: 100%;
+    height: 24px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`
+
+const SelectedSlideIndexButtom = styled.button`
+    padding: 4px;
+    opacity: .45;
+    border-radius: 10px;
 `
 
 const SecondInnerSlide = styled.a`
@@ -279,10 +308,90 @@ const ContMainAreaStory = styled.div`
     width: 100%;
     height: 621px;
     margin: 0 auto;
-    // background-color: green;
     display: block;
+    background-color: red;
+`
+const ContMainAreaNews = styled.div`
+    max-width: 1316px;
+    width: 100%;
+    height: 1100px;
+    margin: 0 auto;
 `
 
+const ContMainAreaNewsTitle = styled.h3`
+    max-width: 1316px;
+    width: 100%;
+    height: 72px;
+    font-size: 48px;
+    line-height: 72px;
+    letter-spacing: -1px;
+    color: #000;
+    font-weight: 400;
+
+    &::before {
+        content: "";
+        display: inline-block;
+        vertical-align: top;
+        max-width: 72px;
+        width: 100%;
+        height: 72px;
+        margin-right: 16px;
+        background-size: 100%;
+        background-image: url(https://t1.kakaocdn.net/kakaocorp/kakaocorp/service/calendar/light/ico_date25.gif)
+  }
+
+`
+
+const InnerMainInnerNews = styled.div`
+    max-width: 1316px;
+    width: 100%;
+    height: 985px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+`
+
+const WrapTop = styled.div`
+    max-width: 1332px;
+    width: 100%;
+    height: 621px;
+`
+
+const WrapTopSlickSlider = styled.div`
+    max-width: 1332px;
+    width: 100%;
+    height: 621px;
+`
+
+const WrapTopSlickList = styled.div`
+    max-width: 1332px;
+    width: 100%;
+    height: 621px;
+`
+
+const WrapTopSlickTrack = styled.div`
+    max-width: 1332px;
+    width: 100%;
+    height: 621px;
+    display: flex;
+    justify-content: space-between;
+    
+`
+
+const SlickTrackSlickSlide = styled.div`
+    max-width: 444px;
+    width: 100%;
+    height: 621px;
+    background-color: blue;
+`
+
+const WrapBottom = styled.div`
+    max-width: 1316px;
+    width: 100%;
+    height: 324px;
+    background-color: blue;
+`
 
 
 
@@ -328,6 +437,11 @@ function Main() {
                                                         </WrapTags>
                                                     </InnerSecond>
                                                 </SecondInnerSlide>
+                                                <SlickDots>
+                                                    <SelectedSlideIndex>
+                                                        <SelectedSlideIndexButtom></SelectedSlideIndexButtom>
+                                                    </SelectedSlideIndex>
+                                                </SlickDots>
                                             </SlickSlide>
                                         </SlickTrack>
                                     </InnerSecondWidget>
@@ -346,8 +460,26 @@ function Main() {
                                 </AreaWidget>
                             </ContMainAreaBanner>
                             <ContMainAreaStory></ContMainAreaStory>
+                            <ContMainAreaNews>
+                                <ContMainAreaNewsTitle>오늘의 뉴스</ContMainAreaNewsTitle>
+                                <InnerMainInnerNews>
+                                    <WrapTop>
+                                        <WrapTopSlickSlider>
+                                            <WrapTopSlickList>
+                                                <WrapTopSlickTrack>
+                                                    <SlickTrackSlickSlide></SlickTrackSlickSlide>
+                                                    <SlickTrackSlickSlide></SlickTrackSlickSlide>
+                                                    <SlickTrackSlickSlide></SlickTrackSlickSlide>
+                                                </WrapTopSlickTrack>
+                                            </WrapTopSlickList>
+                                        </WrapTopSlickSlider>
+                                    </WrapTop>
+                                    <WrapBottom></WrapBottom>
+                                </InnerMainInnerNews>
+                            </ContMainAreaNews>
                         </ContHome>
                     </ContentArticle>
+                    
                 </MainContent>
             </InnerMain>
         </MainContainer>
