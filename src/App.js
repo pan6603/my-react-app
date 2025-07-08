@@ -1,15 +1,16 @@
-import Footer from "./Footer";
-import Header from "./Header";
-import Main from "./Main";
+
+// import Routers from "./Routers";
+import AppRouters from "./AppRouters";
+import { AuthProvider } from "./components/AuthContext";
 
 function App() {
 
   return (
-    <>
-      <Header />
-      <Main />
-      <Footer />
-    </>
+    <AuthProvider>
+    
+      {/* <Routers /> */}
+      <AppRouters />
+    </AuthProvider>
   );
 }
 

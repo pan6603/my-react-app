@@ -386,104 +386,96 @@ const SlickTrackSlickSlide = styled.div`
     background-color: blue;
 `
 
+const WrapCardInnerSlide = styled.div`
+    max-width: 428px;
+    width: 100%;
+    height: 621px;
+    margin: 0 auto;
+    position: relative;
+`
+
+const InnerCard = styled.div`
+    max-width: 428px;
+    width: 100%;
+    height: 621px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background-color: #f3f3f3;
+`
+
+const BtnShareIcoComm = styled.div`
+    max-width: 24px;
+    width: 100%;
+    height: 24px;
+    top: 10px;
+    right: 30px;
+    position: absolute;
+    z-index: 20;
+    max-width: 20px;
+    width: 100%;
+    height: 24px;
+    display: block;
+    cursor: pointer;
+`
+
+const BtnShareIcoSvg = styled.svg`
+  max-width: 24px;
+  width: 100%;
+  height: 24px;
+  fill: none;
+  vertical-align: top;
+ .fill circle {
+    fill: currentColor;
+  }
+`;
+
+const InfoCate = styled.div`
+    max-width: 368px;
+    width: 100%;
+    height: 46px;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+`
+
+const InfoCateImg = styled.img`
+    max-width: 46px;
+    width: 100%;
+    height: 46px;
+
+`
+
+const TxtCate = styled.span`
+    height: 41px;
+    padding: 0 16px;
+    line-height: 40px;
+    margin-top: 1px;
+    background-color: #fff;
+    display: inline-block;
+    border-radius: 8px;
+    font-size: 14px;
+    letter-spacing: -.2px;
+    color: #000;
+    font-weight: 400;
+`
+
+const TxtDate = styled.span`
+    line-height: 46px;
+    margin-left: 12px;
+    font-size: 14px;
+    display: inline-block;
+    color: #000;
+    letter-spacing: -.2px;
+`
+
+
 const WrapBottom = styled.div`
     max-width: 1316px;
     width: 100%;
     height: 324px;
     background-color: blue;
 `
-
-
-
-function Main() {
-    return (
-        <MainContainer>
-            <InnerMain>
-                <MainContent>
-                    <ContentArticle>
-                        <ContHome>
-                            <ContMainAreaBanner>
-                                <AreaVisual>
-                                    <ItemVisualVideo src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/heroVisual/d6b781eb019600001.mp4" poster="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/heroVisual/d6b79a46019600001.png?type=thumb&amp;opt=C1424x808.fwebp" muted="muted" loop="loop" type="video/mp4" />
-
-                                    <WrapText>
-                                        <TitleVisual>다시 한 번 세상을 놀랍게!</TitleVisual>
-                                    </WrapText>
-                                </AreaVisual>
-                                <AreaWidget>
-                                    <InnerfirstWidget>
-                                        <InnerSlideFirstLink href="https://www.kakaocorp.com/page/about/culture" target="_blank">
-                                            <InnerFirstImg>
-                                                <ImgFirst alt="카카오문화를 소개합니다." src="//t1.kakaocdn.net/thumb/C544x544.fwebp.q100/?fname=https%3A%2F%2Ft1.kakaocdn.net%2Fkakaocorp%2Fkakaocorp%2Fadmin%2Fwidget%2Fae7546a6019600001.png" draggable="false" />
-                                            </InnerFirstImg>
-                                        </InnerSlideFirstLink>
-                                    </InnerfirstWidget>
-
-                                    <InnerSecondWidget>
-                                        <SlickTrack>
-                                            <SlickSlide>
-                                                <SecondInnerSlide>
-                                                    <InnerSecond>
-                                                        <InnerSecondSpan>카카오의 기술</InnerSecondSpan>
-                                                        <TitleSecond>
-                                                            AI 서비스를 
-                                                            <TitleSecondBr />
-                                                            내 일상 속으로
-                                                        </TitleSecond>
-                                                        <WrapTags>
-                                                            <ItemTag>#AI</ItemTag>
-                                                            <ItemTag>#오픈AI</ItemTag>
-                                                            <ItemTag>#전략적제휴</ItemTag>
-                                                        </WrapTags>
-                                                    </InnerSecond>
-                                                </SecondInnerSlide>
-                                                <SlickDots>
-                                                    <SelectedSlideIndex>
-                                                        <SelectedSlideIndexButtom></SelectedSlideIndexButtom>
-                                                    </SelectedSlideIndex>
-                                                </SlickDots>
-                                            </SlickSlide>
-                                        </SlickTrack>
-                                    </InnerSecondWidget>
-
-                                    <InnerThirdWidget>
-                                        <InnerSlideThirdLink href="https://www.kakaocorp.com/page/service/service/KakaoTalk" target="_self" draggable="false">
-
-                                            <InnerThirdFlex>
-                                                <IconThird src="//t1.kakaocdn.net/thumb/C80x80.fwebp.q100/?fname=https%3A%2F%2Ft1.kakaocdn.net%2Fkakaocorp%2Fkakaocorp%2Fadmin%2Fwidget%2Fae796489019600001.png" alt=""/>
-
-                                                <TitleThird>카카오톡 다운로드</TitleThird>
-                                            </InnerThirdFlex>
-
-                                        </InnerSlideThirdLink>
-                                    </InnerThirdWidget>
-                                </AreaWidget>
-                            </ContMainAreaBanner>
-                            <ContMainAreaStory></ContMainAreaStory>
-                            <ContMainAreaNews>
-                                <ContMainAreaNewsTitle>오늘의 뉴스</ContMainAreaNewsTitle>
-                                <InnerMainInnerNews>
-                                    <WrapTop>
-                                        <WrapTopSlickSlider>
-                                            <WrapTopSlickList>
-                                                <WrapTopSlickTrack>
-                                                    <SlickTrackSlickSlide></SlickTrackSlickSlide>
-                                                    <SlickTrackSlickSlide></SlickTrackSlickSlide>
-                                                    <SlickTrackSlickSlide></SlickTrackSlickSlide>
-                                                </WrapTopSlickTrack>
-                                            </WrapTopSlickList>
-                                        </WrapTopSlickSlider>
-                                    </WrapTop>
-                                    <WrapBottom></WrapBottom>
-                                </InnerMainInnerNews>
-                            </ContMainAreaNews>
-                        </ContHome>
-                    </ContentArticle>
-                    
-                </MainContent>
-            </InnerMain>
-        </MainContainer>
-    )
-}
-
-export default Main;
+export {WrapBottom, TxtDate} 
