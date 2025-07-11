@@ -130,6 +130,46 @@ export const NameResponsible = styled.div`
     text-align: center;
 `
 
+export const ActiveGreenNameResponsible = styled.div`
+    max-width: 205px;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 29px;
+    background-color: #1ed47e;
+    display: inline-block;
+    margin: 2px 2px 0 0;
+    font-size: 17px;
+    color: #000;
+    text-align: center;
+    letter-spacing: -.5px;
+    font-weight: 400;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: center;
+`
+
+export const PolicyMagazineNameResponsible = styled.div`
+    max-width: 205px;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 29px;
+    background-color: #fae100;
+    display: inline-block;
+    margin: 2px 2px 0 0;
+    font-size: 17px;
+    color: #000;
+    text-align: center;
+    letter-spacing: -.5px;
+    font-weight: 400;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: center;
+`
+
 export const ImgResponsibleTypeEsg = styled.img`
     width: 428px;
     height: 245px;
@@ -140,11 +180,53 @@ export const ImgResponsibleTypeEsg = styled.img`
     border: 0;
     overflow-clip-margin: content-box;
     overflow: clip;
-
 `
+
+export const ImgResponsibleTypeActiveGreen = styled.img`
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 244px;
+    width: 100%;
+    top: 142px;
+`
+
+export const ImgResponsibleTypePolicyMagazine = styled.img`
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 244px;
+    width: 100%;
+    top: 142px;
+`
+
 
 export const TextResponsible = styled.p`
     color: #000;
+    max-width: 330px;
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    font-size: 26px;
+    line-height: 1.46;
+    margin: 0;
+    padding: 0;
+`
+
+export const ActiveGreenTextResponsible = styled.p`
+    color: #fff;
+    max-width: 330px;
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    font-size: 26px;
+    line-height: 1.46;
+    margin: 0;
+    padding: 0;
+`
+
+export const PolicyMagazineTextResponsible = styled.p`
+    color: #fff;
     max-width: 330px;
     position: absolute;
     bottom: 40px;
