@@ -39,6 +39,67 @@ export const WrapText = styled.div`
     height: 60px;
 `
 
+export const InnerBottomTypeBtn = styled.div`
+    position: absolute;
+    bottom: -2px;
+    left: -2px;
+    max-width: 247px;
+    width: 100%;
+    max-height: 99px;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 0 36px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: -36px;
+        max-width: 38px;
+        width: 100%;
+        max-height: 38px;
+        height: 100%;
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 38 38'%3E%3Cpath d='M2 0H0v38h38v-2C18.1 36 2 19.9 2 0z' fill='%23fff'/%3E%3C/svg%3E");
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        right: -36px;
+        bottom: 0;
+        max-width: 38px;
+        width: 100%;
+        max-height: 38px;
+        height: 100%;
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 38 38'%3E%3Cpath d='M2 0H0v38h38v-2C18.1 36 2 19.9 2 0z' fill='%23fff'/%3E%3C/svg%3E");
+    
+    }
+`
+
+export const LinkBottom = styled.a`
+    max-width: 201px;
+    width: 100%;
+    max-height: 48px;
+    height: 100%;
+    line-height: 48px;
+    font-size: 22px;
+    letter-spacing: -.6px;
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+`
+
 export const TitleVisual = styled.strong`
     font-size: 48px;
     line-height: 1.25;
