@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Swiper } from 'swiper/react';
 
 export const ContMainAreaBannerContainer = styled.div`
     max-width: 1324px;
@@ -136,97 +137,6 @@ export const ImgFirst = styled.img`
     border-radius: 24px;
 `
 
-export const InnerSecondWidget = styled.div`
-    max-width: 206px;
-    width: 100%;
-    height: 259px;
-    overflow: hidden;
-    position: relative;
-    border-radius: 24px;
-`
-
-export const SlickTrack = styled.div`
-    max-width: 206px;
-    width: 100%;
-    height: 259px;
-    display: flex;
-    transition: transform 0.5s ease;
-`
-
-export const SlickSlide = styled.div`
-    max-width: 206px;
-    width: 100%;
-    height: 259px;
-    position: absolute;
-    cursor: pointer;
-    background-color: #F0F0F0;
-`
-
-export const SecondInnerSlide = styled.a`
-    max-width: 206px;
-    width: 100%;
-    height: 259px;
-    cursor: pointer;
-`
-
-export const InnerSecond = styled.div`
-    max-width: 166px;
-    width: 100%;
-    height: 119px;
-    margin: 20px auto;
-    display: flex; 
-    justify-content: center;
-    flex-direction: column;
-`
-
-export const InnerSecondSpan = styled.span`
-    max-width: 100px;
-    width: 100%;
-    height: 32px;
-    display: inline-block;
-    border-radius: 8px;
-    font-size: 14px;
-    line-height: 1.78;
-    letter-spacing: -.2px;
-    background-color: #fae100;
-    color: #000;
-    font-weight: 400;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 8px;
-`
-
-export const TitleSecond = styled.strong`
-    line-height: 1.4;
-    font-size: 18px;
-    letter-spacing: -.6px;
-    font-weight: 400;
-    color: #000;
-`
-
-export const TitleSecondBr = styled.br
-`
-`
-
-export const WrapTags = styled.div`
-    max-height: 174px;
-    width: 100%;
-    height: 20px;
-    margin-top: 8px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-left: -8px;
-    font-weight: 400;
-`
-
-export const ItemTag = styled.span`
-    font-size: 14px;
-    letter-spacing: -.2px;
-    line-height: 1.42;
-    color: #666;   
-`
 
 export const InnerThirdWidget = styled.div`
     position: relative; 
@@ -293,23 +203,6 @@ export const TitleThird = styled.span`
     color: #000;
 `
 
-export const SelectedSlideIndex = styled.li`
-    max-width: 24px;
-    width: 100%;
-    height: 24px;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-`
-
-
-export const SelectedSlideIndexButtom = styled.button`
-    padding: 4px;
-    opacity: .45;
-    border-radius: 10px;
-`
-
 export const AreaWidget = styled.div`
     max-width: 215px;
     width: 100%;
@@ -319,16 +212,117 @@ export const AreaWidget = styled.div`
     justify-content: space-between;
 `
 
-export const SlickDots = styled.ul`
-    max-width: 64px;
+export const InnerWidgetSecondWidget = styled.div`
+    left: 0px;
+    max-width: 206px;
     width: 100%;
-    height: 24px;
-    background-color: blue;
-    position: absolute;
-    flex-direction: column;
-    left: 50%;
-    bottom: -2%;
-    transform: translateX(-50%);
-    white-space: nowrap;
-    display: inline-block;
+    max-height: 259px;
+    height: 100%;
+    user-select: none;
+    border-radius: 24px;
+    cursor: pointer;
+`
+
+export const SwiperSlideItem = styled.div`
+    max-width: 206px;
+    width: 100%;
+    max-height: 259px;
+    height: 100%;
+    background-color: #f3f3f3;
+    border-radius: 24px;
+`
+
+export const InnerSlideLink = styled.a`
+    max-width: 206px;
+    width: 100%;
+    max-height: 259px;
+    height: 100%;
+    cursor: pointer;
+    border-radius: 24px;
+`
+
+export const InnerSecond = styled.div`
+    max-width: 166px;
+    width: 100%;
+    max-height: 119px;
+    height: 100%;
+    margin: 20px auto;
+`
+
+export const BadgeSecondTypeYellow = styled.div`
+    max-width: 100px;
+    width: 100%;
+    max-height: 32px;
+    height: 100%;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    font-size: 14px;
+    letter-spacing: -.2px;
+    line-height: 1.78;
+    background-color: #fae100;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+`
+
+export const TitleSecond = styled.strong`
+    max-width: 166px;
+    width: 100%;
+    max-height: 50px;
+    height: 100%;
+    font-size: 18px;
+    line-height: 1.4;
+    letter-spacing: -.6px;
+    font-weight: 400;
+    color: #000;
+    
+`
+
+export const WrapTags = styled.div`
+    margin-top: 9px;
+    max-width: 166px;
+    width: 100%;
+    max-height: 19px;
+    height: 100%;
+    display: flex;
+    gap: 9px;
+    align-items: center;
+`
+
+export const ItemTag = styled.div`
+    width: max-content; 
+    font-size: 14px;
+    line-height: 1.42;
+    letter-spacing: -.2px;
+    color: #666;
+` 
+
+export const StyledSwiper = styled(Swiper)`
+    .swiper-pagination {
+        max-width: 64px;
+        width: 100%;
+        max-height: 24px;
+        height: 100%;
+        margin-left: 70px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .swiper-pagination-bullet {
+        background-color: #000;
+        color: #000;
+        opacity: .45;
+    }
+
+  .swiper-pagination-bullet-active {
+        width: 25px;
+        height: 8px;
+        border-radius: 24px;
+        background-color: #000;
+        color: #000;
+        opacity: 1;
+  }
 `

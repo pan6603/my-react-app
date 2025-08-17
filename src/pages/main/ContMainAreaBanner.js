@@ -8,30 +8,29 @@ import {
     InnerSlideFirstLink,
     InnerFirstImg,
     ImgFirst,
-    InnerSecondWidget,
-    SlickTrack,
-    SlickSlide,
-    SecondInnerSlide,
-    InnerSecond,
-    InnerSecondSpan,
-    TitleSecond,
-    TitleSecondBr,
-    WrapTags,
-    ItemTag,
     InnerThirdWidget,
     InnerSlideThirdLink,
     InnerThirdFlex,
     IconThird,
     TitleThird,
-    SelectedSlideIndex,
-    SelectedSlideIndexButtom,
     AreaWidget,
-    SlickDots,
     InnerBottomTypeBtn,
-    LinkBottom
+    LinkBottom,
+    InnerWidgetSecondWidget,
+    SwiperSlideItem,
+    InnerSlideLink,
+    InnerSecond,
+    BadgeSecondTypeYellow,
+    TitleSecond,
+    WrapTags,
+    ItemTag,
+    StyledSwiper
 } from "../../styles/main/ContMainAreaBanner.styles";
-
-
+import 'swiper/css'
+import 'swiper/css/autoplay'
+import 'swiper/css/pagination'
+import { SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination } from 'swiper/modules'
 
 function ContMainAreaBanner() {
     return (
@@ -58,32 +57,67 @@ function ContMainAreaBanner() {
                     </InnerSlideFirstLink>
                 </InnerfirstWidget>
 
-                <InnerSecondWidget>
-                    <SlickTrack>
-                        <SlickSlide>
-                            <SecondInnerSlide>
-                                <InnerSecond>
-                                    <InnerSecondSpan>카카오의 기술</InnerSecondSpan>
-                                    <TitleSecond>
-                                        AI 서비스를 
-                                        <TitleSecondBr />
-                                        내 일상 속으로
-                                    </TitleSecond>
-                                    <WrapTags>
-                                        <ItemTag>#AI</ItemTag>
-                                        <ItemTag>#오픈AI</ItemTag>
-                                        <ItemTag>#전략적제휴</ItemTag>
-                                    </WrapTags>
-                                </InnerSecond>
-                            </SecondInnerSlide>
-                            <SlickDots>
-                                <SelectedSlideIndex>
-                                    <SelectedSlideIndexButtom></SelectedSlideIndexButtom>
-                                </SelectedSlideIndex>
-                            </SlickDots>
-                        </SlickSlide>
-                    </SlickTrack>
-                </InnerSecondWidget>
+                <InnerWidgetSecondWidget>
+                    <StyledSwiper
+                        modules={[Autoplay, Pagination]}
+                        spaceBetween={20}
+                        slidesPerView={1}
+                        loop={true}
+                        autoplay={{ delay: 5000 }}
+                        pagination={{ clickable: true }}
+                    >
+                        <SwiperSlide style={{ 
+                            width: "206px",
+                            height: "259px", 
+                            borderRadius: "24px;",
+                            display: "flex",
+                            alignItems: "center",   
+                            justifyContent: "center"
+                            }}>
+                            <SwiperSlideItem>
+                                <InnerSlideLink>
+                                    <InnerSecond>
+                                        <BadgeSecondTypeYellow>카카오의 기술</BadgeSecondTypeYellow>
+                                        <TitleSecond>
+                                            AI 서비스를 <br />
+                                            내 일상 속으로 
+                                        </TitleSecond>
+                                        <WrapTags>
+                                            <ItemTag>#AI</ItemTag>
+                                            <ItemTag>#오픈AI</ItemTag>
+                                            <ItemTag>#전략적제휴</ItemTag>
+                                        </WrapTags>
+                                    </InnerSecond>
+                                </InnerSlideLink>
+                            </SwiperSlideItem>
+                        </SwiperSlide>
+                        <SwiperSlide style={{ 
+                            width: "206px", 
+                            height: "259px", 
+                            borderRadius: "24px;",
+                            display: "flex",
+                            alignItems: "center",   
+                            justifyContent: "center"
+                            }}>
+                            <SwiperSlideItem>
+                                <InnerSlideLink>
+                                    <InnerSecond>
+                                        <BadgeSecondTypeYellow>카톡설명서</BadgeSecondTypeYellow>
+                                        <TitleSecond>
+                                            모두의 카톡을 <br />
+                                            더 가깝고 안전하게 
+                                        </TitleSecond>
+                                        <WrapTags>
+                                            <ItemTag>#업데이트소식</ItemTag>
+                                            <ItemTag>#톡활용팁</ItemTag>
+                                        </WrapTags>
+                                    </InnerSecond>
+                                </InnerSlideLink>
+                            </SwiperSlideItem>
+                        </SwiperSlide>
+                        
+                    </StyledSwiper>
+                </InnerWidgetSecondWidget>
 
                 <InnerThirdWidget>
                     <InnerSlideThirdLink href="https://www.kakaocorp.com/page/service/service/KakaoTalk" target="_self" draggable="false">
