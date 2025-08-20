@@ -66,57 +66,45 @@ function ContMainAreaBanner() {
                         autoplay={{ delay: 5000 }}
                         pagination={{ clickable: true }}
                     >
-                        <SwiperSlide style={{ 
-                            width: "206px",
-                            height: "259px", 
-                            borderRadius: "24px;",
-                            display: "flex",
-                            alignItems: "center",   
-                            justifyContent: "center"
-                            }}>
-                            <SwiperSlideItem>
+                    {[
+                        {
+                            badge: "카카오의 기술",
+                            title: <>AI 서비스를 <br /> 내 일상 속으로</>,
+                            tags: ["#AI", "#오픈AI", "#전략적제휴"]
+                        },
+                        {
+                            badge: "카톡설명서",
+                            title: <>모두의 카톡을 <br /> 더 가깝고 안전하게</>,
+                            tags: ["#업데이트소식", "#톡활용팁"]
+                        }
+                    ].map((item, index) => (
+                        <SwiperSlide key={index}>
+                            <SwiperSlideItem
+                                style={{
+                                    width: "206px",
+                                    height: "259px",
+                                    borderRadius: "24px",
+                                    display: "flex",
+                                    alignItems: "center",
+                                    justifyContent: "center"
+                                }}
+                            >
                                 <InnerSlideLink>
                                     <InnerSecond>
-                                        <BadgeSecondTypeYellow>카카오의 기술</BadgeSecondTypeYellow>
-                                        <TitleSecond>
-                                            AI 서비스를 <br />
-                                            내 일상 속으로 
-                                        </TitleSecond>
+                                        <BadgeSecondTypeYellow>{item.badge}</BadgeSecondTypeYellow>
+                                        <TitleSecond>{item.title}</TitleSecond>
                                         <WrapTags>
-                                            <ItemTag>#AI</ItemTag>
-                                            <ItemTag>#오픈AI</ItemTag>
-                                            <ItemTag>#전략적제휴</ItemTag>
+                                            {item.tags.map((tag, i) => (
+                                                <ItemTag key={i}>{tag}</ItemTag>
+                                            ))}
                                         </WrapTags>
                                     </InnerSecond>
                                 </InnerSlideLink>
                             </SwiperSlideItem>
                         </SwiperSlide>
-                        <SwiperSlide style={{ 
-                            width: "206px", 
-                            height: "259px", 
-                            borderRadius: "24px;",
-                            display: "flex",
-                            alignItems: "center",   
-                            justifyContent: "center"
-                            }}>
-                            <SwiperSlideItem>
-                                <InnerSlideLink>
-                                    <InnerSecond>
-                                        <BadgeSecondTypeYellow>카톡설명서</BadgeSecondTypeYellow>
-                                        <TitleSecond>
-                                            모두의 카톡을 <br />
-                                            더 가깝고 안전하게 
-                                        </TitleSecond>
-                                        <WrapTags>
-                                            <ItemTag>#업데이트소식</ItemTag>
-                                            <ItemTag>#톡활용팁</ItemTag>
-                                        </WrapTags>
-                                    </InnerSecond>
-                                </InnerSlideLink>
-                            </SwiperSlideItem>
-                        </SwiperSlide>
-                        
+                    ))}
                     </StyledSwiper>
+
                 </InnerWidgetSecondWidget>
 
                 <InnerThirdWidget>

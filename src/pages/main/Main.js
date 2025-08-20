@@ -11,10 +11,13 @@ import ContMainAreaService from "./ContMainAreaService";
 import ContMainAreaNews from "./ContMainAreaNews";
 import ContMainAreaResponsible from "./ContMainAreaResponsible";
 import ContMainAreaHelp from "./ContMainAreaHelp";
-
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 
 function Main() {
     return (
+        <>
+        <Header />   
         <MainContainer>
             <InnerMain>
                 <MainContent>
@@ -32,6 +35,9 @@ function Main() {
                 </MainContent>
             </InnerMain>
         </MainContainer>
+        <Footer />
+        </>
+ 
     )
 }
 

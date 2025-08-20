@@ -16,10 +16,6 @@ import {
     IconMagnifierItem,
 } from '../styles/Header.styles';
 
-
-
-
-
 function Header () {
     const [isScrolled, setIsScrolled] = useState(false);
 
@@ -45,7 +41,7 @@ function Header () {
                         <NavItemMenu to="/about/subsidiarycompany">약속과 책임</NavItemMenu>
                         <NavItemMenu to="/">소식</NavItemMenu>
                 
-                        <InvestmentLinkDiv>
+                        <InvestmentLinkDiv to="/ir/main" target="_blank">
                             <NavInvestmentItem>투자정보</NavInvestmentItem>
                             <InvestmentArrowLink />
                         </InvestmentLinkDiv>

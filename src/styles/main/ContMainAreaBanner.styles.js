@@ -300,6 +300,10 @@ export const ItemTag = styled.div`
 ` 
 
 export const StyledSwiper = styled(Swiper)`
+    .swiper-slide {
+        transition: opacity 500ms, visibility 500ms;
+    }
+
     .swiper-pagination {
         max-width: 64px;
         width: 100%;

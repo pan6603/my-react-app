@@ -84,7 +84,7 @@ export const NavItemMenu = styled(Link)`
     }
 `;
 
-export const InvestmentLinkDiv = styled.div`
+export const InvestmentLinkDiv = styled(Link)`
     margin: 0;
     cursor: pointer;
     padding: 8px 2px;
@@ -94,6 +94,8 @@ export const InvestmentLinkDiv = styled.div`
     justify-content: center;
     gap: 3px;
     align-items: center;
+    text-decoration: none;
+    color: #000;
 
     &:hover {
         background-color: #f5f5f5;
