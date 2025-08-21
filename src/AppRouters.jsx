@@ -5,7 +5,7 @@ import History from "./pages/about/History";
 import SubsidiaryCompany from "./pages/about/SubsidiaryCompany";
 import Admin from "./pages/Admin";
 import NotFound from "./pages/NotFound";
-import Investment from "./ir/main/Investment";
+import Investment from "./Investment";
 
 function AppRouters () {
     return (
