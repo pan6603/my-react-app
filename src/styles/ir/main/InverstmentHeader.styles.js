@@ -17,7 +17,6 @@ export const InnerHeader = styled.div`
     max-width: 1300px;
     width: 100%;
     height: 92px;
-    background-color: red;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -28,7 +27,6 @@ export const DocTitle = styled.div`
     max-width: 154px;
     width: 100%;
     height: 29px;
-    background-color: blue;
 `
 
 export const DocTitleLink = styled.a`
@@ -42,8 +40,49 @@ export const DocGnbNav = styled.div`
     max-width: 818px;
     width: 100%;
     height: 36px;
-    background-color: blue;
 `
+
+export const ListMainNav = styled.div`
+    max-width: 818px;
+    width: 100%;
+    height: 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+`
+
+export const NavItemMenu = styled.div`
+    width: max-content;
+    height: 36px;
+`
+
+export const NavItemMenuLink = styled.a`
+    width: max-content;
+    height: 36px;
+    line-height: 1.58;
+    text-decoration: none;
+    font-size: 17px;
+    letter-spacing: -0.5px;
+`
+
+export const NavItemMenuLinkArrow = styled.a`
+    width: max-content;
+    height: 36px;
+    line-height: 1.58;
+    text-decoration: none;
+    font-size: 17px;
+
+    &::after {
+        content: '';
+        display: inline-block;
+        vertical-align: top;
+        background: url(https://t1.kakaocdn.net/kakaocorp/Ir/images/ico_outlink.svg) no-repeat;
+        margin: 7px 0 0 4px;
+        width: 10px;
+        height: 9px;
+    }
+`
+
 
 export const BtnLangViewPc = styled.div`
     max-width: 36px;
