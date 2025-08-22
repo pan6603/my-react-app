@@ -52,25 +52,44 @@ export const ListMainNav = styled.div`
 `
 
 export const NavItemMenu = styled.div`
-    width: max-content;
+    position: relative;
     height: 36px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 `
 
 export const NavItemMenuLink = styled.a`
     width: max-content;
     height: 36px;
-    line-height: 1.58;
-    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 17px;
     letter-spacing: -0.5px;
+    padding: 8px 12px; 
+    text-decoration: none;
+    color: #000;
+
+    &:hover {
+        background-color: #f5f5f5;
+        border-radius: 24px; 
+    }
+
 `
 
 export const NavItemMenuLinkArrow = styled.a`
     width: max-content;
     height: 36px;
-    line-height: 1.58;
-    text-decoration: none;
     font-size: 17px;
+    padding: 8px 12px; 
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &::after {
         content: '';
@@ -80,6 +99,11 @@ export const NavItemMenuLinkArrow = styled.a`
         margin: 7px 0 0 4px;
         width: 10px;
         height: 9px;
+    }
+
+     &:hover {
+        background-color: #f5f5f5;
+        border-radius: 24px; 
     }
 `
 
