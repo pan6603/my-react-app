@@ -1,8 +1,10 @@
-
+import { 
+    DocMain,
+} from "../../styles/ir/main/InverstmentMain.styles"
 
 function InverstmentMain() {
     return (
-        <h1>Hello InverstmentMain</h1>
+        <DocMain>Hello Main</DocMain>
     )
 }
 
