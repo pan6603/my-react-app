@@ -4,8 +4,8 @@ export const DocFooter = styled.footer`
     position: relative;
     max-width: 1440px;
     width: 100%;
-    height: 530px;
-    margin: 0 auto;
+    height: 230px;
+    margin: 0px auto;
     padding: 80px 0 70px;
     background: #fff;
     border-top: 1px solid #333;
