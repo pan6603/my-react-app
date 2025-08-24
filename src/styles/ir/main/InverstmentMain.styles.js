@@ -155,7 +155,7 @@ export const SectionRelationTitle = styled.h4`
     margin-bottom: 52px;
     font-size: 48px;
     letter-spacing: -1px;
-    font-weight: 400;
+    font-weight: 700;
     color: #000;
 
     &::before {
@@ -184,7 +184,7 @@ export const SectionNewsTitle = styled.h4`
     margin-bottom: 46px;
     font-size: 48px;
     color: #000;
-    font-weight: 400;
+    font-weight: 700;
     letter-spacing: -1px;
     line-height: 1.5;
 
@@ -441,6 +441,189 @@ export const SectionVisual = styled.section`
     max-width: 1316px;
     width: 100%;
     height: 741px;
-    background-color: red;
     margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+`
+
+export const WrapVisual = styled.div`
+    max-width: 1094px;
+    width: 100%;
+    height: 621px;
+    overflow: hidden; 
+    position: relative;
+    border-radius: 36px;
+`
+
+export const BgDimmed = styled.div`
+    max-width: 1094px;
+    width: 100%;
+    height: 621px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+    background: rgba(0,0,0,0.2);
+    background-color: red;
+`
+
+export const BgDimmedVideo = styled.video`
+    max-width: 1094px;
+    width: 100%;
+    height: 621px;
+    object-fit: cover;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+`
+
+export const BgDimmedVideoSource = styled.source`
+
+`
+
+
+
+export const WrapBanner = styled.div`
+    max-width: 206px;
+    width: 100%;
+    height: 621px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+`
+
+export const BoxStock = styled.div`
+    max-width: 206px;
+    width: 100%;
+    height: 136px;
+    background-color: red;
+    border-radius: 24px;
+`
+
+export const BnrItem = styled.div`
+    max-width: 206px;
+    width: 100%;
+    height: 136px;
+    border-radius: 24px;
+    padding: 16px 20px;
+    box-sizing: border-box;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+`
+
+export const TxtStock = styled.div`
+    max-width: 166px;
+    width: 100%;
+    height: 39px;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+    color: #fff;
+`
+
+export const EmphStockChangeDown = styled.em`
+    max-width: 166px;
+    width: 100%;
+    height: 21px;
+    margin-top: 8px;
+    color: #4a9cff;
+    letter-spacing: -0.5px;
+    font-size: 14px;
+
+    &::before {
+        display: inline-block;
+        border-top: 5px solid #4a9cff;
+        border-bottom: none;
+        margin-right: 3px;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        content: '';
+        color: #4a9cff;
+    }
+
+`
+
+export const EmphStockTxtSub = styled.div`
+    max-width: 166px;
+    width: 100%;
+    height: 21px;
+    font-size: 14px;
+    margin-top: auto;
+    color: #d2d2d2;
+    letter-spacing: -0.2px;
+`
+
+
+export const CarouselNotice = styled.div`
+    max-width: 206px;
+    width: 100%;
+    height: 255px;
+    background-color: red;
+    border-radius: 24px;
+`
+
+export const CarouselPost = styled.div`
+    max-width: 206px;
+    width: 100%;
+    height: 206px;
+    background-color: red;
+    border-radius: 24px;
+`
+
+export const WrapMore = styled.div`
+    position: absolute;
+    z-index: 10;
+    border-radius: 0 36px 0 0;
+    background: #fff;
+    bottom: 98px;
+    max-width: 236px;
+    width: 100%;
+    height: 102px;
+    padding: 24px 33px 30px 34px;
+    box-sizing: border-box;
+
+
+    &::before {
+        position: absolute;
+        left: -1px;
+        bottom: 100px;
+        z-index: 20;
+        width: 38px;
+        height: 38px;
+        background: url(https://t1.kakaocdn.net/kakaocorp/Ir/images/ico_mask_36.svg) no-repeat;
+        content: '';
+    }
+
+    &::after {
+        position: absolute;
+        left: 234px;
+        bottom: 0px;
+        z-index: 20;
+        width: 38px;
+        height: 38px;
+        background: url(https://t1.kakaocdn.net/kakaocorp/Ir/images/ico_mask_36.svg) no-repeat;
+        content: '';
+    }
+`
+
+export const LinkVideo = styled.a`
+    max-width: 169px;
+    width: 100%;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    letter-spacing: -0.6px;
+    white-space: nowrap;
+
+    &::after {
+        width: 48px;
+        height: 48px;
+        border-radius: 24px;
+        margin-left: 20px;
+        background: url(https://t1.kakaocdn.net/kakaocorp/Ir/images/ico_arrow_241212.png) 50%/20px no-repeat,#000;
+        content: '';
+    }
 `

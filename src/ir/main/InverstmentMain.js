@@ -35,13 +35,52 @@ import {
     TxtSubDiv,
     TxtEm,
     BorderLine,
-    TxtSubDate
+    TxtSubDate,
+    WrapVisual,
+    WrapBanner,
+    BoxStock,
+    CarouselNotice,
+    CarouselPost,
+    BgDimmed,
+    BgDimmedVideo,
+    BgDimmedVideoSource,
+    WrapMore,
+    LinkVideo,
+    BnrItem,
+    TxtStock,
+    EmphStockChangeDown,
+    EmphStockTxtSub
 } from "../../styles/ir/main/InverstmentMain.styles"
 
 function InverstmentMain() {
     return (
         <DocMain>
-            <SectionVisual>카카오 비전</SectionVisual>
+            <SectionVisual>
+                <WrapVisual>
+                    <BgDimmed>
+                        <BgDimmedVideo poster="https://t1.kakaocdn.net/kakaocorp/Ir/images/poster_image_250522.png" autoplay="" muted="" loop="" playsinline="">
+                            <BgDimmedVideoSource src="https://t1.kakaocdn.net/kakaocorp/Ir/images/video_main_250522.mp4" type="video/mp4" />
+                        </BgDimmedVideo>   
+                    </BgDimmed>
+                    
+                </WrapVisual>
+                <WrapMore>
+                    <LinkVideo>
+                        더 알아보기
+                    </LinkVideo>
+                </WrapMore>
+                <WrapBanner>
+                    <BoxStock>
+                        <BnrItem>
+                            <TxtStock>63,600</TxtStock>
+                            <EmphStockChangeDown>400 &nbsp;(-0.63%)</EmphStockChangeDown>
+                            <EmphStockTxtSub>카카오 035720</EmphStockTxtSub>
+                        </BnrItem>
+                    </BoxStock>
+                    <CarouselNotice></CarouselNotice>
+                    <CarouselPost></CarouselPost>
+                </WrapBanner>
+            </SectionVisual>
             <SectionNews>
                 <SectionNewsTitle>카카오 주요현황</SectionNewsTitle>
                 <WrapBoard>
