@@ -51,6 +51,7 @@ import {
     EmphStockChangeDown,
     EmphStockTxtSub
 } from "../../styles/ir/main/InverstmentMain.styles"
+import CountUp from "react-countup"
 
 function InverstmentMain() {
     return (
@@ -72,7 +73,9 @@ function InverstmentMain() {
                 <WrapBanner>
                     <BoxStock>
                         <BnrItem>
-                            <TxtStock>63,600</TxtStock>
+                            <TxtStock>
+                                <CountUp start={0} end={63600} duration={2} separator="," />
+                            </TxtStock>
                             <EmphStockChangeDown>400 &nbsp;(-0.63%)</EmphStockChangeDown>
                             <EmphStockTxtSub>카카오 035720</EmphStockTxtSub>
                         </BnrItem>
