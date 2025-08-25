@@ -29,8 +29,22 @@ import {
 import 'swiper/css'
 import 'swiper/css/autoplay'
 import 'swiper/css/pagination'
+import "swiper/css/effect-fade";
 import { SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination } from 'swiper/modules'
+import { Autoplay, Pagination, EffectFade } from 'swiper/modules'
+
+const slides = [
+    {
+      badge: "카카오의 기술",
+      title: <>AI 서비스를 <br /> 내 일상 속으로</>,
+      tags: ["#AI", "#오픈AI", "#전략적제휴"]
+    },
+    {
+      badge: "카톡설명서",
+      title: <>모두의 카톡을 <br /> 더 가깝고 안전하게</>,
+      tags: ["#업데이트소식", "#톡활용팁"]
+    }
+];
 
 function ContMainAreaBanner() {
     return (
@@ -59,44 +73,35 @@ function ContMainAreaBanner() {
 
                 <InnerWidgetSecondWidget>
                     <StyledSwiper
-                        modules={[Autoplay, Pagination]}
+                        modules={[Autoplay, Pagination, EffectFade]}
                         spaceBetween={20}
                         slidesPerView={1}
                         loop={true}
                         autoplay={{ delay: 5000 }}
                         pagination={{ clickable: true }}
+                        effect="fade"
+                        fadeEffect={{ crossFade: true }}
                     >
-                    {[
-                        {
-                            badge: "카카오의 기술",
-                            title: <>AI 서비스를 <br /> 내 일상 속으로</>,
-                            tags: ["#AI", "#오픈AI", "#전략적제휴"]
-                        },
-                        {
-                            badge: "카톡설명서",
-                            title: <>모두의 카톡을 <br /> 더 가깝고 안전하게</>,
-                            tags: ["#업데이트소식", "#톡활용팁"]
-                        }
-                    ].map((item, index) => (
+                    {slides.map((item, index) => (
                         <SwiperSlide key={index}>
                             <SwiperSlideItem
-                                style={{
-                                    width: "206px",
-                                    height: "259px",
-                                    borderRadius: "24px",
-                                    display: "flex",
-                                    alignItems: "center",
-                                    justifyContent: "center"
-                                }}
+                            style={{
+                                width: "206px",
+                                height: "259px",
+                                borderRadius: "24px",
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "center"
+                            }}
                             >
                                 <InnerSlideLink>
                                     <InnerSecond>
                                         <BadgeSecondTypeYellow>{item.badge}</BadgeSecondTypeYellow>
                                         <TitleSecond>{item.title}</TitleSecond>
                                         <WrapTags>
-                                            {item.tags.map((tag, i) => (
-                                                <ItemTag key={i}>{tag}</ItemTag>
-                                            ))}
+                                        {item.tags.map((tag, i) => (
+                                            <ItemTag key={i}>{tag}</ItemTag>
+                                        ))}
                                         </WrapTags>
                                     </InnerSecond>
                                 </InnerSlideLink>
@@ -104,7 +109,6 @@ function ContMainAreaBanner() {
                         </SwiperSlide>
                     ))}
                     </StyledSwiper>
-
                 </InnerWidgetSecondWidget>
 
                 <InnerThirdWidget>
