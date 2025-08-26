@@ -174,7 +174,7 @@ function InverstmentMain() {
                                 spaceBetween={20}
                                 slidesPerView={1}
                                 loop={true}
-                                autoplay={{ delay: 5000 }}
+                                autoplay={{ delay: 8000 }}
                                 pagination={{ clickable: true }}
                                 effect="fade"
                                 fadeEffect={{ crossFade: true }}
