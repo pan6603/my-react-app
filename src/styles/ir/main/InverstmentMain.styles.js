@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Swiper } from 'swiper/react';
 
 
 export const DocMain = styled.main`
@@ -557,20 +558,206 @@ export const EmphStockTxtSub = styled.div`
 
 
 export const CarouselNotice = styled.div`
+    position: relative;
+    overflow: hidden;
     max-width: 206px;
     width: 100%;
     height: 255px;
-    background-color: red;
     border-radius: 24px;
+    background-color: #f0f0f0;
+`
+
+export const SwiperSlideItem = styled.div`
+
+`
+
+export const StyledSwiper = styled(Swiper)`
+    .swiper-slide {
+        transition: opacity 500ms, visibility 500ms;
+    }
+
+    .swiper-pagination {
+        max-width: 64px;
+        width: 100%;
+        max-height: 24px;
+        height: 100%;
+        margin-left: 70px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .swiper-pagination-bullet {
+        background-color: #000;
+        color: #000;
+        opacity: .45;
+    }
+
+  .swiper-pagination-bullet-active {
+        width: 25px;
+        height: 8px;
+        border-radius: 24px;
+        background-color: #000;
+        color: #000;
+        opacity: 1;
+  }
+`
+
+export const BoxPostStyledSwiper = styled(Swiper)`
+    .swiper-slide {
+        transition: opacity 500ms, visibility 500ms;
+    }
+
+    .swiper-pagination {
+        max-width: 64px;
+        width: 100%;
+        max-height: 24px;
+        height: 100%;
+        margin-left: 70px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .swiper-pagination-bullet {
+        background-color: #000;
+        opacity: .45;
+    }
+
+  .swiper-pagination-bullet-active {
+        width: 25px;
+        height: 8px;
+        border-radius: 24px;
+        background-color: #000;
+        opacity: 1;
+  }
+`
+
+export const InnerSlideLink = styled.a`
+    max-width: 206px;
+    width: 100%;
+    height: 255px;
+    cursor: pointer;
+    border-radius: 24px;
+`
+
+export const InnerSecond = styled.div`
+    max-width: 206px;
+    width: 100%;
+    height: 255px;
+    height: 100%;
+    margin: 20px auto;
+`
+
+export const TitNotice = styled.div`
+    max-width: 166px;
+    width: 100%;
+    height: 78px;
+    overflow: hidden;
+    font-size: 26px;
+    font-weight: 500;
+    margin: 0 auto;
+ `   
+
+export const AreaLinks = styled.div`
+    max-width: 166px;
+    width: 100%;
+    height: 21px;
+    margin: 0 auto;
+    display: flex;
+    gap: 12px;
+`
+
+export const LinkItemPdf = styled.div`
+    width: max-content;
+    height: 20px;
+
+    &::after {
+        width: 20px;
+        height: 20px;
+        margin-left: 6px;
+        display: inline-block;
+        vertical-align: top;
+        background: url(https://t1.kakaocdn.net/kakaocorp/Ir/images/ico_download.svg) no-repeat;
+        content: '';
+    }
+   
+`
+
+export const LinkItemMusic = styled.div`
+    width: max-content;
+    height: 20px;
+
+    &::after {
+        width: 20px;
+        height: 20px;
+        margin-left: 6px;
+        display: inline-block;
+        vertical-align: top;
+        background-image: url(https://t1.kakaocdn.net/kakaocorp/Ir/images/ico_webcast.svg);
+        content: '';
+    }
 `
 
 export const CarouselPost = styled.div`
     max-width: 206px;
     width: 100%;
     height: 206px;
-    background-color: red;
     border-radius: 24px;
 `
+
+export const BoxPost = styled.div`
+    max-width: 206px;
+    width: 100%;
+    height: 206px;
+    border-radius: 24px;
+`
+
+export const FirstInnerSlideLink = styled.a`
+    max-width: 206px;
+    width: 100%;
+    height: 206px;
+    cursor: pointer;
+    border-radius: 24px;
+    background: #FAE100;
+    color: #000;
+`
+
+export const TwoInnerSlideLink = styled.a`
+    max-width: 206px;
+    width: 100%;
+    height: 206px;
+    cursor: pointer;
+    border-radius: 24px;
+    background: #0073FF;
+    color: #fff;
+`
+
+
+export const InnerPost = styled.div`
+    max-width: 206px;
+    width: 100%;
+    height: 170px;
+    height: 100%;
+    padding: 20px 20px 16px;
+    display: flex;
+    flex-direction: column;
+`
+
+export const TitPost = styled.div`
+    margin-bottom: 4px;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.6px;
+    overflow: hidden;
+`
+
+export const BoxPostTxtDate = styled.div`
+    font-size: 17px;
+    letter-spacing: -0.5px;
+    overflow: hidden;
+`
+
 
 export const WrapMore = styled.div`
     position: absolute;

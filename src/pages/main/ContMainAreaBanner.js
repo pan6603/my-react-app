@@ -94,19 +94,19 @@ function ContMainAreaBanner() {
                                 justifyContent: "center"
                             }}
                             >
-                                <InnerSlideLink>
-                                    <InnerSecond>
-                                        <BadgeSecondTypeYellow>{item.badge}</BadgeSecondTypeYellow>
-                                        <TitleSecond>{item.title}</TitleSecond>
-                                        <WrapTags>
-                                        {item.tags.map((tag, i) => (
-                                            <ItemTag key={i}>{tag}</ItemTag>
-                                        ))}
-                                        </WrapTags>
-                                    </InnerSecond>
-                                </InnerSlideLink>
-                            </SwiperSlideItem>
-                        </SwiperSlide>
+                                    <InnerSlideLink>
+                                        <InnerSecond>
+                                            <BadgeSecondTypeYellow>{item.badge}</BadgeSecondTypeYellow>
+                                            <TitleSecond>{item.title}</TitleSecond>
+                                            <WrapTags>
+                                            {item.tags.map((tag, i) => (
+                                                <ItemTag key={i}>{tag}</ItemTag>
+                                            ))}
+                                            </WrapTags>
+                                        </InnerSecond>
+                                    </InnerSlideLink>
+                                </SwiperSlideItem>
+                            </SwiperSlide>
                     ))}
                     </StyledSwiper>
                 </InnerWidgetSecondWidget>

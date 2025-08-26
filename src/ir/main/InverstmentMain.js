@@ -49,9 +49,58 @@ import {
     BnrItem,
     TxtStock,
     EmphStockChangeDown,
-    EmphStockTxtSub
+    EmphStockTxtSub,
+    StyledSwiper,
+    InnerSlideLink,
+    InnerSecond,
+    TitNotice,
+    SwiperSlideItem,
+    AreaLinks,
+    LinkItemPdf,
+    LinkItemMusic,
+    BoxPost,
+    TwoInnerSlideLink,
+    FirstInnerSlideLink,
+    InnerPost,
+    TitPost,
+    BoxPostTxtDate,
+    BoxPostStyledSwiper
 } from "../../styles/ir/main/InverstmentMain.styles"
 import CountUp from "react-countup"
+import { SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination, EffectFade } from 'swiper/modules'
+
+const twoSlides = [
+    {
+      title: <>2025년도 <br />연결재무제표</>
+    },
+    {
+      title: <>2025년도 <br />2분기 실적발표</>,
+      pdf: <><LinkItemPdf>PDF</LinkItemPdf></>,
+      webCast: <><LinkItemMusic>웹 캐스트</LinkItemMusic></>
+    }
+];
+
+const boxPostSlides = [
+    {
+        innerSlideLink: <>
+        <FirstInnerSlideLink>
+            <InnerPost>
+                <TitPost>카카오 주주서한</TitPost>
+                <BoxPostTxtDate>2024.05.16</BoxPostTxtDate>
+            </InnerPost>
+        </FirstInnerSlideLink></>
+    },
+    {
+        innerSlideLink: <>
+        <TwoInnerSlideLink>
+            <InnerPost>
+                <TitPost>공고사항</TitPost>
+                <BoxPostTxtDate>자본금 감소 및 채권자 <br /> 이의제출 공고</BoxPostTxtDate>
+            </InnerPost>
+        </TwoInnerSlideLink></>
+    }
+]
 
 function InverstmentMain() {
     return (
@@ -80,8 +129,77 @@ function InverstmentMain() {
                             <EmphStockTxtSub>카카오 035720</EmphStockTxtSub>
                         </BnrItem>
                     </BoxStock>
-                    <CarouselNotice></CarouselNotice>
-                    <CarouselPost></CarouselPost>
+                    <CarouselNotice>
+                        <StyledSwiper
+                            modules={[Autoplay, Pagination, EffectFade]}
+                            spaceBetween={20}
+                            slidesPerView={1}
+                            loop={true}
+                            autoplay={{ delay: 5000 }}
+                            pagination={{ clickable: true }}
+                            effect="fade"
+                            fadeEffect={{ crossFade: true }}
+                        >
+                            {twoSlides.map((item, index) => (
+                                <SwiperSlide key={index}>
+                                    <SwiperSlideItem
+                                        style={{
+                                            width: "206px",
+                                            height: "259px",
+                                            borderRadius: "24px",
+                                            display: "flex",
+                                            alignItems: "center",
+                                            justifyContent: "center"
+                                        }}    
+                                    >
+                                        <InnerSlideLink>
+                                            <InnerSecond>
+                                                <TitNotice>{item.title}</TitNotice>
+                                                <AreaLinks>
+                                                    {item.pdf}
+                                                    {item.webCast}
+                                                </AreaLinks>
+                                            </InnerSecond>
+                                        </InnerSlideLink>
+                                    </SwiperSlideItem>
+                                </SwiperSlide>       
+                            ))}
+                        
+                        </StyledSwiper>
+                    </CarouselNotice>
+                    <CarouselPost>
+                        <BoxPost>
+                            <BoxPostStyledSwiper
+                                modules={[Autoplay, Pagination, EffectFade]}
+                                spaceBetween={20}
+                                slidesPerView={1}
+                                loop={true}
+                                autoplay={{ delay: 5000 }}
+                                pagination={{ clickable: true }}
+                                effect="fade"
+                                fadeEffect={{ crossFade: true }}
+                            >
+                                {boxPostSlides.map((item, index) => (
+                                    <SwiperSlide key={index}>
+                                        <SwiperSlideItem
+                                            style={{
+                                                width: "206px",
+                                                height: "206px",
+                                                borderRadius: "24px",
+                                                display: "flex",
+                                                alignItems: "center",
+                                                justifyContent: "center"
+                                            }}    
+                                        >
+                                            {item.innerSlideLink}         
+                                   
+                                        </SwiperSlideItem>   
+                                    </SwiperSlide>  
+                                ))}
+                       
+                            </BoxPostStyledSwiper>
+                        </BoxPost>
+                    </CarouselPost>
                 </WrapBanner>
             </SectionVisual>
             <SectionNews>
