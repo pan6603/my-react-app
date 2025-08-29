@@ -470,20 +470,6 @@ export const BgDimmed = styled.div`
     background-color: red;
 `
 
-export const BgDimmedVideo = styled.video`
-    max-width: 1094px;
-    width: 100%;
-    height: 621px;
-    object-fit: cover;
-    overflow-clip-margin: content-box;
-    overflow: clip;
-`
-
-export const BgDimmedVideoSource = styled.source`
-
-`
-
-
 
 export const WrapBanner = styled.div`
     max-width: 206px;

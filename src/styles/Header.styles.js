@@ -10,7 +10,6 @@ import styled from "styled-components";
 
 
 export const HeaderWrapper = styled.header`
-    background-color: white;
     max-width:1440px;
     width:100%;
     height:91px;

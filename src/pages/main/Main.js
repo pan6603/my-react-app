@@ -17,25 +17,25 @@ import Footer from "../../components/Footer";
 function Main() {
     return (
         <>
-        <Header />   
-        <MainContainer>
-            <InnerMain>
-                <MainContent>
-                    <ContentArticle>
-                        <ContHome>
-                            <ContMainAreaBanner />
-                            <ContMainAreaStory />
-                            <ContMainAreaService />
-                            <ContMainAreaNews />
-                            <ContMainAreaResponsible />
-                            <ContMainAreaHelp />
-                        </ContHome>
-                    </ContentArticle>
-                    
-                </MainContent>
-            </InnerMain>
-        </MainContainer>
-        <Footer />
+            <Header />   
+            <MainContainer>
+                <InnerMain>
+                    <MainContent>
+                        <ContentArticle>
+                            <ContHome>
+                                <ContMainAreaBanner />
+                                <ContMainAreaStory />
+                                <ContMainAreaService />
+                                <ContMainAreaNews />
+                                <ContMainAreaResponsible />
+                                <ContMainAreaHelp />
+                            </ContHome>
+                        </ContentArticle>
+                        
+                    </MainContent>
+                </InnerMain>
+            </MainContainer>
+            <Footer />
         </>
  
     )

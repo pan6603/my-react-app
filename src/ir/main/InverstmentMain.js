@@ -42,8 +42,6 @@ import {
     CarouselNotice,
     CarouselPost,
     BgDimmed,
-    BgDimmedVideo,
-    BgDimmedVideoSource,
     WrapMore,
     LinkVideo,
     BnrItem,
@@ -108,9 +106,7 @@ function InverstmentMain() {
             <SectionVisual>
                 <WrapVisual>
                     <BgDimmed>
-                        <BgDimmedVideo poster="https://t1.kakaocdn.net/kakaocorp/Ir/images/poster_image_250522.png" autoplay="" muted="" loop="" playsinline="">
-                            <BgDimmedVideoSource src="https://t1.kakaocdn.net/kakaocorp/Ir/images/video_main_250522.mp4" type="video/mp4" />
-                        </BgDimmedVideo>   
+                        <video data-v-85d56d7e="" data-v-bb1396d4="" src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/heroVisual/ef3f91ae019800001.mp4" poster="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/heroVisual/ef3f9d11019800001.png?type=thumb&amp;opt=C1424x808.fwebp" autoplay="autoplay" muted="muted" loop="loop" playsinline="playsinline" type="video/mp4" class="item_visual"></video>
                     </BgDimmed>
                     
                 </WrapVisual>

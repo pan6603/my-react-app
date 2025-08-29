@@ -15,8 +15,11 @@ import {
     IconMoonItem,
     IconMagnifierItem,
 } from '../styles/Header.styles';
+import { useTheme } from './context/ThemeContext';
+import { lightTheme, darkTheme } from '../styles/context/theme.js'
 
 function Header () {
+    const { theme, toggleTheme} = useTheme() 
     const [isScrolled, setIsScrolled] = useState(false);
 
     useEffect(() => {
@@ -28,8 +31,8 @@ function Header () {
         return () => window.removeEventListener('scroll', handleScroll); // 클린업
     }, []);
  
-    return (  
-        <HeaderWrapper isScrolled={isScrolled}>
+    return (
+        <HeaderWrapper isScrolled={isScrolled} theme={theme === 'light' ? lightTheme : darkTheme}>
             <InnerHeader>
                 <KakaoMainLogo>
                     <KakaoMainLogoImg />
@@ -47,14 +50,14 @@ function Header () {
                         </InvestmentLinkDiv>
                     </NavigationList>
                 </Navigation>
-
                 <AreaUtil>
                     <IconMagnifierItem />
                     <IconEarthItem />
-                    <IconMoonItem />
+                    <IconMoonItem onClick={toggleTheme} />
                 </AreaUtil>
             </InnerHeader>
         </HeaderWrapper>
+        
     ) 
 }
 
