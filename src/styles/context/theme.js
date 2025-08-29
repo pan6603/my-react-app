@@ -2,10 +2,10 @@
 
 export const lightTheme = {
     bgColor: '#fff',
-    fontcolor: '#333'
+    fontcolor: '#000'
 }
 
 export const darkTheme = {
-    bgColor: '#333',
+    bgColor: '#000',
     fontcolor: '#fff'
 }

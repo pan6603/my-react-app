@@ -2,6 +2,7 @@
 // import Routers from "./Routers";
 import AppRouters from "./AppRouters";
 import { AuthProvider } from "./components/AuthContext";
+import { ThemeProviderContext } from "./components/context/ThemeContext";
 
 function App() {
 
@@ -9,7 +10,9 @@ function App() {
     <AuthProvider>
     
       {/* <Routers /> */}
-      <AppRouters />
+      <ThemeProviderContext>
+        <AppRouters />
+      </ThemeProviderContext>
     </AuthProvider>
   );
 }

@@ -19,7 +19,8 @@ export const HeaderWrapper = styled.header`
     left: 0;
     right: 0;
     border: 0;
-
+    background-color: ${({theme}) => theme.bgColor};
+    color: ${({theme}) => theme.fontcolor};
     border-bottom: ${props => (props.isScrolled ? '1px solid #EAEAEA' : 'none')};
 `;
 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'; 
+import React, { useState, useEffect} from 'react'; 
 import { 
     HeaderWrapper, 
     InnerHeader,
@@ -16,7 +16,7 @@ import {
     IconMagnifierItem,
 } from '../styles/Header.styles';
 import { useTheme } from './context/ThemeContext';
-import { lightTheme, darkTheme } from '../styles/context/theme.js'
+import { lightTheme, darkTheme } from '../styles/context/theme';
 
 function Header () {
     const { theme, toggleTheme} = useTheme() 
