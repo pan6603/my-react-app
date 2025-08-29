@@ -48,6 +48,7 @@ export const KakaoMainLogoImg = styled(KakaoLogoIcon)`
     width: 100%;
     height: 50px;
     cursor: pointer;
+
 `
 
 export const Navigation = styled.nav`
@@ -76,10 +77,10 @@ export const NavItemMenu = styled(Link)`
     cursor: pointer;
     padding: 8px 12px; 
     text-decoration: none;
-    color: #000;
+    color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
 
     &:hover {
-        background-color: #f5f5f5;
+        background-color: ${({ theme }) => theme === "light" ? "#f5f5f5" : "#333"}; 
         border-radius: 54px; 
     }
 `;
@@ -95,10 +96,10 @@ export const InvestmentLinkDiv = styled(Link)`
     gap: 3px;
     align-items: center;
     text-decoration: none;
-    color: #000;
+    color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
 
     &:hover {
-        background-color: #f5f5f5;
+        background-color: ${({ theme }) => theme === "light" ? "#f5f5f5" : "#333"}; 
         border-radius: 54px; 
     }
 `
@@ -107,6 +108,7 @@ export const NavInvestmentItem = styled.li`
     margin: 0;
     font-weight: 400;
     cursor: pointer; 
+    color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
 `;
 
 export const InvestmentArrowLink = styled(IconArrowLink)`
@@ -133,7 +135,7 @@ export const IconEarthItem = styled(IconEarth)`
     padding: 8px 12px; 
 
     &:hover {
-        background-color: #f5f5f5;
+        background-color: ${({ theme }) => theme === "light" ? "#f5f5f5" : "#333"}; 
         border-radius: 54px; 
     }
 `
@@ -146,7 +148,7 @@ export const IconMoonItem = styled(IconMoon)`
     padding: 8px 12px; 
 
     &:hover {
-        background-color: #f5f5f5;
+        background-color: ${({ theme }) => theme === "light" ? "#f5f5f5" : "#333"}; 
         border-radius: 54px; 
     }
 ` 
@@ -159,7 +161,7 @@ export const IconMagnifierItem = styled(IconMagnifier)`
     padding: 8px 12px; 
 
     &:hover {
-        background-color: #f5f5f5;
+        background-color: ${({ theme }) => theme === "light" ? "#f5f5f5" : "#333"}; 
         border-radius: 54px; 
     }
 `

@@ -35,25 +35,35 @@ function Header () {
         <HeaderWrapper isScrolled={isScrolled} theme={theme === 'light' ? lightTheme : darkTheme}>
             <InnerHeader>
                 <KakaoMainLogo>
-                    <KakaoMainLogoImg />
+                    <KakaoMainLogoImg fill={theme === "light" ? "#000" : "#fff"}/>
                 </KakaoMainLogo>
                 <Navigation>
                     <NavigationList>
-                        <NavItemMenu to="/admin">소개</NavItemMenu>
-                        <NavItemMenu to="/about/history">기술과 서비스</NavItemMenu>
-                        <NavItemMenu to="/about/subsidiarycompany">약속과 책임</NavItemMenu>
-                        <NavItemMenu to="/">소식</NavItemMenu>
+                        <NavItemMenu theme={theme} to="/admin">소개</NavItemMenu>
+                        <NavItemMenu theme={theme} to="/about/history">기술과 서비스</NavItemMenu>
+                        <NavItemMenu theme={theme} to="/about/subsidiarycompany">약속과 책임</NavItemMenu>
+                        <NavItemMenu theme={theme} to="/">소식</NavItemMenu>
                 
-                        <InvestmentLinkDiv to="/ir/main" target="_blank">
-                            <NavInvestmentItem>투자정보</NavInvestmentItem>
-                            <InvestmentArrowLink />
+                        <InvestmentLinkDiv to="/ir/main" target="_blank" theme={theme}>
+                            <NavInvestmentItem theme={theme}>투자정보</NavInvestmentItem>
+                            <InvestmentArrowLink fill={theme === "light" ? "#000" : "#fff"} />
                         </InvestmentLinkDiv>
                     </NavigationList>
                 </Navigation>
                 <AreaUtil>
-                    <IconMagnifierItem />
-                    <IconEarthItem />
-                    <IconMoonItem onClick={toggleTheme} />
+                    <IconMagnifierItem 
+                        theme={theme}
+                        fill={theme === "light" ? "#000" : "#fff"}
+                    />
+                    <IconEarthItem 
+                        theme={theme}
+                        fill={theme === "light" ? "#000" : "#fff"}
+                    />
+                    <IconMoonItem 
+                        onClick={toggleTheme}
+                        theme={theme}
+                        fill={theme === "light" ? "#000" : "#fff"}
+                    />
                 </AreaUtil>
             </InnerHeader>
         </HeaderWrapper>
