@@ -48,7 +48,7 @@ export const InnerBottomTypeBtn = styled.div`
     width: 100%;
     max-height: 99px;
     height: 100%;
-    background-color: #fff;
+    background-color: ${({ theme }) => theme === "light" ? "#fff" : "#000"}; 
     border-radius: 0 36px 0 0;
     display: flex;
     justify-content: center;
@@ -67,7 +67,9 @@ export const InnerBottomTypeBtn = styled.div`
         background-position: 50%;
         background-repeat: no-repeat;
         background-size: 100% auto;
-        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 38 38'%3E%3Cpath d='M2 0H0v38h38v-2C18.1 36 2 19.9 2 0z' fill='%23fff'/%3E%3C/svg%3E");
+        background-image: ${({ theme }) => theme === "light"
+        ? `url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 38 38'%3E%3Cpath d='M2 0H0v38h38v-2C18.1 36 2 19.9 2 0z' fill='%23fff'/%3E%3C/svg%3E")`
+        : `url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 38 38'%3E%3Cpath d='M2 0H0v38h38v-2C18.1 36 2 19.9 2 0z' fill='%23000'/%3E%3C/svg%3E")`};
     }
 
     &::after {
@@ -82,7 +84,9 @@ export const InnerBottomTypeBtn = styled.div`
         background-position: 50%;
         background-repeat: no-repeat;
         background-size: 100% auto;
-        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 38 38'%3E%3Cpath d='M2 0H0v38h38v-2C18.1 36 2 19.9 2 0z' fill='%23fff'/%3E%3C/svg%3E");
+        background-image: ${({ theme }) => theme === "light"
+        ? `url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 38 38'%3E%3Cpath d='M2 0H0v38h38v-2C18.1 36 2 19.9 2 0z' fill='%23fff'/%3E%3C/svg%3E")`
+        : `url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 38 38'%3E%3Cpath d='M2 0H0v38h38v-2C18.1 36 2 19.9 2 0z' fill='%23000'/%3E%3C/svg%3E")`};
     
     }
 `
@@ -95,7 +99,7 @@ export const LinkBottom = styled.a`
     line-height: 48px;
     font-size: 22px;
     letter-spacing: -.6px;
-    color: #000;
+    color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -171,7 +175,10 @@ export const InnerSlideThirdLink = styled.a`
         right: 0px;
         z-index: 2;
         position: absolute;
-        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 128'%3E%3Cpath d='M33.3 119.9c-5.1 0-9.9-1.1-14.3-3.2-4.4 5.7-11.3 9.3-19 9.3v2h36V0H0v2c13.3 0 24 10.7 24 24v76.9c.4 7 3.9 13.1 9.3 17' fill='%23fff' fill-rule='evenodd' clip-rule='evenodd'/%3E%3C/svg%3E");
+        background-image: ${({ theme }) => theme === "light" 
+        ? `url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 128'%3E%3Cpath d='M33.3 119.9c-5.1 0-9.9-1.1-14.3-3.2-4.4 5.7-11.3 9.3-19 9.3v2h36V0H0v2c13.3 0 24 10.7 24 24v76.9c.4 7 3.9 13.1 9.3 17' fill='%23fff' fill-rule='evenodd' clip-rule='evenodd'/%3E%3C/svg%3E")`
+        : `url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 128'%3E%3Cpath d='M33.3 119.9c-5.1 0-9.9-1.1-14.3-3.2-4.4 5.7-11.3 9.3-19 9.3v2h36V0H0v2c13.3 0 24 10.7 24 24v76.9c.4 7 3.9 13.1 9.3 17' fill='%23000' fill-rule='evenodd' clip-rule='evenodd'/%3E%3C/svg%3E")`
+
     }
 
 `
@@ -228,7 +235,7 @@ export const SwiperSlideItem = styled.div`
     width: 100%;
     max-height: 259px;
     height: 100%;
-    background-color: #f3f3f3;
+    background-color: ${({ theme }) => (theme === "light" ? "#f3f3f3" : "#333")};
     border-radius: 24px;
 `
 
@@ -276,7 +283,7 @@ export const TitleSecond = styled.strong`
     line-height: 1.4;
     letter-spacing: -.6px;
     font-weight: 400;
-    color: #000;
+    color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
     
 `
 
@@ -296,7 +303,7 @@ export const ItemTag = styled.div`
     font-size: 14px;
     line-height: 1.42;
     letter-spacing: -.2px;
-    color: #666;
+    color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
 ` 
 
 export const StyledSwiper = styled(Swiper)`
@@ -316,7 +323,7 @@ export const StyledSwiper = styled(Swiper)`
     }
 
     .swiper-pagination-bullet {
-        background-color: #000;
+        background-color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
         color: #000;
         opacity: .45;
     }
@@ -325,8 +332,8 @@ export const StyledSwiper = styled(Swiper)`
         width: 25px;
         height: 8px;
         border-radius: 24px;
-        background-color: #000;
-        color: #000;
+        background-color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
+        color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
         opacity: 1;
   }
 `

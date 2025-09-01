@@ -11,7 +11,7 @@ export const TitleContTypeService = styled.h3`
     font-size: 48px;
     line-height: 72px;
     letter-spacing: -1px;
-    color: #000;
+    color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
     font-weight: 400;
     display: flex;
     align-items: center;
@@ -22,7 +22,11 @@ export const TitleContTypeService = styled.h3`
         width: 72px;
         height: 72px;
         margin-right: 16px;
-        background-image: url("https://t1.kakaocdn.net/kakaocorp/kakaocorp/service/ico_tit_service.gif");
+        background-image: ${({ theme }) =>
+        theme === "light"
+        ? "url(https://t1.kakaocdn.net/kakaocorp/kakaocorp/service/ico_tit_service.gif)"
+        : "url(https://t1.kakaocdn.net/kakaocorp/kakaocorp/service/ico_tit_service_dark.gif)"};
+
         background-size: cover;
     }
 `
@@ -50,7 +54,7 @@ export const BoxService = styled.div`
     max-width: 650px;
     width: 100%;
     height: 160px;
-    background-color: #f3f3f3;
+    background-color: ${({ theme }) => theme === "light" ? "#f3f3f3" : "#333"}; 
     border-radius: 24px;
     display: flex;
     justify-content: space-around;
@@ -69,7 +73,7 @@ export const BoxServiceFlex = styled.div`
 export const CateService = styled.strong`
     font-size: 30px;
     letter-spacing: -.8px;
-    color: #000;
+    color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
     word-break: break-all;
 `
 
@@ -177,7 +181,7 @@ export const LinkCommonDiv = styled.div`
     max-width: 316px;
     width: 100%;
     height: 76px;
-    background-color: #f3f3f3;
+    background-color: ${({ theme }) => theme === "light" ? "#f3f3f3" : "#333"}; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -186,8 +190,8 @@ export const LinkCommonDiv = styled.div`
 `
 
 export const LinkCommonText = styled.span`
-    font-size: 24px;
-    color: #000;
+    font-size: 24px;    
+    color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
     font-weight: 400;
 `
 
@@ -196,4 +200,5 @@ export const BtnArr = styled.svg`
     width: 100%;
     height: 24px;
     margin-left: 12px;
+   
 `

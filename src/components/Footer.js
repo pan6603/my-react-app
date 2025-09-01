@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useTheme } from "./context/ThemeContext";
 
 
 const FooterContainer = styled.footer`
@@ -6,7 +7,7 @@ const FooterContainer = styled.footer`
     max-width: 1440px;
     width: 100%;
     height: 634px;
-    background-color: #FFFFFF;
+    background-color: ${({ theme }) => (theme === "light" ? "#FFFFFF" : "#000")};
     border-top: 1px solid #6D6D6D;
 `
 
@@ -97,7 +98,7 @@ const IrMenuSectionServiceItem = styled.div`
 `
 
 const TodayKakaoText = styled.h3`
-    color: black;
+    color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
     max-width: 143px;
     width: 100%;
     height: 35px;
@@ -216,7 +217,7 @@ const SubTitle = styled.strong`
     height: 28px;
     font-size: 16px;
     letter-spacing: -.5px;
-    color: black;
+    color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
 
 `
 const KakaoMenuCategories = styled.div`
@@ -423,13 +424,14 @@ const AccountOutlinkIcon = styled.svg`
 
 
 function Footer () {
+    const { theme } = useTheme() 
 
     return (
-        <FooterContainer>
+        <FooterContainer theme={theme}>
             <InnerFooter>
                 <SectionService>
                     <TodaysKakaoMenuSectionServiceItem>
-                        <TodayKakaoText>오늘의 카카오</TodayKakaoText>
+                        <TodayKakaoText theme={theme}>오늘의 카카오</TodayKakaoText>
                         <TodaysKakaoMenuInnerService>
                             <InnerServiceUl>
                                 <InnerServiceUlList>
@@ -479,7 +481,7 @@ function Footer () {
                     </TodaysKakaoMenuSectionServiceItem>
 
                     <KakaoSectionServiceItemCategories>
-                        <SubTitle>카카오 그룹의 서비스</SubTitle>
+                        <SubTitle theme={theme}>카카오 그룹의 서비스</SubTitle>
                         <KakaoInnerServiceCategories>
                             <KakaoMenuCategories>
                                 <KakaoMenuCategoriesLink>커뮤니케이션</KakaoMenuCategoriesLink>
@@ -493,7 +495,7 @@ function Footer () {
                     </KakaoSectionServiceItemCategories>
 
                     <KakaoSectionServiceGroupCompanies>
-                        <SubTitle>카카오 그룹</SubTitle>
+                        <SubTitle theme={theme}>카카오 그룹</SubTitle>
                         <KakaoInnerServiceGroupCompanies>
                             <KakaoMenuGroupCompanies>
                                 <KakaoMenuGroupCompaniesItem>카카오</KakaoMenuGroupCompaniesItem>
@@ -616,7 +618,7 @@ function Footer () {
                     </KaKaoSectionServiceAffiliates>
 
                     <IrMenuSectionServiceItem>
-                        <SubTitle>IR</SubTitle>
+                        <SubTitle theme={theme}>IR</SubTitle>
                         <IrMenuService>
                             <IrMenuGroup>
                                 <IrMenuGroupItem>
@@ -678,7 +680,7 @@ function Footer () {
 
                     <AccountSectionServiceItem>
                         <AccountInnerServiceItem>
-                            <SubTitle>계정 및 지원</SubTitle>
+                            <SubTitle theme={theme}>계정 및 지원</SubTitle>
                             <AccountGroup>
                                 <AccountGroupItem>
                                     카카오계정

@@ -5,6 +5,7 @@ export const MainContainer = styled.main`
     width: 100%;
     height: 5457px;
     padding-top: 91px;
+    background-color: ${({theme}) => theme.bgColor};
 `
 
 export const InnerMain = styled.section`

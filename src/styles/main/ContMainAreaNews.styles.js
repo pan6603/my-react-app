@@ -18,7 +18,7 @@ export const TitleContTypeNewsTitNews3 = styled.div`
     font-size: 48px;
     line-height: 72px;
     letter-spacing: -1px;
-    color: #000;
+    color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
     font-weight: 400;
 
     &::before {
@@ -31,8 +31,9 @@ export const TitleContTypeNewsTitNews3 = styled.div`
         display: inline-block;
         vertical-align: top;
         background-size: 100%;
-        background-image: url(//t1.kakaocdn.net/kakaocorp/kakaocorp/service/calendar/light/ico_date3.gif);
-    
+        background-image: ${({ theme }) => theme === "light"
+        ? "url(//t1.kakaocdn.net/kakaocorp/kakaocorp/service/calendar/light/ico_date31.gif)"
+        : "url(//t1.kakaocdn.net/kakaocorp/kakaocorp/service/calendar/dark/ico_date31.gif)"};
     }
 `
 
@@ -135,7 +136,7 @@ export const ItemCardNewItemNormalCardTypeMain = styled.div`
     width: 100%;
     max-height: 621px;
     height: 100%;
-    background-color: #f3f3f3;
+    background-color: ${({ theme }) => (theme === "light" ? "#f0f0f0" : "#262626")};
     position: relative;
     border-radius: 36px;
     box-sizing: border-box;
@@ -172,12 +173,12 @@ export const TxtCate = styled.div`
     width: 100%;
     max-height: 41px;
     width: 100%;
-    background-color: #fff;
+    background-color: ${({ theme }) => (theme === "light" ? "#fff" : "#343434")};
     line-height: 40px;
     border-radius: 8px;
     font-size: 14px;
     letter-spacing: -.2px;
-    color: #000;
+    color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
     display: flex;
     justify-content: center;
 `
@@ -194,6 +195,7 @@ export const TxtDate = styled.div`
     user-select: none;
     display: flex;
     justify-content: center;
+    color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
 `
 
 export const LinkItemDiv = styled.div`
@@ -240,7 +242,7 @@ export const TxtKeyword = styled.span`
     letter-spacing: -.5px;
     font-size: 16px;
     white-space: nowrap;
-    color: #666;
+    color: ${({ theme }) => (theme === "light" ? "#666" : "#fff")};
 `
 
 
@@ -255,7 +257,7 @@ export const TitCard = styled.div`
     line-height: 1.4;
     user-select: none;
     letter-spacing: -.6px;
-    color: #000;
+    color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
 `
 
 export const WrapThumb = styled.div`
@@ -351,7 +353,7 @@ export const ItemCardNewBoxNews = styled.div`
     width: 100%;
     max-height: 198px;
     height: 100%;
-    background-color: #f3f3f3;
+    background-color: ${({ theme }) => (theme === "light" ? "#f0f0f0" : "#262626")};
     border-radius: 20px;
 `
 
@@ -379,6 +381,7 @@ export const TitleBoxLink = styled.a`
     width: 100%;
     max-height: 76px;
     height: 100%;
+    color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
 `
 
 export const BadgeBox = styled.div`
@@ -406,9 +409,9 @@ export const CateBox = styled.div`
     width: 100%;
     max-height: 33px;
     height: 100%;
-    background-color: #fff;
+    background-color: ${({ theme }) => (theme === "light" ? "#fff" : "#343434")};
     border-radius: 8px;
-    color: #000;
+    color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
     display: flex;
     justify-content: center;
     align-items: center;
@@ -421,7 +424,7 @@ export const DateBox = styled.div`
     height: 100%;
     font-size: 14px;
     line-height: 38px;
-    color: #000;
+    color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
     display: flex;
     justify-content: center;
     align-items: center;
@@ -452,7 +455,7 @@ export const LinkNewsDiv = styled.div`
     width: 100%;
     max-height: 110px;
     height: 100%;
-    background-color: #f3f3f3;
+    background-color: ${({ theme }) => (theme === "light" ? "#f0f0f0" : "#262626")};
     box-sizing: border-box;
     border-radius: 20px;
 `
@@ -474,4 +477,5 @@ export const TitleLink = styled.div`
     font-weight: 400;
     line-height: 38px;
     letter-spacing: -.6px;
+    color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
 `

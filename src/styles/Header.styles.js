@@ -1,5 +1,6 @@
 
 import {ReactComponent as IconMoon} from "../img/area/area-moon-icon.svg";
+import {ReactComponent as IconSun} from "../img/area/area-sun-icon.svg";
 import {ReactComponent as IconMagnifier} from "../img/area/area-magnifier-icon.svg";
 import {ReactComponent as KakaoLogoIcon} from "../img/logo/kakao_logo_icon.svg";
 import {ReactComponent as IconArrowLink} from "../img/nav/arrow_icon-icons.svg";
@@ -21,7 +22,6 @@ export const HeaderWrapper = styled.header`
     border: 0;
     background-color: ${({theme}) => theme.bgColor};
     color: ${({theme}) => theme.fontcolor};
-    border-bottom: ${props => (props.isScrolled ? '1px solid #EAEAEA' : 'none')};
 `;
 
 export const InnerHeader = styled.div`
@@ -152,6 +152,20 @@ export const IconMoonItem = styled(IconMoon)`
         border-radius: 54px; 
     }
 ` 
+
+export const IconSunItem = styled(IconSun)`
+    max-width: 22px;
+    width: 100%;
+    height: 22px; 
+    cursor: pointer;
+    padding: 8px 12px; 
+
+    &:hover {
+        background-color: ${({ theme }) => theme === "light" ? "#f5f5f5" : "#333"}; 
+        border-radius: 54px; 
+    }
+` 
+
 
 export const IconMagnifierItem = styled(IconMagnifier)`
     max-width: 22px;

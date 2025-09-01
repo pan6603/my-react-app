@@ -13,7 +13,7 @@ export const TitleContTypeResponsible = styled.h3`
     height: 72px;
     letter-spacing: -1px;
     font-weight: 400;
-    color: #000;
+    color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
     font-size: 48px;
     line-height: 72px;
     display: flex;
@@ -25,7 +25,9 @@ export const TitleContTypeResponsible = styled.h3`
         width: 72px;
         height: 72px;
         margin-right: 16px;
-        background-image: url("https://t1.kakaocdn.net/kakaocorp/kakaocorp/service/ico_tit_esg.gif");
+        background-image: ${({ theme }) => theme === "light"
+        ? "url(//t1.kakaocdn.net/kakaocorp/kakaocorp/service/ico_tit_esg.gif)"
+        : "url(//t1.kakaocdn.net/kakaocorp/kakaocorp/service/ico_tit_esg_dark.gif)"};
         background-size: cover;
     }
 `
@@ -37,6 +39,7 @@ export const InnerMainInnerResponsible = styled.div`
     margin-left: -16px;
     display: flex;
     justify-content: space-between;
+    background-color: ${({ theme }) => (theme === "light" ? "#fff" : "#000")};
 `
 
 export const BoxResponsibleTypeEsg = styled.div`
@@ -73,12 +76,11 @@ export const TitleResponsible = styled.div`
     max-width: 222px;
     width: 100%;
     height: 67px;
-    background-color: red; 
     border-radius: 0 0 0 24px;
     position: absolute;
     right: -2px;
     top: -2px;
-    background-color: #fff;
+    background-color: ${({ theme }) => (theme === "light" ? "#fff" : "#000")};
     text-align: right;
 
     &::before {
@@ -92,7 +94,11 @@ export const TitleResponsible = styled.div`
         background-size: 100% auto;
         background-position: 50%;
         background-repeat: no-repeat;
-        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Cpath d='M0 2c13.3 0 24 10.7 24 24h2V0H0v2z' fill='%23fff' clip-rule='evenodd'/%3E%3C/svg%3E");
+        background-image: ${({ theme }) => theme === "light"
+        ? "url(\"data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Cpath d='M0 2c13.3 0 24 10.7 24 24h2V0H0v2z' fill='%23fff' clip-rule='evenodd'/%3E%3C/svg%3E\")"
+        : "url(\"data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Cpath d='M0 2c13.3 0 24 10.7 24 24h2V0H0v2z' fill='%23000' clip-rule='evenodd'/%3E%3C/svg%3E\")"};
+
+        
     }
 
     &::after {
@@ -106,7 +112,9 @@ export const TitleResponsible = styled.div`
         background-size: 100% auto;
         background-position: 50%;
         background-repeat: no-repeat;
-        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Cpath d='M0 2c13.3 0 24 10.7 24 24h2V0H0v2z' fill='%23fff' clip-rule='evenodd'/%3E%3C/svg%3E");
+         background-image: ${({ theme }) => theme === "light"
+        ? "url(\"data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Cpath d='M0 2c13.3 0 24 10.7 24 24h2V0H0v2z' fill='%23fff' clip-rule='evenodd'/%3E%3C/svg%3E\")"
+        : "url(\"data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Cpath d='M0 2c13.3 0 24 10.7 24 24h2V0H0v2z' fill='%23000' clip-rule='evenodd'/%3E%3C/svg%3E\")"};
     }
 `
 
@@ -246,7 +254,7 @@ export const BtnAreaLink = styled.a`
     max-width: 57px;
     width: 100%;
     height: 57px;
-    background-color: #fff;
+    background-color: ${({ theme }) => (theme === "light" ? "#fff" : "#000")};
     padding: 15px 0 0 15px;
     border-radius: 36px 0 0 0;
 
@@ -261,7 +269,9 @@ export const BtnAreaLink = styled.a`
         background-size: 100% auto;
         background-position: 50%;
         background-repeat: no-repeat;
-        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Cpath d='M24 0c0 13.3-10.7 24-24 24v2h26V0h-2z' fill='%23fff' fill-rule='evenodd' clip-rule='evenodd'/%3E%3C/svg%3E");
+        background-image: ${({ theme }) => theme === "light"
+        ? "url(\"data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Cpath d='M24 0c0 13.3-10.7 24-24 24v2h26V0h-2z' fill='%23fff' fill-rule='evenodd' clip-rule='evenodd'/%3E%3C/svg%3E\")"
+        : "url(\"data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Cpath d='M24 0c0 13.3-10.7 24-24 24v2h26V0h-2z' fill='%23000' fill-rule='evenodd' clip-rule='evenodd'/%3E%3C/svg%3E\")"};
     }
 
     &::after {
@@ -275,7 +285,9 @@ export const BtnAreaLink = styled.a`
         background-size: 100% auto;
         background-position: 50%;
         background-repeat: no-repeat;
-        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Cpath d='M24 0c0 13.3-10.7 24-24 24v2h26V0h-2z' fill='%23fff' fill-rule='evenodd' clip-rule='evenodd'/%3E%3C/svg%3E");
+        background-image: ${({ theme }) => theme === "light"
+        ? "url(\"data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Cpath d='M24 0c0 13.3-10.7 24-24 24v2h26V0h-2z' fill='%23fff' fill-rule='evenodd' clip-rule='evenodd'/%3E%3C/svg%3E\")"
+        : "url(\"data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Cpath d='M24 0c0 13.3-10.7 24-24 24v2h26V0h-2z' fill='%23000' fill-rule='evenodd' clip-rule='evenodd'/%3E%3C/svg%3E\")"};
     }
 `
 

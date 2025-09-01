@@ -17,13 +17,15 @@ export const TitleContTypeHelp = styled.div`
     height: 100%;
     font-size: 48px;
     line-height: 72px;
-    color: #000;
+    color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
     font-weight: 400;
     letter-spacing: -1px;
 
     &::before {
         content: "";
-        background-image: url("https://t1.kakaocdn.net/kakaocorp/kakaocorp/service/ico_tit_help.gif");
+        background-image: ${({ theme }) => theme === "light"
+        ? "url('https://t1.kakaocdn.net/kakaocorp/kakaocorp/service/ico_tit_help.gif')"
+        : "url('https://t1.kakaocdn.net/kakaocorp/kakaocorp/service/ico_tit_help_dark.gif')"};
         max-width: 72px;
         width: 100%;
         max-height: 72px;
@@ -70,7 +72,8 @@ export const BoxHelp = styled.div`
     width: 100%;
     max-height: 153px;
     height: 100%;
-    background-color: #f3f3f3;
+    background-color: ${({ theme }) => (theme === "light" ? "#f3f3f3" : "#333")};
+    border-radius: 20px;
     position: relative;
 `
 
@@ -256,7 +259,7 @@ export const BoxHelpTypeDouble = styled.div`
     width: 100%;
     max-height: 200px;
     height: 100%;
-    background-color: #f3f3f3;
+    background-color: ${({ theme }) => (theme === "light" ? "#f3f3f3" : "#333")};
     border-radius: 20px;
     cursor: pointer;
     vertical-align: top;
@@ -284,7 +287,7 @@ export const TitleHelp = styled.strong`
     font-size: 26px;
     font-weight: 400;
     line-height: 1.46;
-    color: #000;
+    color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
 `
 
 export const SubHelp = styled.div`
@@ -300,6 +303,7 @@ export const SubHelp = styled.div`
     display: flex;
     align-items: center;
     gap: 10px;
+    color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
 `
 
 export const IconHelp = styled.img`
@@ -331,7 +335,7 @@ export const LinkCommonDiv = styled.div`
     font-size: 22px;
     font-weight: 400;
     color: #000;
-    background-color: #f3f3f3;
+    background-color: ${({ theme }) => (theme === "light" ? "#f3f3f3" : "#333")};
     display: inline-block;
 `
 
@@ -344,5 +348,6 @@ export const LinkCommon = styled.a`
     gap: 10px;
     align-items: center;
     justify-content: center;
+    color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
 `
 

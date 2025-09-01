@@ -1,13 +1,13 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 
-const slideLeft = keyframes`
-    0% {
-        transform: translateX(0.2%);
-    }
-    100% {
-        transform: translateX(-50.2%);
-    }
-`;
+// const slideLeft = keyframes`
+//     0% {
+//         transform: translateX(0.2%);
+//     }
+//     100% {
+//         transform: translateX(-50.2%);
+//     }
+// `;
 
 export const ContMainAreaStoryContainer = styled.div`
     max-width: 1440px;
@@ -23,13 +23,16 @@ export const TitleContTypeStory = styled.h3`
     overflow: hidden;
     margin: 0 auto;
     letter-spacing: -1px;
+    
 
     &::before {
         content: "";
         display: inline-block;
         vertical-align: top;
         background-size: 100%;
-        background-image: url(//t1.kakaocdn.net/kakaocorp/kakaocorp/service/ico_archives.gif);
+        background-image: ${({ theme }) => theme === "light"
+              ? "url(//t1.kakaocdn.net/kakaocorp/kakaocorp/service/ico_archives.gif);"
+              : "url(//t1.kakaocdn.net/kakaocorp/kakaocorp/service/ico_archives_dark.gif)"};
         max-width: 72px;
         width: 100%;
         height: 72px;
@@ -42,7 +45,7 @@ export const TitleContTypeStorySpan = styled.span`
     font-size: 48px;
     line-height: 72px;
     font-weight: 400;
-    color: #000;
+    color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
 `
 
 export const WrapTop = styled.div`
@@ -56,7 +59,14 @@ export const WrapTop = styled.div`
 `
 
 export const BtnStoryTypePause = styled.button`
-    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' fill='none'%3E%3Cpath d='M50 28c0 12.15-9.85 22-22 22S6 40.15 6 28 15.85 6 28 6s22 9.85 22 22z' fill='%23000' stroke='%23000' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M23.332 35V21m9.336 14V21' stroke='%23fff' stroke-width='4.667' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-image: ${({ theme }) =>
+    theme === "light"
+    ? "url(\"data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' fill='none'%3E%3Cpath d='M50 28c0 12.15-9.85 22-22 22S6 40.15 6 28 15.85 6 28 6s22 9.85 22 22z' fill='%23000' stroke='%23000' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M23.332 35V21m9.336 14V21' stroke='%23fff' stroke-width='4.667' stroke-linejoin='round'/%3E%3C/svg%3E\")"
+
+    : "url(\"data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' fill='none'%3E%3Cpath d='M50 28c0 12.15-9.85 22-22 22S6 40.15 6 28 15.85 6 28 6s22 9.85 22 22z' fill='%23fff' stroke='%23fff' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M23.332 35V21m9.336 14V21' stroke='%23000' stroke-width='4.667' stroke-linejoin='round'/%3E%3C/svg%3E\")"};
+
+
+
     display: block;
     max-width: 56px;
     width: 100%;
@@ -77,6 +87,7 @@ export const InnerMainInnerStory = styled.div`
     width: 100%;
     height: 439px;
     overflow: hidden; /* 보이는 영역만 보여줌 */
+    overflow-x: auto;
 `;
 
 export const SlideTrack = styled.div`
@@ -87,7 +98,7 @@ export const SlideTrack = styled.div`
     top: 0;
     left: 0px;
     padding: 0;
-    animation: ${slideLeft} 50s linear infinite;
+    
 `;
 
 export const Slide = styled.div`
@@ -122,8 +133,7 @@ export const WrapText = styled.div`
     max-width: 332px;
     width: 100%;
     height: 439px;
-    background-color: #f0f0f0;
-    
+    background-color: ${({ theme }) => (theme === "light" ? "#f0f0f0" : "#262626")};
 `
 
 export const WrapThumb = styled.div`
@@ -160,14 +170,15 @@ export const TxtCate = styled.div`
     height: 32px;
     padding: 0 12px;
     line-height: 32px;
-    background-color: #fff;
+    background-color: ${({ theme }) => (theme === "light" ? "#fff" : "#343434")};
     font-size: 14px;
     font-weight: 400;
     letter-spacing: -.2px;
-    color: #000;
+    color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
     border-radius: 8px;
     display: inline-block;
     margin-left: 8px;
+
 `
 
 export const BtnShareIcoComm = styled.div`
@@ -201,7 +212,7 @@ export const TitCard = styled.strong`
     font-size: 26px;
     line-height: 1.38;
     letter-spacing: -.6px;
-    color: #000;
+    color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
 `
 
 export const DescCard = styled.p`
@@ -209,7 +220,7 @@ export const DescCard = styled.p`
     width: 100%;
     height: 182px;
     font-size: 16px;
-    color: #666;
+    color: ${({ theme }) => (theme === "light" ? "#666" : "#fff")};
     margin: 12px auto;
     line-height: 1.62;
     letter-spacing: -.5px;
@@ -235,7 +246,7 @@ export const TxtKeyword = styled.span`
     margin-right: 8px;
     letter-spacing: -.5px;
     display: inline-block;
-    color: #666;
+    color: ${({ theme }) => (theme === "light" ? "#666" : "#fff")};
 `
 
 export const ItemStoryTypeNormal = styled.div`
@@ -249,8 +260,8 @@ export const ItemCardNewItemBottomCardTypeFlow = styled.div`
     max-width: 317px;
     width: 100%;
     height: 439px;
+    background-color: ${({ theme }) => (theme === "light" ? "#f0f0f0" : "#262626")};
     border-radius: 24px;
-    background-color: #f0f0f0;
     display: block;
     position: relative;
     overflow: hidden;
@@ -303,7 +314,7 @@ export const HeroWrapText = styled.div`
     max-width: 317px;
     width: 100%;
     height: 260px;
-    background-color: #f0f0f0;
+    background-color: ${({ theme }) => (theme === "light" ? "#f0f0f0" : "#262626")};
     padding: 30px 30px 20px;
     box-sizing: border-box; 
 `
@@ -344,7 +355,7 @@ export const HeroTitCard = styled.div`
     font-size: 26px;
     line-height: 1.38;
     letter-spacing: -.6px;
-    color: #000;
+    color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
 `
 
 export const HeroInfoCard = styled.div`
@@ -376,7 +387,7 @@ export const ItemCardNewItemNormalCardTypeFlow = styled.div`
     overflow: hidden;
     box-sizing: border-box;
     position: relative;
-    background-color: #f0f0f0;
+    background-color: ${({ theme }) => (theme === "light" ? "#f0f0f0" : "#262626")};
 `
 
 export const InnerCard = styled.div`
@@ -461,7 +472,7 @@ export const ChoSeungYeonItemCardNewItemBottomCardTypeFlow = styled.div`
     box-sizing: border-box;
     border-radius: 24px;
     user-select: none;
-    background-color: #f0f0f0;
+    background-color: ${({ theme }) => (theme === "light" ? "#f0f0f0" : "#262626")};
 `
 
 export const ChoSeungYeonLinkCard = styled.a`
@@ -527,6 +538,7 @@ export const ChoSeungYeonTitCard = styled.div`
     font-weight: bold;
     line-height: 1.38;
     letter-spacing: -.6px;
+    color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
 `
 
 export const ChoSeungYeonInfoCard = styled.div`
@@ -548,7 +560,7 @@ export const ItemStoryTypeRow = styled.div`
 export const ItemCardNewItemRowCardTypeFlow = styled.div`
     position: relative;
     border-radius: 24px;
-    background-color: #f3f3f3;
+    background-color: ${({ theme }) => (theme === "light" ? "#f0f0f0" : "#262626")};
     overflow: hidden;
     box-sizing: border-box;
     width: 100%;
@@ -608,10 +620,10 @@ export const LocationTxtCate = styled.div`
     width: 100%;
     height: 32px;
     line-height: 32px;
-    background-color: #fff;
+    background-color: ${({ theme }) => (theme === "light" ? "#fff" : "#343434")};
     font-size: 14px;
     letter-spacing: -.2px;
-    color: #000;
+    color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
     border-radius: 8px;
     display: flex;
     justify-content: center;
@@ -627,7 +639,7 @@ export const LocationTitCard = styled.div`
     font-weight: bold;
     line-height: 1.38;
     letter-spacing: -.6px;
-    color: #000;
+    color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
 `
 
 export const LocationDescCard = styled.p`
@@ -639,7 +651,7 @@ export const LocationDescCard = styled.p`
     line-height: 1.62;
     letter-spacing: -.5px;
     margin: 12px auto;
-    color: #666;
+    color: ${({ theme }) => (theme === "light" ? "#666" : "#fff")};
 `
 
 export const LocationInfoCard = styled.div`
@@ -662,7 +674,7 @@ export const ReplyWrapCont = styled.div`
     max-width: 317px;
     width: 100%;
     height: 439px;
-    background-color: #f3f3f3;
+    background-color: ${({ theme }) => (theme === "light" ? "#f0f0f0" : "#262626")};
 `
 
 export const ReplyWrapThumb = styled.div`
@@ -722,7 +734,7 @@ export const ReplyTitCard = styled.div`
     font-weight: bold;
     line-height: 1.38;
     letter-spacing: -.6px;
-    color: #000;
+    color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
 `
 
 export const ReplyInfoCard = styled.div`
@@ -744,6 +756,7 @@ export const BlindPersonInnerCard = styled.div`
     max-width: 317px;
     width: 100%;
     height: 439px;
+
 `
 
 export const BlindPersonInfoCate = styled.div`
@@ -786,7 +799,7 @@ export const BlindPersonTitCard = styled.a`
     font-weight: bold;
     line-height: 36px;
     letter-spacing: -.6px;
-    color: #000;
+    color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
     display: flex;
     flex-direction column;
     justify-content: space-between;

@@ -32,6 +32,7 @@ import 'swiper/css/pagination'
 import "swiper/css/effect-fade";
 import { SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, EffectFade } from 'swiper/modules'
+import { useTheme } from "../../components/context/ThemeContext";
 
 const slides = [
     {
@@ -47,6 +48,8 @@ const slides = [
 ];
 
 function ContMainAreaBanner() {
+    const { theme } = useTheme() 
+    
     return (
         <ContMainAreaBannerContainer>
             <AreaVisual>
@@ -55,13 +58,14 @@ function ContMainAreaBanner() {
                 <WrapText>
                     <TitleVisual>다시 한 번 세상을 놀랍게!</TitleVisual>
                 </WrapText>
-                <InnerBottomTypeBtn>
-                    <LinkBottom>
+                <InnerBottomTypeBtn theme={theme}>
+                    <LinkBottom theme={theme}>
                         자세히 알아보기
-                        <svg data-v-6984c41e="" data-v-85d56d7e="" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 64 64" fill="none" class="btn_arr_big"><circle data-v-6984c41e="" cx="32" cy="31.9961" r="32" fill="black"></circle> <path data-v-6984c41e="" d="M34.9292 25.5325L33.515 26.9467L38.1748 31.6065L23 31.6074V33.6015L38.1748 33.6005L33.515 38.2604L34.9292 39.6746L42.0002 32.6035L34.9292 25.5325Z" fill="white"></path></svg>
+                        <svg data-v-6984c41e="" data-v-85d56d7e="" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 64 64" fill="none" class="btn_arr_big"><circle data-v-6984c41e="" cx="32" cy="31.9961" r="32" fill={theme === "light" ? "#000" : "#fff"}></circle> <path data-v-6984c41e="" d="M34.9292 25.5325L33.515 26.9467L38.1748 31.6065L23 31.6074V33.6015L38.1748 33.6005L33.515 38.2604L34.9292 39.6746L42.0002 32.6035L34.9292 25.5325Z" fill={theme === "light" ? "#fff" : "#000"}></path></svg>
                     </LinkBottom>
                 </InnerBottomTypeBtn>
             </AreaVisual>
+
             <AreaWidget>
                 <InnerfirstWidget>
                     <InnerSlideFirstLink href="https://www.kakaocorp.com/page/about/culture" target="_blank">
@@ -73,6 +77,7 @@ function ContMainAreaBanner() {
 
                 <InnerWidgetSecondWidget>
                     <StyledSwiper
+                        theme={theme}
                         modules={[Autoplay, Pagination, EffectFade]}
                         spaceBetween={20}
                         slidesPerView={1}
@@ -85,6 +90,7 @@ function ContMainAreaBanner() {
                     {slides.map((item, index) => (
                         <SwiperSlide key={index}>
                             <SwiperSlideItem
+                            theme={theme}
                             style={{
                                 width: "206px",
                                 height: "259px",
@@ -97,10 +103,15 @@ function ContMainAreaBanner() {
                                     <InnerSlideLink>
                                         <InnerSecond>
                                             <BadgeSecondTypeYellow>{item.badge}</BadgeSecondTypeYellow>
-                                            <TitleSecond>{item.title}</TitleSecond>
+                                            <TitleSecond theme={theme}>{item.title}</TitleSecond>
                                             <WrapTags>
                                             {item.tags.map((tag, i) => (
-                                                <ItemTag key={i}>{tag}</ItemTag>
+                                                <ItemTag 
+                                                    key={i}
+                                                    theme={theme}
+                                                    >
+                                                    {tag}
+                                                </ItemTag>
                                             ))}
                                             </WrapTags>
                                         </InnerSecond>
@@ -112,7 +123,7 @@ function ContMainAreaBanner() {
                 </InnerWidgetSecondWidget>
 
                 <InnerThirdWidget>
-                    <InnerSlideThirdLink href="https://www.kakaocorp.com/page/service/service/KakaoTalk" target="_self" draggable="false">
+                    <InnerSlideThirdLink href="https://www.kakaocorp.com/page/service/service/KakaoTalk" target="_self" draggable="false" theme={theme}>
 
                         <InnerThirdFlex>
                             <IconThird src="//t1.kakaocdn.net/thumb/C80x80.fwebp.q100/?fname=https%3A%2F%2Ft1.kakaocdn.net%2Fkakaocorp%2Fkakaocorp%2Fadmin%2Fwidget%2Fae796489019600001.png" alt=""/>

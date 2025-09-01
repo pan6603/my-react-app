@@ -13,12 +13,16 @@ import ContMainAreaResponsible from "./ContMainAreaResponsible";
 import ContMainAreaHelp from "./ContMainAreaHelp";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import { lightTheme, darkTheme } from "../../styles/context/theme";
+import { useTheme } from "../../components/context/ThemeContext";
 
 function Main() {
+    const { theme } = useTheme() 
+    
     return (
         <>
             <Header />   
-            <MainContainer>
+            <MainContainer theme={theme === 'light' ? lightTheme : darkTheme}>
                 <InnerMain>
                     <MainContent>
                         <ContentArticle>

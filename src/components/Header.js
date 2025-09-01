@@ -13,6 +13,7 @@ import {
     AreaUtil,
     IconEarthItem,
     IconMoonItem,
+    IconSunItem,
     IconMagnifierItem,
 } from '../styles/Header.styles';
 import { useTheme } from './context/ThemeContext';
@@ -32,7 +33,10 @@ function Header () {
     }, []);
  
     return (
-        <HeaderWrapper isScrolled={isScrolled} theme={theme === 'light' ? lightTheme : darkTheme}>
+        <HeaderWrapper 
+            isScrolled={isScrolled}
+            theme={theme === 'light' ? lightTheme : darkTheme}
+            >
             <InnerHeader>
                 <KakaoMainLogo>
                     <KakaoMainLogoImg fill={theme === "light" ? "#000" : "#fff"}/>
@@ -59,11 +63,20 @@ function Header () {
                         theme={theme}
                         fill={theme === "light" ? "#000" : "#fff"}
                     />
-                    <IconMoonItem 
+                    {theme === "light" ? (
+                        <IconMoonItem
+                          onClick={toggleTheme}
+                          theme={theme}
+                          fill={theme === "light" ? "#000" : "#fff"}
+                        />
+                    ) : (
+                      <IconSunItem
                         onClick={toggleTheme}
                         theme={theme}
                         fill={theme === "light" ? "#000" : "#fff"}
-                    />
+                      />
+                    )}
+
                 </AreaUtil>
             </InnerHeader>
         </HeaderWrapper>
