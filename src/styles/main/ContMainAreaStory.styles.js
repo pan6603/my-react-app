@@ -59,36 +59,31 @@ export const WrapTop = styled.div`
 `
 
 export const BtnStoryTypePause = styled.button`
-    background-image: ${({ theme }) =>
-    theme === "light"
-    ? "url(\"data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' fill='none'%3E%3Cpath d='M50 28c0 12.15-9.85 22-22 22S6 40.15 6 28 15.85 6 28 6s22 9.85 22 22z' fill='%23000' stroke='%23000' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M23.332 35V21m9.336 14V21' stroke='%23fff' stroke-width='4.667' stroke-linejoin='round'/%3E%3C/svg%3E\")"
+    background-image: ${({ theme, paused }) =>
+        paused
+        ? // ▶️ Play 아이콘
+            theme === "light"
+            ? "url(\"data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' fill='none'%3E%3Cpath d='M50 28c0 12.15-9.85 22-22 22S6 40.15 6 28 15.85 6 28 6s22 9.85 22 22z' fill='%23000' stroke='%23000' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M24 19l14 9-14 9V19z' fill='%23fff'/%3E%3C/svg%3E\")"
+            : "url(\"data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' fill='none'%3E%3Cpath d='M50 28c0 12.15-9.85 22-22 22S6 40.15 6 28 15.85 6 28 6s22 9.85 22 22z' fill='%23fff' stroke='%23fff' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M24 19l14 9-14 9V19z' fill='%23000'/%3E%3C/svg%3E\")"
+        : // ⏸ Pause 아이콘
+            theme === "light"
+            ? "url(\"data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' fill='none'%3E%3Cpath d='M50 28c0 12.15-9.85 22-22 22S6 40.15 6 28 15.85 6 28 6s22 9.85 22 22z' fill='%23000' stroke='%23000' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M23.332 35V21m9.336 14V21' stroke='%23fff' stroke-width='4.667' stroke-linejoin='round'/%3E%3C/svg%3E\")"
+            : "url(\"data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' fill='none'%3E%3Cpath d='M50 28c0 12.15-9.85 22-22 22S6 40.15 6 28 15.85 6 28 6s22 9.85 22 22z' fill='%23fff' stroke='%23fff' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M23.332 35V21m9.336 14V21' stroke='%23000' stroke-width='4.667' stroke-linejoin='round'/%3E%3C/svg%3E\")"};
 
-    : "url(\"data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' fill='none'%3E%3Cpath d='M50 28c0 12.15-9.85 22-22 22S6 40.15 6 28 15.85 6 28 6s22 9.85 22 22z' fill='%23fff' stroke='%23fff' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M23.332 35V21m9.336 14V21' stroke='%23000' stroke-width='4.667' stroke-linejoin='round'/%3E%3C/svg%3E\")"};
-
-
-
-    display: block;
-    max-width: 56px;
-    width: 100%;
-    height: 56px;
-    background-position: 50%;
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    border: 0;
-    background-color: transparent;
-    cursor: pointer;
-    font-size: 14px;
-    line-height: 1.5;
-`
-
-export const InnerMainInnerStory = styled.div`
-    position: relative;
-    margin-top: 43px;
-    width: 100%;
-    height: 439px;
-    overflow: hidden; /* 보이는 영역만 보여줌 */
-    overflow-x: auto;
+            display: block;
+            max-width: 56px;
+            width: 100%;
+            height: 56px;
+            background-position: 50%;
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+            border: 0;
+            background-color: transparent;
+            cursor: pointer;
+            font-size: 14px;
+            line-height: 1.5;
 `;
+
 
 export const SlideTrack = styled.div`
     display: flex;
@@ -98,8 +93,18 @@ export const SlideTrack = styled.div`
     top: 0;
     left: 0px;
     padding: 0;
-    
+    transition: transform 0.5s ease-in-out;
 `;
+
+export const InnerMainInnerStory = styled.div`
+    position: relative;
+    margin-top: 43px;
+    width: 100%;
+    height: 439px;
+    overflow: hidden;
+
+`
+   
 
 export const Slide = styled.div`
     width: 3579px;

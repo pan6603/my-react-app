@@ -67,6 +67,7 @@ import {
 import CountUp from "react-countup"
 import { SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, EffectFade } from 'swiper/modules'
+import React from "react";
 
 const twoSlides = [
     {
@@ -101,6 +102,7 @@ const boxPostSlides = [
 ]
 
 function InverstmentMain() {
+
     return (
         <DocMain>
             <SectionVisual>

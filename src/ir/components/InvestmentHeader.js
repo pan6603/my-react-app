@@ -10,9 +10,16 @@ import {
     NavItemMenuLink,
     NavItemMenuLinkArrow
 } from "../../styles/ir/main/InverstmentHeader.styles"
-
+import { useTranslation } from "react-i18next";
 
 function InverstmentHeader() {
+    const { t, i18n } = useTranslation();
+
+    const toggleLanguage = () => {
+        const newLang = i18n.language === "ko" ? "en" : "ko";
+        i18n.changeLanguage(newLang);
+    };
+
     return (
         <DocHeader>
             <InnerHeader>
@@ -65,34 +72,34 @@ function InverstmentHeader() {
                 <DocGnbNav>
                     <ListMainNav>
                         <NavItemMenu>
-                            <NavItemMenuLink>기업지배구조</NavItemMenuLink>
+                            <NavItemMenuLink>{t("nav.governance")}</NavItemMenuLink>
                         </NavItemMenu>
                         <NavItemMenu>
-                            <NavItemMenuLink>주식정보</NavItemMenuLink>
+                            <NavItemMenuLink>{t("nav.stock")}</NavItemMenuLink>
                         </NavItemMenu>
                         <NavItemMenu>
-                            <NavItemMenuLink>재무정보</NavItemMenuLink>
+                            <NavItemMenuLink>{t("nav.finance")}</NavItemMenuLink>
                         </NavItemMenu>
                         <NavItemMenu>
-                            <NavItemMenuLink>IR 자료</NavItemMenuLink>
+                            <NavItemMenuLink>{t("nav.ir")}</NavItemMenuLink>
                         </NavItemMenu>
                         <NavItemMenu>
-                            <NavItemMenuLink>공시정보</NavItemMenuLink>
+                            <NavItemMenuLink>{t("nav.disclosure")}</NavItemMenuLink>
                         </NavItemMenu>
                         <NavItemMenu>
-                            <NavItemMenuLink>공고</NavItemMenuLink>
+                            <NavItemMenuLink>{t("nav.notice")}</NavItemMenuLink>
                         </NavItemMenu>
                         <NavItemMenu>
-                            <NavItemMenuLinkArrow>ESG</NavItemMenuLinkArrow>
+                            <NavItemMenuLinkArrow>{t("nav.esg")}</NavItemMenuLinkArrow>
                         </NavItemMenu>
                         <NavItemMenu>
                             <NavItemMenuLinkArrow>
-                                kakao
+                            {t("nav.kakao")}
                             </NavItemMenuLinkArrow>
                         </NavItemMenu>
                     </ListMainNav>
                 </DocGnbNav>
-                <BtnLangViewPc></BtnLangViewPc>
+                <BtnLangViewPc onClick={toggleLanguage}/>
             </InnerHeader>
         </DocHeader>
     )
