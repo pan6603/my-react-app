@@ -68,40 +68,45 @@ import CountUp from "react-countup"
 import { SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, EffectFade } from 'swiper/modules'
 import React from "react";
+import { useTranslation } from "react-i18next";
 
-const twoSlides = [
-    {
-      title: <>2025년도 <br />연결재무제표</>
-    },
-    {
-      title: <>2025년도 <br />2분기 실적발표</>,
-      pdf: <><LinkItemPdf>PDF</LinkItemPdf></>,
-      webCast: <><LinkItemMusic>웹 캐스트</LinkItemMusic></>
-    }
-];
-
-const boxPostSlides = [
-    {
-        innerSlideLink: <>
-        <FirstInnerSlideLink>
-            <InnerPost>
-                <TitPost>카카오 주주서한</TitPost>
-                <BoxPostTxtDate>2024.05.16</BoxPostTxtDate>
-            </InnerPost>
-        </FirstInnerSlideLink></>
-    },
-    {
-        innerSlideLink: <>
-        <TwoInnerSlideLink>
-            <InnerPost>
-                <TitPost>공고사항</TitPost>
-                <BoxPostTxtDate>자본금 감소 및 채권자 <br /> 이의제출 공고</BoxPostTxtDate>
-            </InnerPost>
-        </TwoInnerSlideLink></>
-    }
-]
 
 function InverstmentMain() {
+    const { t } = useTranslation();
+
+    const twoSlides = [
+        {
+          title: <>{t("carouselnotice.tit_notice_financial_statement")}</>
+        },
+        {
+          title: <>{t("carouselnotice.tit_notice_earnings")}</>,
+          pdf: <><LinkItemPdf>{t("carouselnotice.pdf")}</LinkItemPdf></>,
+          webCast: <><LinkItemMusic>{t("carouselnotice.webcast")}</LinkItemMusic></>
+        }
+    ];
+
+    const boxPostSlides = [
+        {
+            innerSlideLink: <>
+            <FirstInnerSlideLink>
+                <InnerPost>
+                    <TitPost style={{ whiteSpace: 'pre-line' }}>{t("boxpostslides.ceo_titpost")}</TitPost>
+                    <BoxPostTxtDate>2024.05.16</BoxPostTxtDate>
+                </InnerPost>
+            </FirstInnerSlideLink></>
+        },
+        {
+            innerSlideLink: <>
+            <TwoInnerSlideLink>
+                <InnerPost>
+                    <TitPost>{t("boxpostslides.notice_titpost")}</TitPost>
+                    <BoxPostTxtDate style={{ whiteSpace: 'pre-line' }}>
+                        {t("boxpostslides.notice_boxpost_txtdate")}
+                    </BoxPostTxtDate>
+                </InnerPost>
+            </TwoInnerSlideLink></>
+        }
+    ]
 
     return (
         <DocMain>
@@ -114,7 +119,7 @@ function InverstmentMain() {
                 </WrapVisual>
                 <WrapMore>
                     <LinkVideo>
-                        더 알아보기
+                        {t("wrapmore.linkvideo")}
                     </LinkVideo>
                 </WrapMore>
                 <WrapBanner>
@@ -124,7 +129,7 @@ function InverstmentMain() {
                                 <CountUp start={0} end={63600} duration={2} separator="," />
                             </TxtStock>
                             <EmphStockChangeDown>400 &nbsp;(-0.63%)</EmphStockChangeDown>
-                            <EmphStockTxtSub>카카오 035720</EmphStockTxtSub>
+                            <EmphStockTxtSub>{t("boxstock.bnritem.emphstocktxtsub")}</EmphStockTxtSub>
                         </BnrItem>
                     </BoxStock>
                     <CarouselNotice>
@@ -152,7 +157,9 @@ function InverstmentMain() {
                                     >
                                         <InnerSlideLink>
                                             <InnerSecond>
-                                                <TitNotice>{item.title}</TitNotice>
+                                                <TitNotice style={{ whiteSpace: 'pre-line' }}>
+                                                    {item.title}
+                                                </TitNotice>
                                                 <AreaLinks>
                                                     {item.pdf}
                                                     {item.webCast}
@@ -201,58 +208,88 @@ function InverstmentMain() {
                 </WrapBanner>
             </SectionVisual>
             <SectionNews>
-                <SectionNewsTitle>카카오 주요현황</SectionNewsTitle>
+                <SectionNewsTitle>{t("section_news.section_news_title")}</SectionNewsTitle>
                 <WrapBoard>
                     <BoxBoard>
-                        <TitBoard>주주총회</TitBoard>
+                        <TitBoard>
+                            {t("wrapboard.first_box_board.tit_board")}
+                        </TitBoard>
                         <ListBoard>
                             <LinkBoard>
                                 <InnerBoard>
-                                    <TxtEm>주주총회</TxtEm>
-                                    <TxtSubDiv>바로가기</TxtSubDiv>
+                                    <TxtEm>
+                                        {t("wrapboard.first_box_board.first_inner_board.txtem")}
+                                    </TxtEm>
+                                    <TxtSubDiv>
+                                        {t("wrapboard.first_box_board.first_inner_board.txt_sub_div")}
+                                    </TxtSubDiv>
                                 </InnerBoard>
                             </LinkBoard>
                             <BorderLine />
                             <LinkBoard>
                                 <InnerBoard>
-                                    <TxtEm>주주환원</TxtEm>
-                                    <TxtSubDiv>바로가기</TxtSubDiv>
+                                    <TxtEm>
+                                        {t("wrapboard.first_box_board.two_inner_board.txtem")}
+                                    </TxtEm>
+                                    <TxtSubDiv>
+                                        {t("wrapboard.first_box_board.two_inner_board.txt_sub_div")}
+                                    </TxtSubDiv>
                                 </InnerBoard>
                             </LinkBoard>
                         </ListBoard>
                     </BoxBoard>
                     <BoxBoard>
-                        <TitBoard>IR 행사</TitBoard>
+                        <TitBoard>
+                            {t("wrapboard.two_box_board.tit_board")}
+                        </TitBoard>
                         <ListBoard>
                             <LinkBoard>
                                 <InnerBoard>
-                                    <TxtEm>다올투자증권 국내 NDR</TxtEm>
-                                    <TxtSubDate>2025-08-18</TxtSubDate>
+                                    <TxtEm>
+                                        {t("wrapboard.two_box_board.first_inner_board.txtem")}
+                                    </TxtEm>
+                                    <TxtSubDate>
+                                        {t("wrapboard.two_box_board.first_inner_board.txt_sub_div")}
+                                    </TxtSubDate>
                                 </InnerBoard>
                             </LinkBoard>
                             <BorderLine />
                             <LinkBoard>
                                 <InnerBoard>
-                                    <TxtEm>메리츠증권 국내 NDR</TxtEm>
-                                    <TxtSubDate>2025-08-13</TxtSubDate>
+                                    <TxtEm>
+                                        {t("wrapboard.two_box_board.two_inner_board.txtem")}
+                                    </TxtEm>
+                                    <TxtSubDate>
+                                        {t("wrapboard.two_box_board.two_inner_board.txt_sub_div")}
+                                    </TxtSubDate>
                                 </InnerBoard>
                             </LinkBoard>
                         </ListBoard>
                     </BoxBoard>
                     <BoxBoard>
-                        <TitBoard>최근 제출 보고서</TitBoard>
+                        <TitBoard>
+                            {t("wrapboard.three_box_board.tit_board")}
+                        </TitBoard>
                         <ListBoard>
                             <LinkBoard>
                                 <InnerBoard>
-                                    <TxtEm>감사(검토)보고서</TxtEm>
-                                    <TxtSubDiv>바로가기</TxtSubDiv>
+                                    <TxtEm>
+                                        {t("wrapboard.three_box_board.first_inner_board.txtem")}
+                                    </TxtEm>
+                                    <TxtSubDiv>
+                                        {t("wrapboard.three_box_board.first_inner_board.txt_sub_div")}
+                                    </TxtSubDiv>
                                 </InnerBoard>
                             </LinkBoard>
                             <BorderLine />
                             <LinkBoard>
                                 <InnerBoard>
-                                    <TxtEm>사업(분·반기)보고서</TxtEm>
-                                    <TxtSubDiv>바로가기</TxtSubDiv>
+                                    <TxtEm>
+                                        {t("wrapboard.three_box_board.two_inner_board.txtem")}    
+                                    </TxtEm>
+                                    <TxtSubDiv>
+                                        {t("wrapboard.three_box_board.two_inner_board.txt_sub_div")}
+                                    </TxtSubDiv>
                                 </InnerBoard>
                             </LinkBoard>
                         </ListBoard>
@@ -263,84 +300,106 @@ function InverstmentMain() {
                         <LinkNewsDiv>
                             <InnerNews>
                                 <BoxInfo>
-                                    <BadgeNews>보도자료</BadgeNews>
+                                    <BadgeNews>
+                                        {t("badgenews")}
+                                    </BadgeNews>
                                     <TxtDate>2025.08.21</TxtDate>
                                 </BoxInfo>
-                                <TitNews>카카오, ‘2025 찾아가는 카카오 클래스’ 오프라인 과정 참가자 모집</TitNews>
+                                <TitNews>
+                                    {t("first_tit_news")}    
+                                </TitNews>
                                 <ListTag>
-                                    <ListTagItem>#카카오클래스</ListTagItem>
-                                    <ListTagItem>#카카오</ListTagItem>
-                                    <ListTagItem>#카카오채널</ListTagItem>
+                                    <ListTagItem>{t("list_tag.kakao_class")}</ListTagItem>
+                                    <ListTagItem>{t("list_tag.kakao")}</ListTagItem>
+                                    <ListTagItem>{t("list_tag.kakao_channel")}</ListTagItem>
                                 </ListTag>
                             </InnerNews>
                         </LinkNewsDiv>
                         <LinkNewsDiv>
                             <InnerNews>
                                 <BoxInfo>
-                                    <BadgeNews>보도자료</BadgeNews>
+                                    <BadgeNews>
+                                        {t("badgenews")}
+                                    </BadgeNews>
                                     <TxtDate>2025.08.20</TxtDate>
                                 </BoxInfo>
                                 <TitNews>
-                                    카카오, ‘사이좋은 디지털 세상’ 10주년 맞아 AI 맞춤형 교육으로 개편···
-                                    <br />
-                                    2025년 2학기 참여 학교 ...
+                                    {t("two_tit_news")}    
                                 </TitNews>
                                 <ListTag>
-                                    <ListTagItem>#더가깝게카카오</ListTagItem>
-                                    <ListTagItem>#사이좋은디지털세상</ListTagItem>
-                                    <ListTagItem>#카카오 ...</ListTagItem>                
+                                    <ListTagItem>{t("list_tag.closer_to_kakao")}</ListTagItem>
+                                    <ListTagItem>{t("list_tag.digital_world")}</ListTagItem>
+                                    <ListTagItem>{t("list_tag.kakao")} ...</ListTagItem>                
                                 </ListTag>
                             </InnerNews>
                         </LinkNewsDiv>
                         <LinkNewsDiv>
                             <InnerNews>
                                 <BoxInfo>
-                                    <BadgeNews>보도자료</BadgeNews>
+                                    <BadgeNews>
+                                        {t("badgenews")}
+                                    </BadgeNews>
                                     <TxtDate>2025.08.14</TxtDate>
                                 </BoxInfo>
                                 <TitNews>
-                                    카카오, ‘카카오테크 캠퍼스 아이디어톤’으로 전국 5개 국립대 손잡고 지역 기술 인재 양성 박차
+                                    {t("three_tit_news")}
                                 </TitNews>
                                 <ListTag>
                                     <ListTagItem>#ESG</ListTagItem>
-                                    <ListTagItem>#기술인재양성</ListTagItem>
-                                    <ListTagItem>#카카오테크 캠퍼스</ListTagItem>                
+                                    <ListTagItem>{t("list_tag.technical_talent")}</ListTagItem>
+                                    <ListTagItem>{t("list_tag.kakao_tech_campus")}</ListTagItem>                
                                 </ListTag>
                             </InnerNews>
                         </LinkNewsDiv>
                     </ListNews>
                 </WrapNews>
                 <LinkAllDiv>
-                    <LinkAll>보도자료 전체보기</LinkAll>
+                    <LinkAll>
+                        {t("link_all")}
+                    </LinkAll>
                 </LinkAllDiv>
             </SectionNews>
             <SectionRelation>
-                <SectionRelationTitle>필요한 미래를 만드는 카카오</SectionRelationTitle>
+                <SectionRelationTitle>
+                    {t("section_relation.section_relation_title")}
+                </SectionRelationTitle>
                 <ListRelation>
                     <ListRelationItem>
                         <LinkRelation>
                             <WrapRelationFirst>
-                                <TitRelation>IR 미팅 예약</TitRelation>
-                                <TxtSub>투자정보의 이해를 도와줄 커뮤니케이션 채널</TxtSub>
-                                <TxtGoto>바로가기</TxtGoto>
+                                <TitRelation>{t("section_relation.tit_relation")}</TitRelation>
+                                <TxtSub>{t("section_relation.txt_sub")}</TxtSub>
+                                <TxtGoto>{t("section_relation.txt_goto")}</TxtGoto>
                             </WrapRelationFirst>
                         </LinkRelation>
                     </ListRelationItem>
                     <ListRelationItem>
                         <LinkRelation>
                             <WrapRelationTwo>
-                                <TitRelation>기업지배구조헌장</TitRelation>
-                                <TxtSub>카카오 기업지배구조 헌장 확인하기</TxtSub>
-                                <TxtGoto>바로가기</TxtGoto>
+                                <TitRelation>
+                                    {t("section_relation.governance_section_relation_title")}
+                                </TitRelation>
+                                <TxtSub>
+                                    {t("section_relation.governance_txt_sub")}
+                                </TxtSub>
+                                <TxtGoto>
+                                    {t("section_relation.governance_txt_goto")}
+                                </TxtGoto>
                             </WrapRelationTwo>
                         </LinkRelation>
                     </ListRelationItem>
                     <ListRelationItem>
                         <LinkRelation>
                             <WrapRelationThird>
-                                <TitRelation>기업사이트</TitRelation>
-                                <TxtSub>더 나은 세상을 만드는 카카오의 기업사이트</TxtSub>
-                                <TxtGoto>바로가기</TxtGoto>
+                                <TitRelation>
+                                    {t("section_relation.kakao_website_section_relation_title")}
+                                </TitRelation>
+                                <TxtSub>
+                                    {t("section_relation.kakao_website_txt_sub")}
+                                </TxtSub>
+                                <TxtGoto>
+                                    {t("section_relation.kakao_website_txt_goto")}
+                                </TxtGoto>
                             </WrapRelationThird>
                         </LinkRelation>
                     </ListRelationItem>

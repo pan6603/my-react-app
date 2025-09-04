@@ -8,6 +8,128 @@
       "notice": "IR News",
       "esg": "ESG",
       "kakao": "kakao"
+    },
+
+    "boxstock": {
+      "bnritem": {
+          "emphstocktxtsub": "kakao 035720"
+      }
+    },
+
+    "carouselnotice": {
+      "tit_notice_earnings": "Q2 2025 Kakao Earnings",
+      "tit_notice_financial_statement": " 2025 Kakao Financial Information",
+      "pdf": "PDF",
+      "webcast": "Webcast"
+    },
+
+    "boxpostslides": {
+      "ceo_titpost": "CEO Letter\nto...",
+      "notice_titpost": "Disclosure",
+      "notice_boxpost_txtdate": "[Revised]Convening\nNotice of 30th..."
+    },
+
+    "wrapmore": {
+      "linkvideo": "View More"
+    },
+
+    "section_news": {
+      "section_news_title": "kakao Current State"
+    },
+
+    "wrapboard": {
+      "first_box_board": {
+        "tit_board": "General Meetings",
+        "first_inner_board": {
+          "txtem": "General Meetings",
+          "txt_sub_div": "Go to Link"
+        },
+        "two_inner_board": {
+          "txtem": "Shareholder Return",
+          "txt_sub_div": "Go to Link"
+        }
+      },
+      "two_box_board": {
+        "tit_board": "IR Events",
+        "first_inner_board": {
+          "txtem": "UBS Korea Summit 2025",
+          "txt_sub_div": "2025-08-18"
+        },
+        "two_inner_board": {
+          "txtem": "Daol Investment & Securities...",
+          "txt_sub_div": "2025-08-13"
+        }
+      },
+
+      "three_box_board": {
+        "tit_board": "Recent Submission Report",
+        "first_inner_board": {
+          "txtem": "Audit (review) report",
+          "txt_sub_div": "Go to Link"
+        },
+        "two_inner_board": {
+          "txtem": "Business (quarter/half) report",
+          "txt_sub_div": "Go to Link"
+        }
+      }
+    },    
+
+    "badgenews": "Press Release",
+    "first_tit_news": "Kakao Reports Record-High Q2 2025 Revenue of ₩2,028.3B and Operating Profit of...",
+    "two_tit_news": "Kakao Releases One of the World’s Highest-Performing Multimodal Language Model and...",
+    "three_tit_news": "Kakao Group Donates ₩1.5B for Heavy Rain Relief",
+
+    "list_tag": {
+      "kakao_class": "#KakaoClass",
+      "kakao": "#kakao",
+      "kakao_channel": "#KakaoChannel",
+      "closer_to_kakao": "#CloserToKakao",
+      "digital_world": "#DigitalWorld",
+      "technical_talent": "#TechnicalTalent",
+      "kakao_tech_campus": "#KakaoTechCampus"
+    },
+
+    "link_all": "Go to the Press Release",
+
+    "section_relation": {
+      "section_relation_title": "Brings the future we need closer",
+       "tit_relation": "IR meeting",
+       "txt_sub": "Kakao Corporate Governance Charter",
+       "txt_goto": "Go to Link",
+       "governance_section_relation_title": "Governance",
+       "governance_txt_sub": "Learn more about Kakao and its business",
+       "governance_txt_goto": "Go to Link",
+       "kakao_website_section_relation_title": "kakao Website",
+       "kakao_website_txt_sub": "Kakao makes a better world",
+       "kakao_website_txt_goto": "Go to Link"
+    },
+
+    "investment_footer": {
+      "governance": "Governance",
+      "shareholders": "Shareholders",
+      "general_meetings": "GeneralMeetings",
+      "board": "Board",
+      "regulation": "Regulation",
+      "stock_info": "Stock Info",
+      "stocks": "Stocks",
+      "shareholder_return": "Shareholder Return",
+      "financial_info": "Financial Info",
+      "consolidated": "Consolidated",
+      "separate": "Separate",
+      "credit_ratings": "Credit Ratings",
+      "ir": "IR",
+      "ceo_message": "CEO Message",
+      "earnings_release": "Earnings Release",
+      "events": "Events",
+      "ir_meeting_reservation": "IR Meeting Reservation",
+      "analyst_coverage": "Analyst Coverage",
+      "disclosure": "Disclosure",
+      "disclosure_details": "Disclosure",
+      "business_report": "Business Report",
+      "audit_report": "Audit Report",
+      "ir_news": "IR News",
+      "public_notice": "Public Notice",
+      "shareholder_proposal": "Shareholder Proposal"
     }
   }
   

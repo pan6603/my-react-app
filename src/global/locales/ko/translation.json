@@ -8,6 +8,129 @@
       "notice": "공고",
       "esg": "ESG",
       "kakao": "kakao"
+    },
+    
+    "boxstock": {
+      "bnritem": {
+          "emphstocktxtsub": "카카오 035720"
+      }
+    },
+
+    "carouselnotice": {
+      "tit_notice_earnings": "2025년도\n2분기 실적발표",
+      "tit_notice_financial_statement": "2025년도\n연결재무재표",
+      "pdf": "PDF",
+      "webcast": "웹캐스트"
+    },
+
+    "boxpostslides": {
+      "ceo_titpost": "카카오 주주서한",
+      "notice_titpost": "공지사항",
+      "notice_boxpost_txtdate": "자본금 감소 및 채권자\n이의제출 공고"
+    },
+
+    "wrapmore": {
+      "linkvideo": "더 알아보기"
+    },
+
+    "section_news": {
+      "section_news_title": "카카오 주요현황"
+    },
+
+    "wrapboard": {
+      "first_box_board": {
+        "tit_board": "주주총회",
+        "first_inner_board": {
+          "txtem": "주주총회",
+          "txt_sub_div": "바로가기"
+        },
+        "two_inner_board": {
+          "txtem": "주주환원",
+          "txt_sub_div": "바로가기"
+        }
+      },
+
+      "two_box_board": {
+        "tit_board": "IR 행사",
+        "first_inner_board": {
+          "txtem": "다올투자증권 국내 NDR",
+          "txt_sub_div": "2025-08-18"
+        },
+        "two_inner_board": {
+          "txtem": "메리츠증권 국내 NDR",
+          "txt_sub_div": "2025-08-13"
+        }
+      },
+
+      "three_box_board": {
+        "tit_board": "최근 제출 보고서",
+        "first_inner_board": {
+          "txtem": "감사(검토)보고서",
+          "txt_sub_div": "바로가기"
+        },
+        "two_inner_board": {
+          "txtem": "사업(분·반기)보고서",
+          "txt_sub_div": "바로가기"
+        }
+      }
+    },
+
+    "badgenews": "보도자료",
+    "first_tit_news": "카카오, ‘2025 찾아가는 카카오 클래스’ 오프라인 과정 참가자 모집",
+    "two_tit_news": "카카오, ‘사이좋은 디지털 세상’ 10주년 맞아 AI 맞춤형 교육으로 개편···\n2025년 2학기 참여 학교 ...",
+    "three_tit_news": "카카오, ‘카카오테크 캠퍼스 아이디어톤’으로 전국 5개 국립대 손잡고 지역 기술 인재 양성 박차",
+
+    "list_tag": {
+      "kakao_class": "#카카오클래스",
+      "kakao": "#카카오",
+      "kakao_channel": "#카카오채널",
+      "closer_to_kakao": "#더가깝게카카오",
+      "digital_world": "#사이좋은디지털세상",
+      "technical_talent": "#기술인재양성",
+      "kakao_tech_campus": "#카카오테크 캠퍼스"
+    },
+
+    "link_all": "보도자료 전체보기",
+
+    "section_relation": {
+      "section_relation_title": "필요한 미래를 만드는 카카오",
+      "tit_relation": "IR 미팅 예약",
+      "txt_sub": "투자정보의 이해를 도와줄 커뮤니케이션 채널",
+      "txt_goto": "바로가기",
+      "governance_section_relation_title": "기업지배구조헌장",
+      "governance_txt_sub": "카카오 기업지배구조 헌장 확인하기",
+      "governance_txt_goto": "바로가기",
+      "kakao_website_section_relation_title": "기업사이트",
+      "kakao_website_txt_sub": "더 나은 세상을 만드는 카카오의 기업사이트",
+      "kakao_website_txt_goto": "바로가기"
+    },
+
+    "investment_footer": {
+      "governance": "기업지배구조",
+      "shareholders": "주주구성",
+      "general_meetings": "주주총회",
+      "board": "이사회",
+      "regulation": "규정",
+      "stock_info": "주식정보",
+      "stocks": "주가정보",
+      "shareholder_return": "주주환원",
+      "financial_info": "재무정보",
+      "consolidated": "연결재무제표",
+      "separate": "별도재무제표",
+      "credit_ratings": "신용등급",
+      "ir": "IR 자료",
+      "ceo_message": "CEO 메세지",
+      "earnings_release": "실적발표",
+      "events": "IR 행사",
+      "ir_meeting_reservation": "IR 미팅예약",
+      "analyst_coverage": "증권사커버리지",
+      "disclosure": "공시정보",
+      "disclosure_details": "공시사항",
+      "business_report": "사업보고서",
+      "audit_report": "감사 및 검토보고서",
+      "ir_news": "공고",
+      "public_notice": "공고사항",
+      "shareholder_proposal": "주주제안권"
     }
   }
   

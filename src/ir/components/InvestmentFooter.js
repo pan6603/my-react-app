@@ -7,98 +7,125 @@ import {
     ListSubMenuDiv,
     ListSubMenuLink
 } from "../../styles/ir/main/InverstmentFooter.styles"
+import { useTranslation } from "react-i18next";
 
 function InvestmentFooter() {
+    const { t } = useTranslation();
+
     return (
         <DocFooter>
             <ListMain>
                 <ListMainItem>
-                    <ListSubTitle>기업지배구조</ListSubTitle>
+                    <ListSubTitle>{t("investment_footer.governance")}</ListSubTitle>
                     <ListSub>
                         <ListSubMenuDiv>
-                            <ListSubMenuLink>주주구성</ListSubMenuLink>
+                            <ListSubMenuLink>
+                                {t("investment_footer.shareholders")}
+                            </ListSubMenuLink>
                         </ListSubMenuDiv>
                         <ListSubMenuDiv>
-                            <ListSubMenuLink>주주총회</ListSubMenuLink>
+                            <ListSubMenuLink>
+                                {t("investment_footer.general_meetings")}
+                            </ListSubMenuLink>
                         </ListSubMenuDiv>
                         <ListSubMenuDiv>
-                            <ListSubMenuLink>이사회</ListSubMenuLink>
+                            <ListSubMenuLink>
+                                {t("investment_footer.board")}
+                            </ListSubMenuLink>
                         </ListSubMenuDiv>
                         <ListSubMenuDiv>
-                            <ListSubMenuLink>규정</ListSubMenuLink>
+                            <ListSubMenuLink>                
+                                {t("investment_footer.regulation")}
+                            </ListSubMenuLink>
                         </ListSubMenuDiv>
                         <ListSubMenuDiv>
-                            <ListSubMenuLink>지배구조</ListSubMenuLink>
+                            <ListSubMenuLink>
+                                {t("investment_footer.governance")}
+                            </ListSubMenuLink>
                         </ListSubMenuDiv>
                     </ListSub>
                 </ListMainItem>
                 <ListMainItem>
-                    <ListSubTitle>주식정보</ListSubTitle>
+                    <ListSubTitle>
+                        {t("investment_footer.stock_info")}
+                    </ListSubTitle>
                     <ListSub>
                         <ListSubMenuDiv>
-                            <ListSubMenuLink>주가정보</ListSubMenuLink>
+                            <ListSubMenuLink>
+                                {t("investment_footer.stocks")}
+                            </ListSubMenuLink>
                         </ListSubMenuDiv>
                         <ListSubMenuDiv>
-                            <ListSubMenuLink>주주환원</ListSubMenuLink>
+                            <ListSubMenuLink>
+                                {t("investment_footer.shareholder_return")}
+                            </ListSubMenuLink>
                         </ListSubMenuDiv>
                     </ListSub>
                 </ListMainItem>
                 <ListMainItem>
-                    <ListSubTitle>재무정보</ListSubTitle>
+                    <ListSubTitle>
+                        {t("investment_footer.financial_info")}
+                    </ListSubTitle>
                     <ListSub>
                         <ListSubMenuDiv>
-                            <ListSubMenuLink>연결재무제표</ListSubMenuLink>
+                            <ListSubMenuLink>
+                                {t("investment_footer.consolidated")}
+                            </ListSubMenuLink>
                         </ListSubMenuDiv>
                         <ListSubMenuDiv>
-                            <ListSubMenuLink>별도재무제표</ListSubMenuLink>
+                            <ListSubMenuLink>
+                                {t("investment_footer.separate")}
+                            </ListSubMenuLink>
                         </ListSubMenuDiv>
                         <ListSubMenuDiv>
-                            <ListSubMenuLink>신용등급</ListSubMenuLink>
+                            <ListSubMenuLink>
+                                {t("investment_footer.credit_ratings")}
+                            </ListSubMenuLink>
                         </ListSubMenuDiv>
                     </ListSub>
                 </ListMainItem>
                 <ListMainItem>
-                    <ListSubTitle>IR 자료</ListSubTitle>
+                    <ListSubTitle>{t("investment_footer.ir")}</ListSubTitle>
                     <ListSub>
                         <ListSubMenuDiv>
-                            <ListSubMenuLink>CEO 메시지</ListSubMenuLink>
+                            <ListSubMenuLink>{t("investment_footer.ceo_message")}</ListSubMenuLink>
                         </ListSubMenuDiv>
                         <ListSubMenuDiv>
-                            <ListSubMenuLink>실적발표</ListSubMenuLink>
+                            <ListSubMenuLink>{t("investment_footer.earnings_release")}</ListSubMenuLink>
                         </ListSubMenuDiv>
                         <ListSubMenuDiv>
-                            <ListSubMenuLink>IR 행사</ListSubMenuLink>
+                            <ListSubMenuLink>{t("investment_footer.events")}</ListSubMenuLink>
                         </ListSubMenuDiv>
                         <ListSubMenuDiv>
-                            <ListSubMenuLink>IR 미팅예약</ListSubMenuLink>
+                            <ListSubMenuLink>{t("investment_footer.ir_meeting_reservation")}</ListSubMenuLink>
                         </ListSubMenuDiv>
                         <ListSubMenuDiv>
-                            <ListSubMenuLink>증권사커버리지</ListSubMenuLink>
+                            <ListSubMenuLink>{t("investment_footer.analyst_coverage")}</ListSubMenuLink>
                         </ListSubMenuDiv>
                     </ListSub>
                 </ListMainItem>
                 <ListMainItem>
-                    <ListSubTitle>공시정보</ListSubTitle>
+                    <ListSubTitle>{t("investment_footer.disclosure")}</ListSubTitle>
                     <ListSub>
                         <ListSubMenuDiv>
-                            <ListSubMenuLink>공시사항</ListSubMenuLink>
+                            <ListSubMenuLink>{t("investment_footer.disclosure_details")}</ListSubMenuLink>
                         </ListSubMenuDiv>
                         <ListSubMenuDiv>
-                            <ListSubMenuLink>사업보고서</ListSubMenuLink>
+                            <ListSubMenuLink>{t("investment_footer.business_report")}</ListSubMenuLink>
                         </ListSubMenuDiv>
                         <ListSubMenuDiv>
-                            <ListSubMenuLink>감사 및 검토보고서</ListSubMenuLink>
+                            <ListSubMenuLink>{t("investment_footer.audit_report")}</ListSubMenuLink>
                         </ListSubMenuDiv>
                     </ListSub>
                 </ListMainItem>
                 <ListMainItem>
-                    <ListSubTitle>공고</ListSubTitle>
+                    <ListSubTitle>{t("investment_footer.ir_news")}</ListSubTitle>
                     <ListSub>
                         <ListSubMenuDiv>
-                            <ListSubMenuLink>공고사항</ListSubMenuLink>
+                            <ListSubMenuLink>{t("investment_footer.public_notice")}</ListSubMenuLink>
                         </ListSubMenuDiv>
                         <ListSubMenuDiv>
-                            <ListSubMenuLink>주주제안권</ListSubMenuLink>
+                            <ListSubMenuLink>{t("investment_footer.shareholder_proposal")}</ListSubMenuLink>
                         </ListSubMenuDiv>
                     </ListSub>
                 </ListMainItem>

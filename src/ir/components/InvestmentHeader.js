@@ -11,14 +11,23 @@ import {
     NavItemMenuLinkArrow
 } from "../../styles/ir/main/InverstmentHeader.styles"
 import { useTranslation } from "react-i18next";
+import React, { useState } from "react";
 
 function InverstmentHeader() {
     const { t, i18n } = useTranslation();
+    const [lang, setLang] = useState(i18n.language || "en"); 
 
     const toggleLanguage = () => {
         const newLang = i18n.language === "ko" ? "en" : "ko";
         i18n.changeLanguage(newLang);
+
+        setLang(newLang);
     };
+
+    const iconUrl =
+    lang === "en"
+      ? "https://t1.kakaocdn.net/kakaocorp/Ir/images/btn_ko.svg"
+      : "https://t1.kakaocdn.net/kakaocorp/Ir/images/btn_en.svg";
 
     return (
         <DocHeader>
@@ -112,7 +121,7 @@ function InverstmentHeader() {
                         </NavItemMenu>
                     </ListMainNav>
                 </DocGnbNav>
-                <BtnLangViewPc onClick={toggleLanguage}/>
+                <BtnLangViewPc onClick={toggleLanguage} bg={iconUrl}/>
             </InnerHeader>
         </DocHeader>
     )

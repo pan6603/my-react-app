@@ -156,7 +156,7 @@ export const SectionRelationTitle = styled.h4`
     margin-bottom: 52px;
     font-size: 48px;
     letter-spacing: -1px;
-    font-weight: 700;
+    font-weight: 400;
     color: #000;
 
     &::before {
@@ -185,7 +185,7 @@ export const SectionNewsTitle = styled.h4`
     margin-bottom: 46px;
     font-size: 48px;
     color: #000;
-    font-weight: 700;
+    font-weight: 400;
     letter-spacing: -1px;
     line-height: 1.5;
 
@@ -259,7 +259,7 @@ export const TxtSubDiv = styled.div`
     text-underline-offset: 4px;
     letter-spacing: -0.5px;
     font-size: 17px;
-    font-weight: 700;
+    font-weight: 400;
 `
 
 export const TxtSubDate = styled.div`
@@ -281,7 +281,7 @@ export const BorderLine = styled.div`
 
 export const TxtEm = styled.em`
     font-style: normal;
-    font-weight: 700;
+    font-weight: 400;
     font-size: 17px;
     letter-spacing: -0.5px;
     color: #000;
@@ -385,14 +385,15 @@ export const ListTagItem = styled.div`
 
 
 export const BadgeNews = styled.div`
-    max-width: 81px;
-    width: 100%;
+    width: max-content;
     height: 37px;
     background-color: #fff;
     border-radius: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 8px 16px;
+    box-sizing: border-box;
 `
 
 export const TxtDate = styled.div`
@@ -417,11 +418,9 @@ export const LinkAllDiv = styled.div`
 `
 
 export const LinkAll = styled.a`
-    width: fit-content;
+    width: max-content;
     height: 79px;
     margin: 0 auto;
-    padding: 23px 61px;
-    box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -638,7 +637,7 @@ export const InnerSecond = styled.div`
 export const TitNotice = styled.div`
     max-width: 166px;
     width: 100%;
-    height: 78px;
+    height: max-content;
     overflow: hidden;
     font-size: 26px;
     font-weight: 500;
@@ -652,6 +651,7 @@ export const AreaLinks = styled.div`
     margin: 0 auto;
     display: flex;
     gap: 12px;
+    margin-top: 12px;
 `
 
 export const LinkItemPdf = styled.div`
@@ -728,9 +728,13 @@ export const InnerPost = styled.div`
     padding: 20px 20px 16px;
     display: flex;
     flex-direction: column;
+
 `
 
-export const TitPost = styled.div`
+export const TitPost = styled.strong`
+    max-width: 166px;
+    width: 100%;
+    height: max-content;
     margin-bottom: 4px;
     font-size: 26px;
     font-weight: 700;
@@ -740,6 +744,7 @@ export const TitPost = styled.div`
 
 export const BoxPostTxtDate = styled.div`
     font-size: 17px;
+    font-weight: 700;
     letter-spacing: -0.5px;
     overflow: hidden;
 `

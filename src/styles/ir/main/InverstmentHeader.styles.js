@@ -113,6 +113,6 @@ export const BtnLangViewPc = styled.div`
     width: 100%;
     height: 36px;
     background-color: blue;
-    background: url('https://t1.kakaocdn.net/kakaocorp/Ir/images/btn_en.svg');
+    background: url(${props => props.bg});
     cursor: pointer;
 `
