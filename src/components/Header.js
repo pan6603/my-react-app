@@ -18,10 +18,24 @@ import {
 } from '../styles/Header.styles';
 import { useTheme } from './context/ThemeContext';
 import { lightTheme, darkTheme } from '../styles/context/theme';
+import { useTranslation } from "react-i18next";
 
 function Header () {
     const { theme, toggleTheme} = useTheme() 
     const [isScrolled, setIsScrolled] = useState(false);
+    const { t, i18n } = useTranslation();
+    const [lang, setLang] = useState(i18n.language || "en"); 
+    
+    const toggleLanguage = () => {
+        const newLang = i18n.language === "ko" ? "en" : "ko";
+        i18n.changeLanguage(newLang);
+
+        setLang(newLang);
+    };
+    
+    const iconUrl = lang === "en"
+        ? "https://t1.kakaocdn.net/kakaocorp/Ir/images/btn_ko.svg"
+        : "https://t1.kakaocdn.net/kakaocorp/Ir/images/btn_en.svg";
 
     useEffect(() => {
         const handleScroll = () => {
@@ -43,7 +57,7 @@ function Header () {
                 </KakaoMainLogo>
                 <Navigation>
                     <NavigationList>
-                        <NavItemMenu theme={theme} to="/admin">소개</NavItemMenu>
+                        <NavItemMenu theme={theme} to="/admin">{t("main.about")}</NavItemMenu>
                         <NavItemMenu theme={theme} to="/about/history">기술과 서비스</NavItemMenu>
                         <NavItemMenu theme={theme} to="/about/subsidiarycompany">약속과 책임</NavItemMenu>
                         <NavItemMenu theme={theme} to="/">소식</NavItemMenu>
@@ -60,9 +74,12 @@ function Header () {
                         fill={theme === "light" ? "#000" : "#fff"}
                     />
                     <TranslationButton
+                        onClick={toggleLanguage}
+                        bg={iconUrl}
                         theme={theme}
                         fill={theme === "light" ? "#000" : "#fff"}
                     />
+                    
                     {theme === "light" ? (
                         <IconMoonItem
                           onClick={toggleTheme}

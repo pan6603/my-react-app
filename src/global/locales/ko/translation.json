@@ -131,6 +131,13 @@
       "ir_news": "공고",
       "public_notice": "공고사항",
       "shareholder_proposal": "주주제안권"
+    },
+
+
+    
+    "main": {
+      "about": "소개"
     }
+
   }
   

@@ -130,6 +130,10 @@
       "ir_news": "IR News",
       "public_notice": "Public Notice",
       "shareholder_proposal": "Shareholder Proposal"
+    },
+
+    "main": {
+      "about": "About"
     }
   }
   

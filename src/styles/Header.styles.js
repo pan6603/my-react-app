@@ -5,7 +5,6 @@ import {ReactComponent as IconMagnifier} from "../img/area/area-magnifier-icon.s
 import {ReactComponent as KakaoLogoIcon} from "../img/logo/kakao_logo_icon.svg";
 import {ReactComponent as IconArrowLink} from "../img/nav/arrow_icon-icons.svg";
 import { Link } from "react-router-dom";
-import {ReactComponent as IconEarth} from "../img/area/area-earth-icon.svg";
 import styled from "styled-components";
 
 
@@ -127,12 +126,13 @@ export const AreaUtil = styled.div`
     align-items: center;
 `
 
-export const TranslationButton = styled(IconEarth)`
+export const TranslationButton = styled.div`
     max-width: 22px;
     width: 100%;
     height: 22px; 
     cursor: pointer;
     padding: 8px 12px; 
+    background: url(${props => props.bg});
 
     &:hover {
         background-color: ${({ theme }) => theme === "light" ? "#f5f5f5" : "#333"}; 
