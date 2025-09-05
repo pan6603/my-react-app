@@ -127,7 +127,7 @@ export const AreaUtil = styled.div`
     align-items: center;
 `
 
-export const IconEarthItem = styled(IconEarth)`
+export const TranslationButton = styled(IconEarth)`
     max-width: 22px;
     width: 100%;
     height: 22px; 

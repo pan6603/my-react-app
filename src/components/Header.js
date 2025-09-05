@@ -11,7 +11,7 @@ import {
     NavInvestmentItem,
     InvestmentArrowLink,
     AreaUtil,
-    IconEarthItem,
+    TranslationButton,
     IconMoonItem,
     IconSunItem,
     IconMagnifierItem,
@@ -59,7 +59,7 @@ function Header () {
                         theme={theme}
                         fill={theme === "light" ? "#000" : "#fff"}
                     />
-                    <IconEarthItem 
+                    <TranslationButton
                         theme={theme}
                         fill={theme === "light" ? "#000" : "#fff"}
                     />
