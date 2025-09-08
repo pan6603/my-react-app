@@ -72,6 +72,7 @@ export const BoxServiceFlex = styled.div`
 
 export const CateService = styled.strong`
     font-size: 30px;
+    font-weight: 700;
     letter-spacing: -.8px;
     color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
     word-break: break-all;

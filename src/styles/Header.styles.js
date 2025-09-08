@@ -126,19 +126,22 @@ export const AreaUtil = styled.div`
     align-items: center;
 `
 
-export const TranslationButton = styled.div`
+
+export const TranslationBtn = styled.svg`
     max-width: 22px;
     width: 100%;
     height: 22px; 
     cursor: pointer;
-    padding: 8px 12px; 
+    padding: 8px 10px; 
     background: url(${props => props.bg});
-
+    filter: ${({ mode }) => (mode === "light" ? "brightness(1) invert(0)" : "brightness(4) invert(1)")};
+  
     &:hover {
-        background-color: ${({ theme }) => theme === "light" ? "#f5f5f5" : "#333"}; 
-        border-radius: 54px; 
+      background-color: ${({ mode }) => mode === "light" ? "#f5f5f5" : "#333"}; 
+      border-radius: 54px; 
     }
-`
+`;
+
 
 export const IconMoonItem = styled(IconMoon)`
     max-width: 22px;

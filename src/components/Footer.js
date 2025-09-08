@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { useTheme } from "./context/ThemeContext";
+import { useTranslation } from "react-i18next";
+
 
 
 const FooterContainer = styled.footer`
@@ -99,8 +101,7 @@ const IrMenuSectionServiceItem = styled.div`
 
 const TodayKakaoText = styled.h3`
     color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
-    max-width: 143px;
-    width: 100%;
+    width: max-content;
     height: 35px;
     font-size: 26px;
     margin-top: 0;
@@ -212,8 +213,7 @@ const KaKaoInnerServiceAffiliates = styled.div`
 `
 
 const SubTitle = styled.strong`
-    max-width: 129px;
-    width: 100%;
+    width: max-content;
     height: 28px;
     font-size: 16px;
     letter-spacing: -.5px;
@@ -425,24 +425,31 @@ const AccountOutlinkIcon = styled.svg`
 
 function Footer () {
     const { theme } = useTheme() 
+    const { t } = useTranslation()
 
     return (
         <FooterContainer theme={theme}>
             <InnerFooter>
                 <SectionService>
                     <TodaysKakaoMenuSectionServiceItem>
-                        <TodayKakaoText theme={theme}>오늘의 카카오</TodayKakaoText>
+                        <TodayKakaoText theme={theme}>
+                        {t("home.footer.today_kakao_text")}
+                        </TodayKakaoText>
                         <TodaysKakaoMenuInnerService>
                             <InnerServiceUl>
                                 <InnerServiceUlList>
-                                    <InnerServiceUlListLink>카카오톡 공식 다운로드</InnerServiceUlListLink>
+                                    <InnerServiceUlListLink>
+                                    {t("home.footer.todays_kakao_menu_inner_service.download_kakao_talk")}
+                                    </InnerServiceUlListLink>
                                     <RightArrowIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M3 1L6 4.5L3 8" stroke="#888" />
                                     </RightArrowIcon>
                                 </InnerServiceUlList>
 
                                 <InnerServiceUlList>
-                                    <InnerServiceUlListLink>카카오톡백업</InnerServiceUlListLink>
+                                    <InnerServiceUlListLink>
+                                    {t("home.footer.todays_kakao_menu_inner_service.kakao_talk_backup")}
+                                    </InnerServiceUlListLink>
                                     <StyledOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
                                         <g fill="none" fillRule="evenodd">
                                             <path d="M1.795 1.074L7.942 1.074 7.942 7.221M7.942 1.074L1.378 7.638" stroke="#888" />
@@ -451,7 +458,9 @@ function Footer () {
                                 </InnerServiceUlList>
 
                                 <InnerServiceUlList>
-                                    <InnerServiceUlListLink>카카오톡 이모티콘샵</InnerServiceUlListLink>
+                                    <InnerServiceUlListLink>
+                                    {t("home.footer.todays_kakao_menu_inner_service.emoticon_shop")}
+                                    </InnerServiceUlListLink>
                                     <StyledOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
                                         <g fill="none" fillRule="evenodd">
                                             <path d="M1.795 1.074L7.942 1.074 7.942 7.221M7.942 1.074L1.378 7.638" stroke="#888" />
@@ -460,16 +469,20 @@ function Footer () {
                                 </InnerServiceUlList>
 
                                 <InnerServiceUlList>
-                                    <InnerServiceUlListLink>카카오톡맵</InnerServiceUlListLink>
+                                    <InnerServiceUlListLink>
+                                    {t("home.footer.todays_kakao_menu_inner_service.kakao_map")}
+                                    </InnerServiceUlListLink>
                                     <StyledOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
                                         <g fill="none" fillRule="evenodd">
                                             <path d="M1.795 1.074L7.942 1.074 7.942 7.221M7.942 1.074L1.378 7.638" stroke="#888" />
                                         </g>
                                     </StyledOutlinkIcon>
                                 </InnerServiceUlList>
-
+                                
                                 <InnerServiceUlList>
-                                    <InnerServiceUlListLink>지속가능성</InnerServiceUlListLink>
+                                    <InnerServiceUlListLink>
+                                    {t("home.footer.todays_kakao_menu_inner_service.kakao_helthcare")}
+                                    </InnerServiceUlListLink>
                                     <StyledOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
                                         <g fill="none" fillRule="evenodd">
                                             <path d="M1.795 1.074L7.942 1.074 7.942 7.221M7.942 1.074L1.378 7.638" stroke="#888" />
@@ -481,26 +494,44 @@ function Footer () {
                     </TodaysKakaoMenuSectionServiceItem>
 
                     <KakaoSectionServiceItemCategories>
-                        <SubTitle theme={theme}>카카오 그룹의 서비스</SubTitle>
+                        <SubTitle theme={theme}>
+                        {t("home.footer.kakao_inner_service_categories.sub_title")}
+                        </SubTitle>
                         <KakaoInnerServiceCategories>
                             <KakaoMenuCategories>
-                                <KakaoMenuCategoriesLink>커뮤니케이션</KakaoMenuCategoriesLink>
-                                <KakaoMenuCategoriesLink>일상편의</KakaoMenuCategoriesLink>
-                                <KakaoMenuCategoriesLink>비즈니스</KakaoMenuCategoriesLink>
-                                <KakaoMenuCategoriesLink>쇼핑</KakaoMenuCategoriesLink>
-                                <KakaoMenuCategoriesLink>엔터테인먼트</KakaoMenuCategoriesLink>
-                                <KakaoMenuCategoriesLink>임팩트</KakaoMenuCategoriesLink>
+                                <KakaoMenuCategoriesLink>
+                                {t("home.footer.kakao_inner_service_categories.communication")}
+                                </KakaoMenuCategoriesLink>
+                                <KakaoMenuCategoriesLink>
+                                {t("home.footer.kakao_inner_service_categories.life")}
+                                </KakaoMenuCategoriesLink>
+                                <KakaoMenuCategoriesLink>
+                                {t("home.footer.kakao_inner_service_categories.business")}
+                                </KakaoMenuCategoriesLink>
+                                <KakaoMenuCategoriesLink>
+                                {t("home.footer.kakao_inner_service_categories.shopping")}
+                                </KakaoMenuCategoriesLink>
+                                <KakaoMenuCategoriesLink>
+                                {t("home.footer.kakao_inner_service_categories.entertainment")}
+                                </KakaoMenuCategoriesLink>
+                                <KakaoMenuCategoriesLink>
+                                {t("home.footer.kakao_inner_service_categories.impact")}
+                                </KakaoMenuCategoriesLink>
                             </KakaoMenuCategories>
                         </KakaoInnerServiceCategories>
                     </KakaoSectionServiceItemCategories>
 
                     <KakaoSectionServiceGroupCompanies>
-                        <SubTitle theme={theme}>카카오 그룹</SubTitle>
+                        <SubTitle theme={theme}>
+                        {t("home.footer.kakao_inner_service_group_companies.sub_title")}
+                        </SubTitle>
                         <KakaoInnerServiceGroupCompanies>
                             <KakaoMenuGroupCompanies>
-                                <KakaoMenuGroupCompaniesItem>카카오</KakaoMenuGroupCompaniesItem>
                                 <KakaoMenuGroupCompaniesItem>
-                                    카카오페이
+                                {t("home.footer.kakao_inner_service_group_companies.kakao")}
+                                </KakaoMenuGroupCompaniesItem>
+                                <KakaoMenuGroupCompaniesItem>
+                                {t("home.footer.kakao_inner_service_group_companies.kakao_pay")}
                                     <KakaoPayOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
                                         <g fill="none" fillRule="evenodd">
                                             <path d="M1.795 1.074L7.942 1.074 7.942 7.221M7.942 1.074L1.378 7.638" />
@@ -509,7 +540,7 @@ function Footer () {
                                 </KakaoMenuGroupCompaniesItem>
 
                                 <KakaoMenuGroupCompaniesItem>
-                                    카카오뱅크
+                                {t("home.footer.kakao_inner_service_group_companies.kakao_bank")}
                                     <KakaoPayOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
                                         <g fill="none" fillRule="evenodd">
                                             <path d="M1.795 1.074L7.942 1.074 7.942 7.221M7.942 1.074L1.378 7.638" />
@@ -518,7 +549,7 @@ function Footer () {
                                 </KakaoMenuGroupCompaniesItem>
 
                                 <KakaoMenuGroupCompaniesItem>
-                                    카카오모빌리티
+                                {t("home.footer.kakao_inner_service_group_companies.kakao_mobility")}
                                     <KakaoPayOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
                                         <g fill="none" fillRule="evenodd">
                                             <path d="M1.795 1.074L7.942 1.074 7.942 7.221M7.942 1.074L1.378 7.638" />
@@ -527,7 +558,7 @@ function Footer () {
                                 </KakaoMenuGroupCompaniesItem>
 
                                 <KakaoMenuGroupCompaniesItem>
-                                    카카오스타일
+                                {t("home.footer.kakao_inner_service_group_companies.kakao_style")}
                                     <KakaoPayOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
                                         <g fill="none" fillRule="evenodd">
                                             <path d="M1.795 1.074L7.942 1.074 7.942 7.221M7.942 1.074L1.378 7.638" />
@@ -536,7 +567,7 @@ function Footer () {
                                 </KakaoMenuGroupCompaniesItem>
 
                                 <KakaoMenuGroupCompaniesItem>
-                                    카카오엔터테인먼트
+                                {t("home.footer.kakao_inner_service_group_companies.kakao_entertainment")}
                                     <KakaoPayOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
                                         <g fill="none" fillRule="evenodd">
                                             <path d="M1.795 1.074L7.942 1.074 7.942 7.221M7.942 1.074L1.378 7.638" />
@@ -552,7 +583,8 @@ function Footer () {
                         <KaKaoInnerServiceAffiliates>
                             <KakaoMenuGroupAffiliates>
                                 <KakaoMenuGroupAffiliatesItem>
-                                    카카오게임즈 
+                                {t("home.footer.kakao_inner_service_group_companies.kakao_games")}
+            
                                     <KakaoAffiliateOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
                                         <g fill="none" fillRule="evenodd">
                                             <path d="M1.795 1.074L7.942 1.074 7.942 7.221M7.942 1.074L1.378 7.638" />
@@ -561,7 +593,8 @@ function Footer () {
                                 </KakaoMenuGroupAffiliatesItem>
 
                                 <KakaoMenuGroupAffiliatesItem>
-                                    카카오픽코마
+                                {t("home.footer.kakao_inner_service_group_companies.kakao_pickkoma")}
+                               
                                     <KakaoAffiliateOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
                                         <g fill="none" fillRule="evenodd">
                                             <path d="M1.795 1.074L7.942 1.074 7.942 7.221M7.942 1.074L1.378 7.638" />
@@ -570,7 +603,8 @@ function Footer () {
                                 </KakaoMenuGroupAffiliatesItem>
 
                                 <KakaoMenuGroupAffiliatesItem>
-                                    카카오엔터프라이즈
+                                {t("home.footer.kakao_inner_service_group_companies.kakao_enterprise")}
+                                    
                                     <KakaoAffiliateOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
                                         <g fill="none" fillRule="evenodd">
                                             <path d="M1.795 1.074L7.942 1.074 7.942 7.221M7.942 1.074L1.378 7.638" />
@@ -579,7 +613,7 @@ function Footer () {
                                 </KakaoMenuGroupAffiliatesItem>
 
                                 <KakaoMenuGroupAffiliatesItem>
-                                    카카오헬스케어
+                                {t("home.footer.kakao_inner_service_group_companies.kakao_healthcare")}
                                     <KakaoAffiliateOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
                                         <g fill="none" fillRule="evenodd">
                                             <path d="M1.795 1.074L7.942 1.074 7.942 7.221M7.942 1.074L1.378 7.638" />
@@ -588,7 +622,8 @@ function Footer () {
                                 </KakaoMenuGroupAffiliatesItem>
 
                                 <KakaoMenuGroupAffiliatesItem>
-                                    카카오벤처스
+                                {t("home.footer.kakao_inner_service_group_companies.kakao_ventures")}
+                                
                                     <KakaoAffiliateOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
                                         <g fill="none" fillRule="evenodd">
                                             <path d="M1.795 1.074L7.942 1.074 7.942 7.221M7.942 1.074L1.378 7.638" />
@@ -597,7 +632,8 @@ function Footer () {
                                 </KakaoMenuGroupAffiliatesItem>
 
                                 <KakaoMenuGroupAffiliatesItem>
-                                    카카오인베스트먼트
+                                {t("home.footer.kakao_inner_service_group_companies.kakao_investment")}
+                                    
                                     <KakaoAffiliateOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
                                         <g fill="none" fillRule="evenodd">
                                             <path d="M1.795 1.074L7.942 1.074 7.942 7.221M7.942 1.074L1.378 7.638" />
@@ -606,7 +642,8 @@ function Footer () {
                                 </KakaoMenuGroupAffiliatesItem>
 
                                 <KakaoMenuGroupAffiliatesItem>
-                                    링키지랩 
+                                {t("home.footer.kakao_inner_service_group_companies.linkage_lab")}
+                                    
                                     <KakaoAffiliateOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
                                         <g fill="none" fillRule="evenodd">
                                             <path d="M1.795 1.074L7.942 1.074 7.942 7.221M7.942 1.074L1.378 7.638" />
@@ -622,7 +659,7 @@ function Footer () {
                         <IrMenuService>
                             <IrMenuGroup>
                                 <IrMenuGroupItem>
-                                    기업지배구조
+                                {t("home.footer.ir_menu_group.governance")}
                                     <IrMenuOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
                                         <g fill="none" fillRule="evenodd">
                                             <path d="M1.795 1.074L7.942 1.074 7.942 7.221M7.942 1.074L1.378 7.638" />
@@ -631,7 +668,7 @@ function Footer () {
                                 </IrMenuGroupItem>
 
                                 <IrMenuGroupItem>
-                                    주가정보
+                                {t("home.footer.ir_menu_group.stocks")}
                                     <IrMenuOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
                                         <g fill="none" fillRule="evenodd">
                                             <path d="M1.795 1.074L7.942 1.074 7.942 7.221M7.942 1.074L1.378 7.638" />
@@ -640,7 +677,7 @@ function Footer () {
                                 </IrMenuGroupItem>
 
                                 <IrMenuGroupItem>
-                                    재무정보
+                                {t("home.footer.ir_menu_group.financial_info")}
                                     <IrMenuOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
                                         <g fill="none" fillRule="evenodd">
                                             <path d="M1.795 1.074L7.942 1.074 7.942 7.221M7.942 1.074L1.378 7.638" />
@@ -649,7 +686,8 @@ function Footer () {
                                 </IrMenuGroupItem>
 
                                 <IrMenuGroupItem>
-                                    IR행사
+                                {t("home.footer.ir_menu_group.ir_event")}
+                               
                                     <IrMenuOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
                                         <g fill="none" fillRule="evenodd">
                                             <path d="M1.795 1.074L7.942 1.074 7.942 7.221M7.942 1.074L1.378 7.638" />
@@ -658,7 +696,8 @@ function Footer () {
                                 </IrMenuGroupItem>
 
                                 <IrMenuGroupItem>
-                                    공시정보
+                                {t("home.footer.ir_menu_group.disclosure_info")}
+                               
                                     <IrMenuOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
                                         <g fill="none" fillRule="evenodd">
                                             <path d="M1.795 1.074L7.942 1.074 7.942 7.221M7.942 1.074L1.378 7.638" />
@@ -667,7 +706,8 @@ function Footer () {
                                 </IrMenuGroupItem>
 
                                 <IrMenuGroupItem>
-                                    공고
+                                {t("home.footer.ir_menu_group.ir_news")}
+                                
                                     <IrMenuOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
                                         <g fill="none" fillRule="evenodd">
                                             <path d="M1.795 1.074L7.942 1.074 7.942 7.221M7.942 1.074L1.378 7.638" />
@@ -680,10 +720,13 @@ function Footer () {
 
                     <AccountSectionServiceItem>
                         <AccountInnerServiceItem>
-                            <SubTitle theme={theme}>계정 및 지원</SubTitle>
+                            <SubTitle theme={theme}>
+                            {t("home.footer.account_inner_service_item.sub_title")}
+                            </SubTitle>
                             <AccountGroup>
                                 <AccountGroupItem>
-                                    카카오계정
+                                {t("home.footer.account_inner_service_item.kakao_account")}
+                                
                                     <AccountOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
                                         <g fill="none" fillRule="evenodd">
                                             <path d="M1.795 1.074L7.942 1.074 7.942 7.221M7.942 1.074L1.378 7.638" />
@@ -691,7 +734,8 @@ function Footer () {
                                     </AccountOutlinkIcon>
                                 </AccountGroupItem>
                                 <AccountGroupItem>
-                                    카카오 프라이버시
+                                {t("home.footer.account_inner_service_item.kakao_privacy")}
+                                    
                                     <AccountOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
                                         <g fill="none" fillRule="evenodd">
                                             <path d="M1.795 1.074L7.942 1.074 7.942 7.221M7.942 1.074L1.378 7.638" />
@@ -699,7 +743,8 @@ function Footer () {
                                     </AccountOutlinkIcon>
                                 </AccountGroupItem>
                                 <AccountGroupItem>
-                                    카카오 고객센터
+                                {t("home.footer.account_inner_service_item.kakao_customer_center")}
+                                    
                                     <AccountOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
                                         <g fill="none" fillRule="evenodd">
                                             <path d="M1.795 1.074L7.942 1.074 7.942 7.221M7.942 1.074L1.378 7.638" />
@@ -707,7 +752,8 @@ function Footer () {
                                     </AccountOutlinkIcon>
                                 </AccountGroupItem>
                                 <AccountGroupItem>
-                                    다음 고객센터
+                                {t("home.footer.account_inner_service_item.daum_customer_center")}
+                               
                                     <AccountOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
                                         <g fill="none" fillRule="evenodd">
                                             <path d="M1.795 1.074L7.942 1.074 7.942 7.221M7.942 1.074L1.378 7.638" />
@@ -715,7 +761,8 @@ function Footer () {
                                     </AccountOutlinkIcon>
                                 </AccountGroupItem>
                                 <AccountGroupItem>
-                                    커머스 고객센터
+                                {t("home.footer.account_inner_service_item.commerce_customer_center")}
+                                
                                     <AccountOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
                                         <g fill="none" fillRule="evenodd">
                                             <path d="M1.795 1.074L7.942 1.074 7.942 7.221M7.942 1.074L1.378 7.638" />
@@ -723,7 +770,8 @@ function Footer () {
                                     </AccountOutlinkIcon>
                                 </AccountGroupItem>
                                 <AccountGroupItem>
-                                    인재영입
+                                {t("home.footer.account_inner_service_item.kakao_careers")}
+                                    
                                     <AccountOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
                                         <g fill="none" fillRule="evenodd">
                                             <path d="M1.795 1.074L7.942 1.074 7.942 7.221M7.942 1.074L1.378 7.638" />

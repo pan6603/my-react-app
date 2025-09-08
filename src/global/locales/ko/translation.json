@@ -134,10 +134,198 @@
     },
 
 
-    
-    "main": {
-      "about": "소개"
-    }
 
+    "home": {
+      "header": {
+        "about": "소개",
+        "tech_service": "기술과 서비스",
+        "responsibility": "약속과 책임",
+        "news": "소식",
+        "ir": "투자정보"
+      },
+      "main": {
+        "view_more": "자세히 알아보기",
+        "download": "카카오톡 다운로드",
+        "kakao_tech": "카카오의 기술",
+        "kakao_tech_title": "AI 서비스를\n내 일상 속으로",
+        "kakao_description": "카카오설명서",
+        "kakao_description_title": "모두의 카톡을\n더 가깝고 안전하게",
+        "hash_tag": {
+          "ai": "#AI",
+          "open_ai": "#오픈AI",
+          "kakao_ai": "#전략적제휴",
+          "updated_news": "#업데이트소식",
+          "tips_for_kakakotalk": "톡활용팁"
+        }
+      },
+
+      "cont_main_area_story": {
+        "title_cont_type_story_span": "카카오와 카카오 그룹이 축적해 온 이야기들"
+      },
+
+      "list_story": {
+        "esg": "ESG",
+        "service": "서비스",
+        "big_beginner_ceo": "왕초보 사장님들의\n단골 만들기 비법",
+        "secret_to_making_sales": "마케팅이 어려웠던 사장님이\n매출 500% 올린 비결",
+        "hero_tit_card": "도로 위 히어로즈",
+        "kakao_dream": "카카오가 꿈꾸는\n지속가능한 미래",
+        "evolution": "진화에 누구보다\n진심인 편",
+        "click_click_click": "뚝딱뚝딱 성장기",
+        "location_tit_card": "지역 정보 매체에서\n위치 기반 상호작용\n플랫폼으로",
+        "location_desc_card": "카카오맵에서 일어난\n24년 간의 업데이트 이야기",
+        "reply_tit_card": "100명에게\n물어봤습니다",
+        "blind_person_tit_card": "접근성\n어디까지 고민해 봤나요?",
+
+        "hash_tag": {
+          "kakao_mobility": "#카카오모빌리티",
+          "partners": "#파트너상생",
+          "esg": "#ESG",
+          "esg_report": "#ESG보고서",
+          "promise_responsibility": "#약속과 책임",
+          "exploration_life": "#조승연의탐구생활",
+          "kakao_talk": "#카카오톡",
+          "map_platform": "#지도플랫폼",
+          "kakao_map": "#카카오맵",
+          "trend_ranking": "#트랜드랭킹",
+          "road_trip": "#로드트립",
+          "kakao_easy": "#카톡이지",
+          "digital_accessibility": "#디지털접근성"
+        }
+      },
+
+      "cont_main_area_service": {
+        "title_cont_type_service": "더 나은 세상을 만드는 카카오 서비스",
+        "communication": "커뮤니케이션",
+        "business": "비즈니스",
+        "life": "일상편의",
+        "shopping": "쇼핑",
+        "entertainment": "엔터테인먼트",
+        "social_impact": "소셜임팩트",
+        "go_to_service": "서비스 전체보기"
+      },
+
+      "cont_main_area_news": {
+        "kakao_news": "오늘의 뉴스",
+        "press_release": "보도자료",
+        "kakao_news_first_content": "카카오프렌즈, 여름 한정 테마\n'냥냥특집' 테마 굿즈 출시",
+        "kakao_news_two_content": "카카오, ‘제12회 브런치북 출판\n프로젝트’ 대상 수상작 출간",
+        "kakao_news_three_content": "카카오, 신규 톡디지털카드\n‘러너스 카드’ 출시",
+        "media_kit": "미디어자료",
+        "kakao_impact": "카카오임팩트, ‘돕는 AI 컨퍼런스 2025’ 참가자 모집'",
+        "kakao_friends": "카카오프렌즈, 여름 한정 테마 '냥냥특집' 테마 굿즈 출시",
+
+        "hash_tag": {
+          "kakao_friends": "#카카오프렌즈",
+          "kakao_friends_store": "#카카오프렌즈스토어",
+          "character": "#캐릭터",
+          "brunch_book": "#브런치북",
+          "brunch_story": "#브런치스토리",
+          "kakao": "#카카오",
+          "kakao_talk": "#카카오톡",
+          "talk_digital_card": "#톡디지털카드",
+          "runners_card": "#러너스카드"
+        }
+      },
+
+      "cont_main_area_responsible": {
+        "responsibility": "약속과 책임",
+        "title": {
+          "esg_name_responsible": "ESG",
+          "active_green_name_responsible":"액티브그린",
+          "policy": "정책매거진"
+        },
+        "content": {
+          "esg_text_responsible":"모두의 지속가능한 미래를 위한 카카오의 약속과 책임",
+          "active_green_text_responsible": "카카오를 이용하는 만큼\n우리들의 지구도 더 풍요로울 수\n있도록",
+          "policy_magazine_text_responsible": "기술과 사람이 함께 만드는\n건강한 디지털 문화를\n고민합니다"
+        }
+      },
+
+      "cont_main_area_help": {
+        "title_cont_type_help": "무엇을 도와드릴까요?",
+        "title_help": {
+          "kakao": "카카오 고객센터",
+          "daum": "다음 고객센터",
+          "commerce": "커머스 고객센터",
+          "stock": "투자정보",
+          "protection": "데이터의 연결과 보호의 균형을 위한\n카카오의 노력"
+        },
+        "sub_help": {
+          "customer_service": "바로가기",
+          "go_to": "바로가기"
+        },
+        "link_common": {
+          "view_all_kakao_news": "카카오 소식 모아보기"
+        },
+
+        "wrap_social_inner_top": {
+          "wrap_social_inner_top_title": "카카오의 다양한 소식을\n구독하세요!",
+          "sub_social": "공식 소셜 미디어 바로가기"
+        },
+
+        "wrap_recruit_inner_top": {
+          "wrap_recruit_inner_top_title": "세상만사에 관심이 많다면,\n당신은 이미 카카오 크루",
+           "sub_help_link": "영입소식"
+        }
+      },
+
+      "footer": {
+        "today_kakao_text": "오늘의 카카오",
+        "todays_kakao_menu_inner_service": {
+          "kakao_map": "카카오맵",
+          "kakao_helthcare": "지속가능성",
+          "emoticon_shop": "이모티콘샵",
+          "kakao_talk_backup": "카카오톡 백업",
+          "download_kakao_talk": "카카오톡 다운로드"
+        },
+
+        "kakao_inner_service_categories": {
+          "sub_title": "카카오 그룹의 서비스",
+          "communication": "커뮤니케이션",
+          "life": "일상편의",
+          "business": "비지니스",
+          "shopping": "쇼핑",
+          "entertainment": "엔터테인먼트",
+          "impact": "임팩트"
+        },
+
+        "kakao_inner_service_group_companies": {
+          "sub_title": "카카오 그룹",
+          "kakao": "카카오",
+          "kakao_pay": "카카오 페이",
+          "kakao_bank": "카카오 뱅크",
+          "kakao_mobility": "카카오모빌리티",
+          "kakao_style": "카카오스타일",
+          "kakao_entertainment": "카카오엔터테인먼트",
+          "kakao_games": "카카오게임즈",
+          "kakao_pickkoma": "카카오픽코마",
+          "kakao_enterprise": "카카오엔터프라이즈",
+          "kakao_healthcare": "카카오헬스케어",
+          "kakao_ventures": "카카오벤처스",
+          "kakao_investment": "카카오인베스트먼트",
+          "linkage_lab": "링키지랩"
+        },
+
+        "account_inner_service_item": {
+          "sub_title": "계정 및 지원",
+          "kakao_account": "카카오계정",
+          "kakao_privacy": "카카오 프라이버시",
+          "kakao_customer_center": "카카오 고객센터",
+          "daum_customer_center": "다음 고객센터",
+          "commerce_customer_center": "커머스 고객센터",
+          "kakao_careers": "인재영입"
+        },
+
+        "ir_menu_group": {
+          "governance": "기업지배구조",
+          "stocks": "주가정보",
+          "financial_info": "재무정보",
+          "ir_event": "IR 행사",
+          "disclosure_info": "공시정보",
+          "ir_news":"공고"
+        }
+      }
+    }
   }
   

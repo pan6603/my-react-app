@@ -132,8 +132,196 @@
       "shareholder_proposal": "Shareholder Proposal"
     },
 
-    "main": {
-      "about": "About"
+    "home": {
+      "header": {
+        "about": "About",
+        "tech_service": "Tech & Service",
+        "responsibility": "Responsibility",
+        "news": "News",
+        "ir": "IR"
+      },
+      "main": {
+        "view_more": "View More",
+        "download": "Kakaotalk Download",
+        "kakao_tech": "Kakao Tech",
+        "kakao_tech_title": "Kakao and OpenAI announce Collaboration",
+        "kakao_description": "Highlight",
+        "kakao_description_title": "Everyone's\nKakaoTalk closer\nand safer",
+        "hash_tag": {
+          "ai": "#AI",
+          "open_ai": "#OpenAI",
+          "kakao_ai": "#KakaoAI",
+          "updated_news": "#updated news",
+          "tips_for_kakakotalk": "#talk tips"
+        }
+      },
+
+      "cont_main_area_story": {
+        "title_cont_type_story_span": "Kakao & Group Chronicles"
+      },
+
+      "list_story": {
+        "esg": "ESG",
+        "service": "Service",
+        "big_beginner_ceo": "You're the first-timersHow to make a regular customer",
+        "secret_to_making_sales": "The secret of the owner's 500% increase in sales",
+        "hero_tit_card": "Heroes on the Road",
+        "kakao_dream": "Kakao's dream of a sustainable future",
+        "evolution": "I'm more serious about evolution than anyone else",
+        "click_click_click": "Period Of Growth",
+        "location_tit_card": "From local information media to location-based interaction platforms",
+        "location_desc_card": "24 Years of Updates on Kakao Maps",
+        "reply_tit_card": "I asked 100 people",
+        "blind_person_tit_card": "How far have you been thinking about accessibility?",
+
+        "hash_tag": {
+          "kakao_mobility": "#KakaoMobility",
+          "partners": "#Partners",
+          "esg": "#ESG",
+          "esg_report": "#ESGReport",
+          "promise_responsibility": "#PromiseAndResponsibility",
+          "exploration_life": "#Cho Seung-yeon's",
+          "kakao_talk": "#KakaoTalk",
+          "map_platform": "#MapPlatform",
+          "kakao_map": "#KakaoMap",
+          "trend_ranking": "#TrendRanking",
+          "road_trip": "#RoadTrip",
+          "kakao_easy": "#Easy",
+          "digital_accessibility": "#DigitalAccessibility"
+        }
+      },
+
+      "cont_main_area_service": {
+        "title_cont_type_service": "Kakao creates a better world",
+        "communication": "Communication",
+        "business": "Business",
+        "life": "Life",
+        "shopping": "Shopping",
+        "entertainment": "Entertainment",
+        "social_impact": "Social Impact",
+        "go_to_service": "Go to the Service"
+      },
+
+      "cont_main_area_news": {
+        "kakao_news": "Kakao News",
+        "press_release": "Press Release",
+        "kakao_news_first_content": "Kakao Friends Releases Summer-Limited\n'Nyang Cat Special'\nTheme Goods",
+        "kakao_news_two_content": "The 12th Brunch Book Publishing Project.",
+        "kakao_news_three_content": "Kakao Launches New Talk Digital Card 'Runners Card'",
+        "media_kit": "Media-Kit",
+        "kakao_impact": "Kakao Impact Recruiting Participants for 'Helping AI Conference 2025'",
+        "kakao_friends": "Kakao Friends Releases Summer-Limited 'Nyang Cat Special' Theme Goods",
+
+        "hash_tag": {
+          "kakao_friends": "#KakaoFriends",
+          "kakao_friends_store": "#KakaoFriendsStore",
+          "character": "#Character",
+          "brunch_book": "#BrunchBook",
+          "brunch_story": "#BrunchStory",
+          "kakao": "#Kakao",
+          "kakao_talk": "#KakaoTalk",
+          "talk_digital_card": "#TalkDigitalCard",
+          "runners_card": "#RunnersCard"
+        }
+      },
+
+      "cont_main_area_responsible": {
+        "responsibility": "Responsibility",
+        "title": {
+          "esg_name_responsible": "ESG",
+          "active_green_name_responsible":"Active Green",
+          "policy": "Policy"
+        },
+        "content": {
+          "esg_text_responsible":"Kakao’s commitment and responsibility to build a sustainable future for all",
+          "active_green_text_responsible": "To make our planet more\nabundant as we utilize\nKakao",
+          "policy_magazine_text_responsible": "Creating a healthy digital\nculture with technology\nand people"
+        }
+      },
+      "cont_main_area_help": {
+        "title_cont_type_help": "Can I help You?",
+        "title_help": {
+          "kakao": "Kakao",
+          "daum": "Daum",
+          "commerce": "Commerce",
+          "stock": "Stock",
+          "protection": "Kakao always gives priority to\nits users in the process"
+        },
+        "sub_help": {
+          "customer_service": "customer service",
+          "go_to": "go to"
+        },
+        "link_common": {
+          "view_all_kakao_news": "View All Kakao News"
+        },
+
+        "wrap_social_inner_top": {
+          "wrap_social_inner_top_title": "Official Social Media\nChannels",
+          "sub_social": "Social media"
+        },
+
+        "wrap_recruit_inner_top": {
+          "wrap_recruit_inner_top_title": "Curious abot the world\naround you? Then you’re\nalready a Kakao Krew",
+          "sub_help_link": "go to the Careers"
+        }
+      },
+
+      "footer": {
+        "today_kakao_text": "Today's Kakao",
+        "todays_kakao_menu_inner_service": {
+          "kakao_map": "Kakao map",
+          "kakao_helthcare": "Kakao Helthcare",
+          "emoticon_shop": "Emoticon shop",
+          "kakao_talk_backup": "KakaoTalk Backup",
+          "download_kakao_talk": "Download KakaoTalk"
+        },
+
+        "kakao_inner_service_categories": {
+          "sub_title": "Kakao Service",
+          "communication": "Communication",
+          "life": "Life",
+          "business": "Business",
+          "shopping": "Shopping",
+          "entertainment": "Entertainment",
+          "impact": "Impact"
+        },
+
+        "kakao_inner_service_group_companies": {
+          "sub_title": "Group",
+          "kakao": "Kakao",
+          "kakao_pay": "Kakao Pay",
+          "kakao_bank": "Kakao Bank",
+          "kakao_mobility": "Kakao Mobility",
+          "kakao_style": "Kakao Style",
+          "kakao_entertainment": "Kakao Entertainment",
+          "kakao_games": "Kakao Games",
+          "kakao_pickkoma": "Kakao Pickkoma",
+          "kakao_enterprise": "Kakao Enterprise",
+          "kakao_healthcare": "Kakao Healthcare",
+          "kakao_ventures": "Kakao Ventures",
+          "kakao_investment": "Kakao Investment",
+          "linkage_lab": "Linkage Lab"
+        },
+
+        "account_inner_service_item": {
+          "sub_title": "Account & Support",
+          "kakao_account": "Kakao Account",
+          "kakao_privacy": "Kakao Privacy",
+          "kakao_customer_center": "Kakao Customer Center",
+          "daum_customer_center": "Daum Customer Center",
+          "commerce_customer_center": "Commerce Customer Center",
+          "kakao_careers": "Kakao Careers"
+        },
+
+        "ir_menu_group": {
+          "governance": "Governance",
+          "stocks": "Stocks",
+          "financial_info": "Financial Info",
+          "ir_event": "IR Event",
+          "disclosure_info": "Disclosure Info",
+          "ir_news":"IR News"
+        }
+      }
     }
   }
   

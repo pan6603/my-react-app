@@ -11,7 +11,7 @@ import {
     NavInvestmentItem,
     InvestmentArrowLink,
     AreaUtil,
-    TranslationButton,
+    TranslationBtn,
     IconMoonItem,
     IconSunItem,
     IconMagnifierItem,
@@ -32,10 +32,11 @@ function Header () {
 
         setLang(newLang);
     };
-    
-    const iconUrl = lang === "en"
+
+    const iconUrl = lang === "en" 
         ? "https://t1.kakaocdn.net/kakaocorp/Ir/images/btn_ko.svg"
-        : "https://t1.kakaocdn.net/kakaocorp/Ir/images/btn_en.svg";
+        : "https://t1.kakaocdn.net/kakaocorp/Ir/images/btn_en.svg"  
+    
 
     useEffect(() => {
         const handleScroll = () => {
@@ -45,6 +46,7 @@ function Header () {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll); // 클린업
     }, []);
+    
  
     return (
         <HeaderWrapper 
@@ -57,13 +59,13 @@ function Header () {
                 </KakaoMainLogo>
                 <Navigation>
                     <NavigationList>
-                        <NavItemMenu theme={theme} to="/admin">{t("main.about")}</NavItemMenu>
-                        <NavItemMenu theme={theme} to="/about/history">기술과 서비스</NavItemMenu>
-                        <NavItemMenu theme={theme} to="/about/subsidiarycompany">약속과 책임</NavItemMenu>
-                        <NavItemMenu theme={theme} to="/">소식</NavItemMenu>
+                        <NavItemMenu theme={theme} to="/admin">{t("home.header.about")}</NavItemMenu>
+                        <NavItemMenu theme={theme} to="/about/history">{t("home.header.tech_service")}</NavItemMenu>
+                        <NavItemMenu theme={theme} to="/about/subsidiarycompany">{t("home.header.responsibility")}</NavItemMenu>
+                        <NavItemMenu theme={theme} to="/">{t("home.header.news")}</NavItemMenu>
                 
                         <InvestmentLinkDiv to="/ir/main" target="_blank" theme={theme}>
-                            <NavInvestmentItem theme={theme}>투자정보</NavInvestmentItem>
+                            <NavInvestmentItem theme={theme}>{t("home.header.ir")}</NavInvestmentItem>
                             <InvestmentArrowLink fill={theme === "light" ? "#000" : "#fff"} />
                         </InvestmentLinkDiv>
                     </NavigationList>
@@ -73,12 +75,13 @@ function Header () {
                         theme={theme}
                         fill={theme === "light" ? "#000" : "#fff"}
                     />
-                    <TranslationButton
+        
+                    <TranslationBtn
                         onClick={toggleLanguage}
+                        mode={theme}
                         bg={iconUrl}
-                        theme={theme}
-                        fill={theme === "light" ? "#000" : "#fff"}
                     />
+           
                     
                     {theme === "light" ? (
                         <IconMoonItem

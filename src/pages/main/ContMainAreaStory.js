@@ -11,6 +11,7 @@ import {
 import ListStory from "./ListStory";
 import { useTheme } from "../../components/context/ThemeContext";
 import { useRef, useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 function ContMainAreaStory() {
     const slidesCount = 10; // 충분히 많은 복제본
@@ -18,6 +19,7 @@ function ContMainAreaStory() {
     const slideTrackRef = useRef(null);
     const scrollX = useRef(0);
     const [paused, setPaused] = useState(false);
+    const { t } = useTranslation();
 
     useEffect(() => {
         const slideTrack = slideTrackRef.current;
@@ -58,7 +60,7 @@ function ContMainAreaStory() {
         <ContMainAreaStoryContainer>
             <TitleContTypeStory theme={theme}>
                 <TitleContTypeStorySpan theme={theme}>
-                    카카오와 카카오 그룹이 축적해 온 이야기들
+                    {t("home.cont_main_area_story.title_cont_type_story_span")}
                 </TitleContTypeStorySpan>
                 <WrapTop>
                     <BtnStoryTypePause 

@@ -33,17 +33,24 @@ import {
     BtnArr
 } from "../../styles/main/ContMainAreaService.styles";
 import { useTheme } from "../../components/context/ThemeContext";
+import { useTranslation } from "react-i18next";
 
 function ContMainAreaService() {
     const { theme } = useTheme() 
+    const { t } = useTranslation();
+
     return (
         <ContMainAreaStoryContainer>
-            <TitleContTypeService theme={theme}>더 나은 세상을 만드는 카카오 서비스</TitleContTypeService>
+            <TitleContTypeService theme={theme}>
+                {t("home.cont_main_area_service.title_cont_type_service")}
+            </TitleContTypeService>
             <InnerMainInnerService>
                 <ListService>
                     <BoxService theme={theme}>
                         <BoxServiceFlex>
-                        <CateService theme={theme}>커뮤니케이션</CateService>
+                        <CateService theme={theme}>
+                            {t("home.cont_main_area_service.communication")}
+                        </CateService>
                         <ItemsService>
                             <KaKaoLink href="https://www.kakaocorp.com/page/service/service/KakaoTalk">
                                 <LinkImg src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/cc08d9e2018e00001.png" alt="카카오톡" />
@@ -63,7 +70,7 @@ function ContMainAreaService() {
                     </BoxService>
                     <BoxService theme={theme}>
                         <BoxServiceFlex> 
-                            <CateService theme={theme}>비즈니스</CateService>
+                            <CateService theme={theme}>{t("home.cont_main_area_service.business")}</CateService>
                             <ItemsService>
                                 <KakaoTalkChannelLink href="https://www.kakaocorp.com/page/service/service/KakaoTalkChannel">
                                     <LinkImg src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c9468d8a018c00001.png" alt="카카오채널" />
@@ -83,7 +90,9 @@ function ContMainAreaService() {
                     </BoxService>
                     <BoxService theme={theme}>
                         <BoxServiceFlex>  
-                            <CateService theme={theme}>일상편의</CateService>
+                            <CateService theme={theme}>
+                                {t("home.cont_main_area_service.life")}
+                            </CateService>
                             <ItemsService>
                                 <KakaoMapLink href="https://www.kakaocorp.com/page/service/service/KakaoMap">
                                     <LinkImg src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c947f606018c00001.png" alt="카카오맵"/>
@@ -103,7 +112,9 @@ function ContMainAreaService() {
 
                     <BoxService theme={theme}>
                         <BoxServiceFlex>
-                            <CateService theme={theme}>쇼핑</CateService>
+                            <CateService theme={theme}>
+                                {t("home.cont_main_area_service.shopping")}        
+                            </CateService>
                             <ItemsService>
                                 <KakaoTalkGiftLink href="https://www.kakaocorp.com/page/service/service/KakaoTalkGift">
                                     <LinkImg src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c94a2627018c00001.png" alt="" />
@@ -123,7 +134,9 @@ function ContMainAreaService() {
 
                     <BoxService theme={theme}>
                         <BoxServiceFlex>
-                            <CateService theme={theme}>엔터테인먼트</CateService>
+                            <CateService theme={theme}>
+                                {t("home.cont_main_area_service.entertainment")}   
+                            </CateService>
                             <ItemsService>
                                 <KakaoPageLink href="https://www.kakaocorp.com/page/service/service/KakaoPage">
                                     <LinkImg src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c94b668f018c00001.png" alt="카카오페이지"/>
@@ -143,7 +156,9 @@ function ContMainAreaService() {
 
                     <BoxService theme={theme}>
                         <BoxServiceFlex>
-                            <CateService theme={theme}>소셜임팩트</CateService>
+                            <CateService theme={theme}>
+                                {t("home.cont_main_area_service.social_impact")}   
+                            </CateService>
                             <SocialImpactFlex>
                                 <KakaoTogetherLink href="https://www.kakaocorp.com/page/service/service/KakaoTogether">
                                     <LinkImg src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c94c09cc018c00001.png" alt="카카오같이가치" />
@@ -158,7 +173,9 @@ function ContMainAreaService() {
                 <WrapBtn>
                     <LinkCommon href="https://www.kakaocorp.com/page/service/service">
                         <LinkCommonDiv theme={theme}>
-                            <LinkCommonText theme={theme}>서비스 전체보기</LinkCommonText>
+                            <LinkCommonText theme={theme}>
+                                {t("home.cont_main_area_service.go_to_service")}   
+                            </LinkCommonText>
 
                             <BtnArr theme={theme}>
                             <circle data-v-be739f74="" cx="12" cy="12" r="12" fill={theme === "light" ? "#000" : "#fff"}></circle> <path data-v-be739f74="" d="M13.9704 8.57847L13.2078 9.34107L15.7207 11.8539L7.53764 11.8543L7.53765 12.9296L15.7207 12.9292L13.2079 15.442L13.9705 16.2046L17.7836 12.3916L13.9704 8.57847Z" fill={theme === "light" ? "#fff" : "#000"}></path>

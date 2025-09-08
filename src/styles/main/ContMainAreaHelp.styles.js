@@ -242,6 +242,7 @@ export const SubHelpLink = styled.a`
     display: flex;
     align-items: center;
     gap: 10px;
+    width: max-content;
 `
 
 
@@ -296,8 +297,7 @@ export const SubHelp = styled.div`
     left: 40px;
     font-size: 17px;
     line-height: 1.58;
-    max-width: 94px;
-    width: 100%;
+    width: max-content;
     max-height: 27px;
     height: 100%;
     display: flex;

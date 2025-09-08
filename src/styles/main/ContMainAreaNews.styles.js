@@ -169,10 +169,9 @@ export const InfoCate = styled.div`
 `
 
 export const TxtCate = styled.div`
-    max-width: 83px;
-    width: 100%;
+    width: max-content;
     max-height: 41px;
-    width: 100%;
+    padding: 0 16px;
     background-color: ${({ theme }) => (theme === "light" ? "#fff" : "#343434")};
     line-height: 40px;
     border-radius: 8px;
@@ -385,7 +384,7 @@ export const TitleBoxLink = styled.a`
 `
 
 export const BadgeBox = styled.div`
-    max-width: 217px;
+    max-width: 350px;
     width: 100%;
     max-height: 38px;
     height: 100%;
@@ -393,7 +392,7 @@ export const BadgeBox = styled.div`
     letter-spacing: -.2px;
     user-select: none;
     display: flex;
-    justify-content: space-between;
+    gap: 12px;
     align-items: center;
 `
 
@@ -405,16 +404,17 @@ export const IconBox = styled.img`
 `
 
 export const CateBox = styled.div`
-    max-width: 73px;
-    width: 100%;
-    max-height: 33px;
-    height: 100%;
+    width: max-content;
+    height: 33px;
+    padding: 0 16px;
     background-color: ${({ theme }) => (theme === "light" ? "#fff" : "#343434")};
     border-radius: 8px;
     color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 14px;
+    letter-spacing: -.2px;
 `
 
 export const DateBox = styled.div`
@@ -466,7 +466,7 @@ export const LinkNews = styled.a`
     max-height: 110px;
     height: 100%;
     display: flex;
-    gap: 450px;
+    gap: 410px;
     justify-content: center;
     align-items: center;
 

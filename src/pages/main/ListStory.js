@@ -71,10 +71,11 @@ import {
     BlindPersonInfoCard
 } from "../../styles/main/ContMainAreaStory.styles";
 import { useTheme } from "../../components/context/ThemeContext";
-
+import { useTranslation } from "react-i18next";
 
 function ListStory() {
     const { theme } = useTheme() 
+    const { t } = useTranslation();
 
     return (
         <Slide>
@@ -83,13 +84,12 @@ function ListStory() {
                     <WrapText theme={theme}>
                         <InfoCate>
                             <IcoCate src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/category/1ef676a4019300001.png?type=thumb&opt=C72x72.fwebp"/>
-                            <TxtCate theme={theme}>ESG</TxtCate>
+                            <TxtCate theme={theme}>{t("home.list_story.esg")}</TxtCate>
                         </InfoCate>
-        
-                        <TitCard theme={theme}>왕초보 사장님들의 <br /> 단골 만들기 비법</TitCard>
+                        
+                        <TitCard theme={theme}>{t("home.list_story.big_beginner_ceo")}</TitCard>
                         <DescCard theme={theme}>
-                            마케팅이 어려웠던 사장님이 <br />
-                            매출 500% 올린 비결
+                            {t("home.list_story.secret_to_making_sales")}
                         </DescCard>
                     
                     </WrapText>
@@ -120,12 +120,16 @@ function ListStory() {
                         <HeroWrapText theme={theme}>
                             <HeroInfoCate>
                                 <HeroIcoCate src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/category/22d6226a019300001.png?type=thumb&opt=C72x72.fwebp" />
-                                <TxtCate theme={theme}>ESG</TxtCate>
+                                <TxtCate theme={theme}>{t("home.list_story.esg")}</TxtCate>
                             </HeroInfoCate>
-                            <HeroTitCard theme={theme}>도로 위 히어로즈</HeroTitCard>
+                            <HeroTitCard theme={theme}>{t("home.list_story.hero_tit_card")}</HeroTitCard>
                             <HeroInfoCard>
-                                <TxtKeyword theme={theme}>#카카오모빌리티</TxtKeyword>
-                                <TxtKeyword theme={theme}>#파트너상생</TxtKeyword>
+                                <TxtKeyword theme={theme}>
+                                    {t("home.list_story.hash_tag.kakao_mobility")}
+                                </TxtKeyword>
+                                <TxtKeyword theme={theme}>
+                                    {t("home.list_story.hash_tag.partners")}
+                                </TxtKeyword>
                             </HeroInfoCard>
                         </HeroWrapText>
                     </LinkCard>
@@ -150,18 +154,26 @@ function ListStory() {
                     <InnerCard>
                         <InfoCate>
                             <IcoCate src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/category/1ef676a4019300001.png?type=thumb&opt=C72x72.fwebp" />
-                            <TxtCate theme={theme}>ESG</TxtCate>
+                            <TxtCate theme={theme}>{t("home.list_story.esg")}</TxtCate>
                         </InfoCate>
                         <ClickStoryCard2>
-                            <TitCard theme={theme}>카카오가 꿈꾸는<br /> 지속가능한 미래</TitCard>
+                            <TitCard theme={theme}>
+                                {t("home.list_story.kakao_dream")}
+                            </TitCard>
                             <WrapThumbDream>
                                 <ThumbImgDream src="https://t1.kakaocdn.net/thumb/C630x354.fwebp.q100/?fname=https%3A%2F%2Ft1.kakaocdn.net%2Fkakaocorp%2Fkakaocorp%2Fadmin%2Farchives%2F85d56931018c00001.jpg" />
                             </WrapThumbDream>
                         </ClickStoryCard2>
                         <InfoCardDream>
-                            <TxtKeyword theme={theme}>#ESG</TxtKeyword>
-                            <TxtKeyword theme={theme}>#ESG보고서</TxtKeyword>
-                            <TxtKeyword theme={theme}>#약속과책임</TxtKeyword>
+                            <TxtKeyword theme={theme}>
+                                {t("home.list_story.hash_tag.esg")}
+                            </TxtKeyword>
+                            <TxtKeyword theme={theme}>
+                                {t("home.list_story.hash_tag.esg_report")}
+                            </TxtKeyword>
+                            <TxtKeyword theme={theme}>
+                                {t("home.list_story.hash_tag.promise_responsibility")}
+                            </TxtKeyword>
                             <TxtKeyword theme={theme}>#카카오</TxtKeyword>
                         </InfoCardDream>
                     </InnerCard>
@@ -188,15 +200,20 @@ function ListStory() {
                             <ChoSeungYeonWrapText>
                                 <ChoSeungYeonInfoCate>
                                     <IcoCate src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/category/1ef676a4019300001.png?type=thumb&opt=C72x72.fwebp"/>
-                                    <TxtCate theme={theme}>서비스</TxtCate>
+                                    <TxtCate theme={theme}>
+                                        {t("home.list_story.service")}
+                                    </TxtCate>
                                 </ChoSeungYeonInfoCate>
                                 <ChoSeungYeonTitCard theme={theme}>
-                                    진화에 누구보다 <br />
-                                    진심인 편
+                                    {t("home.list_story.evolution")}
                                 </ChoSeungYeonTitCard>
                                 <ChoSeungYeonInfoCard>
-                                    <TxtKeyword theme={theme}>#조승연의탐구생활</TxtKeyword>
-                                    <TxtKeyword theme={theme}>#카카오톡</TxtKeyword>
+                                    <TxtKeyword theme={theme}>
+                                        {t("home.list_story.hash_tag.exploration_life")}
+                                    </TxtKeyword>
+                                    <TxtKeyword theme={theme}>
+                                        {t("home.list_story.hash_tag.kakao_talk")}
+                                    </TxtKeyword>
                                 </ChoSeungYeonInfoCard>
                             </ChoSeungYeonWrapText>
                         </ChoSeungYeonWrapCont>
@@ -210,20 +227,26 @@ function ListStory() {
                         <LocationWrapText>
                             <InfoCate>
                                 <LocationIcoCate src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/6562b710017800001.png?type=thumb&opt=C72x72.fwebp"/>
-                                <LocationTxtCate theme={theme}>뚝딱뚝딱 성장기</LocationTxtCate>
+                                <LocationTxtCate theme={theme}>
+                                    {t("home.list_story.click_click_click")}
+                                </LocationTxtCate>
                             </InfoCate>
                             <LocationTitCard theme={theme}>
-                                지역 정보 매체에서  <br/>
-                                위치 기반 상호작용 <br/> 플랫폼으로
+                                {t("home.list_story.location_tit_card")}
                             </LocationTitCard>
                             <LocationDescCard theme={theme}>
-                                카카오맵에서 일어난 <br/>
-                                24년 간의 업데이트 이야기
+                                {t("home.list_story.location_desc_card")}
                             </LocationDescCard>
                             <LocationInfoCard>
-                                <TxtKeyword theme={theme}>#지도플랫폼</TxtKeyword>
-                                <TxtKeyword theme={theme}>#카카오맵</TxtKeyword>
-                                <TxtKeyword theme={theme}>#트렌드랭킹</TxtKeyword>
+                                <TxtKeyword theme={theme}>
+                                    {t("home.list_story.hash_tag.map_platform")}
+                                </TxtKeyword>
+                                <TxtKeyword theme={theme}>
+                                    {t("home.list_story.hash_tag.kakao_map")}
+                                </TxtKeyword>
+                                <TxtKeyword theme={theme}>
+                                    {t("home.list_story.hash_tag.trend_ranking")}
+                                </TxtKeyword>
                             </LocationInfoCard>
                         </LocationWrapText>
                         <LocationWrapThumb>
@@ -244,16 +267,23 @@ function ListStory() {
                             <ReplyWrapText>
                                 <ReplyInfoCate>
                                     <IcoCate src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/category/1ef676a4019300001.png?type=thumb&opt=C72x72.fwebp"/>
-                                    <TxtCate theme={theme}>서비스</TxtCate>
+                                    <TxtCate theme={theme}>
+                                        {t("home.list_story.service")}
+                                    </TxtCate>
                                 </ReplyInfoCate>
                                 <ReplyTitCard theme={theme}>
-                                    100명에게 <br />
-                                    물어봤습니다
+                                    {t("home.list_story.reply_tit_card")}
                                 </ReplyTitCard>
                                 <ReplyInfoCard>
-                                    <TxtKeyword theme={theme}>#로드트립</TxtKeyword>
-                                    <TxtKeyword theme={theme}>#카카오톡</TxtKeyword>
-                                    <TxtKeyword theme={theme}>#카톡이지</TxtKeyword>
+                                    <TxtKeyword theme={theme}>
+                                        {t("home.list_story.hash_tag.road_trip")}
+                                    </TxtKeyword>
+                                    <TxtKeyword theme={theme}>
+                                        {t("home.list_story.hash_tag.kakao_talk")}
+                                    </TxtKeyword>
+                                    <TxtKeyword theme={theme}>
+                                        {t("home.list_story.hash_tag.kakao_easy")}
+                                    </TxtKeyword>
                                 </ReplyInfoCard>
                             </ReplyWrapText>
                         </ReplyWrapCont>
@@ -274,21 +304,20 @@ function ListStory() {
                     <BlindPersonInnerCard>
                         <BlindPersonInfoCate>
                             <IcoCate src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/category/1ef676a4019300001.png?type=thumb&opt=C72x72.fwebp" />
-                            <TxtCate theme={theme}>서비스</TxtCate>
+                            <TxtCate theme={theme}>{t("home.list_story.service")}</TxtCate>
                         </BlindPersonInfoCate>
                         <BlindPersonLinkItem>
-                            <BlindPersonTitCard theme={theme}>
-                                접근성 <br />
-                                어디까지 고민해 봤나요? 
+                            <BlindPersonTitCard theme={theme} style={{ whiteSpace: 'pre-line' }}>
+                                {t("home.list_story.blind_person_tit_card")}
                             </BlindPersonTitCard>
                             <BlindPersonWrapThumb>
                                 <BlindPersonThumbImg src="https://t1.kakaocdn.net/thumb/C630x354.fwebp.q100/?fname=https%3A%2F%2Ft1.kakaocdn.net%2Fkakaocorp%2Fkakaocorp%2Fadmin%2Farchives%2F85c1a2dc018c00001.jpg"/>
                             </BlindPersonWrapThumb>
                         </BlindPersonLinkItem>
                         <BlindPersonInfoCard>
-                            <TxtKeyword theme={theme}>#디지털접근성</TxtKeyword>
-                            <TxtKeyword theme={theme}>#카카오톡</TxtKeyword>
-                            <TxtKeyword theme={theme}>#카톡이지</TxtKeyword>
+                            <TxtKeyword theme={theme}>{t("home.list_story.hash_tag.digital_accessibility")}</TxtKeyword>
+                            <TxtKeyword theme={theme}>{t("home.list_story.hash_tag.kakao_talk")}</TxtKeyword>
+                            <TxtKeyword theme={theme}>{t("home.list_story.hash_tag.kakao_easy")}</TxtKeyword>
                         </BlindPersonInfoCard>
                     </BlindPersonInnerCard>
                     <BlindPersonBtnShareIcoComm>

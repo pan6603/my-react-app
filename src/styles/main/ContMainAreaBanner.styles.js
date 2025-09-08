@@ -101,16 +101,8 @@ export const LinkBottom = styled.a`
     letter-spacing: -.6px;
     color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
     display: flex;
-    justify-content: space-between;
+    gap: 12px;
     align-items: center;
-`
-
-export const TitleVisual = styled.strong`
-    font-size: 48px;
-    line-height: 1.25;
-    font-weight: 400;
-    letter-spacing: -1px;
-    color: #fff;
 `
 
 export const InnerfirstWidget = styled.div`

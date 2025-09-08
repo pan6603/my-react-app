@@ -102,7 +102,7 @@ export const InnerMainInnerStory = styled.div`
     width: 100%;
     height: 439px;
     overflow: hidden;
-
+    
 `
    
 
@@ -211,7 +211,7 @@ export const IcoShare = styled.svg`
 export const TitCard = styled.strong`
     max-width: 272px;
     width: 100%;
-    height: 72px;
+    height: max-content;
     display: -webkit-box;
     margin: 16px auto;
     font-size: 26px;
@@ -621,10 +621,10 @@ export const LocationIcoCate = styled.img`
 `
 
 export const LocationTxtCate = styled.div`
-    max-width: 115px;
-    width: 100%;
+    width: max-content;
     height: 32px;
     line-height: 32px;
+    padding: 0 12px;
     background-color: ${({ theme }) => (theme === "light" ? "#fff" : "#343434")};
     font-size: 14px;
     letter-spacing: -.2px;
@@ -638,7 +638,7 @@ export const LocationTxtCate = styled.div`
 export const LocationTitCard = styled.div`
     max-width: 272px;
     width: 100%;
-    height: 107px;
+    height: max-content;
     margin: 16px auto;
     font-size: 26px;
     font-weight: bold;
