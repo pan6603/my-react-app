@@ -115,9 +115,7 @@ function InverstmentHeader() {
                             <NavItemMenuLinkArrow>{t("nav.esg")}</NavItemMenuLinkArrow>
                         </NavItemMenu>
                         <NavItemMenu>
-                            <NavItemMenuLinkArrow>
-                            {t("nav.kakao")}
-                            </NavItemMenuLinkArrow>
+                            <NavItemMenuLinkArrow href="/" target="_blank">{t("nav.kakao")}</NavItemMenuLinkArrow>
                         </NavItemMenu>
                     </ListMainNav>
                 </DocGnbNav>

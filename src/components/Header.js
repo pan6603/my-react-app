@@ -36,7 +36,7 @@ function Header () {
     const iconUrl = lang === "en" 
         ? "https://t1.kakaocdn.net/kakaocorp/Ir/images/btn_ko.svg"
         : "https://t1.kakaocdn.net/kakaocorp/Ir/images/btn_en.svg"  
-    
+        
 
     useEffect(() => {
         const handleScroll = () => {
@@ -46,7 +46,7 @@ function Header () {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll); // 클린업
     }, []);
-    
+
  
     return (
         <HeaderWrapper 
@@ -82,7 +82,6 @@ function Header () {
                         bg={iconUrl}
                     />
            
-                    
                     {theme === "light" ? (
                         <IconMoonItem
                           onClick={toggleTheme}

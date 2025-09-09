@@ -16,7 +16,7 @@ const FooterContainer = styled.footer`
 const InnerFooter = styled.div`
     max-width: 1316px;
     width: 100%;
-    height: 533px;
+    height: 0px;
     margin: 0 auto;
     padding: 81px 0 48px;
     display: flex;
