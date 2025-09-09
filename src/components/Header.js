@@ -47,7 +47,7 @@ function Header () {
         return () => window.removeEventListener('scroll', handleScroll); // 클린업
     }, []);
 
- 
+
     return (
         <HeaderWrapper 
             isScrolled={isScrolled}

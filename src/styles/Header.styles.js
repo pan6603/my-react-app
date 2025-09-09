@@ -21,6 +21,7 @@ export const HeaderWrapper = styled.header`
     border: 0;
     background-color: ${({theme}) => theme.bgColor};
     color: ${({theme}) => theme.fontcolor};
+    border-bottom: ${({ isScrolled }) => (isScrolled ? "1px solid #EAEAEA" : "none")};
 `;
 
 export const InnerHeader = styled.div`
@@ -81,6 +82,12 @@ export const NavItemMenu = styled(Link)`
     &:hover {
         background-color: ${({ theme }) => theme === "light" ? "#f5f5f5" : "#333"}; 
         border-radius: 54px; 
+    }
+
+    &:active {
+        background-color: #000;   
+        color: #fff;            
+        border-radius: 54px;
     }
 `;
 
