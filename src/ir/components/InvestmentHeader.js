@@ -11,11 +11,12 @@ import {
     NavItemMenuLinkArrow
 } from "../../styles/ir/main/InverstmentHeader.styles"
 import { useTranslation } from "react-i18next";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function InverstmentHeader() {
     const { t, i18n } = useTranslation();
     const [lang, setLang] = useState(i18n.language || "en"); 
+    const [isScrolled, setIsScrolled] = useState(false);
 
     const toggleLanguage = () => {
         const newLang = i18n.language === "ko" ? "en" : "ko";
@@ -29,8 +30,17 @@ function InverstmentHeader() {
       ? "https://t1.kakaocdn.net/kakaocorp/Ir/images/btn_ko.svg"
       : "https://t1.kakaocdn.net/kakaocorp/Ir/images/btn_en.svg";
 
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 0);
+        };
+      
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll); // 클린업
+    }, []);
+
     return (
-        <DocHeader>
+        <DocHeader isScrolled={isScrolled}>
             <InnerHeader>
                 <DocTitle>
                     <DocTitleLink href="/ir/main">

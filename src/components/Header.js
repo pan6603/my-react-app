@@ -17,11 +17,11 @@ import {
     IconMagnifierItem,
 } from '../styles/Header.styles';
 import { useTheme } from './context/ThemeContext';
-import { lightTheme, darkTheme } from '../styles/context/theme';
 import { useTranslation } from "react-i18next";
 
+
 function Header () {
-    const { theme, toggleTheme} = useTheme() 
+    const { theme, toggleTheme} = useTheme(); 
     const [isScrolled, setIsScrolled] = useState(false);
     const { t, i18n } = useTranslation();
     const [lang, setLang] = useState(i18n.language || "en"); 
@@ -36,7 +36,7 @@ function Header () {
     const iconUrl = lang === "en" 
         ? "https://t1.kakaocdn.net/kakaocorp/Ir/images/btn_ko.svg"
         : "https://t1.kakaocdn.net/kakaocorp/Ir/images/btn_en.svg"  
-        
+
 
     useEffect(() => {
         const handleScroll = () => {
@@ -49,17 +49,14 @@ function Header () {
 
 
     return (
-        <HeaderWrapper 
-            isScrolled={isScrolled}
-            theme={theme === 'light' ? lightTheme : darkTheme}
-            >
+        <HeaderWrapper isScrolled={isScrolled} theme={theme}>
             <InnerHeader>
                 <KakaoMainLogo>
                     <KakaoMainLogoImg fill={theme === "light" ? "#000" : "#fff"}/>
                 </KakaoMainLogo>
                 <Navigation>
                     <NavigationList>
-                        <NavItemMenu theme={theme} to="/admin">{t("home.header.about")}</NavItemMenu>
+                        <NavItemMenu theme={theme}>{t("home.header.about")}</NavItemMenu>
                         <NavItemMenu theme={theme} to="/about/history">{t("home.header.tech_service")}</NavItemMenu>
                         <NavItemMenu theme={theme} to="/about/subsidiarycompany">{t("home.header.responsibility")}</NavItemMenu>
                         <NavItemMenu theme={theme} to="/">{t("home.header.news")}</NavItemMenu>

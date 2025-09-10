@@ -11,6 +11,7 @@ export const DocHeader = styled.header`
     width: 100%;
     height: 92px;
     background-color: #fff;
+    border-bottom: ${({ isScrolled }) => isScrolled ? "1px solid #EAEAEA" : "none"};
 `
 
 export const InnerHeader = styled.div`

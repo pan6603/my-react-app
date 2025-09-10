@@ -19,9 +19,10 @@ export const HeaderWrapper = styled.header`
     left: 0;
     right: 0;
     border: 0;
-    background-color: ${({theme}) => theme.bgColor};
-    color: ${({theme}) => theme.fontcolor};
-    border-bottom: ${({ isScrolled }) => (isScrolled ? "1px solid #EAEAEA" : "none")};
+    background-color: ${({ theme }) => (theme === "light" ? "#fff" : "#000")};
+    color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
+    border-bottom: ${({ isScrolled, theme }) => isScrolled ? 
+        theme === "light" ? "1px solid #EAEAEA" : "1px solid #262626": "none"};
 `;
 
 export const InnerHeader = styled.div`
@@ -85,8 +86,8 @@ export const NavItemMenu = styled(Link)`
     }
 
     &:active {
-        background-color: #000;   
-        color: #fff;            
+        background-color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};   
+        color: ${({ theme }) => (theme === "light" ? "#fff" : "#000")};          
         border-radius: 54px;
     }
 `;
