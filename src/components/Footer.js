@@ -152,7 +152,7 @@ const InnerServiceUlListLink = styled.a`
     line-height: 1.78;
 
     &:hover {
-        color: black;
+        color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
     }
 `
 
@@ -286,7 +286,7 @@ const KakaoMenuCategoriesLink = styled.a`
     cursor: pointer;
 
     &:hover {
-        color: black;
+        color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
     }
 `
 
@@ -303,7 +303,7 @@ const KakaoMenuGroupCompaniesItem = styled.a`
     cursor: pointer;
 
     &:hover {
-        color: black;
+        color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
     }
 `
 
@@ -320,7 +320,7 @@ const IrMenuGroupItem = styled.a`
     cursor: pointer;
 
     &:hover {
-        color: black;
+        color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
     }
 `
 
@@ -337,7 +337,7 @@ const AccountGroupItem = styled.a`
     cursor: pointer;
 
     &:hover {
-        color: black;
+        color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
     }
 `
 
@@ -354,7 +354,7 @@ const KakaoMenuGroupAffiliatesItem = styled.a`
     cursor: pointer;
 
     &:hover {
-        color: black;
+        color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
     }
 `
 
@@ -438,7 +438,7 @@ function Footer () {
                         <TodaysKakaoMenuInnerService>
                             <InnerServiceUl>
                                 <InnerServiceUlList>
-                                    <InnerServiceUlListLink>
+                                    <InnerServiceUlListLink theme={theme}>
                                     {t("home.footer.todays_kakao_menu_inner_service.download_kakao_talk")}
                                     </InnerServiceUlListLink>
                                     <RightArrowIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
@@ -447,7 +447,7 @@ function Footer () {
                                 </InnerServiceUlList>
 
                                 <InnerServiceUlList>
-                                    <InnerServiceUlListLink>
+                                    <InnerServiceUlListLink theme={theme}>
                                     {t("home.footer.todays_kakao_menu_inner_service.kakao_talk_backup")}
                                     </InnerServiceUlListLink>
                                     <StyledOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
@@ -458,7 +458,7 @@ function Footer () {
                                 </InnerServiceUlList>
 
                                 <InnerServiceUlList>
-                                    <InnerServiceUlListLink>
+                                    <InnerServiceUlListLink theme={theme}>
                                     {t("home.footer.todays_kakao_menu_inner_service.emoticon_shop")}
                                     </InnerServiceUlListLink>
                                     <StyledOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
@@ -469,7 +469,7 @@ function Footer () {
                                 </InnerServiceUlList>
 
                                 <InnerServiceUlList>
-                                    <InnerServiceUlListLink>
+                                    <InnerServiceUlListLink theme={theme}>
                                     {t("home.footer.todays_kakao_menu_inner_service.kakao_map")}
                                     </InnerServiceUlListLink>
                                     <StyledOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
@@ -480,7 +480,7 @@ function Footer () {
                                 </InnerServiceUlList>
                                 
                                 <InnerServiceUlList>
-                                    <InnerServiceUlListLink>
+                                    <InnerServiceUlListLink theme={theme}>
                                     {t("home.footer.todays_kakao_menu_inner_service.kakao_helthcare")}
                                     </InnerServiceUlListLink>
                                     <StyledOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
@@ -499,22 +499,22 @@ function Footer () {
                         </SubTitle>
                         <KakaoInnerServiceCategories>
                             <KakaoMenuCategories>
-                                <KakaoMenuCategoriesLink>
+                                <KakaoMenuCategoriesLink theme={theme}>
                                 {t("home.footer.kakao_inner_service_categories.communication")}
                                 </KakaoMenuCategoriesLink>
-                                <KakaoMenuCategoriesLink>
+                                <KakaoMenuCategoriesLink theme={theme}>
                                 {t("home.footer.kakao_inner_service_categories.life")}
                                 </KakaoMenuCategoriesLink>
-                                <KakaoMenuCategoriesLink>
+                                <KakaoMenuCategoriesLink theme={theme}>
                                 {t("home.footer.kakao_inner_service_categories.business")}
                                 </KakaoMenuCategoriesLink>
-                                <KakaoMenuCategoriesLink>
+                                <KakaoMenuCategoriesLink theme={theme}>
                                 {t("home.footer.kakao_inner_service_categories.shopping")}
                                 </KakaoMenuCategoriesLink>
-                                <KakaoMenuCategoriesLink>
+                                <KakaoMenuCategoriesLink theme={theme}>
                                 {t("home.footer.kakao_inner_service_categories.entertainment")}
                                 </KakaoMenuCategoriesLink>
-                                <KakaoMenuCategoriesLink>
+                                <KakaoMenuCategoriesLink theme={theme}>
                                 {t("home.footer.kakao_inner_service_categories.impact")}
                                 </KakaoMenuCategoriesLink>
                             </KakaoMenuCategories>
@@ -527,10 +527,10 @@ function Footer () {
                         </SubTitle>
                         <KakaoInnerServiceGroupCompanies>
                             <KakaoMenuGroupCompanies>
-                                <KakaoMenuGroupCompaniesItem>
+                                <KakaoMenuGroupCompaniesItem theme={theme}>
                                 {t("home.footer.kakao_inner_service_group_companies.kakao")}
                                 </KakaoMenuGroupCompaniesItem>
-                                <KakaoMenuGroupCompaniesItem>
+                                <KakaoMenuGroupCompaniesItem theme={theme}>
                                 {t("home.footer.kakao_inner_service_group_companies.kakao_pay")}
                                     <KakaoPayOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
                                         <g fill="none" fillRule="evenodd">
@@ -539,7 +539,7 @@ function Footer () {
                                     </KakaoPayOutlinkIcon>
                                 </KakaoMenuGroupCompaniesItem>
 
-                                <KakaoMenuGroupCompaniesItem>
+                                <KakaoMenuGroupCompaniesItem theme={theme}>
                                 {t("home.footer.kakao_inner_service_group_companies.kakao_bank")}
                                     <KakaoPayOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
                                         <g fill="none" fillRule="evenodd">
@@ -548,7 +548,7 @@ function Footer () {
                                     </KakaoPayOutlinkIcon>
                                 </KakaoMenuGroupCompaniesItem>
 
-                                <KakaoMenuGroupCompaniesItem>
+                                <KakaoMenuGroupCompaniesItem theme={theme}>
                                 {t("home.footer.kakao_inner_service_group_companies.kakao_mobility")}
                                     <KakaoPayOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
                                         <g fill="none" fillRule="evenodd">
@@ -557,7 +557,7 @@ function Footer () {
                                     </KakaoPayOutlinkIcon>
                                 </KakaoMenuGroupCompaniesItem>
 
-                                <KakaoMenuGroupCompaniesItem>
+                                <KakaoMenuGroupCompaniesItem theme={theme}>
                                 {t("home.footer.kakao_inner_service_group_companies.kakao_style")}
                                     <KakaoPayOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
                                         <g fill="none" fillRule="evenodd">
@@ -566,7 +566,7 @@ function Footer () {
                                     </KakaoPayOutlinkIcon>
                                 </KakaoMenuGroupCompaniesItem>
 
-                                <KakaoMenuGroupCompaniesItem>
+                                <KakaoMenuGroupCompaniesItem theme={theme}>
                                 {t("home.footer.kakao_inner_service_group_companies.kakao_entertainment")}
                                     <KakaoPayOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
                                         <g fill="none" fillRule="evenodd">
@@ -582,7 +582,7 @@ function Footer () {
                     <KaKaoSectionServiceAffiliates>
                         <KaKaoInnerServiceAffiliates>
                             <KakaoMenuGroupAffiliates>
-                                <KakaoMenuGroupAffiliatesItem>
+                                <KakaoMenuGroupAffiliatesItem theme={theme}>
                                 {t("home.footer.kakao_inner_service_group_companies.kakao_games")}
             
                                     <KakaoAffiliateOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
@@ -592,7 +592,7 @@ function Footer () {
                                     </KakaoAffiliateOutlinkIcon>
                                 </KakaoMenuGroupAffiliatesItem>
 
-                                <KakaoMenuGroupAffiliatesItem>
+                                <KakaoMenuGroupAffiliatesItem theme={theme}>
                                 {t("home.footer.kakao_inner_service_group_companies.kakao_pickkoma")}
                                
                                     <KakaoAffiliateOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
@@ -602,7 +602,7 @@ function Footer () {
                                     </KakaoAffiliateOutlinkIcon>
                                 </KakaoMenuGroupAffiliatesItem>
 
-                                <KakaoMenuGroupAffiliatesItem>
+                                <KakaoMenuGroupAffiliatesItem theme={theme}>
                                 {t("home.footer.kakao_inner_service_group_companies.kakao_enterprise")}
                                     
                                     <KakaoAffiliateOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
@@ -612,7 +612,7 @@ function Footer () {
                                     </KakaoAffiliateOutlinkIcon>
                                 </KakaoMenuGroupAffiliatesItem>
 
-                                <KakaoMenuGroupAffiliatesItem>
+                                <KakaoMenuGroupAffiliatesItem theme={theme}>
                                 {t("home.footer.kakao_inner_service_group_companies.kakao_healthcare")}
                                     <KakaoAffiliateOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
                                         <g fill="none" fillRule="evenodd">
@@ -621,7 +621,7 @@ function Footer () {
                                     </KakaoAffiliateOutlinkIcon>
                                 </KakaoMenuGroupAffiliatesItem>
 
-                                <KakaoMenuGroupAffiliatesItem>
+                                <KakaoMenuGroupAffiliatesItem theme={theme}>
                                 {t("home.footer.kakao_inner_service_group_companies.kakao_ventures")}
                                 
                                     <KakaoAffiliateOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
@@ -631,7 +631,7 @@ function Footer () {
                                     </KakaoAffiliateOutlinkIcon>
                                 </KakaoMenuGroupAffiliatesItem>
 
-                                <KakaoMenuGroupAffiliatesItem>
+                                <KakaoMenuGroupAffiliatesItem theme={theme}>
                                 {t("home.footer.kakao_inner_service_group_companies.kakao_investment")}
                                     
                                     <KakaoAffiliateOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
@@ -641,7 +641,7 @@ function Footer () {
                                     </KakaoAffiliateOutlinkIcon>
                                 </KakaoMenuGroupAffiliatesItem>
 
-                                <KakaoMenuGroupAffiliatesItem>
+                                <KakaoMenuGroupAffiliatesItem theme={theme}>
                                 {t("home.footer.kakao_inner_service_group_companies.linkage_lab")}
                                     
                                     <KakaoAffiliateOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
@@ -658,7 +658,7 @@ function Footer () {
                         <SubTitle theme={theme}>IR</SubTitle>
                         <IrMenuService>
                             <IrMenuGroup>
-                                <IrMenuGroupItem>
+                                <IrMenuGroupItem theme={theme}>
                                 {t("home.footer.ir_menu_group.governance")}
                                     <IrMenuOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
                                         <g fill="none" fillRule="evenodd">
@@ -667,7 +667,7 @@ function Footer () {
                                     </IrMenuOutlinkIcon>
                                 </IrMenuGroupItem>
 
-                                <IrMenuGroupItem>
+                                <IrMenuGroupItem theme={theme}>
                                 {t("home.footer.ir_menu_group.stocks")}
                                     <IrMenuOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
                                         <g fill="none" fillRule="evenodd">
@@ -676,7 +676,7 @@ function Footer () {
                                     </IrMenuOutlinkIcon>
                                 </IrMenuGroupItem>
 
-                                <IrMenuGroupItem>
+                                <IrMenuGroupItem theme={theme}>
                                 {t("home.footer.ir_menu_group.financial_info")}
                                     <IrMenuOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
                                         <g fill="none" fillRule="evenodd">
@@ -685,7 +685,7 @@ function Footer () {
                                     </IrMenuOutlinkIcon>
                                 </IrMenuGroupItem>
 
-                                <IrMenuGroupItem>
+                                <IrMenuGroupItem theme={theme}>
                                 {t("home.footer.ir_menu_group.ir_event")}
                                
                                     <IrMenuOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
@@ -695,7 +695,7 @@ function Footer () {
                                     </IrMenuOutlinkIcon>
                                 </IrMenuGroupItem>
 
-                                <IrMenuGroupItem>
+                                <IrMenuGroupItem theme={theme}>
                                 {t("home.footer.ir_menu_group.disclosure_info")}
                                
                                     <IrMenuOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
@@ -705,7 +705,7 @@ function Footer () {
                                     </IrMenuOutlinkIcon>
                                 </IrMenuGroupItem>
 
-                                <IrMenuGroupItem>
+                                <IrMenuGroupItem theme={theme}>
                                 {t("home.footer.ir_menu_group.ir_news")}
                                 
                                     <IrMenuOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
@@ -724,7 +724,7 @@ function Footer () {
                             {t("home.footer.account_inner_service_item.sub_title")}
                             </SubTitle>
                             <AccountGroup>
-                                <AccountGroupItem>
+                                <AccountGroupItem theme={theme}>
                                 {t("home.footer.account_inner_service_item.kakao_account")}
                                 
                                     <AccountOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
@@ -733,7 +733,7 @@ function Footer () {
                                         </g>
                                     </AccountOutlinkIcon>
                                 </AccountGroupItem>
-                                <AccountGroupItem>
+                                <AccountGroupItem theme={theme}>
                                 {t("home.footer.account_inner_service_item.kakao_privacy")}
                                     
                                     <AccountOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
@@ -742,7 +742,7 @@ function Footer () {
                                         </g>
                                     </AccountOutlinkIcon>
                                 </AccountGroupItem>
-                                <AccountGroupItem>
+                                <AccountGroupItem theme={theme}>
                                 {t("home.footer.account_inner_service_item.kakao_customer_center")}
                                     
                                     <AccountOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
@@ -751,7 +751,7 @@ function Footer () {
                                         </g>
                                     </AccountOutlinkIcon>
                                 </AccountGroupItem>
-                                <AccountGroupItem>
+                                <AccountGroupItem theme={theme}>
                                 {t("home.footer.account_inner_service_item.daum_customer_center")}
                                
                                     <AccountOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
@@ -760,7 +760,7 @@ function Footer () {
                                         </g>
                                     </AccountOutlinkIcon>
                                 </AccountGroupItem>
-                                <AccountGroupItem>
+                                <AccountGroupItem theme={theme}>
                                 {t("home.footer.account_inner_service_item.commerce_customer_center")}
                                 
                                     <AccountOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
@@ -769,7 +769,7 @@ function Footer () {
                                         </g>
                                     </AccountOutlinkIcon>
                                 </AccountGroupItem>
-                                <AccountGroupItem>
+                                <AccountGroupItem theme={theme}>
                                 {t("home.footer.account_inner_service_item.kakao_careers")}
                                     
                                     <AccountOutlinkIcon viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg">
