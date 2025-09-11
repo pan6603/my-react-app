@@ -22,6 +22,7 @@ const InnerFooter = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
 `
 
 const SectionService = styled.section`
@@ -40,6 +41,7 @@ const SectionRelation = styled.section`
     height: 65px;
     display: flex;
     align-items: center;
+    margin-top: 55px;
 `
 
 const GroupInfo = styled.div`
