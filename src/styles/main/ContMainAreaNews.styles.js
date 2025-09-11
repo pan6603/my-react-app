@@ -108,6 +108,7 @@ export const SlickSlide = styled.div`
     width: 100%;
     max-height: 621px;
     height: 100%;
+    cursor: pointer;
 `
 
 export const SlickSlideDiv1 = styled.div`
