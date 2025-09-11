@@ -343,8 +343,7 @@ export const TodayNewsSlickSlide = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    
+    cursor: pointer;
 `
 
 export const ItemCardNewBoxNews = styled.div`
@@ -459,6 +458,7 @@ export const LinkNewsDiv = styled.div`
     background-color: ${({ theme }) => (theme === "light" ? "#f0f0f0" : "#262626")};
     box-sizing: border-box;
     border-radius: 20px;
+    cursor: pointer;
 `
 
 export const LinkNews = styled.a`
