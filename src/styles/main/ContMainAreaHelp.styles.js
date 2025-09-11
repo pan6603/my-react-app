@@ -75,6 +75,7 @@ export const BoxHelp = styled.div`
     background-color: ${({ theme }) => (theme === "light" ? "#f3f3f3" : "#333")};
     border-radius: 20px;
     position: relative;
+    cursor: pointer;
 `
 
 export const BoxHelpLink = styled.div`
@@ -99,6 +100,7 @@ export const WrapSocialInnerTop = styled.div`
     box-sizing: border-box;
     padding: 40px;
     background-size: 284px auto;
+    cursor: pointer;
 `
 
 export const WrapSocialInnerTopTitle = styled.strong`
@@ -217,6 +219,7 @@ export const WrapRecruitInnerTop = styled.div`
     border-radius: 36px;
     box-sizing: border-box;
     padding: 40px;
+    cursor: pointer;
 `
 
 export const WrapRecruitInnerTopTitle = styled.strong`
@@ -323,6 +326,7 @@ export const HelpWrapBtn = styled.div`
     max-height: 76px;
     height: 100%;
     text-align: center;
+    cursor: pointer;
 `
 
 export const LinkCommonDiv = styled.div`
