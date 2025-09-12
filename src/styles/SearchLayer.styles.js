@@ -119,6 +119,7 @@ export const LinkTag = styled.a`
     margin-right: 10px;
     vertical-align: top;
     text-decoration: none;
+    cursor: pointer;
 
     &:hover {
         background-color: #ddd;
