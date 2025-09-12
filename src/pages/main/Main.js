@@ -13,6 +13,7 @@ import ContMainAreaResponsible from "./ContMainAreaResponsible";
 import ContMainAreaHelp from "./ContMainAreaHelp";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import SearchLayer from "../../components/SearchLayer";
 import { lightTheme, darkTheme } from "../../styles/context/theme";
 import { useTheme } from "../../components/context/ThemeContext";
 
@@ -40,6 +41,7 @@ function Main() {
                 </InnerMain>
             </MainContainer>
             <Footer />
+            <SearchLayer />
         </>
  
     )
