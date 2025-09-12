@@ -15,9 +15,20 @@ import {
     LinkTag,
     IcoSearchBold
 } from "../styles/SearchLayer.styles";
+import { useEffect } from "react";
 
+function SearchLayer({closeSearch}) {
 
-function SearchLayer() {
+    useEffect(() => {
+        // SearchLayer 열릴 때 스크롤 막기
+        document.body.style.overflow = "hidden";
+    
+        return () => {
+          // SearchLayer 닫힐 때 원래대로 복구
+          document.body.style.overflow = "auto";
+        };
+      }, []);
+
     return (
         <SearchLayerContainer>
             <InnerLayer>
@@ -96,7 +107,7 @@ function SearchLayer() {
                             </WrapTag>
                         </GroupSearch>
                     </AreaSearch>
-                    <BtnClose>
+                    <BtnClose onClick={closeSearch}>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="ico_close">
                         <line x1="4" y1="4" x2="24" y2="24" stroke="black" strokeWidth="1.6" strokeLinecap="square" />
                         <line x1="24" y1="4" x2="4" y2="24" stroke="black" strokeWidth="1.6" strokeLinecap="square" />

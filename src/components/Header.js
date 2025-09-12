@@ -20,7 +20,7 @@ import { useTheme } from './context/ThemeContext';
 import { useTranslation } from "react-i18next";
 
 
-function Header () {
+function Header ({openSearch}) {
     const { theme, toggleTheme} = useTheme(); 
     const [isScrolled, setIsScrolled] = useState(false);
     const { t, i18n } = useTranslation();
@@ -71,6 +71,7 @@ function Header () {
                     <IconMagnifierItem 
                         theme={theme}
                         fill={theme === "light" ? "#000" : "#fff"}
+                        onClick={openSearch}
                     />
         
                     <TranslationBtn
