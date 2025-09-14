@@ -16,8 +16,10 @@ import {
     IcoSearchBold
 } from "../styles/SearchLayer.styles";
 import { useEffect } from "react";
+import { useTheme } from "./context/ThemeContext";
 
-function SearchLayer({closeSearch}) {
+function SearchLayer({ closeSearch}) {
+    const { theme } = useTheme() 
 
     useEffect(() => {
         // SearchLayer 열릴 때 스크롤 막기
@@ -31,7 +33,7 @@ function SearchLayer({closeSearch}) {
 
     return (
         <SearchLayerContainer>
-            <InnerLayer>
+            <InnerLayer theme={theme}>
                 <LayerHead>
                     <LayerHeadDiv>
                         <KakaoLogoLink href="/">
@@ -40,7 +42,7 @@ function SearchLayer({closeSearch}) {
                                     <path id="os5cgsl0ta" d="M0.011 0.205L11.948 0.205 11.948 22.203 0.011 22.203z" />
                                     <path id="oanpyfjipc" d="M0.264 0.004L13.566 0.004 13.566 15.487 0.264 15.487z" />
                                 </defs>
-                                <g fill="black" fillRule="evenodd">
+                                <g fill={theme === "light" ? "#000" : "#fff"} fillRule="evenodd">
                                     <g>
                                         <path
                                             d="M18.91 20.05c.344 0 .7-.046 1.071-.137.371-.09.742-.209 1.113-.354.371-.146.72-.323 1.045-.532.327-.21.616-.432.87-.668V14.87h-2.607c-1.32 0-2.284.227-2.89.681-.606.455-.91 1.173-.91 2.154 0 1.562.769 2.344 2.308 2.344m-4.706-2.235c0-1.508.503-2.658 1.513-3.448 1.008-.79 2.476-1.186 4.401-1.186h2.89v-.954c0-2.308-1.018-3.461-3.053-3.461-.653 0-1.34.09-2.057.272-.719.182-1.377.409-1.977.681l-.736-1.771c.745-.418 1.55-.74 2.413-.968.862-.227 1.704-.341 2.52-.341 3.526 0 5.288 1.88 5.288 5.642v9.54h-1.852l-.3-1.635c-.745.6-1.54 1.063-2.385 1.39-.845.328-1.649.49-2.414.49-1.325 0-2.365-.376-3.12-1.13-.754-.754-1.131-1.794-1.131-3.12"
@@ -91,26 +93,37 @@ function SearchLayer({closeSearch}) {
                                     <g data-v-558be2b6="" transform="translate(-333 -214) translate(309 192) translate(24 22)">
                                         <path data-v-558be2b6="" d="M0 0H28V28H0z"></path> 
                                         <circle 
-                                            data-v-558be2b6="" cx="12.944" cy="12.944" r="8.944" stroke-width="2.5" class="stroke" stroke="white"></circle> 
-                                        <path data-v-558be2b6="" d="M18.987 18.987L25.017 25.017" stroke-width="2.5" class="stroke" stroke="white">
+                                            data-v-558be2b6="" cx="12.944" cy="12.944" r="8.944" stroke-width="2.5" class="stroke" stroke={theme === "light" ? "#fff" : "#000"}></circle> 
+                                        <path data-v-558be2b6="" d="M18.987 18.987L25.017 25.017" stroke-width="2.5" class="stroke" stroke={theme === "light" ? "#fff" : "#000"}>
                                         </path></g></g>
                                 </IcoSearchBold>
                             
-                                <InpSearch placeholder="무엇이 궁금하신가요?"/>
+                                <InpSearch 
+                                    placeholder="무엇이 궁금하신가요?"
+                                    theme={theme}
+                                />
                             </WrapSearch>
                             <WrapTag>
-                                <LinkTag>#산업생태계기여</LinkTag>
-                                <LinkTag>#비즈니스임팩트</LinkTag>
-                                <LinkTag>#케이팝 데몬 헌터스</LinkTag>
-                                <LinkTag>#넷플릭스</LinkTag>
-                                <LinkTag>#국제포럼</LinkTag>
+                                <LinkTag theme={theme}>#산업생태계기여</LinkTag>
+                                <LinkTag theme={theme}>#비즈니스임팩트</LinkTag>
+                                <LinkTag theme={theme}>#케이팝 데몬 헌터스</LinkTag>
+                                <LinkTag theme={theme}>#넷플릭스</LinkTag>
+                                <LinkTag theme={theme}>#국제포럼</LinkTag>
                             </WrapTag>
                         </GroupSearch>
                     </AreaSearch>
                     <BtnClose onClick={closeSearch}>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="ico_close">
-                        <line x1="4" y1="4" x2="24" y2="24" stroke="black" strokeWidth="1.6" strokeLinecap="square" />
-                        <line x1="24" y1="4" x2="4" y2="24" stroke="black" strokeWidth="1.6" strokeLinecap="square" />
+                        <line x1="4" y1="4" x2="24" y2="24" 
+                            stroke={theme === "light" ? "#000" : "#fff"} 
+                            strokeWidth="1.6"
+                            strokeLinecap="square" 
+                        />
+                        <line x1="24" y1="4" x2="4" y2="24"
+                            stroke={theme === "light" ? "#000" : "#fff"}
+                            strokeWidth="1.6"
+                            strokeLinecap="square" 
+                        />
                     </svg>
 
                     </BtnClose>

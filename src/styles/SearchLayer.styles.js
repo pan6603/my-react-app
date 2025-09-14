@@ -12,9 +12,6 @@ export const SearchLayerContainer = styled.section`
     width: 100%;
     height: 464px;
 
-    &::before {
-        background: #fff;
-    }
 `
 
 
@@ -23,7 +20,8 @@ export const InnerLayer = styled.div`
     width: 100%;
     height: 454px;
     opacity: 1;
-    background: #fff;
+    background-color: ${({ theme }) => theme === "light" ? "#fff" : "#000"}; 
+    position: fixed;
 `
 
 export const LayerHead = styled.div`
@@ -110,8 +108,8 @@ export const LinkTag = styled.a`
     font-size: 13px;
     font-weight: 600;
     line-height: 34px;
-    color: #000;
-    background-color: #eee;
+    color: ${({ theme }) => theme === "light" ? "#000" : "#fff"}; 
+    background-color: ${({ theme }) => theme === "light" ? "#eee" : "#333"}; 
     letter-spacing: -.5px;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -122,7 +120,7 @@ export const LinkTag = styled.a`
     cursor: pointer;
 
     &:hover {
-        background-color: #ddd;
+        background-color: ${({ theme }) => theme === "light" ? "#ddd" : "#555"}; 
     }
 `
 
@@ -133,15 +131,28 @@ export const InpSearch = styled.input`
     width: 100%;
     height: 72px;
     padding: 20px 24px 20px 64px;
-    background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='823' height='72'%3E%3Cg transform='rotate(180 411.5 36)' fill='%23333' fill-rule='evenodd'%3E%3Cpath d='M0 0c4.004 2.904 6.617 7.607 6.615 12.931V24H24C24 10.745 13.255 0 0 0'/%3E%3Crect width='816' height='72' x='6.5' rx='27'/%3E%3C/g%3E%3C/svg%3E") no-repeat;
+    background: ${({ theme }) => theme === "light" 
+    ? `url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="823" height="72"%3E%3Cg transform="rotate(180 411.5 36)" fill="%23333" fill-rule="evenodd"%3E%3Cpath d="M0 0c4.004 2.904 6.617 7.607 6.615 12.931V24H24C24 10.745 13.255 0 0 0"/%3E%3Crect width="816" height="72" x="6.5" rx="27"/%3E%3C/g%3E%3C/svg%3E') no-repeat`
+    : `url('data:image/svg+xml;charset=utf-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="823" height="72"%3E%3Cg transform="rotate(180 411.5 36)" fill="%23fff" fill-rule="evenodd"%3E%3Cpath d="M0 0c4.004 2.904 6.617 7.607 6.615 12.931V24H24C24 10.745 13.255 0 0 0"/%3E%3Crect width="816" height="72" x="6.5" rx="27"/%3E%3C/g%3E%3C/svg%3E') no-repeat`
+    };
     line-height: 32px;
     font-size: 22px;
     font-weight: 700;
-    color: #fff;
+    color: ${({ theme }) => theme === "light" ? "#fff" : "#000"}; 
     letter-spacing: -.6px;
     box-sizing: border-box;
     border: none;      
     outline: none;
+
+    ::placeholder {
+        color: ${({ theme }) => theme === "light" ? "#fff" : "#000"}; 
+        opacity: 1; 
+    }
+
+    &::-webkit-input-placeholder { /* Chrome, Safari */
+        color: ${({ theme }) => theme === "light" ? "#fff" : "#000"}; 
+        opacity: 1;
+    }
 `
 
 

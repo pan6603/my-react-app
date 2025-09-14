@@ -4,6 +4,7 @@ import {
     MainContent,
     ContentArticle,
     ContHome,
+    Overlay
 } from "../../styles/main/Main.styles"
 import ContMainAreaBanner from "./ContMainAreaBanner";
 import ContMainAreaStory from "./ContMainAreaStory";
@@ -47,7 +48,10 @@ function Main() {
                 </InnerMain>
             </MainContainer>
             <Footer />
-            {isSearchOpen && <SearchLayer closeSearch={closeSearch} />}
+
+            {isSearchOpen && <Overlay />}
+
+            {isSearchOpen && <SearchLayer theme={theme} closeSearch={closeSearch} />}
 
         </>
  
