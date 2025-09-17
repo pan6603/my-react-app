@@ -17,9 +17,12 @@ import {
 } from "../styles/SearchLayer.styles";
 import { useEffect } from "react";
 import { useTheme } from "./context/ThemeContext";
+import { useTranslation } from "react-i18next";
 
 function SearchLayer({ closeSearch}) {
     const { theme } = useTheme() 
+    const { t } = useTranslation();
+
 
     useEffect(() => {
         // SearchLayer 열릴 때 스크롤 막기
@@ -99,16 +102,16 @@ function SearchLayer({ closeSearch}) {
                                 </IcoSearchBold>
                             
                                 <InpSearch 
-                                    placeholder="무엇이 궁금하신가요?"
+                                    placeholder={t("home.search_layer.placeholder")}
                                     theme={theme}
                                 />
                             </WrapSearch>
                             <WrapTag>
-                                <LinkTag theme={theme}>#산업생태계기여</LinkTag>
-                                <LinkTag theme={theme}>#비즈니스임팩트</LinkTag>
-                                <LinkTag theme={theme}>#케이팝 데몬 헌터스</LinkTag>
-                                <LinkTag theme={theme}>#넷플릭스</LinkTag>
-                                <LinkTag theme={theme}>#국제포럼</LinkTag>
+                                <LinkTag theme={theme}>{t("home.search_layer.hash_tag.industry_impact")}</LinkTag>
+                                <LinkTag theme={theme}>{t("home.search_layer.hash_tag.business_impact")}</LinkTag>
+                                <LinkTag theme={theme}>{t("home.search_layer.hash_tag.k_pop_demon_hunters")}</LinkTag>
+                                <LinkTag theme={theme}>{t("home.search_layer.hash_tag.netflix")}</LinkTag>
+                                <LinkTag theme={theme}>{t("home.search_layer.hash_tag.global_forum")}</LinkTag>
                             </WrapTag>
                         </GroupSearch>
                     </AreaSearch>

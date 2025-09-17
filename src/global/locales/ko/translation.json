@@ -325,6 +325,17 @@
           "disclosure_info": "공시정보",
           "ir_news":"공고"
         }
+      },
+
+      "search_layer": {
+          "placeholder": "무엇이 궁금하신가요?",
+          "hash_tag": {
+              "industry_impact": "#산업생태계기여",
+              "business_impact": "#비즈니스임팩트",
+              "k_pop_demon_hunters": "#케이팝 데몬 헌터스",
+              "netflix": "#넷플릭스",
+              "global_forum": "#국제포럼"
+          }
       }
     }
   }

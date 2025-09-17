@@ -321,6 +321,17 @@
           "disclosure_info": "Disclosure Info",
           "ir_news":"IR News"
         }
+      },
+
+      "search_layer": {
+          "placeholder": "What are you looking for?",
+          "hash_tag": {
+              "industry_impact": "#IndustryImpact",
+              "business_impact": "#BusinessImpact",
+              "k_pop_demon_hunters": "#KPopDemonHunters",
+              "netflix": "#Netflix",
+              "global_forum": "#GlobalForum"
+          }
       }
     }
   }
