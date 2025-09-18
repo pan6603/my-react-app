@@ -31,6 +31,7 @@ function Header ({openSearch}) {
     // Nav 메뉴 클릭 > boxMenu 팝업 열기 
     const [isBoxMenuOpen, setIsBoxMenuOpen] = useState(false);
     const openBoxMenu = () => setIsBoxMenuOpen(true);
+    const closeBoxMenu = () => setIsBoxMenuOpen(false); 
     
     const toggleLanguage = () => {
         const newLang = i18n.language === "ko" ? "en" : "ko";
@@ -112,7 +113,11 @@ function Header ({openSearch}) {
             </HeaderWrapper>
 
              {/* Overlay */}
-            {isBoxMenuOpen && <Overlay />}
+            {isBoxMenuOpen && 
+                <Overlay 
+                    onClick={closeBoxMenu}
+                />
+            }
         </>
    
         
