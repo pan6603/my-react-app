@@ -27,12 +27,21 @@ function Header ({openSearch}) {
     const [isScrolled, setIsScrolled] = useState(false);
     const { t, i18n } = useTranslation();
     const [lang, setLang] = useState(i18n.language || "en"); 
+    const [activeMenu, setActiveMenu] = useState(null);
+    const [isBoxMenuOpen, setIsBoxMenuOpen] = useState(false);  // Nav 메뉴 클릭 > boxMenu 팝업 열기 
+   
+    const closeBoxMenu = () => {
+        setIsBoxMenuOpen(false); 
+        setActiveMenu(null);
+    }
 
-    // Nav 메뉴 클릭 > boxMenu 팝업 열기 
-    const [isBoxMenuOpen, setIsBoxMenuOpen] = useState(false);
-    const openBoxMenu = () => setIsBoxMenuOpen(true);
-    const closeBoxMenu = () => setIsBoxMenuOpen(false); 
-    
+    const openBoxMenu = (menu) => {
+      
+        setIsBoxMenuOpen(true);
+        setActiveMenu(menu);
+        
+    }
+
     const toggleLanguage = () => {
         const newLang = i18n.language === "ko" ? "en" : "ko";
         i18n.changeLanguage(newLang);
@@ -64,14 +73,16 @@ function Header ({openSearch}) {
                     </KakaoMainLogo>
                     <Navigation>
                         <NavigationList>
-                            <NavItemMenu 
-                                theme={theme}
-                                onClick={openBoxMenu}
-                            >
+                        
+                        <NavItemMenu
+                            theme={theme}
+                            onClick={() => openBoxMenu("about")}
+                            isActive={activeMenu === "about"} 
+                        >
                                 {t("home.header.about")}
                                 {isBoxMenuOpen && <AboutBoxMenu />}
-                                
                             </NavItemMenu>
+                   
                             <NavItemMenu theme={theme} to="/about/history">{t("home.header.tech_service")}</NavItemMenu>
                             <NavItemMenu theme={theme} to="/about/subsidiarycompany">{t("home.header.responsibility")}</NavItemMenu>
                             <NavItemMenu theme={theme} to="/">{t("home.header.news")}</NavItemMenu>
@@ -113,11 +124,7 @@ function Header ({openSearch}) {
             </HeaderWrapper>
 
              {/* Overlay */}
-            {isBoxMenuOpen && 
-                <Overlay 
-                    onClick={closeBoxMenu}
-                />
-            }
+            {isBoxMenuOpen && <Overlay onClick={closeBoxMenu} />}
         </>
    
         

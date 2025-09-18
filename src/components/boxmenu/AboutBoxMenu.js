@@ -7,7 +7,9 @@ import {
 
 function AboutBoxMenu() {
     return (
-        <AboutBoxMenuContainer>Hello AboutBoxMenu()</AboutBoxMenuContainer>
+        <AboutBoxMenuContainer>
+            
+        </AboutBoxMenuContainer>
     )
 }
 

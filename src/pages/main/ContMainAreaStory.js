@@ -10,7 +10,7 @@ import {
 } from "../../styles/main/ContMainAreaStory.styles";
 import ListStory from "./ListStory";
 import { useTheme } from "../../components/context/ThemeContext";
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
 function ContMainAreaStory() {
@@ -18,7 +18,6 @@ function ContMainAreaStory() {
     const { theme } = useTheme();
     const slideTrackRef = useRef(null);
     const scrollX = useRef(0);
-    const [paused, setPaused] = useState(false);
     const { t } = useTranslation();
 
     useEffect(() => {
@@ -65,8 +64,6 @@ function ContMainAreaStory() {
                 <WrapTop>
                     <BtnStoryTypePause 
                         theme={theme}
-                        paused={paused}
-                        onClick={() => setPaused(prev => !prev)} 
                     />
                 </WrapTop>
             </TitleContTypeStory>
