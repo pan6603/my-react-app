@@ -49,9 +49,13 @@ function Main() {
             </MainContainer>
             <Footer />
 
+            {/* Overlay */}
             {isSearchOpen && <Overlay />}
 
+            {/* 돋보기 아이콘 클릭 */}
             {isSearchOpen && <SearchLayer theme={theme} closeSearch={closeSearch} />}
+
+
 
         </>
  

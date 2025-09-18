@@ -26,6 +26,7 @@ export const HeaderWrapper = styled.header`
 `;
 
 export const InnerHeader = styled.div`
+    position: relative;
     max-width:1316px;
     width:100%;
     height:91px;

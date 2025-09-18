@@ -18,6 +18,7 @@ import {
 } from '../styles/Header.styles';
 import { useTheme } from './context/ThemeContext';
 import { useTranslation } from "react-i18next";
+import AboutBoxMenu from './boxmenu/AboutBoxMenu';
 
 
 function Header ({openSearch}) {
@@ -25,6 +26,10 @@ function Header ({openSearch}) {
     const [isScrolled, setIsScrolled] = useState(false);
     const { t, i18n } = useTranslation();
     const [lang, setLang] = useState(i18n.language || "en"); 
+
+    // Nav 메뉴 클릭 > boxMenu 팝업 열기 
+    const [isBoxMenuOpen, setIsBoxMenuOpen] = useState(false);
+    const openBoxMenu = () => setIsBoxMenuOpen(true);
     
     const toggleLanguage = () => {
         const newLang = i18n.language === "ko" ? "en" : "ko";
@@ -49,55 +54,64 @@ function Header ({openSearch}) {
 
 
     return (
-        <HeaderWrapper isScrolled={isScrolled} theme={theme}>
-            <InnerHeader>
-                <KakaoMainLogo>
-                    <KakaoMainLogoImg fill={theme === "light" ? "#000" : "#fff"}/>
-                </KakaoMainLogo>
-                <Navigation>
-                    <NavigationList>
-                        <NavItemMenu theme={theme}>{t("home.header.about")}</NavItemMenu>
-                        <NavItemMenu theme={theme} to="/about/history">{t("home.header.tech_service")}</NavItemMenu>
-                        <NavItemMenu theme={theme} to="/about/subsidiarycompany">{t("home.header.responsibility")}</NavItemMenu>
-                        <NavItemMenu theme={theme} to="/">{t("home.header.news")}</NavItemMenu>
+        <>
+            <HeaderWrapper isScrolled={isScrolled} theme={theme}>
+                <InnerHeader>
+                    <KakaoMainLogo>
+                        <KakaoMainLogoImg fill={theme === "light" ? "#000" : "#fff"}/>
+                    </KakaoMainLogo>
+                    <Navigation>
+                        <NavigationList>
+                            <NavItemMenu 
+                                theme={theme}
+                                onClick={openBoxMenu}
+                            >
+                                {t("home.header.about")}
+                                {isBoxMenuOpen && <AboutBoxMenu />}
+                                
+                            </NavItemMenu>
+                            <NavItemMenu theme={theme} to="/about/history">{t("home.header.tech_service")}</NavItemMenu>
+                            <NavItemMenu theme={theme} to="/about/subsidiarycompany">{t("home.header.responsibility")}</NavItemMenu>
+                            <NavItemMenu theme={theme} to="/">{t("home.header.news")}</NavItemMenu>
                 
-                        <InvestmentLinkDiv to="/ir/main" target="_blank" theme={theme}>
-                            <NavInvestmentItem theme={theme}>{t("home.header.ir")}</NavInvestmentItem>
-                            <InvestmentArrowLink fill={theme === "light" ? "#000" : "#fff"} />
-                        </InvestmentLinkDiv>
-                    </NavigationList>
-                </Navigation>
-                <AreaUtil>
-                    <IconMagnifierItem 
-                        theme={theme}
-                        fill={theme === "light" ? "#000" : "#fff"}
-                        onClick={openSearch}
-                    />
-        
-                    <TranslationBtn
-                        onClick={toggleLanguage}
-                        mode={theme}
-                        bg={iconUrl}
-                    />
-           
-                    {theme === "light" ? (
-                        <IconMoonItem
-                          onClick={toggleTheme}
-                          theme={theme}
-                          fill={theme === "light" ? "#000" : "#fff"}
+                            <InvestmentLinkDiv to="/ir/main" target="_blank" theme={theme}>
+                                <NavInvestmentItem theme={theme}>{t("home.header.ir")}</NavInvestmentItem>
+                                <InvestmentArrowLink fill={theme === "light" ? "#000" : "#fff"} />
+                            </InvestmentLinkDiv>
+                        </NavigationList>
+                    </Navigation>
+                    <AreaUtil>
+                        <IconMagnifierItem 
+                            theme={theme}
+                            fill={theme === "light" ? "#000" : "#fff"}
+                            onClick={openSearch}
                         />
-                    ) : (
-                      <IconSunItem
-                        onClick={toggleTheme}
-                        theme={theme}
-                        fill={theme === "light" ? "#000" : "#fff"}
-                      />
-                    )}
-
-                </AreaUtil>
-            </InnerHeader>
-        </HeaderWrapper>
         
+                        <TranslationBtn
+                            onClick={toggleLanguage}
+                            mode={theme}
+                            bg={iconUrl}
+                        />
+           
+                        {theme === "light" ? (
+                            <IconMoonItem
+                              onClick={toggleTheme}
+                              theme={theme}
+                              fill={theme === "light" ? "#000" : "#fff"}
+                            />
+                        ) : (
+                          <IconSunItem
+                            onClick={toggleTheme}
+                            theme={theme}
+                            fill={theme === "light" ? "#000" : "#fff"}
+                          />
+                        )}
+                    </AreaUtil>
+                </InnerHeader>
+            </HeaderWrapper>
+        </>
+   
+
     ) 
 }
 
