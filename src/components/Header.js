@@ -15,6 +15,7 @@ import {
     IconMoonItem,
     IconSunItem,
     IconMagnifierItem,
+    Overlay
 } from '../styles/Header.styles';
 import { useTheme } from './context/ThemeContext';
 import { useTranslation } from "react-i18next";
@@ -109,9 +110,12 @@ function Header ({openSearch}) {
                     </AreaUtil>
                 </InnerHeader>
             </HeaderWrapper>
+
+             {/* Overlay */}
+            {isBoxMenuOpen && <Overlay />}
         </>
    
-
+        
     ) 
 }
 
