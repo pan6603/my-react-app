@@ -1,5 +1,8 @@
 import { 
-    AboutBoxMenuContainer
+    AboutBoxMenuContainer,
+    ListSecond,
+    ContMenu,
+    SlickSlider
 } from "../../styles/boxmenu/BoxMenu.styles";
 
 
@@ -8,7 +11,10 @@ import {
 function AboutBoxMenu() {
     return (
         <AboutBoxMenuContainer>
-            
+            <ListSecond></ListSecond>
+            <ContMenu>
+                <SlickSlider></SlickSlider>
+            </ContMenu>
         </AboutBoxMenuContainer>
     )
 }

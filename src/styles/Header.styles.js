@@ -90,10 +90,8 @@ export const NavItemMenu = styled(Link)`
     padding: 8px 12px; 
     text-decoration: none;
     color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
-    background-color: ${({ isActive, theme }) =>
-        isActive ? (theme === "light" ? "#000" : "#fff") : "transparent"};
-    color: ${({ isActive, theme }) =>
-        isActive ? (theme === "light" ? "#fff" : "#000") : "inherit"};
+    background-color: ${({ isActive, theme }) => isActive ? (theme === "light" ? "#000" : "#fff") : "transparent"};
+    color: ${({ isActive, theme }) => isActive ? (theme === "light" ? "#fff" : "#000") : "inherit"};
     border-radius: ${({ isActive }) => (isActive ? "54px" : "0")};
 
     ${({ isActive, theme }) =>

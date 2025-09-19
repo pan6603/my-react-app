@@ -36,10 +36,14 @@ function Header ({openSearch}) {
     }
 
     const openBoxMenu = (menu) => {
-      
-        setIsBoxMenuOpen(true);
-        setActiveMenu(menu);
-        
+        if (activeMenu === menu) {
+            setIsBoxMenuOpen(false);
+            setActiveMenu(null);
+            
+        } else {
+            setIsBoxMenuOpen(true);
+            setActiveMenu(menu);
+        }        
     }
 
     const toggleLanguage = () => {
