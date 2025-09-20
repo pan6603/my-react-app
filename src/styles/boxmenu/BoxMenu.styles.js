@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 // AboutBoxMenu
 export const AboutBoxMenuContainer = styled.div`
-    position: absolute;
+    position: fixed;
     top: 91px;
     left: 320px;
     border-top: none;

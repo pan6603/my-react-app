@@ -130,7 +130,7 @@ function Header ({openSearch}) {
             {/* Overlay */}
             {isBoxMenuOpen && <Overlay onClick={closeBoxMenu} />}
 
-            {/* About 메뉴 팝업 */}
+            
             {isBoxMenuOpen && activeMenu === "about" && <AboutBoxMenu />}            
 
         </>
