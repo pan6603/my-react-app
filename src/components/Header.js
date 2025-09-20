@@ -39,7 +39,7 @@ function Header ({openSearch}) {
         if (activeMenu === menu) {
             setIsBoxMenuOpen(false);
             setActiveMenu(null);
-            
+
         } else {
             setIsBoxMenuOpen(true);
             setActiveMenu(menu);
@@ -78,13 +78,13 @@ function Header ({openSearch}) {
                     <Navigation>
                         <NavigationList>
                         
-                        <NavItemMenu
-                            theme={theme}
-                            onClick={() => openBoxMenu("about")}
-                            isActive={activeMenu === "about"} 
-                        >
+                            <NavItemMenu
+                                theme={theme}
+                                onClick={() => openBoxMenu("about")}
+                                isActive={activeMenu === "about"} 
+                            >
                                 {t("home.header.about")}
-                                {isBoxMenuOpen && <AboutBoxMenu />}
+                                
                             </NavItemMenu>
                    
                             <NavItemMenu theme={theme} to="/about/history">{t("home.header.tech_service")}</NavItemMenu>
@@ -127,8 +127,12 @@ function Header ({openSearch}) {
                 </InnerHeader>
             </HeaderWrapper>
 
-             {/* Overlay */}
+            {/* Overlay */}
             {isBoxMenuOpen && <Overlay onClick={closeBoxMenu} />}
+
+            {/* About 메뉴 팝업 */}
+            {isBoxMenuOpen && activeMenu === "about" && <AboutBoxMenu />}            
+
         </>
    
         
