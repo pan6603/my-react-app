@@ -20,6 +20,7 @@ import {
 import { useTheme } from './context/ThemeContext';
 import { useTranslation } from "react-i18next";
 import AboutBoxMenu from './boxmenu/AboutBoxMenu';
+import TechServiceBoxMenu from './boxmenu/TechServiceBoxMenu';
 
 
 function Header ({openSearch}) {
@@ -84,10 +85,15 @@ function Header ({openSearch}) {
                                 isActive={activeMenu === "about"} 
                             >
                                 {t("home.header.about")}
-                                
                             </NavItemMenu>
-                   
-                            <NavItemMenu theme={theme} to="/about/history">{t("home.header.tech_service")}</NavItemMenu>
+
+                            <NavItemMenu 
+                                theme={theme}
+                                onClick={() => openBoxMenu("tech_service")}
+                                isActive={activeMenu === "tech_service"} 
+                                >
+                                {t("home.header.tech_service")}
+                            </NavItemMenu>
                             <NavItemMenu theme={theme} to="/about/subsidiarycompany">{t("home.header.responsibility")}</NavItemMenu>
                             <NavItemMenu theme={theme} to="/">{t("home.header.news")}</NavItemMenu>
                 
@@ -130,8 +136,12 @@ function Header ({openSearch}) {
             {/* Overlay */}
             {isBoxMenuOpen && <Overlay onClick={closeBoxMenu} />}
 
-            
-            {isBoxMenuOpen && activeMenu === "about" && <AboutBoxMenu />}            
+            {/* About 메뉴 클릭 > 팝업 호출 */}
+            {isBoxMenuOpen && activeMenu === "about" && <AboutBoxMenu />}   
+
+            {/* Tech_Service 메뉴 클릭 > 팝업 호출  */}
+            {isBoxMenuOpen && activeMenu === "tech_service" &&  <TechServiceBoxMenu />}
+                      
 
         </>
    
