@@ -85,7 +85,7 @@ export const NavigationList = styled.ul`
 
 export const NavItemMenu = styled(Link)`
     margin: 0;
-    font-weight: 400;
+    font-weight: 500;
     cursor: pointer;
     padding: 8px 12px; 
     text-decoration: none;

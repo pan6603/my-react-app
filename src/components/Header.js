@@ -22,6 +22,7 @@ import { useTranslation } from "react-i18next";
 import AboutBoxMenu from './boxmenu/AboutBoxMenu';
 import TechServiceBoxMenu from './boxmenu/TechServiceBoxMenu';
 import PromiseAndResponsbilityBoxMenu from './boxmenu/PromiseAndResponsibilityBoxMenu';
+import NewBoxMenu from './boxmenu/NewsBoxMenu';
 
 
 function Header ({openSearch}) {
@@ -104,7 +105,13 @@ function Header ({openSearch}) {
                                 {t("home.header.responsibility")}
                             </NavItemMenu>
 
-                            <NavItemMenu theme={theme} to="/">{t("home.header.news")}</NavItemMenu>
+                            <NavItemMenu 
+                                theme={theme}
+                                onClick={() => openBoxMenu("news")}
+                                isActive={activeMenu === "news"}
+                                >
+                                {t("home.header.news")}
+                            </NavItemMenu>
                 
                             <InvestmentLinkDiv to="/ir/main" target="_blank" theme={theme}>
                                 <NavInvestmentItem theme={theme}>{t("home.header.ir")}</NavInvestmentItem>
@@ -153,6 +160,10 @@ function Header ({openSearch}) {
                       
             {/*  Promise And Responsibility 메뉴 클릭 > 팝업 호출 */}
             {isBoxMenuOpen && activeMenu === "responsibility" && <PromiseAndResponsbilityBoxMenu /> }
+
+            {/* News 메뉴 클릭 > 팝업 호출 */}
+            {isBoxMenuOpen && activeMenu === "news" && <NewBoxMenu /> }
+            
 
         </>
    

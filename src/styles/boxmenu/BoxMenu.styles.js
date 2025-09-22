@@ -571,3 +571,205 @@ export const PromiseAndResponsbilityWrapContDescription = styled.div`
     height: 54px;
 `
 
+// NewsBoxMenu 
+export const NewsBoxMenuContainer = styled.div`
+    position: fixed;
+    top: 91px;
+    left: 382px;
+    padding: 35px;
+    box-sizing: border-box;
+    border: 1px solid #eee;
+    border-radius: 0 0 24px 24px;
+    z-index: 1000;
+    background-color: #fff;
+    max-width: 663px;
+    width: 100%;
+    height: 371px;
+    visibility: visible;
+    display:  flex;
+`
+
+export const NewsListSecond = styled.div`
+    margin-top: -12px;
+    max-width: 284px;
+    width: 100%;
+    height: 312px;
+    display: flex;
+`
+
+export const NewsListFlex = styled.div`
+    max-width: 142px;
+    width: 100%;
+    height: 312px;
+    display: flex;
+    flex-direction: column;
+`
+
+export const NewsTitSubmenu = styled.div`
+    max-width: 142px;
+    width: 100%;
+    height: 24px;
+    color: #666;
+    margin-top: 12px;
+    line-height: 24px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+`
+
+export const NewsListThird = styled.div`
+    max-width: 142px;
+    width: 100%;
+    height: 68px;
+    letter-spacing: -.5px;
+    display: flex;
+    flex-direction: column;
+`
+
+export const NewsLinkSubmenu = styled.a`
+    margin-top: 12px;
+    max-width: 142px;
+    width: 100%;
+    height: 28px;
+    font-size: 17px;
+    line-height: 28px;
+    color: #000;
+    white-space: pre-line;
+
+    &:hover {
+        text-decoration: underline;
+        text-underline-offset: 4px; 
+    }
+`
+
+export const NewsContMenu = styled.div`
+    max-width: 307px;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: flex-end;
+    border-left: 1px solid #eee;
+`
+
+export const NewsSlickSlider = styled.div`
+    position: relative;
+    max-width: 270px;
+    width: 100%;
+    height: 300px;
+    user-select: none;
+    box-sizing: border-box;
+`
+
+export const NewsSlickList = styled.div`
+    max-width: 270px;
+    width: 100%;
+    height: 300px;
+`
+
+export const NewsStyledSwiper = styled(Swiper)`
+    max-width: 270px;
+    width: 100%;
+    height: 300px;
+
+    .swiper-slide {
+        transition: opacity 500ms, visibility 500ms;
+    }
+
+    .swiper-pagination {
+        position: absolute;
+        bottom: -8px;
+        left: 50% !important;         
+        transform: translateX(-50%); 
+        max-width: 100px;
+        width: 100%;
+        height: 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .swiper-pagination-bullet {
+        background-color: "#000";
+        color: #000;
+        opacity: .45;
+    }
+
+    .swiper-pagination-bullet-active {
+        width: 25px;
+        height: 8px;
+        border-radius: 24px;
+        background-color: #000;
+        color: #000;
+        opacity: 1;
+    }
+`
+
+export const NewsBoxMenuSlickSlide = styled(SwiperSlide)`
+    max-width: 270px;
+    width: 100%;
+    height: 268px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+`
+
+export const NewsBoxMenuLinkContDiv = styled.div`
+    max-width: 270px;
+    width: 100%;
+    height: 130px;
+    border-radius: 16px;
+`
+
+export const NewsBoxMenuLinkCont = styled.a`
+    max-width: 270px;
+    width: 100%;
+    height: 130px;
+    border-radius: 16px;
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+    user-select: none;
+`
+
+export const NewsBoxMenuWrapCont = styled.div`
+    max-width: 270px;
+    width: 100%;
+    height: 130px;
+    background-color: #eee;
+    border-radius: 16px;
+    padding: 20px;
+    box-sizing: border-box;
+`
+
+export const NewsBoxMenuIcoCategory = styled.img`
+    max-width: 24px;
+    width: 100%;
+    height: 24px;
+    margin: 2px 8px 0 0;
+`
+
+export const NewsBoxMenuTxtCategory = styled.div`
+    display: inline-block;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: -.2px;
+    vertical-align: top;
+    width: max-content;
+    height: 28px;
+    padding: 4px 12px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #000;
+` 
+
+export const NewsWrapContDescription = styled.div`
+    overflow: hidden;
+    margin-top: 8px;
+    color: #000;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 27px;
+    width: max-content;
+    height: 54px;
+`
