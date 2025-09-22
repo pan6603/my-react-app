@@ -21,6 +21,7 @@ import { useTheme } from './context/ThemeContext';
 import { useTranslation } from "react-i18next";
 import AboutBoxMenu from './boxmenu/AboutBoxMenu';
 import TechServiceBoxMenu from './boxmenu/TechServiceBoxMenu';
+import PromiseAndResponsbilityBoxMenu from './boxmenu/PromiseAndResponsibilityBoxMenu';
 
 
 function Header ({openSearch}) {
@@ -94,7 +95,15 @@ function Header ({openSearch}) {
                                 >
                                 {t("home.header.tech_service")}
                             </NavItemMenu>
-                            <NavItemMenu theme={theme} to="/about/subsidiarycompany">{t("home.header.responsibility")}</NavItemMenu>
+
+                            <NavItemMenu 
+                                theme={theme}
+                                onClick={() => openBoxMenu("responsibility")}
+                                isActive={activeMenu === "responsibility"} 
+                                >
+                                {t("home.header.responsibility")}
+                            </NavItemMenu>
+
                             <NavItemMenu theme={theme} to="/">{t("home.header.news")}</NavItemMenu>
                 
                             <InvestmentLinkDiv to="/ir/main" target="_blank" theme={theme}>
@@ -142,6 +151,8 @@ function Header ({openSearch}) {
             {/* Tech_Service 메뉴 클릭 > 팝업 호출  */}
             {isBoxMenuOpen && activeMenu === "tech_service" &&  <TechServiceBoxMenu />}
                       
+            {/*  Promise And Responsibility 메뉴 클릭 > 팝업 호출 */}
+            {isBoxMenuOpen && activeMenu === "responsibility" && <PromiseAndResponsbilityBoxMenu /> }
 
         </>
    

@@ -331,7 +331,6 @@ export const TechServiceBoxMenuLinkCont = styled.div`
     max-width: 270px;
     width: 100%;
     height: 281px;
-    background-color: yellow;
     text-decoration: none;
     cursor: pointer;
     user-select: none;
@@ -391,4 +390,184 @@ export const TechServiceWrapContDescription = styled.div`
     height: 54px;
 `
 
+
+// PromiseAndResponsbilityBoxMenu
+
+export const PromiseAndResponsbilityBoxMenuContainer = styled.div`
+    max-width: 521px;
+    width: 100%;
+    height: 384px;
+    position: fixed;
+    top: 91px;
+    left: 450px;
+    padding: 35px;
+    box-sizing: border-box;
+    visibility: visible;
+    border: 1px solid #eee;
+    border-radius: 0 0 24px 24px;
+    background-color: #fff;
+    z-index: 1000;
+    display: flex;
+`
+
+export const PromiseAndResponsbilityListSecond = styled.div`
+    max-width: 142px;
+    width: 100%;
+    height: 325px;
+    margin-top: -12px;
+`
+
+export const PromiseAndResponsbilityListFlex = styled.div`
+    max-width: 142px;
+    width: 100%;
+    height: 325px;
+    display: flex;
+    flex-direction: column;
+`
+
+export const PromiseAndResponsbilityLinkSubmenu = styled.div`
+    margin-top: 12px;
+    max-width: 142px;
+    width: 100%;
+    height: 28px;
+    font-size: 17px;
+    line-height: 28px;
+    color: #000;
+    white-space: pre-line;
+
+    &:hover {
+        text-decoration: underline;
+        text-underline-offset: 4px; 
+    }
+`
+
+export const PromiseAndResponsbilityContMenu = styled.div`
+    max-width: 307px;
+    width: 100%;
+    height: 313px;
+    border-left: 1px solid #eee;
+    display: flex;
+    justify-content: flex-end;
+`
+
+export const PromiseAndResponsbilitySlickSlider = styled.div`
+    position: relative;
+    max-width: 270px;
+    width: 100%;
+    height: 313px;
+` 
+
+export const PromiseAndResponsbilitySlickList = styled.div`
+    max-width: 270px;
+    width: 100%;
+    height: 313px;
+`
+
+export const PromiseAndResponsbilityStyledSwiper = styled(Swiper)`
+    max-width: 270px;
+    width: 100%;
+    height: 313px;
+
+    .swiper-slide {
+        transition: opacity 500ms, visibility 500ms;
+    }
+
+    .swiper-pagination {
+        position: absolute;
+        bottom: -8px;
+        left: 50% !important;         
+        transform: translateX(-50%); 
+        max-width: 100px;
+        width: 100%;
+        height: 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .swiper-pagination-bullet {
+        background-color: "#000";
+        color: #000;
+        opacity: .45;
+    }
+
+    .swiper-pagination-bullet-active {
+        width: 25px;
+        height: 8px;
+        border-radius: 24px;
+        background-color: #000;
+        color: #000;
+        opacity: 1;
+    }
+`
+
+export const PromiseAndResponsbilitySlickSlide = styled(SwiperSlide)`
+    max-width: 270px;
+    width: 100%;
+    height: 281px;
+`
+
+export const PromiseAndResponsbilityLinkCont = styled.div`
+    max-width: 270px;
+    width: 100%;
+    height: 281px;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    background-color: green;
+`
+
+export const PromiseAndResponsbilityImgCont = styled.img`
+    max-width: 270px;
+    width: 100%;
+    height: 151px;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+`
+
+export const PromiseAndResponsbilityWrapCont = styled.div`
+    max-width: 270px;
+    width: 100%;
+    height: 130px;
+    background-color: #f3f3f3;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 0 0 16px 16px;
+`
+
+export const PromiseAndResponsbilityIcoCategory = styled.img`
+    max-width: 24px;
+    width: 100%;
+    height: 24px;
+    margin: 2px 8px 0 0;
+`
+
+export const PromiseAndResponsbilityTxtCategory = styled.div`
+    display: inline-block;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: -.2px;
+    vertical-align: top;
+    width: max-content;
+    height: 28px;
+    padding: 4px 12px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #000;
+` 
+
+export const PromiseAndResponsbilityWrapContDescription = styled.div`
+    overflow: hidden;
+    margin-top: 8px;
+    color: #000;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 27px;
+    width: max-content;
+    height: 54px;
+`
 
