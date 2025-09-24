@@ -15,24 +15,28 @@ import {
     WrapContDescription
 } from "../../styles/boxmenu/BoxMenu.styles";
 import { Pagination, Navigation, EffectFade } from 'swiper/modules'
+import { useTheme } from "../context/ThemeContext";
 
 function AboutBoxMenu() {
+    const { theme } = useTheme() 
+
     return (
-        <AboutBoxMenuContainer>
-            <ListSecond>
+        <AboutBoxMenuContainer theme={theme}>
+            <ListSecond theme={theme}>
                 <ListSecondMenu>
-                    <LinkSubmenu>카카오 문화</LinkSubmenu>
+                    <LinkSubmenu theme={theme}>카카오 문화</LinkSubmenu>
                 </ListSecondMenu>
                 <ListSecondMenu>
-                    <LinkSubmenu>카카오 그룹</LinkSubmenu>
+                    <LinkSubmenu theme={theme}>카카오 그룹</LinkSubmenu>
                 </ListSecondMenu>
                 <ListSecondMenu>
-                    <LinkSubmenu>연혁</LinkSubmenu>
+                    <LinkSubmenu theme={theme}>연혁</LinkSubmenu>
                 </ListSecondMenu>
             </ListSecond>
             <ContMenu>
                 <SlickSlider>
                     <StyledSwiper
+                        theme={theme}
                         modules={[Navigation, Pagination, EffectFade]}
                         spaceBetween={30}
                         slidesPerView={1}
@@ -45,10 +49,10 @@ function AboutBoxMenu() {
                         <SlickSlide>
                             <LinkCont>
                                 <ImgCont src="https://t1.kakaocdn.net/thumb/C317x178.fwebp.q100/?fname=https%3A%2F%2Ft1.kakaocdn.net%2Fkakaocorp%2Fkakaocorp%2Fservice%2Fgnb%2Fgnb_kakaoCulture.png"/>
-                                <WrapCont>
+                                <WrapCont theme={theme}>
                                     <IcoCategory src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/category/06c15fc0019400001.png"/>
-                                    <TxtCategory>카카오 문화</TxtCategory>
-                                    <WrapContDescription>
+                                    <TxtCategory theme={theme}>카카오 문화</TxtCategory>
+                                    <WrapContDescription theme={theme}>
                                         사람을 이해하는 기술로 <br />
                                         필요한 미래를 더 가깝게
                                     </WrapContDescription>
@@ -58,20 +62,20 @@ function AboutBoxMenu() {
                         <SlickSlide>
                             <LinkCont>
                                 <ImgCont src="https://t1.kakaocdn.net/thumb/C317x178.fwebp.q100/?fname=https%3A%2F%2Ft1.kakaocdn.net%2Fkakaocorp%2Fkakaocorp%2Fservice%2Fgnb%2Fgnb_kakaoGroup.png"/>
-                                <WrapCont>
+                                <WrapCont theme={theme}>
                                     <IcoCategory src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/65628c29017800001.png"/>
-                                    <TxtCategory>카카오 그룹</TxtCategory>
-                                    <WrapContDescription>카카오가 만든 더 나은 세상</WrapContDescription>
+                                    <TxtCategory theme={theme}>카카오 그룹</TxtCategory>
+                                    <WrapContDescription theme={theme}>카카오가 만든 더 나은 세상</WrapContDescription>
                                 </WrapCont>
                             </LinkCont>
                         </SlickSlide>
                         <SlickSlide>
                             <LinkCont>
                                 <ImgCont src="https://t1.kakaocdn.net/thumb/C317x178.fwebp.q100/?fname=https%3A%2F%2Ft1.kakaocdn.net%2Fkakaocorp%2Fkakaocorp%2Fservice%2Fgnb%2Fgnb_milestones.png"/>
-                                <WrapCont>
+                                <WrapCont theme={theme}>
                                     <IcoCategory src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/category/dd29d0e1018800001.png" />
-                                    <TxtCategory>연혁</TxtCategory>
-                                    <WrapContDescription>카카오가 걸어온 길</WrapContDescription>
+                                    <TxtCategory theme={theme}>연혁</TxtCategory>
+                                    <WrapContDescription theme={theme}>카카오가 걸어온 길</WrapContDescription>
                                 </WrapCont>
                             </LinkCont>
                         </SlickSlide>

@@ -18,31 +18,35 @@ import {
     NewsWrapContDescription
 } from "../../styles/boxmenu/BoxMenu.styles";
 import { Pagination, Navigation, EffectFade } from 'swiper/modules'
+import { useTheme } from "../context/ThemeContext";
 
 function NewBoxMenu() {
+    const { theme } = useTheme() 
+
     return (
         <>
-            <NewsBoxMenuContainer>
+            <NewsBoxMenuContainer theme={theme}>
                 <NewsListSecond>
                     <NewsListFlex>
                         <NewsTitSubmenu>뉴스</NewsTitSubmenu>
                         <NewsListThird>
-                            <NewsLinkSubmenu>보도자료</NewsLinkSubmenu>
-                            <NewsLinkSubmenu>미디어자료</NewsLinkSubmenu>
+                            <NewsLinkSubmenu theme={theme}>보도자료</NewsLinkSubmenu>
+                            <NewsLinkSubmenu theme={theme}>미디어자료</NewsLinkSubmenu>
                         </NewsListThird>
                     </NewsListFlex>
                     <NewsListFlex>
                         <NewsTitSubmenu>카카오나우</NewsTitSubmenu>
                         <NewsListThird>
-                            <NewsLinkSubmenu>카카오이야기</NewsLinkSubmenu>
-                            <NewsLinkSubmenu>그룹사이야기</NewsLinkSubmenu>
+                            <NewsLinkSubmenu theme={theme}>카카오이야기</NewsLinkSubmenu>
+                            <NewsLinkSubmenu theme={theme}>그룹사이야기</NewsLinkSubmenu>
                         </NewsListThird>
                     </NewsListFlex>
                 </NewsListSecond>
-                <NewsContMenu>
+                <NewsContMenu theme={theme}>
                     <NewsSlickSlider>
                         <NewsSlickList>
                             <NewsStyledSwiper
+                                theme={theme}
                                 modules={[Navigation, Pagination, EffectFade]}
                                 spaceBetween={30}
                                 slidesPerView={1}
@@ -55,14 +59,14 @@ function NewBoxMenu() {
                                 <NewsBoxMenuSlickSlide>
                                     <NewsBoxMenuLinkContDiv>
                                         <NewsBoxMenuLinkCont>
-                                            <NewsBoxMenuWrapCont>
+                                            <NewsBoxMenuWrapCont theme={theme}>
                                                 <NewsBoxMenuIcoCategory 
                                                     src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/category/1ee6415a019300001.png"/> 
-                                                    <NewsBoxMenuTxtCategory>
+                                                    <NewsBoxMenuTxtCategory theme={theme}>
                                                         보도자료
                                                     </NewsBoxMenuTxtCategory>
 
-                                                    <NewsWrapContDescription>
+                                                    <NewsWrapContDescription theme={theme}>
                                                         브런치 10주년, 작가 9만 5천여 명 <br /> 돌파… 
                                                     </NewsWrapContDescription>
                                             </NewsBoxMenuWrapCont>
@@ -70,13 +74,13 @@ function NewBoxMenu() {
                                     </NewsBoxMenuLinkContDiv>
                                     <NewsBoxMenuLinkContDiv>
                                         <NewsBoxMenuLinkCont>
-                                            <NewsBoxMenuWrapCont>
+                                            <NewsBoxMenuWrapCont theme={theme}>
                                                 <NewsBoxMenuIcoCategory 
                                                     src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/category/1ee6415a019300001.png"/> 
-                                                    <NewsBoxMenuTxtCategory>
+                                                    <NewsBoxMenuTxtCategory theme={theme}>
                                                         보도자료
                                                     </NewsBoxMenuTxtCategory>
-                                                    <NewsWrapContDescription>
+                                                    <NewsWrapContDescription theme={theme}>
                                                         강 위에서도 실시간 위치 확인… 
                                                         <br />
                                                         카카오맵, 초정밀 한강버스 정보…
@@ -89,13 +93,13 @@ function NewBoxMenu() {
                                 <NewsBoxMenuSlickSlide>
                                     <NewsBoxMenuLinkContDiv>
                                         <NewsBoxMenuLinkCont>
-                                            <NewsBoxMenuWrapCont>
+                                            <NewsBoxMenuWrapCont theme={theme}>
                                                 <NewsBoxMenuIcoCategory 
                                                     src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/category/1ee6415a019300001.png"/> 
-                                                    <NewsBoxMenuTxtCategory>
+                                                    <NewsBoxMenuTxtCategory theme={theme}>
                                                         보도자료
                                                     </NewsBoxMenuTxtCategory>
-                                                    <NewsWrapContDescription>
+                                                    <NewsWrapContDescription theme={theme}>
                                                         카카오, 국가 균형 성장 위해 500억<br />
                                                         원 규모 AI 지역 거점 조성
                                                     </NewsWrapContDescription>
@@ -105,13 +109,13 @@ function NewBoxMenu() {
 
                                     <NewsBoxMenuLinkContDiv>
                                         <NewsBoxMenuLinkCont>
-                                            <NewsBoxMenuWrapCont>
+                                            <NewsBoxMenuWrapCont theme={theme}>
                                                 <NewsBoxMenuIcoCategory 
                                                     src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/category/1ee6415a019300001.png"/> 
-                                                    <NewsBoxMenuTxtCategory>
+                                                    <NewsBoxMenuTxtCategory theme={theme}>
                                                         보도자료
                                                     </NewsBoxMenuTxtCategory>
-                                                    <NewsWrapContDescription>
+                                                    <NewsWrapContDescription theme={theme}>
                                                         카카오, 카카오톡 개편 캠페인 티저 <br />영상 공개!
                                                     </NewsWrapContDescription>
                                             </NewsBoxMenuWrapCont>
@@ -122,13 +126,13 @@ function NewBoxMenu() {
                                 <NewsBoxMenuSlickSlide>
                                     <NewsBoxMenuLinkContDiv>
                                         <NewsBoxMenuLinkCont>
-                                            <NewsBoxMenuWrapCont>
+                                            <NewsBoxMenuWrapCont theme={theme}>
                                                 <NewsBoxMenuIcoCategory 
                                                     src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/category/1ee6415a019300001.png"/> 
-                                                    <NewsBoxMenuTxtCategory>
+                                                    <NewsBoxMenuTxtCategory theme={theme}>
                                                         보도자료
                                                     </NewsBoxMenuTxtCategory>
-                                                    <NewsWrapContDescription>
+                                                    <NewsWrapContDescription theme={theme}>
                                                         카카오, ‘카카오비즈니스 사장님 <br />
                                                         커뮤니티’ 3기 모집
                                                     </NewsWrapContDescription>
@@ -137,13 +141,13 @@ function NewBoxMenu() {
                                     </NewsBoxMenuLinkContDiv>
                                     <NewsBoxMenuLinkContDiv>
                                         <NewsBoxMenuLinkCont>
-                                            <NewsBoxMenuWrapCont>
+                                            <NewsBoxMenuWrapCont theme={theme}>
                                                 <NewsBoxMenuIcoCategory 
                                                     src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/category/1ee6415a019300001.png"/> 
-                                                    <NewsBoxMenuTxtCategory>
+                                                    <NewsBoxMenuTxtCategory theme={theme}>
                                                         보도자료
                                                     </NewsBoxMenuTxtCategory>
-                                                    <NewsWrapContDescription>
+                                                    <NewsWrapContDescription theme={theme}>
                                                         추석선물은 톡딜·선물하기· <br />
                                                         카쇼라에서…
                                                     </NewsWrapContDescription>
@@ -155,13 +159,13 @@ function NewBoxMenu() {
                                 <NewsBoxMenuSlickSlide>
                                     <NewsBoxMenuLinkContDiv>
                                         <NewsBoxMenuLinkCont>
-                                            <NewsBoxMenuWrapCont>
+                                            <NewsBoxMenuWrapCont theme={theme}>
                                                 <NewsBoxMenuIcoCategory 
                                                     src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/category/1ee6415a019300001.png"/> 
-                                                    <NewsBoxMenuTxtCategory>
+                                                    <NewsBoxMenuTxtCategory theme={theme}>
                                                         보도자료
                                                     </NewsBoxMenuTxtCategory>
-                                                    <NewsWrapContDescription>
+                                                    <NewsWrapContDescription theme={theme}>
                                                         카카오, ‘비즈니스 임팩트 리포트 <br /> 
                                                         2025’ 발간…산업 생태계 기여… 
                                                     </NewsWrapContDescription>
@@ -171,13 +175,13 @@ function NewBoxMenu() {
 
                                     <NewsBoxMenuLinkContDiv>
                                         <NewsBoxMenuLinkCont>
-                                            <NewsBoxMenuWrapCont>
+                                            <NewsBoxMenuWrapCont theme={theme}>
                                                 <NewsBoxMenuIcoCategory 
                                                     src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/category/1ee6415a019300001.png"/> 
-                                                    <NewsBoxMenuTxtCategory>
+                                                    <NewsBoxMenuTxtCategory theme={theme}>
                                                         보도자료
                                                     </NewsBoxMenuTxtCategory>
-                                                    <NewsWrapContDescription>
+                                                    <NewsWrapContDescription theme={theme}>
                                                         카카오, ‘카카오프렌즈 X T1’ 협업 <br /> 
                                                         굿즈 출시
                                                     </NewsWrapContDescription>
