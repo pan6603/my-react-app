@@ -19,26 +19,36 @@ import {
 } from "../../styles/boxmenu/BoxMenu.styles";
 import { Pagination, Navigation, EffectFade } from 'swiper/modules'
 import { useTheme } from "../context/ThemeContext";
+import { useTranslation } from "react-i18next";
 
 function NewBoxMenu() {
     const { theme } = useTheme() 
+    const { t } = useTranslation();
 
     return (
         <>
             <NewsBoxMenuContainer theme={theme}>
                 <NewsListSecond>
                     <NewsListFlex>
-                        <NewsTitSubmenu>뉴스</NewsTitSubmenu>
+                        <NewsTitSubmenu>{t("home.list_menu.tit_submenu.news")}</NewsTitSubmenu>
                         <NewsListThird>
-                            <NewsLinkSubmenu theme={theme}>보도자료</NewsLinkSubmenu>
-                            <NewsLinkSubmenu theme={theme}>미디어자료</NewsLinkSubmenu>
+                            <NewsLinkSubmenu theme={theme}>
+                                {t("home.list_menu.link_submenu.press_release")}
+                            </NewsLinkSubmenu>
+                            <NewsLinkSubmenu theme={theme}>
+                                {t("home.list_menu.link_submenu.media_materials")}
+                            </NewsLinkSubmenu>
                         </NewsListThird>
                     </NewsListFlex>
                     <NewsListFlex>
-                        <NewsTitSubmenu>카카오나우</NewsTitSubmenu>
+                        <NewsTitSubmenu>{t("home.list_menu.tit_submenu.kakao_now")}</NewsTitSubmenu>
                         <NewsListThird>
-                            <NewsLinkSubmenu theme={theme}>카카오이야기</NewsLinkSubmenu>
-                            <NewsLinkSubmenu theme={theme}>그룹사이야기</NewsLinkSubmenu>
+                            <NewsLinkSubmenu theme={theme}>
+                                {t("home.list_menu.link_submenu.kakao_talk")}
+                            </NewsLinkSubmenu>
+                            <NewsLinkSubmenu theme={theme}>
+                                {t("home.list_menu.link_submenu.group_company_story")}
+                            </NewsLinkSubmenu>
                         </NewsListThird>
                     </NewsListFlex>
                 </NewsListSecond>
@@ -63,11 +73,14 @@ function NewBoxMenu() {
                                                 <NewsBoxMenuIcoCategory 
                                                     src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/category/1ee6415a019300001.png"/> 
                                                     <NewsBoxMenuTxtCategory theme={theme}>
-                                                        보도자료
+                                                        {t("home.list_menu.txt_category.press_release")}
                                                     </NewsBoxMenuTxtCategory>
 
-                                                    <NewsWrapContDescription theme={theme}>
-                                                        브런치 10주년, 작가 9만 5천여 명 <br /> 돌파… 
+                                                    <NewsWrapContDescription 
+                                                        theme={theme} 
+                                                        style={{ whiteSpace: 'pre-line' }}
+                                                    >
+                                                    {t("home.list_menu.wrap_cont_description.press_release_one")}
                                                     </NewsWrapContDescription>
                                             </NewsBoxMenuWrapCont>
                                         </NewsBoxMenuLinkCont>
@@ -78,12 +91,13 @@ function NewBoxMenu() {
                                                 <NewsBoxMenuIcoCategory 
                                                     src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/category/1ee6415a019300001.png"/> 
                                                     <NewsBoxMenuTxtCategory theme={theme}>
-                                                        보도자료
+                                                        {t("home.list_menu.txt_category.press_release")}
                                                     </NewsBoxMenuTxtCategory>
-                                                    <NewsWrapContDescription theme={theme}>
-                                                        강 위에서도 실시간 위치 확인… 
-                                                        <br />
-                                                        카카오맵, 초정밀 한강버스 정보…
+                                                    <NewsWrapContDescription 
+                                                        theme={theme} 
+                                                        style={{ whiteSpace: 'pre-line' }}
+                                                    >
+                                                        {t("home.list_menu.wrap_cont_description.press_release_two")}
                                                     </NewsWrapContDescription>
                                             </NewsBoxMenuWrapCont>
                                         </NewsBoxMenuLinkCont>
@@ -97,11 +111,13 @@ function NewBoxMenu() {
                                                 <NewsBoxMenuIcoCategory 
                                                     src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/category/1ee6415a019300001.png"/> 
                                                     <NewsBoxMenuTxtCategory theme={theme}>
-                                                        보도자료
+                                                        {t("home.list_menu.txt_category.press_release")}
                                                     </NewsBoxMenuTxtCategory>
-                                                    <NewsWrapContDescription theme={theme}>
-                                                        카카오, 국가 균형 성장 위해 500억<br />
-                                                        원 규모 AI 지역 거점 조성
+                                                    <NewsWrapContDescription 
+                                                        theme={theme} 
+                                                        style={{ whiteSpace: 'pre-line' }}
+                                                    >
+                                                        {t("home.list_menu.wrap_cont_description.press_release_three")}
                                                     </NewsWrapContDescription>
                                             </NewsBoxMenuWrapCont>
                                         </NewsBoxMenuLinkCont>
@@ -113,10 +129,13 @@ function NewBoxMenu() {
                                                 <NewsBoxMenuIcoCategory 
                                                     src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/category/1ee6415a019300001.png"/> 
                                                     <NewsBoxMenuTxtCategory theme={theme}>
-                                                        보도자료
+                                                        {t("home.list_menu.txt_category.press_release")}
                                                     </NewsBoxMenuTxtCategory>
-                                                    <NewsWrapContDescription theme={theme}>
-                                                        카카오, 카카오톡 개편 캠페인 티저 <br />영상 공개!
+                                                    <NewsWrapContDescription 
+                                                        theme={theme} 
+                                                        style={{ whiteSpace: 'pre-line' }}
+                                                    >
+                                                        {t("home.list_menu.wrap_cont_description.press_release_fourth")}
                                                     </NewsWrapContDescription>
                                             </NewsBoxMenuWrapCont>
                                         </NewsBoxMenuLinkCont>
@@ -130,11 +149,13 @@ function NewBoxMenu() {
                                                 <NewsBoxMenuIcoCategory 
                                                     src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/category/1ee6415a019300001.png"/> 
                                                     <NewsBoxMenuTxtCategory theme={theme}>
-                                                        보도자료
+                                                        {t("home.list_menu.txt_category.press_release")}
                                                     </NewsBoxMenuTxtCategory>
-                                                    <NewsWrapContDescription theme={theme}>
-                                                        카카오, ‘카카오비즈니스 사장님 <br />
-                                                        커뮤니티’ 3기 모집
+                                                    <NewsWrapContDescription 
+                                                        theme={theme} 
+                                                        style={{ whiteSpace: 'pre-line' }}
+                                                    >
+                                                        {t("home.list_menu.wrap_cont_description.press_release_five")}
                                                     </NewsWrapContDescription>
                                             </NewsBoxMenuWrapCont>
                                         </NewsBoxMenuLinkCont>
@@ -145,11 +166,13 @@ function NewBoxMenu() {
                                                 <NewsBoxMenuIcoCategory 
                                                     src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/category/1ee6415a019300001.png"/> 
                                                     <NewsBoxMenuTxtCategory theme={theme}>
-                                                        보도자료
+                                                        {t("home.list_menu.txt_category.press_release")}
                                                     </NewsBoxMenuTxtCategory>
-                                                    <NewsWrapContDescription theme={theme}>
-                                                        추석선물은 톡딜·선물하기· <br />
-                                                        카쇼라에서…
+                                                    <NewsWrapContDescription 
+                                                        theme={theme} 
+                                                        style={{ whiteSpace: 'pre-line' }}
+                                                    >
+                                                        {t("home.list_menu.wrap_cont_description.press_release_six")}
                                                     </NewsWrapContDescription>
                                             </NewsBoxMenuWrapCont>
                                         </NewsBoxMenuLinkCont>
@@ -163,11 +186,13 @@ function NewBoxMenu() {
                                                 <NewsBoxMenuIcoCategory 
                                                     src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/category/1ee6415a019300001.png"/> 
                                                     <NewsBoxMenuTxtCategory theme={theme}>
-                                                        보도자료
+                                                        {t("home.list_menu.txt_category.press_release")}
                                                     </NewsBoxMenuTxtCategory>
-                                                    <NewsWrapContDescription theme={theme}>
-                                                        카카오, ‘비즈니스 임팩트 리포트 <br /> 
-                                                        2025’ 발간…산업 생태계 기여… 
+                                                    <NewsWrapContDescription 
+                                                        theme={theme} 
+                                                        style={{ whiteSpace: 'pre-line' }}
+                                                    >
+                                                        {t("home.list_menu.wrap_cont_description.press_release_seven")} 
                                                     </NewsWrapContDescription>
                                             </NewsBoxMenuWrapCont>
                                         </NewsBoxMenuLinkCont>
@@ -179,11 +204,13 @@ function NewBoxMenu() {
                                                 <NewsBoxMenuIcoCategory 
                                                     src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/category/1ee6415a019300001.png"/> 
                                                     <NewsBoxMenuTxtCategory theme={theme}>
-                                                        보도자료
+                                                        {t("home.list_menu.txt_category.press_release")}
                                                     </NewsBoxMenuTxtCategory>
-                                                    <NewsWrapContDescription theme={theme}>
-                                                        카카오, ‘카카오프렌즈 X T1’ 협업 <br /> 
-                                                        굿즈 출시
+                                                    <NewsWrapContDescription 
+                                                        theme={theme} 
+                                                        style={{ whiteSpace: 'pre-line' }}
+                                                    >
+                                                        {t("home.list_menu.wrap_cont_description.press_release_eight")}
                                                     </NewsWrapContDescription>
                                             </NewsBoxMenuWrapCont>
                                         </NewsBoxMenuLinkCont>

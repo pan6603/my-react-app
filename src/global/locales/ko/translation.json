@@ -336,6 +336,78 @@
               "netflix": "#넷플릭스",
               "global_forum": "#국제포럼"
           }
+      },
+
+      "list_menu": {
+        "tit_submenu": {
+          "tech": "기술",
+          "service": "서비스",
+          "news": "뉴스",
+          "kakao_now": "카카오나우"
+        },
+
+        "link_submenu": {
+          "kakao_culture": "카카오 문화",
+          "kakao_group": "카카오 그룹",
+          "milestones" : "연혁",
+          "kakao_ai": "카카오테크",
+          "kakao_tech": "기술 플랫폼",
+          "tech_service": "기술 서비스",
+          "tech_contents": "기술 콘텐츠",
+          "tech_event": "기술 이벤트",
+          "if_kakao": "if(코코아)",
+          "communication": "커뮤니케이션",
+          "life": "일상 편의",
+          "business": "비즈니스",
+          "shopping": "쇼핑",
+          "entertainment": "엔터테인먼트",
+          "social_impact": "소셜임팩트",
+          "esg_reports": "ESG 보고서",
+          "project_dangol": "프로젝트 단골",
+          "active_green": "액티브그린",
+          "digital": "디지털 책임",
+          "socioeconomic_value": "사회경제적 가치",
+          "press_release": "보도자료",
+          "media_materials": "미디오자료",
+          "kakao_talk": "카카오이야기",
+          "group_company_story": "그룹사이야기"
+        },
+
+        "txt_category": {
+          "kakao_culture": "카카오 문화",
+          "kakao_group": "카카오 그룹",
+          "milestones" : "연혁",
+          "if_kakao": "if(코코아)",
+          "kakao_tech": "카카오테크",
+          "communication": "커뮤니케이션",
+          "esg_reports": "ESG 보고서",
+          "project_dangol": "프로젝트 단골",
+          "active_green": "액티브그린",
+          "digital": "디지털 책임",
+          "press_release": "보도자료"
+        },
+
+        "wrap_cont_description": {
+          "kakao_culture": "사람을 이해하는 기술로 \n 필요한 미래를 더 가깝게",
+          "kakao_group": "카카오가 만든 더 나은 세상",
+          "milestones": "카카가 걸어온 길",
+          "if_kakao": "카카오 AI를 이해하는, 5가지 \n키워드",
+          "kakao_tech": "카카오의 AI 모델, Kanana Model \nFamily를 소개합니다",
+          "communication": "사람과 세상을 향한 \n모든 연결의 시작, 카카오톡",
+          "kakao_talk_prospectus": "모두의 카톡을 더 가깝고 안전하게, \n카톡설명서",
+          "esg_reports": "모두의 지속가능한 미래를 위한 \n카카오의 약속과 책임",
+          "project_dangol": "더 많은 단골을 만나는게 \n사장님에겐 가장 큰 힘이 되니깐",
+          "active_green": "카카오와 이용자가 함께 만들어가는 \n지속가능한 지구",
+          "digital": "더 나은 디지털 세상을 향한 \n카카오의 원칙과 생각들",
+          "press_release_one": "브런치 10주년, 작가 9만 5천여 명 \n돌파…",
+          "press_release_two": "카카오맵, 초정밀 한강버스 정보…",
+          "press_release_three": "카카오, ‘카나나 상담매니저’ 정식 \n출시",
+          "press_release_fourth": "카카오, ‘카카오 클래스 79시간 한정 특가’ 기획전 진행",
+          "press_release_five": "카카오, if(kakao)25 2일차 \n키노트 세션 진행",
+          "press_release_six": "카카오톡과 AI의 결합…카카오, \n‘if(kakao)25’에서 ‘일상 AI’ 비전…",
+          "press_release_seven": "카카오인베스트먼트, 4대 과기원과 \n‘지역 AI 육성 프로젝트’ MOU 체결",
+          "press_release_eight": "카카오, ‘카카오프렌즈 X T1’ 협업\n굿즈 출시"
+        }
       }
     }
   }

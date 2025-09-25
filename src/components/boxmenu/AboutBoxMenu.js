@@ -16,21 +16,23 @@ import {
 } from "../../styles/boxmenu/BoxMenu.styles";
 import { Pagination, Navigation, EffectFade } from 'swiper/modules'
 import { useTheme } from "../context/ThemeContext";
+import { useTranslation } from "react-i18next";
 
 function AboutBoxMenu() {
+    const { t } = useTranslation();
     const { theme } = useTheme() 
 
     return (
         <AboutBoxMenuContainer theme={theme}>
             <ListSecond theme={theme}>
                 <ListSecondMenu>
-                    <LinkSubmenu theme={theme}>카카오 문화</LinkSubmenu>
+                    <LinkSubmenu theme={theme}>{t("home.list_menu.link_submenu.kakao_culture")}</LinkSubmenu>
                 </ListSecondMenu>
                 <ListSecondMenu>
-                    <LinkSubmenu theme={theme}>카카오 그룹</LinkSubmenu>
+                    <LinkSubmenu theme={theme}>{t("home.list_menu.link_submenu.kakao_group")}</LinkSubmenu>
                 </ListSecondMenu>
                 <ListSecondMenu>
-                    <LinkSubmenu theme={theme}>연혁</LinkSubmenu>
+                    <LinkSubmenu theme={theme}>{t("home.list_menu.link_submenu.milestones")}</LinkSubmenu>
                 </ListSecondMenu>
             </ListSecond>
             <ContMenu>
@@ -51,10 +53,14 @@ function AboutBoxMenu() {
                                 <ImgCont src="https://t1.kakaocdn.net/thumb/C317x178.fwebp.q100/?fname=https%3A%2F%2Ft1.kakaocdn.net%2Fkakaocorp%2Fkakaocorp%2Fservice%2Fgnb%2Fgnb_kakaoCulture.png"/>
                                 <WrapCont theme={theme}>
                                     <IcoCategory src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/category/06c15fc0019400001.png"/>
-                                    <TxtCategory theme={theme}>카카오 문화</TxtCategory>
-                                    <WrapContDescription theme={theme}>
-                                        사람을 이해하는 기술로 <br />
-                                        필요한 미래를 더 가깝게
+                                    <TxtCategory theme={theme}>
+                                        {t("home.list_menu.txt_category.kakao_culture")}
+                                    </TxtCategory>
+                                    <WrapContDescription 
+                                        theme={theme} 
+                                        style={{ whiteSpace: 'pre-line' }}
+                                    >
+                                        {t("home.list_menu.wrap_cont_description.kakao_culture")}
                                     </WrapContDescription>
                                 </WrapCont>
                             </LinkCont>
@@ -64,8 +70,15 @@ function AboutBoxMenu() {
                                 <ImgCont src="https://t1.kakaocdn.net/thumb/C317x178.fwebp.q100/?fname=https%3A%2F%2Ft1.kakaocdn.net%2Fkakaocorp%2Fkakaocorp%2Fservice%2Fgnb%2Fgnb_kakaoGroup.png"/>
                                 <WrapCont theme={theme}>
                                     <IcoCategory src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/65628c29017800001.png"/>
-                                    <TxtCategory theme={theme}>카카오 그룹</TxtCategory>
-                                    <WrapContDescription theme={theme}>카카오가 만든 더 나은 세상</WrapContDescription>
+                                    <TxtCategory theme={theme}>
+                                        {t("home.list_menu.txt_category.kakao_group")}
+                                    </TxtCategory>
+                                    <WrapContDescription 
+                                        theme={theme}
+                                        style={{ whiteSpace: 'pre-line' }}
+                                    >
+                                        {t("home.list_menu.wrap_cont_description.kakao_group")}   
+                                    </WrapContDescription>
                                 </WrapCont>
                             </LinkCont>
                         </SlickSlide>
@@ -74,8 +87,15 @@ function AboutBoxMenu() {
                                 <ImgCont src="https://t1.kakaocdn.net/thumb/C317x178.fwebp.q100/?fname=https%3A%2F%2Ft1.kakaocdn.net%2Fkakaocorp%2Fkakaocorp%2Fservice%2Fgnb%2Fgnb_milestones.png"/>
                                 <WrapCont theme={theme}>
                                     <IcoCategory src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/category/dd29d0e1018800001.png" />
-                                    <TxtCategory theme={theme}>연혁</TxtCategory>
-                                    <WrapContDescription theme={theme}>카카오가 걸어온 길</WrapContDescription>
+                                    <TxtCategory theme={theme}>
+                                        {t("home.list_menu.txt_category.milestones")}
+                                    </TxtCategory>
+                                    <WrapContDescription 
+                                        theme={theme}
+                                        style={{ whiteSpace: 'pre-line' }}
+                                    >
+                                        {t("home.list_menu.wrap_cont_description.milestones")}   
+                                    </WrapContDescription>
                                 </WrapCont>
                             </LinkCont>
                         </SlickSlide>

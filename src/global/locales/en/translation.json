@@ -332,6 +332,78 @@
               "netflix": "#Netflix",
               "global_forum": "#GlobalForum"
           }
+      },
+
+      "list_menu": {
+        "tit_submenu": {
+          "tech": "Tech",
+          "service": "Service",
+          "news": "News",
+          "kakao_now": "Kakao Now"
+        },
+
+        "link_submenu": {
+          "kakao_culture": "Kakao Culture",
+          "kakao_group": "Kakao Group",
+          "milestones" : "Milestones",
+          "kakao_ai": "Kakao AI",
+          "kakao_tech": "Kakao Tech",
+          "tech_service": "Tech Service",
+          "tech_contents": "Tech Contents",
+          "tech_event": "Tech Event",
+          "if_kakao": "if(kakao)",
+          "communication": "Communication",
+          "life": "Life",
+          "business": "Business",
+          "shopping": "Shopping",
+          "entertainment": "Entertainment",
+          "social_impact": "Social Impact",
+          "esg_reports": "ESG Reports",
+          "project_dangol": "Project Dangol",
+          "active_green": "Active Green",
+          "digital": "Digital Responsibility",
+          "socioeconomic_value": "Socioeconomic Value",
+          "press_release": "Press Release",
+          "media_materials": "Media Materials",
+          "kakao_talk": "Kakao Talk",
+          "group_company_story": "Group company"
+        },
+
+        "txt_category": {
+          "kakao_culture": "Kakao Culture",
+          "kakao_group": "Kakao Group",
+          "milestones" : "Milestones",
+          "if_kakao": "if(kakao)",
+          "kakao_tech": "Kakao Tech",
+          "communication": "Communication",
+          "esg_reports": "ESG Reports",
+          "project_dangol": "Project Dangol",
+          "active_green": "Active Green",
+          "digital": "Digital Responsibility",
+          "press_release": "Press Release"
+        },
+
+        "wrap_cont_description": {
+          "kakao_culture": "Kakao brings the future\nwe need closer",
+          "kakao_group": "A better world, created by\nKakao",
+          "milestones": "Kakao's remarkable journey \nThus Far",
+          "if_kakao": "5 Keywords to Understand \nKakao AI",
+          "kakao_tech": "Introducing Kakao's AI model, \nKanana Model Family",
+          "communication": "beginning of all connections, \nKakao Talk",
+          "kakao_talk_prospectus": "Make everyone's \nKakaotalk closer and safer",
+          "esg_reports": "Kakao’s commitment and \nresponsibility",
+          "project_dangol": "To provide support to \nsmall business owners",
+          "active_green": "Earth, made sustainable by \nKakao and our users",
+          "digital": "Our principles and thoughts \ntoward a better digital world",
+          "press_release_one": "10th Anniversary of Brunch, \nOver 95,000 Writers...",
+          "press_release_two": "Kakao Map, Hangang \nBus Information",
+          "press_release_three": "Kakao Group Donates ₩1.5B \nfor Heavy Rain Relief",
+          "press_release_fourth": "Kakao Group Generates \nApproximately ₩19.1T in...",
+          "press_release_five": "Kakao Publishes 2024 \nESG Report, Sharing Its...",
+          "press_release_six": "Kakao and Namyangju Sign\nMOU to Create a Digital Hub",
+          "press_release_seven": "Kakao Unveils “Kanana \nSafeguard,” a Guardrail...",
+          "press_release_eight": "'Kakao Friends XT1' \ncollaborative goods"
+        }
       }
     }
   }

@@ -19,8 +19,10 @@ import {
 } from "../../styles/boxmenu/BoxMenu.styles";
 import { Pagination, Navigation, EffectFade } from 'swiper/modules'
 import { useTheme } from "../context/ThemeContext"; 
+import { useTranslation } from "react-i18next";
 
 function TechServiceBoxMenu() {
+    const { t } = useTranslation();
     const { theme } = useTheme()
 
     return (
@@ -28,25 +30,25 @@ function TechServiceBoxMenu() {
             <TechServiceBoxMenuContainer theme={theme}>
                 <TechServiceBoxMenuListSecond>
                     <TechServiceListFlex>
-                        <TitSubmenu>기술</TitSubmenu>
+                        <TitSubmenu>{t("home.list_menu.tit_submenu.tech")}</TitSubmenu>
                         <ListThird>
-                            <TechServiceLinkSubmenu theme={theme}>카카오테크</TechServiceLinkSubmenu>
-                            <TechServiceLinkSubmenu theme={theme}>기술 플랫폼</TechServiceLinkSubmenu>
-                            <TechServiceLinkSubmenu theme={theme}>기술 서비스</TechServiceLinkSubmenu>
-                            <TechServiceLinkSubmenu theme={theme}>기술 콘텐츠</TechServiceLinkSubmenu>
-                            <TechServiceLinkSubmenu theme={theme}>기술 이벤트</TechServiceLinkSubmenu>
-                            <TechServiceLinkSubmenu theme={theme}>if(코코아)</TechServiceLinkSubmenu>
+                            <TechServiceLinkSubmenu theme={theme}>{t("home.list_menu.link_submenu.kakao_ai")}</TechServiceLinkSubmenu>
+                            <TechServiceLinkSubmenu theme={theme}>{t("home.list_menu.link_submenu.kakao_tech")}</TechServiceLinkSubmenu>
+                            <TechServiceLinkSubmenu theme={theme}>{t("home.list_menu.link_submenu.tech_service")}</TechServiceLinkSubmenu>
+                            <TechServiceLinkSubmenu theme={theme}>{t("home.list_menu.link_submenu.tech_contents")}</TechServiceLinkSubmenu>
+                            <TechServiceLinkSubmenu theme={theme}>{t("home.list_menu.link_submenu.tech_event")}</TechServiceLinkSubmenu>
+                            <TechServiceLinkSubmenu theme={theme}>{t("home.list_menu.link_submenu.if_kakao")}</TechServiceLinkSubmenu>
                         </ListThird>
                     </TechServiceListFlex>
                     <TechServiceListFlex>
-                        <TitSubmenu>서비스</TitSubmenu>
+                        <TitSubmenu>{t("home.list_menu.tit_submenu.service")}</TitSubmenu>
                         <ListThird>
-                            <TechServiceLinkSubmenu theme={theme}>커뮤니케이션</TechServiceLinkSubmenu>
-                            <TechServiceLinkSubmenu theme={theme}>일상 편의</TechServiceLinkSubmenu>
-                            <TechServiceLinkSubmenu theme={theme}>비즈니스</TechServiceLinkSubmenu>
-                            <TechServiceLinkSubmenu theme={theme}>쇼핑</TechServiceLinkSubmenu>
-                            <TechServiceLinkSubmenu theme={theme}>엔터테인먼트</TechServiceLinkSubmenu>
-                            <TechServiceLinkSubmenu theme={theme}>소셜임팩트</TechServiceLinkSubmenu>
+                            <TechServiceLinkSubmenu theme={theme}>{t("home.list_menu.link_submenu.communication")}</TechServiceLinkSubmenu>
+                            <TechServiceLinkSubmenu theme={theme}>{t("home.list_menu.link_submenu.life")}</TechServiceLinkSubmenu>
+                            <TechServiceLinkSubmenu theme={theme}>{t("home.list_menu.link_submenu.business")}</TechServiceLinkSubmenu>
+                            <TechServiceLinkSubmenu theme={theme}>{t("home.list_menu.link_submenu.shopping")}</TechServiceLinkSubmenu>
+                            <TechServiceLinkSubmenu theme={theme}>{t("home.list_menu.link_submenu.entertainment")}</TechServiceLinkSubmenu>
+                            <TechServiceLinkSubmenu theme={theme}>{t("home.list_menu.link_submenu.social_impact")}</TechServiceLinkSubmenu>
                         </ListThird>
                     </TechServiceListFlex>
                 </TechServiceBoxMenuListSecond>
@@ -71,10 +73,13 @@ function TechServiceBoxMenu() {
                                         <TechServiceBoxMenuWrapCont theme={theme}>
                                             <TechServiceBoxMenuIcoCategory src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/category/ea259486018400001.png"/>
                                             <TechServiceBoxMenuTxtCategory theme={theme}>
-                                                if(코코아)
+                                                {t("home.list_menu.txt_category.if_kakao")}
                                             </TechServiceBoxMenuTxtCategory>
-                                            <TechServiceWrapContDescription theme={theme}>
-                                                카카오 AI를 이해하는, 5가지 <br />키워드
+                                            <TechServiceWrapContDescription 
+                                                theme={theme}
+                                                style={{ whiteSpace: 'pre-line' }}
+                                                >
+                                                {t("home.list_menu.wrap_cont_description.if_kakao")}
                                             </TechServiceWrapContDescription>
                                         </TechServiceBoxMenuWrapCont>
                                     </TechServiceBoxMenuLinkCont>
@@ -88,10 +93,13 @@ function TechServiceBoxMenu() {
                                             <TechServiceBoxMenuIcoCategory 
                                                 src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/category/ea259486018400001.png"/>
                                             <TechServiceBoxMenuTxtCategory theme={theme}>
-                                                카카오테크
+                                                {t("home.list_menu.txt_category.kakao_tech")}
                                             </TechServiceBoxMenuTxtCategory>
-                                            <TechServiceWrapContDescription theme={theme}>
-                                                카카오의 AI 모델, Kanana Model <br/>Family를 소개합니다
+                                            <TechServiceWrapContDescription 
+                                                theme={theme}
+                                                style={{ whiteSpace: 'pre-line' }}
+                                                >
+                                                {t("home.list_menu.wrap_cont_description.kakao_tech")}
                                             </TechServiceWrapContDescription>
                                         </TechServiceBoxMenuWrapCont>
                                     </TechServiceBoxMenuLinkCont>
@@ -105,11 +113,15 @@ function TechServiceBoxMenu() {
                                         <TechServiceBoxMenuWrapCont theme={theme}>
                                             <TechServiceBoxMenuIcoCategory src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/65659472017800001.png"/>
                                             <TechServiceBoxMenuTxtCategory theme={theme}>
-                                                커뮤니케이션
+                                                {t("home.list_menu.txt_category.communication")}
                                             </TechServiceBoxMenuTxtCategory>
 
-                                            <TechServiceWrapContDescription theme={theme}>
-                                                사람과 세상을 향한  <br/> 모든 연결의 시작, 카카오톡
+                                            <TechServiceWrapContDescription 
+                                                theme={theme}
+                                                style={{ whiteSpace: 'pre-line' }}
+                                                >
+                                                
+                                                {t("home.list_menu.wrap_cont_description.communication")}
                                             </TechServiceWrapContDescription>
                                         </TechServiceBoxMenuWrapCont>
                                     </TechServiceBoxMenuLinkCont>
@@ -123,11 +135,14 @@ function TechServiceBoxMenu() {
                                         <TechServiceBoxMenuWrapCont theme={theme}>
                                             <TechServiceBoxMenuIcoCategory src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/65659472017800001.png"/>
                                             <TechServiceBoxMenuTxtCategory theme={theme}>
-                                                커뮤니케이션
+                                                {t("home.list_menu.txt_category.communication")}
                                             </TechServiceBoxMenuTxtCategory>
 
-                                            <TechServiceWrapContDescription theme={theme}>
-                                                모두의 카톡을 더 가깝고 안전하게, <br/>카톡설명서
+                                            <TechServiceWrapContDescription 
+                                                theme={theme}
+                                                style={{ whiteSpace: 'pre-line' }}
+                                                >
+                                                {t("home.list_menu.wrap_cont_description.kakao_talk_prospectus")}
                                             </TechServiceWrapContDescription>
                                         </TechServiceBoxMenuWrapCont>
                                     </TechServiceBoxMenuLinkCont>

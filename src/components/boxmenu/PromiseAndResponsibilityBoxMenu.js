@@ -17,8 +17,10 @@ import {
 } from "../../styles/boxmenu/BoxMenu.styles";
 import { Pagination, Navigation, EffectFade } from 'swiper/modules'
 import { useTheme } from "../context/ThemeContext";
+import { useTranslation } from "react-i18next";
 
 function PromiseAndResponsbilityBoxMenu() {
+    const { t } = useTranslation();
     const { theme } = useTheme() 
 
     return (
@@ -26,13 +28,12 @@ function PromiseAndResponsbilityBoxMenu() {
             <PromiseAndResponsbilityBoxMenuContainer theme={theme}>
                 <PromiseAndResponsbilityListSecond>
                     <PromiseAndResponsbilityListFlex>
-                        <PromiseAndResponsbilityLinkSubmenu theme={theme}>ESG 보고서</PromiseAndResponsbilityLinkSubmenu>
-                        <PromiseAndResponsbilityLinkSubmenu theme={theme}>
-                            프로젝트 단골
+                        <PromiseAndResponsbilityLinkSubmenu theme={theme}>{t("home.list_menu.link_submenu.esg_reports")}</PromiseAndResponsbilityLinkSubmenu>
+                        <PromiseAndResponsbilityLinkSubmenu theme={theme}>{t("home.list_menu.link_submenu.project_dangol")}</PromiseAndResponsbilityLinkSubmenu>
+                        <PromiseAndResponsbilityLinkSubmenu theme={theme}>{t("home.list_menu.link_submenu.active_green")}</PromiseAndResponsbilityLinkSubmenu>
+                        <PromiseAndResponsbilityLinkSubmenu theme={theme}>{t("home.list_menu.link_submenu.digital")}</PromiseAndResponsbilityLinkSubmenu>
+                        <PromiseAndResponsbilityLinkSubmenu theme={theme}>{t("home.list_menu.link_submenu.socioeconomic_value")}
                         </PromiseAndResponsbilityLinkSubmenu>
-                        <PromiseAndResponsbilityLinkSubmenu theme={theme}>액티브그린</PromiseAndResponsbilityLinkSubmenu>
-                        <PromiseAndResponsbilityLinkSubmenu theme={theme}>디지털 책임</PromiseAndResponsbilityLinkSubmenu>
-                        <PromiseAndResponsbilityLinkSubmenu theme={theme}>사회경제적 가치</PromiseAndResponsbilityLinkSubmenu>
                     </PromiseAndResponsbilityListFlex>
                 </PromiseAndResponsbilityListSecond>
                 <PromiseAndResponsbilityContMenu theme={theme}>
@@ -57,11 +58,13 @@ function PromiseAndResponsbilityBoxMenu() {
                                             <PromiseAndResponsbilityIcoCategory 
                                                 src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/category/65fde7b2017900001.png"/>
                                                 <PromiseAndResponsbilityTxtCategory theme={theme}>
-                                                    ESG 보고서
+                                                    {t("home.list_menu.txt_category.esg_reports")}
                                                 </PromiseAndResponsbilityTxtCategory>
-                                                <PromiseAndResponsbilityWrapContDescription theme={theme}>
-                                                    모두의 지속가능한 미래를 위한 <br />
-                                                    카카오의 약속과 책임
+                                                <PromiseAndResponsbilityWrapContDescription 
+                                                    theme={theme}
+                                                    style={{ whiteSpace: 'pre-line' }}
+                                                    >
+                                                    {t("home.list_menu.wrap_cont_description.esg_reports")}
                                                 </PromiseAndResponsbilityWrapContDescription>
                                         </PromiseAndResponsbilityWrapCont>
                                     </PromiseAndResponsbilityLinkCont>
@@ -75,11 +78,13 @@ function PromiseAndResponsbilityBoxMenu() {
                                             <PromiseAndResponsbilityIcoCategory 
                                                 src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/category/b1921311019200001.png"/>
                                             <PromiseAndResponsbilityTxtCategory theme={theme}>
-                                                프로젝트 단골
+                                                {t("home.list_menu.txt_category.project_dangol")}
                                             </PromiseAndResponsbilityTxtCategory>  
-                                            <PromiseAndResponsbilityWrapContDescription theme={theme}>
-                                                더 많은 단골을 만나는게 <br />
-                                                사장님에겐 가장 큰 힘이 되니깐
+                                            <PromiseAndResponsbilityWrapContDescription 
+                                                theme={theme} 
+                                                style={{ whiteSpace: 'pre-line' }}
+                                            >
+                                                {t("home.list_menu.wrap_cont_description.project_dangol")}
                                             </PromiseAndResponsbilityWrapContDescription>  
                                         </PromiseAndResponsbilityWrapCont>
                                     </PromiseAndResponsbilityLinkCont>
@@ -93,11 +98,13 @@ function PromiseAndResponsbilityBoxMenu() {
                                             <PromiseAndResponsbilityIcoCategory 
                                                 src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/category/6f187cca018800001.png"/>
                                             <PromiseAndResponsbilityTxtCategory theme={theme}>
-                                                액티브그린
+                                                {t("home.list_menu.txt_category.active_green")}
                                             </PromiseAndResponsbilityTxtCategory>
-                                            <PromiseAndResponsbilityWrapContDescription theme={theme}>
-                                                카카오와 이용자가 함께 만들어가는 <br />
-                                                지속가능한 지구
+                                            <PromiseAndResponsbilityWrapContDescription 
+                                                theme={theme} 
+                                                style={{ whiteSpace: 'pre-line' }}
+                                            >
+                                                {t("home.list_menu.wrap_cont_description.active_green")}
                                             </PromiseAndResponsbilityWrapContDescription>    
                                         </PromiseAndResponsbilityWrapCont>
                                     </PromiseAndResponsbilityLinkCont>
@@ -111,11 +118,12 @@ function PromiseAndResponsbilityBoxMenu() {
                                             <PromiseAndResponsbilityIcoCategory 
                                                 src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/category/ad670b2e018b00001.png"/>
                                             <PromiseAndResponsbilityTxtCategory theme={theme}>
-                                                디지털 책임
+                                                {t("home.list_menu.txt_category.digital")}
                                             </PromiseAndResponsbilityTxtCategory>
-                                            <PromiseAndResponsbilityWrapContDescription theme={theme}>
-                                                더 나은 디지털 세상을 향한 <br />
-                                                카카오의 원칙과 생각들
+                                            <PromiseAndResponsbilityWrapContDescription 
+                                                theme={theme}
+                                                style={{ whiteSpace: 'pre-line' }}>
+                                                {t("home.list_menu.wrap_cont_description.digital")}
                                             </PromiseAndResponsbilityWrapContDescription>   
                                         </PromiseAndResponsbilityWrapCont>
                                     </PromiseAndResponsbilityLinkCont>

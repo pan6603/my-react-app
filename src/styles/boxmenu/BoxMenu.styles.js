@@ -429,7 +429,7 @@ export const PromiseAndResponsbilityLinkSubmenu = styled.div`
     margin-top: 12px;
     max-width: 142px;
     width: 100%;
-    height: 28px;
+    height: max-content;
     font-size: 17px;
     line-height: 28px;
     color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
@@ -771,5 +771,5 @@ export const NewsWrapContDescription = styled.div`
     font-weight: 500;
     line-height: 27px;
     width: max-content;
-    height: 54px;
+    height: max-content;
 `
