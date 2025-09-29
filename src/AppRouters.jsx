@@ -6,6 +6,7 @@ import SubsidiaryCompany from "./pages/about/SubsidiaryCompany";
 import Admin from "./pages/Admin";
 import NotFound from "./pages/NotFound";
 import Investment from "./Investment";
+import Service from "./pages/service/Service";
 
 function AppRouters () {
     return (
@@ -18,6 +19,7 @@ function AppRouters () {
                 <Route path="/admin" element={<Admin />} />
                 <Route path="*" element={<NotFound />} />
                 <Route path="/ir/main" element={<Investment />} />
+                <Route path="/pages/service" element={<Service />} />
             </Routes>  
         </BrowserRouter>
     )

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -241,7 +242,7 @@ export const ListThird = styled.div`
     flex-direction: column;
 `
 
-export const TechServiceLinkSubmenu = styled.a`
+export const TechServiceLinkSubmenu = styled(Link)`
     margin-top: 12px;
     max-width: 142px;
     width: 100%;
@@ -250,6 +251,7 @@ export const TechServiceLinkSubmenu = styled.a`
     line-height: 28px;
     color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
     white-space: pre-line;
+    text-decoration: none;
 
     &:hover {
         text-decoration: underline;

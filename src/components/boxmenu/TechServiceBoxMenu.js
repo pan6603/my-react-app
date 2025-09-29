@@ -43,7 +43,12 @@ function TechServiceBoxMenu() {
                     <TechServiceListFlex>
                         <TitSubmenu>{t("home.list_menu.tit_submenu.service")}</TitSubmenu>
                         <ListThird>
-                            <TechServiceLinkSubmenu theme={theme}>{t("home.list_menu.link_submenu.communication")}</TechServiceLinkSubmenu>
+                            <TechServiceLinkSubmenu 
+                                theme={theme}
+                                to="/pages/service"
+                                >
+                                {t("home.list_menu.link_submenu.communication")}
+                            </TechServiceLinkSubmenu>
                             <TechServiceLinkSubmenu theme={theme}>{t("home.list_menu.link_submenu.life")}</TechServiceLinkSubmenu>
                             <TechServiceLinkSubmenu theme={theme}>{t("home.list_menu.link_submenu.business")}</TechServiceLinkSubmenu>
                             <TechServiceLinkSubmenu theme={theme}>{t("home.list_menu.link_submenu.shopping")}</TechServiceLinkSubmenu>
