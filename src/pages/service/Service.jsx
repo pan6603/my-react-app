@@ -1,9 +1,23 @@
+import Header from "../../components/Header";
+import { 
+    MainContent, 
+    ContentArticle,
+    TitMain,
+
+} from "../../styles/pages/service/service.styles";
 
 
 function Service() {
     return (
         <>
-            <h1>Service</h1>
+            <Header />
+            <MainContent>
+                <ContentArticle>
+                    <TitMain>
+
+                    </TitMain>
+                </ContentArticle>
+            </MainContent>
         </>
     )
 }

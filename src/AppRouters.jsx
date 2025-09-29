@@ -19,7 +19,7 @@ function AppRouters () {
                 <Route path="/admin" element={<Admin />} />
                 <Route path="*" element={<NotFound />} />
                 <Route path="/ir/main" element={<Investment />} />
-                <Route path="/pages/service" element={<Service />} />
+                <Route path="/page/service" element={<Service />} />
             </Routes>  
         </BrowserRouter>
     )

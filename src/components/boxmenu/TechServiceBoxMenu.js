@@ -45,7 +45,7 @@ function TechServiceBoxMenu() {
                         <ListThird>
                             <TechServiceLinkSubmenu 
                                 theme={theme}
-                                to="/pages/service"
+                                to="/page/service"
                                 >
                                 {t("home.list_menu.link_submenu.communication")}
                             </TechServiceLinkSubmenu>
