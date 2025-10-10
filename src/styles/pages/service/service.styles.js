@@ -2,19 +2,33 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 
+export const DocMain = styled.main`
+    max-width: 1440px;
+    width: 100%;
+    height: 3338px;
+`
+
+export const InnerMain = styled.section`
+    max-width: 1440px;
+    width: 100%;
+    height: 3338px;
+`
+
+
 export const MainContent = styled.div`
+    padding-top: 91px;
     max-width: 1440px;
     width: 100%;
     height: 3247px;
-    margin: 91px auto;
+    margin: 0px auto;
 `
 
 export const ContentArticle = styled.article`
+    position: relative;
     max-width: 1296px;
     width: 100%;
     height: 3247px;
     margin: 0 auto;
-    padding-bottom: 182px;
     background-color: red;
 `
 
