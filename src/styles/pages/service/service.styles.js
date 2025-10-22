@@ -29,7 +29,6 @@ export const ContentArticle = styled.article`
     width: 100%;
     height: 3247px;
     margin: 0 auto;
-    background-color: red;
 `
 
 export const TitMain = styled.div`
@@ -47,7 +46,6 @@ export const TitMain = styled.div`
     line-height: 66px;
     padding-top: 96px;
     box-sizing: border-box;
-    background-color: green;
 `
 
 export const EmphTit = styled.div`
@@ -71,14 +69,51 @@ export const SectionService = styled.section`
     max-width: 1296px;
     width: 100%;
     height: 2763px;
-    background-color: blue;
     color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 `
 
 export const WrapTabs = styled.div`
     max-width: 1296px;
     width: 100%;
     height: 61px;
+`
+
+export const ListCardNew = styled.div`
+    max-width: 1296px;
+    width: 100%;
+    height: 2654px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 36px;
+`
+
+export const ListCardNewDiv = styled.div`
+    max-width: 408px;
+    width: 100%;
+    height: 502px;
+`
+
+export const ItemNormalCard = styled.div`
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+    background-color: #f3f3f3;
+    border-radius: 16px;
+    width: 100%;
+    height: 100%;
+    max-width: 408px;
+    width: 100%;
+    height: 502px;
+`
+
+export const InnerCard = styled.div`
+    max-width: 408px;
+    width: 100%;
+    height: 502px;
+    background-color: red;
 `
 
 export const ListTab = styled.div`
