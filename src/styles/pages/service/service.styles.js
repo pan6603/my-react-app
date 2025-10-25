@@ -5,13 +5,11 @@ import { Link } from "react-router-dom";
 export const DocMain = styled.main`
     max-width: 1440px;
     width: 100%;
-    height: 3338px;
 `
 
 export const InnerMain = styled.section`
     max-width: 1440px;
     width: 100%;
-    height: 3338px;
 `
 
 
@@ -19,7 +17,6 @@ export const MainContent = styled.div`
     padding-top: 91px;
     max-width: 1440px;
     width: 100%;
-    height: 3247px;
     margin: 0px auto;
 `
 
@@ -27,8 +24,8 @@ export const ContentArticle = styled.article`
     position: relative;
     max-width: 1296px;
     width: 100%;
-    height: 3247px;
     margin: 0 auto;
+    padding-bottom: 182px;
 `
 
 export const TitMain = styled.div`
@@ -68,11 +65,10 @@ export const SectionService = styled.section`
     margin-top: 92px;
     max-width: 1296px;
     width: 100%;
-    height: 2763px;
     color: #333;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 45px;
 `
 
 export const WrapTabs = styled.div`
@@ -84,7 +80,6 @@ export const WrapTabs = styled.div`
 export const ListCardNew = styled.div`
     max-width: 1296px;
     width: 100%;
-    height: 2654px;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 36px;
@@ -102,8 +97,6 @@ export const ItemNormalCard = styled.div`
     position: relative;
     background-color: #f3f3f3;
     border-radius: 16px;
-    width: 100%;
-    height: 100%;
     max-width: 408px;
     width: 100%;
     height: 502px;
