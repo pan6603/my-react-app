@@ -1056,6 +1056,241 @@ function Service() {
                                     </ListCardNew>
                                 )}
 
+                                { tabMenu === "entertainment" && (
+                                    <ListCardNew>
+                                        <ListCardNewDiv>
+                                            <ItemNormalCard>
+                                                <InnerCard>
+                                                    <InfoCate>
+                                                        <IcoCate src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/65659472017800001.png?type=thumb&opt=C72x72.fwebp"/>
+                                                        <TxtCate>엔터테인먼트</TxtCate>
+                                                    </InfoCate>
+                                                    <LinkItem>
+                                                        <TitCard>
+                                                            세상 모든 이야기를 담다, <br />카카오페이지
+                                                        </TitCard>
+                                                        <WrapThumb>
+                                                            <ThumbImg src="https://t1.kakaocdn.net/thumb/C630x354.fwebp.q100/?fname=https%3A%2F%2Ft1.kakaocdn.net%2Fkakaocorp%2Fkakaocorp%2Fadmin%2Fservice%2Fad52cc82017900001.jpg" />
+                                                        </WrapThumb>
+                                                    </LinkItem>
+                                                    <InfoCard>
+                                                        <TxtKeyword>#기다리면무료</TxtKeyword>
+                                                        <TxtKeyword>#엔터테인먼트</TxtKeyword>
+                                                        <TxtKeyword>#웹소설</TxtKeyword>
+                                                        <TxtKeyword>#웹툰</TxtKeyword>
+                                                        <TxtKeyword>#카카오페이지</TxtKeyword>
+                                                    </InfoCard>
+                                                </InnerCard>
+                                                <BtnShare viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <g data-v-19bdf39b="" fill="none" fill-rule="evenodd"><path data-v-19bdf39b="" d="M0 0H24V24H0z" transform="translate(-350 -222) translate(24 192) translate(326 30)"></path> <g data-v-19bdf39b="" transform="translate(-350 -222) translate(24 192) translate(326 30) translate(10 2)" class="fill" fill="#000"><circle data-v-19bdf39b="" cx="2" cy="2" r="2"></circle> <circle data-v-19bdf39b="" cx="2" cy="10" r="2"></circle><circle data-v-19bdf39b="" cx="2" cy="18" r="2"></circle></g></g>
+                                                </BtnShare>
+                                            </ItemNormalCard>
+                                        </ListCardNewDiv>
+
+                                        <ListCardNewDiv>
+                                            <ItemNormalCard>
+                                                <InnerCard>
+                                                    <InfoCate>
+                                                        <IcoCate src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/65659472017800001.png?type=thumb&opt=C72x72.fwebp"/>
+                                                        <TxtCate>엔터테인먼트</TxtCate>
+                                                    </InfoCate>
+                                                    <LinkItem>
+                                                        <TitCard>
+                                                            오리지널 콘텐츠와 라이브를 즐길 <br /> 수 있는, 카카오TV
+                                                        </TitCard>
+                                                        <WrapThumb>
+                                                            <ThumbImg src="https://t1.kakaocdn.net/thumb/C630x354.fwebp.q100/?fname=https%3A%2F%2Ft1.kakaocdn.net%2Fkakaocorp%2Fkakaocorp%2Fadmin%2Fservice%2F7a22f8b4017900001.jpg" />
+                                                        </WrapThumb>
+                                                    </LinkItem>
+                                                    <InfoCard>
+                                                        <TxtKeyword>#드라마</TxtKeyword>
+                                                        <TxtKeyword>#라이브</TxtKeyword>
+                                                        <TxtKeyword>#예능</TxtKeyword>
+                                                        <TxtKeyword>#오리지널</TxtKeyword>
+                                                        <TxtKeyword>#카카오TV</TxtKeyword>
+                                                    </InfoCard>
+                                                </InnerCard>
+                                                <BtnShare viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <g data-v-19bdf39b="" fill="none" fill-rule="evenodd"><path data-v-19bdf39b="" d="M0 0H24V24H0z" transform="translate(-350 -222) translate(24 192) translate(326 30)"></path> <g data-v-19bdf39b="" transform="translate(-350 -222) translate(24 192) translate(326 30) translate(10 2)" class="fill" fill="#000"><circle data-v-19bdf39b="" cx="2" cy="2" r="2"></circle> <circle data-v-19bdf39b="" cx="2" cy="10" r="2"></circle><circle data-v-19bdf39b="" cx="2" cy="18" r="2"></circle></g></g>
+                                                </BtnShare>
+                                            </ItemNormalCard>
+                                        </ListCardNewDiv>
+
+                                        <ListCardNewDiv>
+                                            <ItemNormalCard>
+                                                <InnerCard>
+                                                    <InfoCate>
+                                                        <IcoCate src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/65659472017800001.png?type=thumb&opt=C72x72.fwebp"/>
+                                                        <TxtCate>엔터테인먼트</TxtCate>
+                                                    </InfoCate>
+                                                    <LinkItem>
+                                                        <TitCard>
+                                                            Korea No.1 캐릭터,  <br />카카오프렌즈
+                                                        </TitCard>
+                                                        <WrapThumb>
+                                                            <ThumbImg src="https://t1.kakaocdn.net/thumb/C630x354.fwebp.q100/?fname=https%3A%2F%2Ft1.kakaocdn.net%2Fkakaocorp%2Fkakaocorp%2Fadmin%2Fservice%2Fa85d0594017900001.jpg" />
+                                                        </WrapThumb>
+                                                    </LinkItem>
+                                                    <InfoCard>
+                                                        <TxtKeyword>#라이언</TxtKeyword>
+                                                        <TxtKeyword>#리틀카카오프렌즈</TxtKeyword>
+                                                        <TxtKeyword>#어피치</TxtKeyword>
+                                                        <TxtKeyword>#춘식이</TxtKeyword>
+                                                        <TxtKeyword>#카카오프렌즈</TxtKeyword>
+                                                    </InfoCard>
+                                                </InnerCard>
+                                                <BtnShare viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <g data-v-19bdf39b="" fill="none" fill-rule="evenodd"><path data-v-19bdf39b="" d="M0 0H24V24H0z" transform="translate(-350 -222) translate(24 192) translate(326 30)"></path> <g data-v-19bdf39b="" transform="translate(-350 -222) translate(24 192) translate(326 30) translate(10 2)" class="fill" fill="#000"><circle data-v-19bdf39b="" cx="2" cy="2" r="2"></circle> <circle data-v-19bdf39b="" cx="2" cy="10" r="2"></circle><circle data-v-19bdf39b="" cx="2" cy="18" r="2"></circle></g></g>
+                                                </BtnShare>
+                                            </ItemNormalCard>
+                                        </ListCardNewDiv>
+
+                                        <ListCardNewDiv>
+                                            <ItemNormalCard>
+                                                <InnerCard>
+                                                    <InfoCate>
+                                                        <IcoCate src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/65659472017800001.png?type=thumb&opt=C72x72.fwebp"/>
+                                                        <TxtCate>엔터테인먼트</TxtCate>
+                                                    </InfoCate>
+                                                    <LinkItem>
+                                                        <TitCard>
+                                                            세상에 없던 세상, <br />카카오웹툰
+                                                        </TitCard>
+                                                        <WrapThumb>
+                                                            <ThumbImg src="https://t1.kakaocdn.net/thumb/C630x354.fwebp.q100/?fname=https%3A%2F%2Ft1.kakaocdn.net%2Fkakaocorp%2Fkakaocorp%2Fadmin%2Fservice%2Ffcf3da10017a00001.png" />
+                                                        </WrapThumb>
+                                                    </LinkItem>
+                                                    <InfoCard>
+                                                        <TxtKeyword>#엔터테인먼트</TxtKeyword>
+                                                        <TxtKeyword>#웹툰</TxtKeyword>
+                                                        <TxtKeyword>#카카오웹툰</TxtKeyword>
+                                                        <TxtKeyword>#콘텐츠</TxtKeyword>
+                                                    </InfoCard>
+                                                </InnerCard>
+                                                <BtnShare viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <g data-v-19bdf39b="" fill="none" fill-rule="evenodd"><path data-v-19bdf39b="" d="M0 0H24V24H0z" transform="translate(-350 -222) translate(24 192) translate(326 30)"></path> <g data-v-19bdf39b="" transform="translate(-350 -222) translate(24 192) translate(326 30) translate(10 2)" class="fill" fill="#000"><circle data-v-19bdf39b="" cx="2" cy="2" r="2"></circle> <circle data-v-19bdf39b="" cx="2" cy="10" r="2"></circle><circle data-v-19bdf39b="" cx="2" cy="18" r="2"></circle></g></g>
+                                                </BtnShare>
+                                            </ItemNormalCard>
+                                        </ListCardNewDiv>
+
+                                        <ListCardNewDiv>
+                                            <ItemNormalCard>
+                                                <InnerCard>
+                                                    <InfoCate>
+                                                        <IcoCate src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/65659472017800001.png?type=thumb&opt=C72x72.fwebp"/>
+                                                        <TxtCate>엔터테인먼트</TxtCate>
+                                                    </InfoCate>
+                                                    <LinkItem>
+                                                        <TitCard>
+                                                            내가 좋아할 음악들만,<br />멜론
+                                                        </TitCard>
+                                                        <WrapThumb>
+                                                            <ThumbImg src="https://t1.kakaocdn.net/thumb/C630x354.fwebp.q100/?fname=https%3A%2F%2Ft1.kakaocdn.net%2Fkakaocorp%2Fkakaocorp%2Fadmin%2Fservice%2Fa8fa107c017900001.jpg" />
+                                                        </WrapThumb>
+                                                    </LinkItem>
+                                                    <InfoCard>
+                                                        <TxtKeyword>#k팝</TxtKeyword>
+                                                        <TxtKeyword>#mma</TxtKeyword>
+                                                        <TxtKeyword>#멜론</TxtKeyword>
+                                                        <TxtKeyword>#멜론차트</TxtKeyword>
+                                                        <TxtKeyword>#뮤직앱</TxtKeyword>
+                                                    </InfoCard>
+                                                </InnerCard>
+                                                <BtnShare viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <g data-v-19bdf39b="" fill="none" fill-rule="evenodd"><path data-v-19bdf39b="" d="M0 0H24V24H0z" transform="translate(-350 -222) translate(24 192) translate(326 30)"></path> <g data-v-19bdf39b="" transform="translate(-350 -222) translate(24 192) translate(326 30) translate(10 2)" class="fill" fill="#000"><circle data-v-19bdf39b="" cx="2" cy="2" r="2"></circle> <circle data-v-19bdf39b="" cx="2" cy="10" r="2"></circle><circle data-v-19bdf39b="" cx="2" cy="18" r="2"></circle></g></g>
+                                                </BtnShare>
+                                            </ItemNormalCard>
+                                        </ListCardNewDiv>
+
+                                        <ListCardNewDiv>
+                                            <ItemNormalCard>
+                                                <InnerCard>
+                                                    <InfoCate>
+                                                        <IcoCate src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/65659472017800001.png?type=thumb&opt=C72x72.fwebp"/>
+                                                        <TxtCate>엔터테인먼트</TxtCate>
+                                                    </InfoCate>
+                                                    <LinkItem>
+                                                        <TitCard>
+                                                            새로운 세대에게 사랑받는, 니니즈
+                                                        </TitCard>
+                                                        <WrapThumb>
+                                                            <ThumbImg src="https://t1.kakaocdn.net/thumb/C630x354.fwebp.q100/?fname=https%3A%2F%2Ft1.kakaocdn.net%2Fkakaocorp%2Fkakaocorp%2Fadmin%2Fservice%2F7e704120017900001.jpg" />
+                                                        </WrapThumb>
+                                                    </LinkItem>
+                                                    <InfoCard>
+                                                        <TxtKeyword>#니니즈</TxtKeyword>
+                                                        <TxtKeyword>#니니툰즈</TxtKeyword>
+                                                        <TxtKeyword>#죠르디</TxtKeyword>
+                                                        <TxtKeyword>#죠르디24시</TxtKeyword>
+                                                        <TxtKeyword>#죠르디TV</TxtKeyword>
+                                                    </InfoCard>
+                                                </InnerCard>
+                                                <BtnShare viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <g data-v-19bdf39b="" fill="none" fill-rule="evenodd"><path data-v-19bdf39b="" d="M0 0H24V24H0z" transform="translate(-350 -222) translate(24 192) translate(326 30)"></path> <g data-v-19bdf39b="" transform="translate(-350 -222) translate(24 192) translate(326 30) translate(10 2)" class="fill" fill="#000"><circle data-v-19bdf39b="" cx="2" cy="2" r="2"></circle> <circle data-v-19bdf39b="" cx="2" cy="10" r="2"></circle><circle data-v-19bdf39b="" cx="2" cy="18" r="2"></circle></g></g>
+                                                </BtnShare>
+                                            </ItemNormalCard>
+                                        </ListCardNewDiv>
+
+                                        <ListCardNewDiv>
+                                            <ItemNormalCard>
+                                                <InnerCard>
+                                                    <InfoCate>
+                                                        <IcoCate src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/65659472017800001.png?type=thumb&opt=C72x72.fwebp"/>
+                                                        <TxtCate>엔터테인먼트</TxtCate>
+                                                    </InfoCate>
+                                                    <LinkItem>
+                                                        <TitCard>
+                                                            함께해요, <br />카카오게임즈
+                                                        </TitCard>
+                                                        <WrapThumb>
+                                                            <ThumbImg src="https://t1.kakaocdn.net/thumb/C630x354.fwebp.q100/?fname=https%3A%2F%2Ft1.kakaocdn.net%2Fkakaocorp%2Fkakaocorp%2Fadmin%2Fservice%2Fa3ed2ecc017900001.jpg" />
+                                                        </WrapThumb>
+                                                    </LinkItem>
+                                                    <InfoCard>
+                                                        <TxtKeyword>#pc온라인게임</TxtKeyword>
+                                                        <TxtKeyword>#게임광고</TxtKeyword>
+                                                        <TxtKeyword>#다음게임</TxtKeyword>
+                                                        <TxtKeyword>#모바일게임</TxtKeyword>
+                                                        <TxtKeyword>#카카오게임</TxtKeyword>
+                                                    </InfoCard>
+                                                </InnerCard>
+                                                <BtnShare viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <g data-v-19bdf39b="" fill="none" fill-rule="evenodd"><path data-v-19bdf39b="" d="M0 0H24V24H0z" transform="translate(-350 -222) translate(24 192) translate(326 30)"></path> <g data-v-19bdf39b="" transform="translate(-350 -222) translate(24 192) translate(326 30) translate(10 2)" class="fill" fill="#000"><circle data-v-19bdf39b="" cx="2" cy="2" r="2"></circle> <circle data-v-19bdf39b="" cx="2" cy="10" r="2"></circle><circle data-v-19bdf39b="" cx="2" cy="18" r="2"></circle></g></g>
+                                                </BtnShare>
+                                            </ItemNormalCard>
+                                        </ListCardNewDiv>
+
+                                        <ListCardNewDiv>
+                                            <ItemNormalCard>
+                                                <InnerCard>
+                                                    <InfoCate>
+                                                        <IcoCate src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/65659472017800001.png?type=thumb&opt=C72x72.fwebp"/>
+                                                        <TxtCate>엔터테인먼트</TxtCate>
+                                                    </InfoCate>
+                                                    <LinkItem>
+                                                        <TitCard>
+                                                            언제 어디서나 내 손 안에 펼쳐지는 <br />콘텐츠 세상, 픽코마
+                                                        </TitCard>
+                                                        <WrapThumb>
+                                                            <ThumbImg src="https://t1.kakaocdn.net/thumb/C630x354.fwebp.q100/?fname=https%3A%2F%2Ft1.kakaocdn.net%2Fkakaocorp%2Fkakaocorp%2Fadmin%2Fservice%2F7a444447017900001.jpg" />
+                                                        </WrapThumb>
+                                                    </LinkItem>
+                                                    <InfoCard>
+                                                        <TxtKeyword>#만화</TxtKeyword>
+                                                        <TxtKeyword>#소설</TxtKeyword>
+                                                        <TxtKeyword>#웹툰</TxtKeyword>
+                                                        <TxtKeyword>#콘텐츠</TxtKeyword>
+                                                        <TxtKeyword>#픽코마</TxtKeyword>
+                                                    </InfoCard>
+                                                </InnerCard>
+                                                <BtnShare viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <g data-v-19bdf39b="" fill="none" fill-rule="evenodd"><path data-v-19bdf39b="" d="M0 0H24V24H0z" transform="translate(-350 -222) translate(24 192) translate(326 30)"></path> <g data-v-19bdf39b="" transform="translate(-350 -222) translate(24 192) translate(326 30) translate(10 2)" class="fill" fill="#000"><circle data-v-19bdf39b="" cx="2" cy="2" r="2"></circle> <circle data-v-19bdf39b="" cx="2" cy="10" r="2"></circle><circle data-v-19bdf39b="" cx="2" cy="18" r="2"></circle></g></g>
+                                                </BtnShare>
+                                            </ItemNormalCard>
+                                        </ListCardNewDiv>
+                                    </ListCardNew>
+                                )}
+
                                 { tabMenu === "social_impact" && (
                                     <ListCardNew>
                                         <ListCardNewDiv>
