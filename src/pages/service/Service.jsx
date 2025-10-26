@@ -1055,6 +1055,39 @@ function Service() {
                                         </ListCardNewDiv>
                                     </ListCardNew>
                                 )}
+
+                                { tabMenu === "social_impact" && (
+                                    <ListCardNew>
+                                        <ListCardNewDiv>
+                                            <ItemNormalCard>
+                                                <InnerCard>
+                                                    <InfoCate>
+                                                        <IcoCate src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/65659472017800001.png?type=thumb&opt=C72x72.fwebp"/>
+                                                        <TxtCate>소셜임팩트</TxtCate>
+                                                    </InfoCate>
+                                                    <LinkItem>
+                                                        <TitCard>
+                                                            함께 만드는 더 좋은 세상, <br />카카오같이가치
+                                                        </TitCard>
+                                                        <WrapThumb>
+                                                            <ThumbImg src="https://t1.kakaocdn.net/thumb/C630x354.fwebp.q100/?fname=https%3A%2F%2Ft1.kakaocdn.net%2Fkakaocorp%2Fkakaocorp%2Fadmin%2Fservice%2F2633650c018a00001.png" />
+                                                        </WrapThumb>
+                                                    </LinkItem>
+                                                    <InfoCard>
+                                                        <TxtKeyword>#기부</TxtKeyword>
+                                                        <TxtKeyword>#마음챙김</TxtKeyword>
+                                                        <TxtKeyword>#사회변화</TxtKeyword>
+                                                        <TxtKeyword>#소셜임팩트</TxtKeyword>
+                                                        <TxtKeyword>#카카오같이가치</TxtKeyword>
+                                                    </InfoCard>
+                                                </InnerCard>
+                                                <BtnShare viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <g data-v-19bdf39b="" fill="none" fill-rule="evenodd"><path data-v-19bdf39b="" d="M0 0H24V24H0z" transform="translate(-350 -222) translate(24 192) translate(326 30)"></path> <g data-v-19bdf39b="" transform="translate(-350 -222) translate(24 192) translate(326 30) translate(10 2)" class="fill" fill="#000"><circle data-v-19bdf39b="" cx="2" cy="2" r="2"></circle> <circle data-v-19bdf39b="" cx="2" cy="10" r="2"></circle><circle data-v-19bdf39b="" cx="2" cy="18" r="2"></circle></g></g>
+                                                </BtnShare>
+                                            </ItemNormalCard>
+                                        </ListCardNewDiv>
+                                    </ListCardNew>
+                                )}
                                 
                             </SectionService>
                             <LinkTop />
