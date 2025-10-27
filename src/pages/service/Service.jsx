@@ -106,6 +106,18 @@ function Service() {
                                 </WrapTabs>
 
                                 <ListCardNew>
+                                {/* 전체 */}
+                                { tabMenu === "entire" && (
+                                    <>
+                                        <Communication />
+                                        <Life />
+                                        <Business />
+                                        <Shopping />
+                                        <Entertainment />
+                                        <SocialImpact />
+                                    </>
+                                )}
+
                                 {/* 카테고리 탭 > 커뮤니케이션 */}
                                 { tabMenu === "communication" && (
                                     <Communication />
