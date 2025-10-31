@@ -1,9 +1,9 @@
 
-import {ReactComponent as IconMoon} from "../img/area/area-moon-icon.svg";
-import {ReactComponent as IconSun} from "../img/area/area-sun-icon.svg";
-import {ReactComponent as IconMagnifier} from "../img/area/area-magnifier-icon.svg";
-import {ReactComponent as KakaoLogoIcon} from "../img/logo/kakao_logo_icon.svg";
-import {ReactComponent as IconArrowLink} from "../img/nav/arrow_icon-icons.svg";
+import { ReactComponent as IconMoon } from "../img/area/area-moon-icon.svg";
+import { ReactComponent as IconSun } from "../img/area/area-sun-icon.svg";
+import { ReactComponent as IconMagnifier } from "../img/area/area-magnifier-icon.svg";
+import { ReactComponent as KakaoLogoIcon } from "../img/logo/kakao_logo_icon.svg";
+import { ReactComponent as IconArrowLink } from "../img/nav/arrow_icon-icons.svg";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
@@ -31,8 +31,12 @@ export const HeaderWrapper = styled.header`
     border: 0;
     background-color: ${({ theme }) => (theme === "light" ? "#fff" : "#000")};
     color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
-    border-bottom: ${({ isScrolled, theme }) => isScrolled ? 
-        theme === "light" ? "1px solid #EAEAEA" : "1px solid #262626": "none"};
+    border-bottom: ${({ isScrolled, theme }) => isScrolled ?
+        theme === "light" ? "1px solid #EAEAEA" : "1px solid #262626" : "none"};
+
+     @media (max-width: 1436px) {
+        height: 84px;
+    }    
 `;
 
 export const InnerHeader = styled.div`
@@ -44,6 +48,12 @@ export const InnerHeader = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: 1436px) {
+        max-width: 952px;
+        width: 100%;
+        height: 84px;
+    }   
 `;
 
 export const KakaoMainLogo = styled.h1`
@@ -53,7 +63,7 @@ export const KakaoMainLogo = styled.h1`
     display: flex;
     justify-content: center;
     align-items: center;
-` 
+`
 
 export const KakaoMainLogoImg = styled(KakaoLogoIcon)`
     max-width: 74px;
@@ -64,12 +74,18 @@ export const KakaoMainLogoImg = styled(KakaoLogoIcon)`
 `
 
 export const Navigation = styled.nav`
-    max-width: 666px;
+    max-width: 626px;
     width: 100%;
     height: 37px;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: 1436px) {
+        max-width: 436px;
+        width: 100%;
+        height: 29px;
+    }  
 `;
 
 export const NavigationList = styled.ul`
@@ -81,10 +97,17 @@ export const NavigationList = styled.ul`
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: 1436px) {
+        max-width: 436px;
+        width: 100%;
+        height: 29px;
+    }  
 `;
 
 export const NavItemMenu = styled(Link)`
     margin: 0;
+    font-size: 17px;
     font-weight: 500;
     cursor: pointer;
     padding: 8px 12px; 
@@ -101,6 +124,13 @@ export const NavItemMenu = styled(Link)`
             border-radius: 54px;
         }
     `}
+
+    @media (max-width: 1436px) {
+        padding: 4px 12px 5px;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: -.2px;
+    }  
 `;
 
 export const InvestmentLinkDiv = styled(Link)`
@@ -173,7 +203,7 @@ export const IconMoonItem = styled(IconMoon)`
         background-color: ${({ theme }) => theme === "light" ? "#f5f5f5" : "#333"}; 
         border-radius: 54px; 
     }
-` 
+`
 
 export const IconSunItem = styled(IconSun)`
     max-width: 22px;
@@ -186,7 +216,7 @@ export const IconSunItem = styled(IconSun)`
         background-color: ${({ theme }) => theme === "light" ? "#f5f5f5" : "#333"}; 
         border-radius: 54px; 
     }
-` 
+`
 
 
 export const IconMagnifierItem = styled(IconMagnifier)`

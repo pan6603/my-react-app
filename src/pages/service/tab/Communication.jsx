@@ -124,7 +124,7 @@ export const communicationData = [
         category: "커뮤니케이션",
         icon: "https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/65659472017800001.png?type=thumb&opt=C72x72.fwebp",
         title: "카카오톡의 편리함을 더한 메일, <br /> 카카오메일",
-        image: "ttps://t1.kakaocdn.net/thumb/C630x354.fwebp.q100/?fname=https%3A%2F%2Ft1.kakaocdn.net%2Fkakaocorp%2Fkakaocorp%2Fadmin%2Fservice%2F79977762017900001.jpg",
+        image: "https://t1.kakaocdn.net/thumb/C630x354.fwebp.q100/?fname=https%3A%2F%2Ft1.kakaocdn.net%2Fkakaocorp%2Fkakaocorp%2Fadmin%2Fservice%2F79977762017900001.jpg",
         keywords: ["카카오메일", "커뮤니케이션", "톡메일"],
     },
 ];
