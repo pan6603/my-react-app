@@ -5,11 +5,21 @@ import { Link } from "react-router-dom";
 export const DocMain = styled.main`
     max-width: 1440px;
     width: 100%;
+
+    @media (max-width: 1436px) {
+        max-width: 1436px;
+        width: 100%;
+    }  
 `
 
 export const InnerMain = styled.section`
     max-width: 1440px;
     width: 100%;
+
+     @media (max-width: 1436px) {
+        max-width: 1436px;
+        width: 100%;
+    }      
 `
 
 
@@ -18,6 +28,11 @@ export const MainContent = styled.div`
     max-width: 1440px;
     width: 100%;
     margin: 0px auto;
+
+    @media (max-width: 1436px) {
+        max-width: 1436px;
+        width: 100%;
+    }  
 `
 
 export const ContentArticle = styled.article`
@@ -26,6 +41,11 @@ export const ContentArticle = styled.article`
     width: 100%;
     margin: 0 auto;
     padding-bottom: 182px;
+
+    @media (max-width: 1436px) {
+        max-width: 952px;
+        width: 100%;
+    }  
 `
 
 export const TitMain = styled.div`
@@ -43,12 +63,24 @@ export const TitMain = styled.div`
     line-height: 66px;
     padding-top: 96px;
     box-sizing: border-box;
+
+    @media (max-width: 1436px) {
+        padding-top: 72px;
+        font-size: 40px;
+        line-height: 52px;
+        background-position-y: 72px;
+        background-size: 56px 56px;
+    }  
 `
 
 export const EmphTit = styled.div`
     display: block;
     padding-left: 84px;
     font-weight: 700;
+
+     @media (max-width: 1436px) {
+        padding-left: 68px;
+    } 
 `
 
 export const TxtTit = styled.div`
@@ -57,6 +89,12 @@ export const TxtTit = styled.div`
     font-weight: 400;
     font-size: 36px;
     line-height: 36px;
+
+    @media (max-width: 1436px) {
+        margin-top: 3px;
+        font-size: 28px;
+        line-height: 52px;
+    } 
 `
 
 
@@ -69,12 +107,22 @@ export const SectionService = styled.section`
     display: flex;
     flex-direction: column;
     gap: 45px;
+
+    @media (max-width: 1436px) {
+        margin-top: 20px;
+    }     
 `
 
 export const WrapTabs = styled.div`
     max-width: 1296px;
     width: 100%;
     height: 61px;
+
+    @media (max-width: 1436px) {
+        max-width: 952px;
+        width: 100%;
+        height: 50px;
+    }  
 `
 
 export const ListCardNew = styled.div`
@@ -83,12 +131,25 @@ export const ListCardNew = styled.div`
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 36px;
+
+    @media (max-width: 1436px) {
+        max-width: 952px;
+        width: 100%;
+        gap: 24px;
+    }  
 `
 
 export const ListCardNewDiv = styled.div`
     max-width: 408px;
     width: 100%;
     height: 502px;
+
+    @media (max-width: 1436px) {
+        max-width: 301px;
+        width: 100%;
+        height: 385px;
+    }  
+
 `
 
 export const ItemNormalCard = styled.div`
@@ -100,6 +161,12 @@ export const ItemNormalCard = styled.div`
     max-width: 408px;
     width: 100%;
     height: 502px;
+
+    @media (max-width: 1436px) {
+        max-width: 301px;
+        width: 100%;
+        height: 385px;
+    }  
 `
 
 export const InnerCard = styled.div`
@@ -109,6 +176,13 @@ export const InnerCard = styled.div`
     position: relative;
     padding: 32px 32px 0;
     box-sizing: border-box;
+
+    @media (max-width: 1436px) {
+        max-width: 301px;
+        width: 100%;
+        height: 385px;
+        padding: 24px 24px 0;
+    }  
 `
 
 export const InfoCard = styled.span`
@@ -126,6 +200,15 @@ export const InfoCard = styled.span`
     line-height: 26px;
     color: #666;
     pointer-events: none;
+
+    @media (max-width: 1436px) {
+        top: 174px;
+        left: 24px;
+        right: 24px;
+        height: 18px;
+        font-size: 13px;
+        line-height: 18px;
+    }  
 `
 
 
@@ -138,6 +221,11 @@ export const TxtKeyword = styled.span`
     font-size: 16px;
     line-height: 26px;
     color: #666;
+
+    @media (max-width: 1436px) {
+        font-size: 13px;
+        line-height: 18px;
+    }  
 `
 
 export const LinkItem = styled.div`
@@ -151,6 +239,10 @@ export const LinkItem = styled.div`
     outline-offset: -4px;
     text-decoration: none;
     color: #333; 
+
+    @media (max-width: 1436px) {
+        margin: 0 -24px;
+    }  
 `
 
 export const WrapDownload = styled.a`
@@ -182,6 +274,11 @@ export const WrapThumb = styled.div`
     margin-top: 117px;
     position: relative;
     display: block;
+
+    @media (max-width: 1436px) {
+        height: 169px;
+        margin-top: 66px;
+    }      
 `
 
 export const ThumbImg = styled.img`
@@ -190,7 +287,7 @@ export const ThumbImg = styled.img`
     transform: translateX(-50%);
     display: block;
     height: 100%;
-    min-width: 100%;
+    min-width: 100%; 
 `
 
 
@@ -205,12 +302,25 @@ export const TitCard = styled.div`
     line-height: 36px;
     letter-spacing: -.6px;
     color: #000;
+
+    @media (max-width: 1436px) {
+        height: 84px;
+        margin-top: 12px;
+        padding: 0 24px;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: -.5px;
+    }  
 `
 
 export const InfoCate = styled.div`
     max-width: 344px;
     width: 100%;
     height: 36px;
+
+    @media (max-width: 1436px) {
+        height: 30px;
+    }  
 `
 export const IcoCate = styled.img`
     max-width: 36px;
@@ -218,6 +328,12 @@ export const IcoCate = styled.img`
     height: 36px;
     margin-right: 8px;
     vertical-align: top;
+
+    @media (max-width: 1436px) {
+        width: 28px;
+        height: 28px;
+        margin-top: 1px;
+    } 
 `
 
 export const TxtCate = styled.div`
@@ -233,6 +349,13 @@ export const TxtCate = styled.div`
     width: max-content;
     height: 36px;
     vertical-align: top;
+
+     @media (max-width: 1436px) {
+        height: 30px;
+        border-radius: 6px;
+        font-size: 12px;
+        line-height: 30px;
+    } 
 `
 
 export const BtnShare = styled.svg`
@@ -247,6 +370,11 @@ export const BtnShare = styled.svg`
     font-size: 0;
     line-height: 0;
     text-indent: -9999px;
+
+    @media (max-width: 1436px) {
+        top: 27px;
+        right: 24px;
+    }  
 `
 
 
@@ -256,6 +384,14 @@ export const ListTab = styled.div`
     height: 61px;
     display: flex;
     align-items: center;
+
+    @media (max-width: 1436px) {
+        max-width: 952px;
+        width: 100%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+    }  
 `
 
 export const LinkTabDiv = styled.div`
@@ -263,6 +399,10 @@ export const LinkTabDiv = styled.div`
     height: 51px;
     margin: 10px 8px 0 0;
     display: flex;
+
+    @media (max-width: 1436px) {
+        height: 40px;
+    }  
 `
 
 export const LinkTab = styled(Link)`
@@ -279,4 +419,12 @@ export const LinkTab = styled(Link)`
     text-decoration: none;
     background-color: ${({ isActive }) => isActive ? "#000" : "#f3f3f3"};
     color: ${({ isActive }) => isActive ? "#fff" : "#666"};
+
+    @media (max-width: 1436px) {
+        padding: 8px 20px;
+        font-size: 15px;
+        line-height: 24px;
+        letter-spacing: -.2px;
+        height: 40px;
+    } 
 `

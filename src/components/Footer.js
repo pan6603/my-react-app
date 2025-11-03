@@ -1,472 +1,45 @@
-import styled from "styled-components";
 import { useTheme } from "./context/ThemeContext";
 import { useTranslation } from "react-i18next";
-
-
-
-const FooterContainer = styled.footer`
-    margin: 0 auto;
-    max-width: 1440px;
-    width: 100%;
-    height: 634px;
-    background-color: ${({ theme }) => (theme === "light" ? "#FFFFFF" : "#000")};
-    border-top: 1px solid #6D6D6D;
-`
-
-const InnerFooter = styled.div`
-    max-width: 1316px;
-    width: 100%;
-    height: 534pxpx;
-    margin: 0 auto;
-    padding: 81px 0 48px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-`
-
-const SectionService = styled.section`
-    max-width: 1316px;
-    width: 100%;
-    height: 319px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-`
-
-const SectionRelation = styled.section`
-    max-width: 1316px;
-    width: 100%;
-    height: 65px;
-    display: flex;
-    align-items: center;
-    margin-top: 55px;
-`
-
-const GroupInfo = styled.div`
-    max-width: 320px;
-    width: 100%;
-    height: 38px;
-    display: flex;
-    gap: 5px;
-    align-items: center;
-`
-
-const WrapInfo = styled.div`
-    max-width: 268px;
-    width: 100%;
-    height: 18px;
-    font-size: 13px;
-    color: ${({ theme }) => (theme === "light" ? "#000" : "#FFFFFF")};
-`
-
-const GithubProfileLightModeLink = styled.a`
-    max-width: 32px;
-    width: 100%;
-    height: 32px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-`
-
-const GithubProfileDarkModeLink = styled.a`
-    max-width: 32px;
-    width: 100%;
-    height: 32px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-`
-
-const AccountSectionServiceItem = styled.div`
-    max-width: 211px;
-    width: 100%;
-    height: 319px;
-    display: flex;
-    flex-direction: column;
-`
-
-const TodaysKakaoMenuSectionServiceItem = styled.div`
-    max-width: 211px;
-    width: 100%;
-    height: 319px;
-    display: flex;
-    flex-direction: column;
-    margin-left: 10px;
-`
-
-const KakaoSectionServiceItemCategories = styled.div`
-    max-width: 211px;
-    width: 100%;
-    height: 319px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    margin-top: 33px;
-    margin-left: 10px;
-`
-
-const KakaoSectionServiceGroupCompanies = styled.div`
-    max-width: 211px;
-    width: 100%;
-    height: 319px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    margin-top: 33px;
-    margin-left: 10px;
-`
-
-const KaKaoSectionServiceAffiliates = styled.div`
-    max-width: 211px;
-    width: 100%;
-    height: 319px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    margin-top: 33px;
-    margin-left: 10px;
-`
-
-const IrMenuSectionServiceItem = styled.div`
-    max-width: 211px;
-    width: 100%;
-    height: 319px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    margin-top: 33px;
-    margin-left: 10px;
-`
-
-const TodayKakaoText = styled.h3`
-    color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
-    width: max-content;
-    height: 35px;
-    font-size: 26px;
-    margin-top: 0;
-` 
-const TodaysKakaoMenuInnerService = styled.div`
-    max-width: 211px;
-    width: 100%;
-    height: 156px;
-`
-
-const AccountInnerServiceItem = styled.div`
-    max-width: 211px;
-    width: 100%;
-    height: 319px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    margin-top: 33px;
-`
-
-const InnerServiceUl = styled.div`
-    max-width: 211px;
-    width: 100%;
-    height: 156px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-`
-
-const InnerServiceUlList = styled.div`
-    max-width: 211px;
-    width: 100%;
-    height: 24px;
-    display: flex;
-    align-items: center;
-    gap: 2px;
-    cursor: pointer;
-`
-
-const InnerServiceUlListLink = styled.a`
-    font-size: 14px;
-    font-weight: 400;
-    text-decoration: none;
-    letter-spacing: -.2px;
-    color: #757575;
-    line-height: 1.78;
-
-    &:hover {
-        color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
-    }
-`
-
-const RightArrowIcon = styled.svg`
-    width: 9px;
-    height: 9px;
-    fill: none;
-    margin: 8px 0 0 4px
-
-    path {
-        stroke: #888;
-        transition: stroke 0.2s ease;
-    }
-
-    &:hover path {
-        stroke: black;
-    }
-`;
-
-const StyledOutlinkIcon = styled.svg`
-    width: 9px;
-    height: 9px;
-    fill: none;
-    margin: 8px 0 0 4px
-
-    path {
-        stroke: #888;
-        transition: stroke 0.2s ease;
-    }
-
-    &:hover path {
-        stroke: black;
-    }
-`;
-
-const KakaoInnerServiceCategories = styled.div`
-    max-width: 211px;
-    width: 100%;
-    height: 189px;
-`
-
-const IrMenuService = styled.div`
-    max-width: 211px;
-    width: 100%;
-    height: 189px;
-`
-
-const KakaoInnerServiceGroupCompanies = styled.div`
-    max-width: 211px;
-    width: 100%;
-    height: 189px;
-`
-
-const KaKaoInnerServiceAffiliates = styled.div`
-    max-width: 211px;
-    width: 100%;
-    height: 189px;
-`
-
-const SubTitle = styled.strong`
-    width: max-content;
-    height: 28px;
-    font-size: 16px;
-    letter-spacing: -.5px;
-    color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
-
-`
-const KakaoMenuCategories = styled.div`
-    max-width: 211px;
-    width: 100%;
-    height: 189px;
-    display: flex;
-    flex-direction: column; 
-    justify-content: flex-start; 
-    align-items: flex-start; 
-    gap: 5px;
-`
-
-const KakaoMenuGroupCompanies = styled.div`
-    max-width: 211px;
-    width: 100%;
-    height: 189px;
-    display: flex;
-    flex-direction: column; 
-    justify-content: flex-start; 
-    align-items: flex-start; 
-    gap: 5px;
-`
-
-const IrMenuGroup = styled.div`
-    max-width: 211px;
-    width: 100%;
-    height: 189px;
-    display: flex;
-    flex-direction: column; 
-    justify-content: flex-start; 
-    align-items: flex-start; 
-    gap: 5px;
-`
-
-const KakaoMenuGroupAffiliates = styled.div`
-    max-width: 211px;
-    width: 100%;
-    height: 189px;
-    display: flex;
-    flex-direction: column; 
-    justify-content: flex-start; 
-    align-items: flex-start; 
-    gap: 5px;
-    margin-top: 15px;
-`
-
-const AccountGroup = styled.div`
-    max-width: 211px;
-    width: 100%;
-    height: 189px;
-    display: flex;
-    flex-direction: column; 
-    justify-content: flex-start; 
-    align-items: flex-start; 
-    gap: 5px;
-`
-
-const KakaoMenuCategoriesLink = styled.a`
-    font-size: 14px;
-    font-weight: 400;
-    text-decoration: none;
-    letter-spacing: -.2px;
-    color: #757575;
-    line-height: 1.78;
-    cursor: pointer;
-
-    &:hover {
-        color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
-    }
-`
-
-const KakaoMenuGroupCompaniesItem = styled.a`
-    font-size: 14px;
-    font-weight: 400;
-    text-decoration: none;
-    letter-spacing: -.2px;
-    color: #757575;
-    line-height: 1.78;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    cursor: pointer;
-
-    &:hover {
-        color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
-    }
-`
-
-const IrMenuGroupItem = styled.a`
-    font-size: 14px;
-    font-weight: 400;
-    text-decoration: none;
-    letter-spacing: -.2px;
-    color: #757575;
-    line-height: 1.78;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    cursor: pointer;
-
-    &:hover {
-        color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
-    }
-`
-
-const AccountGroupItem = styled.a`
-    font-size: 14px;
-    font-weight: 400;
-    text-decoration: none;
-    letter-spacing: -.2px;
-    color: #757575;
-    line-height: 1.78;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    cursor: pointer;
-
-    &:hover {
-        color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
-    }
-`
-
-const KakaoMenuGroupAffiliatesItem = styled.a`
-    font-size: 14px;
-    font-weight: 400;
-    text-decoration: none;
-    letter-spacing: -.2px;
-    color: #757575;
-    line-height: 1.78;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    cursor: pointer;
-
-    &:hover {
-        color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
-    }
-`
-
-const KakaoPayOutlinkIcon = styled.svg`
-  width: 9px;
-  height: 9px;
-  fill: none;
-
-  path {
-    stroke: #757575; 
-    stroke-width: 1;
-    transition: stroke 0.2s ease;
-  }
-
-  &:hover path {
-    stroke: black;
-  }
-`;
-
-const KakaoAffiliateOutlinkIcon = styled.svg`
-  width: 9px;
-  height: 9px;
-  fill: none;
-
-  path {
-    stroke: #757575; 
-    stroke-width: 1;
-    transition: stroke 0.2s ease;
-  }
-
-  &:hover path {
-    stroke: black;
-  }
-`;
-
-const IrMenuOutlinkIcon = styled.svg`
-    width: 9px;
-    height: 9px;
-    fill: none;
-
-    path {
-        stroke: #757575; 
-        stroke-width: 1;
-        transition: stroke 0.2s ease;
-    }
-
-    &:hover path {
-      stroke: black;
-    }
-`;
-
-const AccountOutlinkIcon = styled.svg`
-    width: 9px;
-    height: 9px;
-    fill: none;
-
-    path {
-        stroke: #757575; 
-        stroke-width: 1;
-        transition: stroke 0.2s ease;
-    }
-
-    &:hover path {
-      stroke: black;
-    }
-`
-
+import { 
+    FooterContainer,                                       
+    InnerFooter,                                                
+    SectionService,                                          
+    TodaysKakaoMenuSectionServiceItem,  
+    TodayKakaoText,                                          
+    TodaysKakaoMenuInnerService,                
+    InnerServiceUl,                                          
+    InnerServiceUlList,                           
+    InnerServiceUlListLink,                          
+    RightArrowIcon,                                                                                            
+    StyledOutlinkIcon,                                                                                                  KakaoSectionServiceItemCategories,      
+    SubTitle,                                 
+    KakaoInnerServiceCategories,               
+    KakaoMenuCategories,                                    
+    KakaoMenuCategoriesLink,                                                      
+    KakaoSectionServiceGroupCompanies,                                                                  
+    KakaoInnerServiceGroupCompanies,            
+    KakaoMenuGroupCompanies,                           
+    KakaoMenuGroupCompaniesItem,                                      
+    KakaoPayOutlinkIcon,                                                                                
+    KaKaoSectionServiceAffiliates,               
+    KaKaoInnerServiceAffiliates,                    
+    KakaoMenuGroupAffiliates,                          
+    KakaoMenuGroupAffiliatesItem,                 
+    KakaoAffiliateOutlinkIcon,                                                            
+    IrMenuSectionServiceItem,                                                                                  
+    IrMenuService,                                                
+    IrMenuGroup,                                                    
+    IrMenuGroupItem,                                            
+    IrMenuOutlinkIcon,                                                                                                  AccountSectionServiceItem,                    
+    AccountInnerServiceItem,                                                                             
+    AccountGroup,                                              
+    AccountGroupItem,                                      
+    AccountOutlinkIcon,                                                                                                 SectionRelation,                                        
+    GroupInfo,                                                    
+    WrapInfo,                                                      
+    GithubProfileLightModeLink,                  
+    GithubProfileDarkModeLink,                    
+} from "../styles/Footer.styles";
 
 function Footer () {
     const { theme } = useTheme() 
@@ -480,7 +53,8 @@ function Footer () {
                         <TodayKakaoText theme={theme}>
                         {t("home.footer.today_kakao_text")}
                         </TodayKakaoText>
-                        <TodaysKakaoMenuInnerService>
+                        {/* 넓이가 1436px 경우 여기까지 진행 */}
+                        <TodaysKakaoMenuInnerService>   
                             <InnerServiceUl>
                                 <InnerServiceUlList>
                                     <InnerServiceUlListLink theme={theme}>

@@ -7,13 +7,14 @@ import { ThemeProviderContext } from "./components/context/ThemeContext";
 function App() {
 
   return (
-    <AuthProvider>
-    
+    <>
+      <AuthProvider>
       {/* <Routers /> */}
-      <ThemeProviderContext>
-        <AppRouters />
-      </ThemeProviderContext>
-    </AuthProvider>
+        <ThemeProviderContext>
+          <AppRouters />
+        </ThemeProviderContext>
+      </AuthProvider>
+    </>
   );
 }
 

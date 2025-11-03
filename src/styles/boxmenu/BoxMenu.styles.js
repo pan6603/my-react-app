@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 export const AboutBoxMenuContainer = styled.div`
     position: fixed;
     top: 91px;
-    left: 320px;
+    left: 392px;
     border-top: none;
     border-radius: 0 0 24px 24px;
     background-color: ${({ theme }) => theme === "light" ? "#fff" : "#000"}; 
