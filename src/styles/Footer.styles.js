@@ -24,7 +24,7 @@ export const InnerFooter = styled.div`
     @media (max-width: 1436px) {
         max-width: 952px;
         width: 100%;
-        padding-top: 36px;
+        padding-top: 56px;
     }  
 `
 
@@ -40,8 +40,11 @@ export const SectionService = styled.section`
     @media (max-width: 1436px) {
         max-width: 952px;
         width: 100%;
+        height: 650px;
         margin: -40px 0 0 -16px;
         font-size: 0;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
     }  
 `
 
@@ -109,6 +112,8 @@ export const TodaysKakaoMenuSectionServiceItem = styled.div`
         max-width: 226px;
         width: 100%;
         height: 204px;
+        margin-top: 0px;
+        padding-bottom: 56px;
     }  
 `
 
