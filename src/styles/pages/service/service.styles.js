@@ -32,7 +32,14 @@ export const MainContent = styled.div`
     @media (max-width: 1436px) {
         max-width: 1436px;
         width: 100%;
+        padding-top: 84px;
     }  
+
+    @media (max-width: 1023px) {
+        width: 100%;
+        padding-top: 72px;
+    }  
+
 `
 
 export const ContentArticle = styled.article`
@@ -46,6 +53,12 @@ export const ContentArticle = styled.article`
         max-width: 952px;
         width: 100%;
     }  
+
+    @media (max-width: 1023px) {
+        max-width: 630px;
+        width: 100%;
+        padding-bottom: 172px;
+    }
 `
 
 export const TitMain = styled.div`
@@ -65,12 +78,26 @@ export const TitMain = styled.div`
     box-sizing: border-box;
 
     @media (max-width: 1436px) {
+        max-width: 952px;
+        width: 100%;
+        height: 179px;
         padding-top: 72px;
         font-size: 40px;
         line-height: 52px;
         background-position-y: 72px;
         background-size: 56px 56px;
     }  
+
+    @media (max-width: 1023px) {
+        max-width: 630px;
+        width: 100%;
+        height: 132px;
+        padding-top: 48px;
+        font-size: 40px;
+        line-height: 40px;
+        background-position-y: 48px;
+        background-size: 40px 40px;
+    }
 `
 
 export const EmphTit = styled.div`
@@ -81,6 +108,10 @@ export const EmphTit = styled.div`
      @media (max-width: 1436px) {
         padding-left: 68px;
     } 
+
+    @media (max-width: 1023px) {
+        padding-left: 48px;
+    }
 `
 
 export const TxtTit = styled.div`
@@ -95,6 +126,12 @@ export const TxtTit = styled.div`
         font-size: 28px;
         line-height: 52px;
     } 
+
+    @media (max-width: 1023px) {
+        margin-top: 4px;
+        font-size: 22px;
+        line-height: 40px;
+    }
 `
 
 
@@ -111,6 +148,7 @@ export const SectionService = styled.section`
     @media (max-width: 1436px) {
         margin-top: 20px;
     }     
+
 `
 
 export const WrapTabs = styled.div`
@@ -123,6 +161,13 @@ export const WrapTabs = styled.div`
         width: 100%;
         height: 50px;
     }  
+
+    @media (max-width: 1023px) {
+        max-width: 630px;
+        width: 100%;
+        height: 40px;
+        padding-right: 0;
+    } 
 `
 
 export const ListCardNew = styled.div`
@@ -137,6 +182,13 @@ export const ListCardNew = styled.div`
         width: 100%;
         gap: 24px;
     }  
+
+    @media (max-width: 1023px) {
+        max-width: 630px;
+        width: 100%;
+        grid-template-columns: repeat(2,1fr);
+        gap: 28px;
+    }
 `
 
 export const ListCardNewDiv = styled.div`
@@ -391,7 +443,16 @@ export const ListTab = styled.div`
         height: 50px;
         display: flex;
         align-items: center;
-    }  
+    }
+        
+    @media (max-width: 1023px) {
+        max-width: 630px;
+        width: 100%;
+        height: 40px;
+        overflow-x: auto;
+        margin: 0;
+        white-space: nowrap;
+    }
 `
 
 export const LinkTabDiv = styled.div`
@@ -402,7 +463,11 @@ export const LinkTabDiv = styled.div`
 
     @media (max-width: 1436px) {
         height: 40px;
-    }  
+    } 
+    
+    @media (max-width: 1023px) {
+        margin-top: 0px;
+    } 
 `
 
 export const LinkTab = styled(Link)`

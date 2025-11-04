@@ -38,7 +38,7 @@ export const HeaderWrapper = styled.header`
         height: 84px;
     }
         
-    @media (max-width: 1020px) {
+    @media (max-width: 1023px) {
         height: 72px;
     }
 `;
@@ -59,7 +59,7 @@ export const InnerHeader = styled.div`
         height: 84px;
     } 
     
-    @media (max-width: 1020px) {
+    @media (max-width: 1023px) {
         max-width: 712px;
         width: 100%;
         height: 72px;
@@ -97,7 +97,7 @@ export const Navigation = styled.nav`
         height: 29px;
     }
         
-    @media (max-width: 1020px) {
+    @media (max-width: 1023px) {
         display: none;
     }
 `;
@@ -188,7 +188,7 @@ export const AreaUtil = styled.div`
     justify-content: space-between;
     align-items: center;
 
-    @media (max-width: 1020px) {
+    @media (max-width: 1023px) {
         display: none;
     }  
 `
@@ -257,7 +257,7 @@ export const ClickSearchOpenIcon = styled.svg`
     cursor: pointer;
     margin-left: auto;
 
-    @media (min-width: 1021px) {
+    @media (min-width: 1024px) {
         display: none;
     }  
 `
@@ -269,7 +269,7 @@ export const BtnHamburgerIcon = styled.svg`
     cursor: pointer;
     margin-left: 22px;
 
-    @media (min-width: 1021px) {
+    @media (min-width: 1024px) {
         display: none;
     }  
 `
