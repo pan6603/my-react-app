@@ -36,7 +36,11 @@ export const HeaderWrapper = styled.header`
 
      @media (max-width: 1436px) {
         height: 84px;
-    }    
+    }
+        
+    @media (max-width: 1020px) {
+        height: 72px;
+    }
 `;
 
 export const InnerHeader = styled.div`
@@ -53,7 +57,13 @@ export const InnerHeader = styled.div`
         max-width: 952px;
         width: 100%;
         height: 84px;
-    }   
+    } 
+    
+    @media (max-width: 1020px) {
+        max-width: 712px;
+        width: 100%;
+        height: 72px;
+    } 
 `;
 
 export const KakaoMainLogo = styled.h1`
@@ -85,7 +95,11 @@ export const Navigation = styled.nav`
         max-width: 436px;
         width: 100%;
         height: 29px;
-    }  
+    }
+        
+    @media (max-width: 1020px) {
+        display: none;
+    }
 `;
 
 export const NavigationList = styled.ul`
@@ -173,6 +187,10 @@ export const AreaUtil = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: 1020px) {
+        display: none;
+    }  
 `
 
 
@@ -230,4 +248,28 @@ export const IconMagnifierItem = styled(IconMagnifier)`
         background-color: ${({ theme }) => theme === "light" ? "#f5f5f5" : "#333"}; 
         border-radius: 54px; 
     }
+`
+
+export const ClickSearchOpenIcon = styled.svg`
+    max-width: 28px;
+    width: 100%;
+    height: 28px; 
+    cursor: pointer;
+    margin-left: auto;
+
+    @media (min-width: 1021px) {
+        display: none;
+    }  
+`
+
+export const BtnHamburgerIcon = styled.svg`
+    max-width: 28px;
+    width: 100%;
+    height: 28px; 
+    cursor: pointer;
+    margin-left: 22px;
+
+    @media (min-width: 1021px) {
+        display: none;
+    }  
 `

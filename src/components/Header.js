@@ -17,6 +17,8 @@ import {
     IconMagnifierItem,
     Overlay
 } from '../styles/Header.styles';
+import BtnHamburger from './hamburger/BtnHamburger';
+import ClickSearchOpen from './hamburger/ClickSearchOpen';
 import { useTheme } from './context/ThemeContext';
 import { useTranslation } from "react-i18next";
 import AboutBoxMenu from './boxmenu/AboutBoxMenu';
@@ -119,6 +121,8 @@ function Header ({openSearch}) {
                             </InvestmentLinkDiv>
                         </NavigationList>
                     </Navigation>
+                    <ClickSearchOpen />
+                    <BtnHamburger />
                     <AreaUtil>
                         <IconMagnifierItem 
                             theme={theme}
