@@ -77,7 +77,7 @@ function Header ({openSearch}) {
         <>
             <HeaderWrapper isScrolled={isScrolled} theme={theme}>
                 <InnerHeader>
-                    <KakaoMainLogo>
+                    <KakaoMainLogo to="/">
                         <KakaoMainLogoImg fill={theme === "light" ? "#000" : "#fff"}/>
                     </KakaoMainLogo>
                     <Navigation>

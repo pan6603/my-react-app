@@ -66,7 +66,7 @@ export const InnerHeader = styled.div`
     } 
 `;
 
-export const KakaoMainLogo = styled.h1`
+export const KakaoMainLogo = styled(Link)`
     max-width: 74px;
     width:100%;
     height: 50px;
