@@ -38,8 +38,9 @@ import {
     GroupInfo,                                                    
     WrapInfo,                                                      
     GithubProfileLightModeLink,                  
-    GithubProfileDarkModeLink,                    
+    GithubProfileDarkModeLink,                  
 } from "../styles/Footer.styles";
+import AccordionMenu from "./accordion_menu/AccordionMenu";
 
 function Footer () {
     const { theme } = useTheme() 
@@ -53,7 +54,7 @@ function Footer () {
                         <TodayKakaoText theme={theme}>
                         {t("home.footer.today_kakao_text")}
                         </TodayKakaoText>
-                        {/* 넓이가 1436px 경우 여기까지 진행 */}
+                        
                         <TodaysKakaoMenuInnerService>   
                             <InnerServiceUl>
                                 <InnerServiceUlList>
@@ -111,6 +112,9 @@ function Footer () {
                             </InnerServiceUl>
                         </TodaysKakaoMenuInnerService>
                     </TodaysKakaoMenuSectionServiceItem>
+
+                    {/* 1023px 경우 아코디언 메뉴 만들기*/}
+                    <AccordionMenu />
 
                     <KakaoSectionServiceItemCategories>
                         <SubTitle theme={theme}>

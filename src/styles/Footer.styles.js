@@ -26,6 +26,12 @@ export const InnerFooter = styled.div`
         width: 100%;
         padding-top: 56px;
     }  
+
+    @media (max-width: 1023px) {
+        max-width: 712px;
+        width: 100%;
+        padding-top: 40px;
+    }
 `
 
 export const SectionService = styled.section`
@@ -46,6 +52,16 @@ export const SectionService = styled.section`
         display: grid;
         grid-template-columns: repeat(4, 1fr);
     }  
+
+    @media (max-width: 1023px) {
+        max-width: 712px;
+        width: 100%;
+        margin: 0px 0 0 0;
+        height: max-content;
+        padding-top: 0;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }   
 `
 
 export const SectionRelation = styled.section`
@@ -98,6 +114,10 @@ export const AccountSectionServiceItem = styled.div`
     height: 319px;
     display: flex;
     flex-direction: column;
+
+    @media (max-width: 1023px) {
+        display: none;
+    }
 `
 
 export const TodaysKakaoMenuSectionServiceItem = styled.div`
@@ -114,8 +134,14 @@ export const TodaysKakaoMenuSectionServiceItem = styled.div`
         height: 204px;
         margin-top: 0px;
         padding-bottom: 56px;
+        box-sizing: border-box;
     }  
+
+    @media (max-width: 1023px) {
+        padding-top: 0;
+    }
 `
+
 
 export const KakaoSectionServiceItemCategories = styled.div`
     max-width: 211px;
@@ -127,6 +153,10 @@ export const KakaoSectionServiceItemCategories = styled.div`
     align-items: flex-start;
     margin-top: 33px;
     margin-left: 10px;
+
+    @media (max-width: 1023px) {
+        display: none;
+    }
 `
 
 export const KakaoSectionServiceGroupCompanies = styled.div`
@@ -139,6 +169,10 @@ export const KakaoSectionServiceGroupCompanies = styled.div`
     align-items: flex-start;
     margin-top: 33px;
     margin-left: 10px;
+
+    @media (max-width: 1023px) {
+        display: none;
+    }
 `
 
 export const KaKaoSectionServiceAffiliates = styled.div`
@@ -151,6 +185,10 @@ export const KaKaoSectionServiceAffiliates = styled.div`
     align-items: flex-start;
     margin-top: 33px;
     margin-left: 10px;
+
+    @media (max-width: 1023px) {
+        display: none;
+    }
 `
 
 export const IrMenuSectionServiceItem = styled.div`
@@ -163,6 +201,10 @@ export const IrMenuSectionServiceItem = styled.div`
     align-items: flex-start;
     margin-top: 33px;
     margin-left: 10px;
+
+    @media (max-width: 1023px) {
+        display: none;
+    }
 `
 
 export const TodayKakaoText = styled.h3`
@@ -177,6 +219,16 @@ export const TodayKakaoText = styled.h3`
         line-height: 1.55;
         letter-spacing: -.5px
     }  
+
+    @media (max-width: 1023px) {
+        position: static;
+        padding-bottom: 20px;
+        margin-bottom: 0;
+        font-size: 15px;
+        line-height: 1.6;
+        letter-spacing: -.5px;
+        box-sizing: border-box;
+    } 
 ` 
 export const TodaysKakaoMenuInnerService = styled.div`
     max-width: 211px;
@@ -187,7 +239,14 @@ export const TodaysKakaoMenuInnerService = styled.div`
         max-width: 226px;
         width: 100%;
         height: 156px;
-    }  
+    }
+        
+    @media (max-width: 1023px) {
+        font-size: 0;
+        max-width: 712px;
+        width: 100%;
+        height: 138px;
+    }
 `
 
 export const AccountInnerServiceItem = styled.div`
@@ -209,6 +268,7 @@ export const InnerServiceUl = styled.div`
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+
 `
 
 export const InnerServiceUlList = styled.div`
@@ -231,6 +291,12 @@ export const InnerServiceUlListLink = styled.a`
 
     &:hover {
         color: ${({ theme }) => (theme === "light" ? "#000" : "#fff")};
+    }
+
+    @media (max-width: 1023px) {
+        font-size: 12px;
+        line-height: 1.5;
+        color: #000;
     }
 `
 

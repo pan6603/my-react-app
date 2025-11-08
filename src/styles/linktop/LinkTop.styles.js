@@ -25,4 +25,9 @@ export const ScrollToTopButton = styled.button`
 export const IcoTop = styled.svg`
     width: 50px;
     height: 50px;
+
+    @media (max-width: 1023px) { 
+        width: 40px;
+        height: 100%;
+    }
 `
