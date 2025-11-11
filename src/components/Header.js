@@ -15,7 +15,8 @@ import {
     IconMoonItem,
     IconSunItem,
     IconMagnifierItem,
-    Overlay
+    Overlay,
+    HamburgerMenuOverlay
 } from '../styles/Header.styles';
 import BtnHamburger from './hamburger/BtnHamburger';
 import ClickSearchOpen from './hamburger/ClickSearchOpen';
@@ -160,7 +161,7 @@ function Header ({openSearch}) {
             </HeaderWrapper>
 
             {/* 햄버거 메뉴 열때 */}
-            {isHamburgerMenuOpen && <Overlay />}
+            {isHamburgerMenuOpen && <HamburgerMenuOverlay />}
 
             {/* Overlay */}
             {isBoxMenuOpen && <Overlay onClick={closeBoxMenu} />}
