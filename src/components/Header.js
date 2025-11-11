@@ -34,7 +34,12 @@ function Header ({openSearch}) {
     const [lang, setLang] = useState(i18n.language || "en"); 
     const [activeMenu, setActiveMenu] = useState(null);
     const [isBoxMenuOpen, setIsBoxMenuOpen] = useState(false);  // Nav 메뉴 클릭 > boxMenu 팝업 열기 
-   
+    const [isHamburgerMenuOpen, setIsHamburgerMenuOpen] = useState(false);
+
+    const btnHamburger = () => {
+        setIsHamburgerMenuOpen(true);
+    }
+
     const closeBoxMenu = () => {
         setIsBoxMenuOpen(false); 
         setActiveMenu(null);
@@ -122,7 +127,8 @@ function Header ({openSearch}) {
                         </NavigationList>
                     </Navigation>
                     <ClickSearchOpen />
-                    <BtnHamburger />
+                    <BtnHamburger onClick={() => btnHamburger()}/>
+
                     <AreaUtil>
                         <IconMagnifierItem 
                             theme={theme}
@@ -152,6 +158,9 @@ function Header ({openSearch}) {
                     </AreaUtil>
                 </InnerHeader>
             </HeaderWrapper>
+
+            {/* 햄버거 메뉴 열때 */}
+            {isHamburgerMenuOpen && <Overlay />}
 
             {/* Overlay */}
             {isBoxMenuOpen && <Overlay onClick={closeBoxMenu} />}

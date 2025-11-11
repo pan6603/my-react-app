@@ -46,7 +46,6 @@ function TechServiceBoxMenu() {
                             <TechServiceLinkSubmenu 
                                 theme={theme}
                                 to="/page/service"
-                                
                                 >
                                 {t("home.list_menu.link_submenu.communication")}
                             </TechServiceLinkSubmenu>
