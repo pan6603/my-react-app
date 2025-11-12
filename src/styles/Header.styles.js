@@ -18,6 +18,18 @@ export const HamburgerMenuOverlay = styled.div`
     z-index: 3010;  
 `
 
+export const InnerGnb = styled.div`
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    max-width: 412px;
+    width: 100%;
+    height: 1056px;
+    background-color: red;
+    transform: translateX(0);
+`
+
 export const Overlay = styled.div`
     position: fixed;       
     top: 0;

@@ -16,7 +16,8 @@ import {
     IconSunItem,
     IconMagnifierItem,
     Overlay,
-    HamburgerMenuOverlay
+    HamburgerMenuOverlay,
+    InnerGnb
 } from '../styles/Header.styles';
 import BtnHamburger from './hamburger/BtnHamburger';
 import ClickSearchOpen from './hamburger/ClickSearchOpen';
@@ -77,7 +78,20 @@ function Header ({openSearch}) {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll); // 클린업
     }, []);
-
+    
+    // 햄버거 메뉴 클릭시 스크롤 막기 
+    useEffect(() => {
+        if (isHamburgerMenuOpen) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "auto";
+        }
+    
+        return () => {
+            document.body.style.overflow = "auto";
+        };
+    }, [isHamburgerMenuOpen]);
+  
 
     return (
         <>
@@ -158,6 +172,9 @@ function Header ({openSearch}) {
                         )}
                     </AreaUtil>
                 </InnerHeader>
+
+                {/* 햄버거 메뉴 클릭시 화면 호출*/}
+                {isHamburgerMenuOpen && <InnerGnb />}
             </HeaderWrapper>
 
             {/* 햄버거 메뉴 열때 */}
