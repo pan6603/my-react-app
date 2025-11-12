@@ -22,7 +22,7 @@ export const AreaGnb = styled.div`
     position: fixed;
     top: 0;
     right: 0;
-    z-index: 99999;
+    z-index: 9999;
     max-width: 412px;
     width: 100%;
     height: 1056px;
@@ -30,6 +30,39 @@ export const AreaGnb = styled.div`
     transform: ${({ isOpen }) => (isOpen ? "translateX(0)" : "translateX(100%)")};
     transition: transform 0.3s ease;
 `;
+
+export const ContHead = styled.div`
+    max-width: 412px;
+    width: 100%;
+    height: 72px;
+    padding: 22px 28px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: end;
+`
+
+export const WrapUtil = styled.div`
+    max-width: 137px;
+    width: 100%;
+    height: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: blue;
+`
+
+export const BtnMode = styled.div`
+    width: max-content;   
+    height: max-content;  
+    background-color: orange;
+    padding-left: 5px;
+`
+
+export const IconCloseBtnHamburger = styled.svg`
+    max-width: 28px;
+    width: 100%;
+    height: 28px;
+`
 
 export const Overlay = styled.div`
     position: fixed;       
