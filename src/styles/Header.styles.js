@@ -18,7 +18,7 @@ export const HamburgerMenuOverlay = styled.div`
     z-index: 3010;  
 `
 
-export const InnerGnb = styled.div`
+export const AreaGnb = styled.div`
     position: fixed;
     top: 0;
     right: 0;
@@ -27,8 +27,9 @@ export const InnerGnb = styled.div`
     width: 100%;
     height: 1056px;
     background-color: red;
-    transform: translateX(0);
-`
+    transform: ${({ isOpen }) => (isOpen ? "translateX(0)" : "translateX(100%)")};
+    transition: transform 0.3s ease;
+`;
 
 export const Overlay = styled.div`
     position: fixed;       

@@ -17,7 +17,7 @@ import {
     IconMagnifierItem,
     Overlay,
     HamburgerMenuOverlay,
-    InnerGnb
+    AreaGnb
 } from '../styles/Header.styles';
 import BtnHamburger from './hamburger/BtnHamburger';
 import ClickSearchOpen from './hamburger/ClickSearchOpen';
@@ -35,11 +35,14 @@ function Header ({openSearch}) {
     const { t, i18n } = useTranslation();
     const [lang, setLang] = useState(i18n.language || "en"); 
     const [activeMenu, setActiveMenu] = useState(null);
+
     const [isBoxMenuOpen, setIsBoxMenuOpen] = useState(false);  // Nav 메뉴 클릭 > boxMenu 팝업 열기 
     const [isHamburgerMenuOpen, setIsHamburgerMenuOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
 
     const btnHamburger = () => {
         setIsHamburgerMenuOpen(true);
+        setIsOpen(true);
     }
 
     const closeBoxMenu = () => {
@@ -174,7 +177,7 @@ function Header ({openSearch}) {
                 </InnerHeader>
 
                 {/* 햄버거 메뉴 클릭시 화면 호출*/}
-                {isHamburgerMenuOpen && <InnerGnb />}
+                <AreaGnb isOpen={isOpen}/>
             </HeaderWrapper>
 
             {/* 햄버거 메뉴 열때 */}
