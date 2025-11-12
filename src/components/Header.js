@@ -20,8 +20,21 @@ import {
     AreaGnb,
     ContHead,
     WrapUtil,
-    BtnMode,
-    IconCloseBtnHamburger
+    IconCloseBtnHamburger,
+    IcoModeDarkBtnHamburger,
+    IcoLanguageBtnHamburger,
+    GnbContentMO,
+    GroupRelation,
+    ListRelation,
+    ListRelationItem,
+    ListRelationLink,
+    IcoOutlink,
+    IcoArrow,
+    ListSub,
+    ListSubDiv,
+    ListSubDivTwo,
+    ListSubDivThree,
+    LinkSubitem
 } from '../styles/Header.styles';
 import BtnHamburger from './hamburger/BtnHamburger';
 import ClickSearchOpen from './hamburger/ClickSearchOpen';
@@ -41,6 +54,8 @@ function Header ({openSearch}) {
     const [activeMenu, setActiveMenu] = useState(null);
     const [isOpen, setIsOpen] = useState(false);
     const [isHamburgerMenuOpen, setIsHamburgerMenuOpen] = useState(false);
+    const [isCustomerServiceOpen, setIsCustomerServiceOpen] = useState(false);
+
 
     const btnHamburger = () => {
         setIsHamburgerMenuOpen(true);
@@ -89,7 +104,7 @@ function Header ({openSearch}) {
     
     // 햄버거 메뉴 클릭시 스크롤 막기 
     useEffect(() => {
-        if (isOpen) {
+        if (isHamburgerMenuOpen) {
             document.body.style.overflow = "hidden";
         } else {
             document.body.style.overflow = "auto";
@@ -98,7 +113,7 @@ function Header ({openSearch}) {
         return () => {
             document.body.style.overflow = "auto";
         };
-    }, [isOpen]);
+    }, [isHamburgerMenuOpen]);
   
 
     return (
@@ -180,71 +195,116 @@ function Header ({openSearch}) {
                         )}
                     </AreaUtil>
                 </InnerHeader>
-
-                {/* 햄버거 메뉴 클릭시 화면 호출*/}
-                <AreaGnb isOpen={isHamburgerMenuOpen}>
-                    <ContHead>
-                        <WrapUtil>
-                            <BtnMode>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24"
-                                width="28"
-                                height="28"
-                                className="ico_mode_dark"
-                            >
-                                <g fill="none" fillRule="evenodd" stroke="#000000" strokeLinejoin="round" strokeWidth="1.5">
-                                    <path d="M16.086 13.417c-5.013 0-9.076-4.04-9.076-9.023 0-1.596.42-3.093 1.152-4.394C3.58.456 0 4.3 0 8.977 0 13.961 4.064 18 9.076 18c3.407 0 6.372-1.868 7.924-4.628-.3.03-.605.045-.914.045z" />
-                                </g>
-                            </svg>
-                            </BtnMode>
-                            <BtnMode>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24"
-                                width="28"
-                                height="28"
-                                className="ico_language"
-                            >
-                                <g fill="none" fillRule="evenodd">
-                                    <g stroke="#000" strokeWidth="1.35" strokeLinejoin="round">
-                                    {/* 외곽 원 */}
-                                    <path d="M19.353 9.914c0 5.213-4.226 9.438-9.438 9.438-5.213 0-9.438-4.225-9.438-9.438C.477 4.702 4.702.477 9.915.477c5.212 0 9.438 4.225 9.438 9.437z" />
-                                    
-                                    {/* 안쪽 원 */}
-                                    <path d="M13.662 9.914c0 5.213-3.748 9.438-3.748 9.438s-3.747-4.225-3.747-9.438c0-5.212 3.747-9.437 3.747-9.437s3.748 4.225 3.748 9.437z" />
-                                    
-                                    {/* 가로 선 */}
-                                    <path d="M.876 7.018L18.952 7.018M.876 12.811L18.952 12.811" />
-                                    </g>
-                                </g>
-                            </svg>
-
-                            </BtnMode>
-                            <BtnMode>
-                            <IconCloseBtnHamburger
-                                onClick={closeBtnHamburger}
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24"
-                            >
-                                <g fill="none" fillRule="evenodd" strokeLinecap="square">
-                                    <g stroke="#000" strokeWidth="1.6">
-                                    {/* 대각선 1 */}
-                                    <path d="M0 0.5L16.5 17.5" />
-                                    {/* 대각선 2 (반대 방향) */}
-                                    <path d="M0 0.5L16.5 17.5" transform="scale(-1,1) translate(-17,0)" />
-                                    </g>
-                                </g>
-                            </IconCloseBtnHamburger>
-
-                            </BtnMode>
-                        </WrapUtil>
-                    </ContHead>
-                </AreaGnb>
             </HeaderWrapper>
 
             {/* 햄버거 메뉴 열때 */}
-            {isHamburgerMenuOpen && <HamburgerMenuOverlay />}
+            {isHamburgerMenuOpen && 
+                <>
+                    <HamburgerMenuOverlay />
+                    <AreaGnb isOpen={isHamburgerMenuOpen}>
+                        <ContHead>
+                            <WrapUtil>
+                                <IcoModeDarkBtnHamburger
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <g fill="none" fillRule="evenodd" stroke="#000000" strokeLinejoin="round" strokeWidth="1.5">
+                                        <path d="M16.086 13.417c-5.013 0-9.076-4.04-9.076-9.023 0-1.596.42-3.093 1.152-4.394C3.58.456 0 4.3 0 8.977 0 13.961 4.064 18 9.076 18c3.407 0 6.372-1.868 7.924-4.628-.3.03-.605.045-.914.045z" />
+                                    </g>
+                                </IcoModeDarkBtnHamburger>
+
+                                <IcoLanguageBtnHamburger
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    width="28"
+                                    height="28"
+                                    className="ico_language"
+                                >
+                                    <g fill="none" fillRule="evenodd">
+                                        <g stroke="#000" strokeWidth="1.35" strokeLinejoin="round">
+                                        {/* 외곽 원 */}
+                                        <path d="M19.353 9.914c0 5.213-4.226 9.438-9.438 9.438-5.213 0-9.438-4.225-9.438-9.438C.477 4.702 4.702.477 9.915.477c5.212 0 9.438 4.225 9.438 9.437z" />
+
+                                        {/* 안쪽 원 */}
+                                        <path d="M13.662 9.914c0 5.213-3.748 9.438-3.748 9.438s-3.747-4.225-3.747-9.438c0-5.212 3.747-9.437 3.747-9.437s3.748 4.225 3.748 9.437z" />
+
+                                        {/* 가로 선 */}
+                                        <path d="M.876 7.018L18.952 7.018M.876 12.811L18.952 12.811" />
+                                        </g>
+                                    </g>
+                                </IcoLanguageBtnHamburger>
+
+                                <IconCloseBtnHamburger
+                                    onClick={closeBtnHamburger}
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <g fill="none" fillRule="evenodd" strokeLinecap="square">
+                                        <g stroke="#000" strokeWidth="1.6">
+                                        {/* 대각선 1 */}
+                                        <path d="M0 0.5L16.5 17.5" />
+                                        {/* 대각선 2 (반대 방향) */}
+                                        <path d="M0 0.5L16.5 17.5" transform="scale(-1,1) translate(-17,0)" />
+                                        </g>
+                                    </g>
+                                </IconCloseBtnHamburger>
+                            </WrapUtil>
+                        </ContHead>
+                        <GnbContentMO></GnbContentMO>
+                        <GroupRelation isHeight={isCustomerServiceOpen}>
+                            <ListRelation isHeight={isCustomerServiceOpen}>
+                                <ListRelationItem>
+                                    <ListRelationLink>
+                                        인재영입
+                                        <IcoOutlink viewBox="0 0 9 9" fill="none">
+                                            <path
+                                                d="M1.8 1.1L7.9 1.1 7.9 7.2M7.9 1.1L1.4 7.6"
+                                                stroke="gray"
+                                                strokeWidth="1.0"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                            />
+                                        </IcoOutlink>
+
+                                    </ListRelationLink>
+                                </ListRelationItem>
+
+                                <ListRelationItem onClick={() => setIsCustomerServiceOpen(prev => !prev)}>
+                                    <ListRelationLink>
+                                        고객센터
+                                        <IcoArrow viewBox="0 0 9 9" fill="none">
+                                            <path
+                                                d="M8 3L4.5 6 1 3"
+                                                stroke="gray"
+                                                strokeWidth="1.0"
+                                                fill="none"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                            />
+                                        </IcoArrow>
+
+                                    </ListRelationLink>
+                                    {isCustomerServiceOpen && 
+                                        <ListSub>
+                                            <ListSubDiv>
+                                                <LinkSubitem>카카오 고객센터</LinkSubitem>
+                                            </ListSubDiv>
+                                            <ListSubDivTwo>
+                                                <LinkSubitem>Daum 고객센터</LinkSubitem>
+                                            </ListSubDivTwo>
+                                            <ListSubDivThree>
+                                                <LinkSubitem>커머스 고객센터</LinkSubitem>
+                                            </ListSubDivThree>
+                                    
+                                        </ListSub>
+                                    }
+                                </ListRelationItem>
+                                
+                            </ListRelation>
+                        </GroupRelation>
+                    </AreaGnb>
+            </>
+            }
 
             {/* Overlay */}
             {isOpen && <Overlay onClick={closeBoxMenu} />}

@@ -16,6 +16,10 @@ export const HamburgerMenuOverlay = styled.div`
     height: 100%;
     background-color: rgba(0,0,0,0.5); 
     z-index: 3010;  
+
+    @media (min-width: 1024px) {
+        display: none;
+    }  
 `
 
 export const AreaGnb = styled.div`
@@ -25,10 +29,18 @@ export const AreaGnb = styled.div`
     z-index: 9999;
     max-width: 412px;
     width: 100%;
-    height: 1056px;
-    background-color: red;
+    height: 100vh;
+    background-color: #ffffff;
     transform: ${({ isOpen }) => (isOpen ? "translateX(0)" : "translateX(100%)")};
     transition: transform 0.3s ease;
+
+    /* 스크롤 가능하도록 */
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch; /* 모바일에서 부드러운 스크롤 */
+
+    @media (min-width: 1024px) {
+        display: none;
+    }      
 `;
 
 export const ContHead = styled.div`
@@ -41,6 +53,109 @@ export const ContHead = styled.div`
     justify-content: end;
 `
 
+export const GnbContentMO = styled.nav`
+    max-width: 412px;
+    width: 100%;
+    height: 840px;
+    background-color: blue;
+`
+
+export const GroupRelation = styled.div`
+    border-top: 1px solid #eee;
+    margin: auto 35px 0;
+    max-width: 342px;
+    width: 100%;
+    height: ${({ isHeight }) => (isHeight ? "327px" : "144px")};
+    
+`
+
+export const ListRelation = styled.div`
+    max-width: 342px;
+    width: 100%;
+    height: ${({ isHeight }) => (isHeight ? "327px" : "144px")};
+    padding: 36px 0;
+    font-size: 16px;
+    line-height: 1.6;
+    box-sizing: border-box;
+`
+
+export const ListRelationItem = styled.div`
+    max-width: 342px;
+    width: 100%;
+    height: 25px;
+    position: relative;
+    margin-bottom: 20px;
+`
+
+export const ListRelationLink = styled(Link)`
+    max-width: 342px;
+    width: 100%;
+    height: 25px;
+    position: relative;
+    color: #000;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
+`
+
+export const ListSub = styled.div`
+    max-width: 342px;
+    width: 100%;
+    height: 168px;
+    margin-top: 16px;
+    padding: 32px;
+    background: #F7F7F7;
+    border-radius: 16px;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -.25px;
+    box-sizing: border-box;
+`
+
+export const ListSubDiv = styled.div`
+    max-width: 278px;
+    width: 100%;
+    height: 24px;
+`
+
+export const ListSubDivTwo = styled.div`
+    max-width: 278px;
+    width: 100%;
+    height: 24px;
+    margin-top: 16px;
+`
+
+export const ListSubDivThree = styled.div`
+    max-width: 278px;
+    width: 100%;
+    height: 24px;
+    margin-top: 16px;
+`
+
+export const LinkSubitem = styled.a`
+    color: #000;
+    text-decoration: none;
+
+`
+
+
+
+export const IcoOutlink = styled.svg`
+    position: absolute;
+    right: 0;
+    width: 14px;
+    height: 14px;
+`
+
+export const IcoArrow = styled.svg`
+    position: absolute;
+    right: 0;
+    width: 14px;
+    height: 14px;
+`
+
+
 export const WrapUtil = styled.div`
     max-width: 137px;
     width: 100%;
@@ -48,17 +163,23 @@ export const WrapUtil = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: blue;
 `
 
-export const BtnMode = styled.div`
-    width: max-content;   
-    height: max-content;  
-    background-color: orange;
-    padding-left: 5px;
+
+export const IcoModeDarkBtnHamburger = styled.svg`
+    max-width: 28px;
+    width: 100%;
+    height: 28px;
+    overflow: visible; 
 `
 
 export const IconCloseBtnHamburger = styled.svg`
+    max-width: 28px;
+    width: 100%;
+    height: 28px;
+`
+
+export const IcoLanguageBtnHamburger = styled.svg`
     max-width: 28px;
     width: 100%;
     height: 28px;

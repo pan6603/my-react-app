@@ -21,7 +21,6 @@ import React, { useState } from "react";
 
 function Main() {
     const { theme } = useTheme() 
-
     const [isSearchOpen, setIsSearchOpen] = useState(false);
 
     const openSearch = () => setIsSearchOpen(true);
