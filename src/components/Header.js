@@ -23,7 +23,7 @@ import {
     IconCloseBtnHamburger,
     IcoModeDarkBtnHamburger,
     IcoLanguageBtnHamburger,
-    GnbContentMO,
+    DocGnb,
     GroupRelation,
     ListRelation,
     ListRelationItem,
@@ -34,7 +34,20 @@ import {
     ListSubDiv,
     ListSubDivTwo,
     ListSubDivThree,
-    LinkSubitem
+    LinkSubitem,
+    ListGnb,
+    ListGnbItem,
+    ListGnbItemLink,
+    ListGnbItemText,
+    ListSubTypeThird,
+    ListSubTypeThirdItem,
+    WrapSubitem,
+    ListThirdListCategory,
+    ListCategoryItem,
+    NewsListSubTypeThird,
+    NewsListSubTypeThirdItem,
+    NewsListThird,
+    NewsListThirdItem
 } from '../styles/Header.styles';
 import BtnHamburger from './hamburger/BtnHamburger';
 import ClickSearchOpen from './hamburger/ClickSearchOpen';
@@ -55,6 +68,12 @@ function Header ({openSearch}) {
     const [isOpen, setIsOpen] = useState(false);
     const [isHamburgerMenuOpen, setIsHamburgerMenuOpen] = useState(false);
     const [isCustomerServiceOpen, setIsCustomerServiceOpen] = useState(false);
+
+    // 햄버거 메뉴 > 메뉴 클릭시 
+    const [isAboutOpen, setIsAboutOpen] = useState(false);
+    const [isTechOpen, setIsTechOpen] = useState(false);
+    const [isPromiseOpen, setIsPromiseOpen] = useState(false);
+    const [isNewsOpen, setIsNewsOpen] = useState(false);
 
 
     const btnHamburger = () => {
@@ -250,8 +269,220 @@ function Header ({openSearch}) {
                                 </IconCloseBtnHamburger>
                             </WrapUtil>
                         </ContHead>
-                        <GnbContentMO></GnbContentMO>
-                        <GroupRelation isHeight={isCustomerServiceOpen}>
+                        <DocGnb>
+                            <ListGnb>
+                                <ListGnbItem>
+                                    <ListGnbItemLink onClick={() => setIsAboutOpen(prev => !prev)}>
+                                        <ListGnbItemText>소개</ListGnbItemText>
+                                        {isAboutOpen ? (
+                                            <IcoArrow viewBox="0 0 9 9" fill="none">
+                                                <path
+                                                    d="M1 6L4.5 3 8 6"
+                                                    stroke="black"
+                                                    strokeWidth="1.0"
+                                                    fill="none"
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                />
+                                                </IcoArrow>
+                                        ) : (
+                                            <IcoArrow viewBox="0 0 9 9" fill="none">
+                                                <path
+                                                    d="M8 3L4.5 6 1 3"
+                                                    stroke="gray"
+                                                    strokeWidth="1.0"
+                                                    fill="none"
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                />
+                                            </IcoArrow>
+                                        )}
+                                    </ListGnbItemLink>
+                                    {isAboutOpen && 
+                                        <ListSub>
+                                            <ListSubDiv>
+                                                <LinkSubitem>카카오 문화</LinkSubitem>
+                                            </ListSubDiv>
+                                            <ListSubDivTwo>
+                                                <LinkSubitem>카카오 그룹</LinkSubitem>
+                                            </ListSubDivTwo>
+                                            <ListSubDivThree>
+                                                <LinkSubitem>연혁</LinkSubitem>
+                                            </ListSubDivThree>
+                                         </ListSub>  
+                                    }
+                                </ListGnbItem>
+
+                                <ListGnbItem>
+                                    <ListGnbItemLink onClick={() => setIsTechOpen(prev => !prev)}>
+                                        <ListGnbItemText>기술과 서비스</ListGnbItemText>
+                                        {isTechOpen ? (
+                                            <IcoArrow viewBox="0 0 9 9" fill="none">
+                                                <path
+                                                    d="M1 6L4.5 3 8 6"
+                                                    stroke="black"
+                                                    strokeWidth="1.0"
+                                                    fill="none"
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                />
+                                                </IcoArrow>
+                                        ) : (
+                                            <IcoArrow viewBox="0 0 9 9" fill="none">
+                                                <path
+                                                    d="M8 3L4.5 6 1 3"
+                                                    stroke="gray"
+                                                    strokeWidth="1.0"
+                                                    fill="none"
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                />
+                                            </IcoArrow>
+                                        )}
+                                    </ListGnbItemLink>
+                                    {isTechOpen && 
+                                        <ListSubTypeThird>
+                                            <ListSubTypeThirdItem>
+                                                <WrapSubitem>기술</WrapSubitem>
+                                                <ListThirdListCategory>
+                                                    <ListCategoryItem>카카오AI</ListCategoryItem>
+                                                    <ListCategoryItem>카카오테크</ListCategoryItem>
+                                                    <ListCategoryItem>기술 플랫폼</ListCategoryItem>
+                                                    <ListCategoryItem>기술 서비스</ListCategoryItem>
+                                                    <ListCategoryItem>기술 콘텐츠</ListCategoryItem>
+                                                    <ListCategoryItem>기술 이벤트</ListCategoryItem>
+                                                    <ListCategoryItem>if(Kakao)</ListCategoryItem>
+                                                </ListThirdListCategory>
+                                            </ListSubTypeThirdItem>
+
+                                            <ListSubTypeThirdItem>
+                                                <WrapSubitem>서비스</WrapSubitem>
+                                                <ListThirdListCategory>
+                                                    <ListCategoryItem>커뮤니케이션</ListCategoryItem>
+                                                    <ListCategoryItem>일상 편의</ListCategoryItem>
+                                                    <ListCategoryItem>비즈니스</ListCategoryItem>
+                                                    <ListCategoryItem>쇼핑</ListCategoryItem>
+                                                    <ListCategoryItem>엔터테인먼트</ListCategoryItem>
+                                                    <ListCategoryItem>소셜 임팩트</ListCategoryItem>
+                                                </ListThirdListCategory>
+                                            </ListSubTypeThirdItem>
+                                        </ListSubTypeThird>  
+                                    }
+                                </ListGnbItem>
+
+                                <ListGnbItem>
+                                    <ListGnbItemLink onClick={() => setIsPromiseOpen(prev => !prev)}>
+                                        <ListGnbItemText>약속과 책임</ListGnbItemText>
+                                        {isPromiseOpen ? (
+                                            <IcoArrow viewBox="0 0 9 9" fill="none">
+                                                <path
+                                                    d="M1 6L4.5 3 8 6"
+                                                    stroke="black"
+                                                    strokeWidth="1.0"
+                                                    fill="none"
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                />
+                                                </IcoArrow>
+                                        ) : (
+                                            <IcoArrow viewBox="0 0 9 9" fill="none">
+                                                <path
+                                                    d="M8 3L4.5 6 1 3"
+                                                    stroke="gray"
+                                                    strokeWidth="1.0"
+                                                    fill="none"
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                />
+                                            </IcoArrow>
+                                        )}
+                                    </ListGnbItemLink>
+                                    {isPromiseOpen && 
+                                        <ListSub>
+                                            <ListSubDiv>
+                                                <LinkSubitem>ESG 보고서</LinkSubitem>
+                                            </ListSubDiv>
+                                            <ListSubDivTwo>
+                                                <LinkSubitem>프로젝트 단골</LinkSubitem>
+                                            </ListSubDivTwo>
+                                            <ListSubDivThree>
+                                                <LinkSubitem>액티브 그린</LinkSubitem>
+                                            </ListSubDivThree>
+                                            <ListSubDivThree>
+                                                <LinkSubitem>디지털 책임</LinkSubitem>
+                                            </ListSubDivThree>
+                                            <ListSubDivThree>
+                                                <LinkSubitem>사회경제적 가치</LinkSubitem>
+                                            </ListSubDivThree>
+                                         </ListSub>  
+                                    }
+                                </ListGnbItem>
+
+                                <ListGnbItem>
+                                    <ListGnbItemLink onClick={() => setIsNewsOpen(prev => !prev)}>
+                                        <ListGnbItemText>소식</ListGnbItemText>
+                                        {isNewsOpen ? (
+                                            <IcoArrow viewBox="0 0 9 9" fill="none">
+                                                <path
+                                                    d="M1 6L4.5 3 8 6"
+                                                    stroke="black"
+                                                    strokeWidth="1.0"
+                                                    fill="none"
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                />
+                                                </IcoArrow>
+                                        ) : (
+                                            <IcoArrow viewBox="0 0 9 9" fill="none">
+                                                <path
+                                                    d="M8 3L4.5 6 1 3"
+                                                    stroke="gray"
+                                                    strokeWidth="1.0"
+                                                    fill="none"
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                />
+                                            </IcoArrow>
+                                        )}
+                                    </ListGnbItemLink>
+                                    {isNewsOpen && 
+                                        <NewsListSubTypeThird>
+                                            <NewsListSubTypeThirdItem>
+                                                <WrapSubitem>뉴스</WrapSubitem>
+                                                <NewsListThird>
+                                                    <NewsListThirdItem>보도자료</NewsListThirdItem>
+                                                    <NewsListThirdItem>미디어자료</NewsListThirdItem>
+                                                </NewsListThird>
+                                            </NewsListSubTypeThirdItem>
+
+                                            <NewsListSubTypeThirdItem>
+                                                <WrapSubitem>카카오나우</WrapSubitem>
+                                                <NewsListThird>
+                                                    <NewsListThirdItem>카카오이야기</NewsListThirdItem>
+                                                    <NewsListThirdItem>그룹사이야기</NewsListThirdItem>
+                                                </NewsListThird>
+                                            </NewsListSubTypeThirdItem>
+                                        </NewsListSubTypeThird>
+                                    }
+                                </ListGnbItem>
+
+                                <ListGnbItem>
+                                    <ListGnbItemLink>
+                                        <ListGnbItemText>투자정보</ListGnbItemText>
+                                        <IcoOutlink viewBox="0 0 9 9" fill="none">
+                                            <path
+                                                d="M1.8 1.1L7.9 1.1 7.9 7.2M7.9 1.1L1.4 7.6"
+                                                stroke="gray"
+                                                strokeWidth="1.0"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                            />
+                                        </IcoOutlink>
+                                    </ListGnbItemLink>
+                                </ListGnbItem>
+                            </ListGnb>
+                        </DocGnb>
+                        <GroupRelation>
                             <ListRelation isHeight={isCustomerServiceOpen}>
                                 <ListRelationItem>
                                     <ListRelationLink>
@@ -284,6 +515,7 @@ function Header ({openSearch}) {
                                         </IcoArrow>
 
                                     </ListRelationLink>
+
                                     {isCustomerServiceOpen && 
                                         <ListSub>
                                             <ListSubDiv>
@@ -295,7 +527,6 @@ function Header ({openSearch}) {
                                             <ListSubDivThree>
                                                 <LinkSubitem>커머스 고객센터</LinkSubitem>
                                             </ListSubDivThree>
-                                    
                                         </ListSub>
                                     }
                                 </ListRelationItem>

@@ -53,12 +53,55 @@ export const ContHead = styled.div`
     justify-content: end;
 `
 
-export const GnbContentMO = styled.nav`
+export const DocGnb = styled.nav`
     max-width: 412px;
     width: 100%;
-    height: 840px;
-    background-color: blue;
+    height: max-content;
+    padding: 48px 39px 48px 35px;
+    box-sizing: border-box;
+    margin-bottom: 180px;
 `
+
+export const ListGnb = styled.div`
+    max-width: 338px;
+    width: 100%;
+    height: max-content;
+`
+
+export const ListGnbItem = styled.div`
+    max-width: 338px;
+    width: 100%;
+    height: max-content;
+    position: relative;
+
+    & + & {
+        margin-top: 16px; 
+    }
+`
+
+export const ListGnbItemLink = styled(Link)`
+    max-width: 338px;
+    width: 100%;
+    height: 38px;
+    position: relative;
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+`
+
+
+export const ListGnbItemText = styled.div`
+    display: inline-block;
+    line-height: 1.45;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -.5px;
+    color: #000;
+`
+
+
 
 export const GroupRelation = styled.div`
     border-top: 1px solid #eee;
@@ -82,7 +125,7 @@ export const ListRelation = styled.div`
 export const ListRelationItem = styled.div`
     max-width: 342px;
     width: 100%;
-    height: 25px;
+    height: max-content;
     position: relative;
     margin-bottom: 20px;
 `
@@ -102,7 +145,7 @@ export const ListRelationLink = styled(Link)`
 export const ListSub = styled.div`
     max-width: 342px;
     width: 100%;
-    height: 168px;
+    height: max-content;
     margin-top: 16px;
     padding: 32px;
     background: #F7F7F7;
@@ -111,6 +154,106 @@ export const ListSub = styled.div`
     line-height: 1.5;
     letter-spacing: -.25px;
     box-sizing: border-box;
+`
+
+export const ListSubTypeThirdItem = styled.div`
+    max-width: 274px;
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+`
+
+export const ListThirdListCategory = styled.div`
+    max-width: 274px;
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 16px;
+
+`
+
+export const ListCategoryItem = styled.div`
+    width: 50%;
+    height: 24px;
+    color: #000;
+    font-weight: 400;
+`
+
+
+export const ListSubTypeThird = styled.div`
+    max-width: 338px;
+    width: 100%;
+    height: 457px;
+    margin-top: 16px;
+    padding: 32px;
+    box-sizing: border-box;
+    border-radius: 16px;
+    background: #F7F7F7;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -.25px;
+    border-bottom: 1px solid #eee;
+
+    & > ${ListSubTypeThirdItem}:nth-child(2) {
+        border-top: 1px solid #eee;
+        margin-top: 32px;
+        padding-top: 32px;
+    }
+`
+
+export const NewsListSubTypeThirdItem = styled.div`
+    max-width: 274px;
+    width: 100%;
+    height: 104px;
+    color: #000;
+`
+
+export const NewsListSubTypeThird = styled.div`
+    max-width: 338px;
+    width: 100%;
+    height: 337px;
+    background: #F7F7F7;
+    margin-top: 16px;
+    padding: 32px;
+    border-radius: 16px;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -.25px;
+    box-sizing: border-box;
+
+    & > ${NewsListSubTypeThirdItem}:nth-child(2) {
+        border-top: 1px solid #eee;
+        margin-top: 32px;
+        padding-top: 32px;
+    }
+`
+
+export const NewsListThirdItem = styled.div`
+    width: 100%;
+    color: #000;
+    font-weight: 400;
+`
+
+export const NewsListThird = styled.div`
+    max-width: 274px;
+    width: 100%;
+    height: 64px;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 16px;
+    margin-top: 16px;
+
+`
+
+
+export const WrapSubitem = styled.div`
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -.25px;
+    color: #666;
 `
 
 export const ListSubDiv = styled.div`
