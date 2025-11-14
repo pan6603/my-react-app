@@ -69,6 +69,7 @@ export const ListGnb = styled.div`
 `
 
 
+
 export const ListGnbItem = styled.div`
     max-width: 338px;
     width: 100%;
