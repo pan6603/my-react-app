@@ -12,6 +12,14 @@ export const DocHeader = styled.header`
     height: 92px;
     background-color: #fff;
     border-bottom: ${({ isScrolled }) => isScrolled ? "1px solid #EAEAEA" : "none"};
+
+    @media (max-width: 1431px) {
+        max-width: 1431px;
+        width: 100%;
+        height: 84px;
+        padding: 0 38px;
+        box-sizing: border-box;
+    }  
 `
 
 export const InnerHeader = styled.div`
@@ -22,12 +30,26 @@ export const InnerHeader = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: 1431px) {
+        max-width: 1431px;
+        width: 100%;
+        height: 84px;
+        padding: 0 38px;
+        box-sizing: border-box;
+    }  
 `
 
 export const DocTitle = styled.div`
     max-width: 154px;
     width: 100%;
     height: 29px;
+
+    @media (max-width: 1431px) {
+        max-width: 132px;
+        width: 100%;
+        height: 26px;
+    }  
 `
 
 export const DocTitleLink = styled.a`
@@ -41,6 +63,10 @@ export const DocGnbNav = styled.div`
     max-width: 818px;
     width: 100%;
     height: 36px;
+
+    @media (max-width: 1431px) {
+        display: none;
+    }  
 `
 
 export const ListMainNav = styled.div`
@@ -113,7 +139,40 @@ export const BtnLangViewPc = styled.div`
     max-width: 36px;
     width: 100%;
     height: 36px;
-    background-color: blue;
     background: url(${props => props.bg});
     cursor: pointer;
+
+    @media (max-width: 1431px) {
+        display: none;
+    }  
+`
+
+export const BoxControls = styled.div`
+    max-width: 96px;
+    width: 100%;
+    height: 36px;
+    display: flex;
+    z-index: 110;
+    justify-content: space-between;
+    align-items: center;
+`
+
+export const BtnLangIcon = styled.div`
+    @media (max-width: 1431px) {
+        max-width: 36px;
+        width: 100%;
+        height: 36px;
+        background: url(${props => props.bg});
+    }
+`
+
+export const BtnMenuIcon = styled.div`
+    @media (max-width: 1431px) {
+        max-width: 36px;
+        width: 100%;
+        height: 36px;
+        background-image: url(${props => props.bg});
+    }
+
+
 `

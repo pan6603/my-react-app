@@ -8,7 +8,10 @@ import {
     ListMainNav,
     NavItemMenu,
     NavItemMenuLink,
-    NavItemMenuLinkArrow
+    NavItemMenuLinkArrow,
+    BoxControls,
+    BtnLangIcon,
+    BtnMenuIcon
 } from "../../styles/ir/main/InverstmentHeader.styles"
 import { useTranslation } from "react-i18next";
 import React, { useState, useEffect } from "react";
@@ -29,6 +32,10 @@ function InverstmentHeader() {
     lang === "en"
       ? "https://t1.kakaocdn.net/kakaocorp/Ir/images/btn_ko.svg"
       : "https://t1.kakaocdn.net/kakaocorp/Ir/images/btn_en.svg";
+
+    // width 1431px 경우
+    const btnMenuIcon = "https://t1.kakaocdn.net/kakaocorp/Ir/images/btn_menu.svg";
+      
 
     useEffect(() => {
         const handleScroll = () => {
@@ -101,6 +108,11 @@ function InverstmentHeader() {
              
                     </DocTitleLink>
                 </DocTitle>
+                {/* 1431px 경우 추가 */}
+                <BoxControls>
+                    <BtnLangIcon bg={iconUrl}/>
+                    <BtnMenuIcon bg={btnMenuIcon}/>
+                </BoxControls>
                 <DocGnbNav>
                     <ListMainNav>
                         <NavItemMenu>
