@@ -155,6 +155,10 @@ export const BoxControls = styled.div`
     z-index: 110;
     justify-content: space-between;
     align-items: center;
+
+    @media (min-width: 1440px) {
+        display: none;
+    }  
 `
 
 export const BtnLangIcon = styled.div`
@@ -173,6 +177,4 @@ export const BtnMenuIcon = styled.div`
         height: 36px;
         background-image: url(${props => props.bg});
     }
-
-
 `

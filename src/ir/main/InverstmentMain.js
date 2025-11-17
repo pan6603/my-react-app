@@ -113,7 +113,7 @@ function InverstmentMain() {
             <SectionVisual>
                 <WrapVisual>
                     <BgDimmed>
-                        <video data-v-85d56d7e="" data-v-bb1396d4="" src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/heroVisual/ef3f91ae019800001.mp4" poster="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/heroVisual/ef3f9d11019800001.png?type=thumb&amp;opt=C1424x808.fwebp" autoplay="autoplay" muted="muted" loop="loop" playsinline="playsinline" type="video/mp4" class="item_visual"></video>
+                        <video data-v-85d56d7e="" data-v-bb1396d4="" src="https://t1.kakaocdn.net/kakaocorp/Ir/images/video_main_250522.mp4" poster="https://t1.kakaocdn.net/kakaocorp/Ir/images/poster_image_250522.png" autoplay="autoplay" muted="muted" loop="loop" playsinline="playsinline" type="video/mp4" class="item_visual"></video>
                     </BgDimmed>
                     
                 </WrapVisual>
@@ -186,16 +186,7 @@ function InverstmentMain() {
                             >
                                 {boxPostSlides.map((item, index) => (
                                     <SwiperSlide key={index}>
-                                        <SwiperSlideItem
-                                            style={{
-                                                width: "206px",
-                                                height: "206px",
-                                                borderRadius: "24px",
-                                                display: "flex",
-                                                alignItems: "center",
-                                                justifyContent: "center"
-                                            }}    
-                                        >
+                                        <SwiperSlideItem>
                                             {item.innerSlideLink}         
                                    
                                         </SwiperSlideItem>   
@@ -207,6 +198,7 @@ function InverstmentMain() {
                     </CarouselPost>
                 </WrapBanner>
             </SectionVisual>
+            
             <SectionNews>
                 <SectionNewsTitle>{t("section_news.section_news_title")}</SectionNewsTitle>
                 <WrapBoard>

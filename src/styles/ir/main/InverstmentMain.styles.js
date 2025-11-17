@@ -7,6 +7,15 @@ export const DocMain = styled.main`
     width: 100%;
     height: 2548px;
     margin: 0 auto;
+
+    @media (max-width: 1431px) {
+        max-width: 1431px;
+        width: 100%;
+        height: 1650px;
+        margin: 0 auto;
+        padding: 0 38px;
+        box-sizing: border-box;
+    }
 `
 
 export const SectionRelation = styled.section`
@@ -436,7 +445,6 @@ export const LinkAll = styled.a`
 `
 
 
-
 export const SectionVisual = styled.section`
     max-width: 1316px;
     width: 100%;
@@ -444,6 +452,16 @@ export const SectionVisual = styled.section`
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: 1431px) {
+        max-width: 1355px;
+        width: 100%;
+        height: 566px;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 80px;
+        box-sizing: border-box;
+    }  
 `
 
 export const WrapVisual = styled.div`
@@ -453,6 +471,14 @@ export const WrapVisual = styled.div`
     overflow: hidden; 
     position: relative;
     border-radius: 36px;
+
+    @media (max-width: 1431px) {
+        max-width: 1163px;
+        width: 100%;
+        height: 486px;
+        width: calc(100% - 192px);
+        border-radius: 20px;
+    }  
 `
 
 export const BgDimmed = styled.div`
@@ -477,6 +503,16 @@ export const WrapBanner = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @media (max-width: 1431px) {
+        max-width: 180px;
+        width: 100%;
+        height: 486px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    } 
+
 `
 
 export const BoxStock = styled.div`
@@ -485,6 +521,12 @@ export const BoxStock = styled.div`
     height: 136px;
     background-color: red;
     border-radius: 24px;
+
+    @media (max-width: 1431px) {
+        max-width: 180px;
+        width: 100%;
+        height: 120px;
+    } 
 `
 
 export const BnrItem = styled.div`
@@ -497,6 +539,14 @@ export const BnrItem = styled.div`
     background-color: #333;
     display: flex;
     flex-direction: column;
+
+    @media (max-width: 1431px) {
+        max-width: 180px;
+        width: 100%;
+        height: 120px;
+        padding: 12px 16px;
+        box-sizing: border-box;
+    } 
 `
 
 export const TxtStock = styled.div`
@@ -507,13 +557,18 @@ export const TxtStock = styled.div`
     font-weight: 700;
     letter-spacing: -0.8px;
     color: #fff;
+
+    @media (max-width: 1431px) {
+        max-width: 148px;
+        width: 100%;
+        height: 39px;
+    }
 `
 
 export const EmphStockChangeDown = styled.em`
     max-width: 166px;
     width: 100%;
     height: 21px;
-    margin-top: 8px;
     color: #4a9cff;
     letter-spacing: -0.5px;
     font-size: 14px;
@@ -539,6 +594,10 @@ export const EmphStockTxtSub = styled.div`
     margin-top: auto;
     color: #d2d2d2;
     letter-spacing: -0.2px;
+
+    @media (max-width: 1431px) {
+        font-size: 12px;  
+    }             
 `
 
 
@@ -550,10 +609,31 @@ export const CarouselNotice = styled.div`
     height: 255px;
     border-radius: 24px;
     background-color: #f0f0f0;
+
+    @media (max-width: 1431px) {
+        max-width: 180px;
+        width: 100%;
+        height: 203px;
+        border-radius: 16px;
+    } 
 `
 
 export const SwiperSlideItem = styled.div`
+    max-width: 206px;
+    width: 100%;
+    height: 206px;
+    borderRadius: 24px;
+    display: flex;
+    alignItems: center;
+    justifyContent: center;
 
+
+    @media (max-width: 1431px) {
+        max-width: 180px;
+        width: 100%;
+        height: 147px;
+        border-radius: 16px;
+    } 
 `
 
 export const StyledSwiper = styled(Swiper)`
@@ -570,6 +650,10 @@ export const StyledSwiper = styled(Swiper)`
         display: flex;
         justify-content: space-around;
         align-items: center;
+
+        @media (max-width: 1431px) {
+            margin-left: 60px;
+        } 
     }
 
     .swiper-pagination-bullet {
@@ -585,7 +669,14 @@ export const StyledSwiper = styled(Swiper)`
         background-color: #000;
         color: #000;
         opacity: 1;
-  }
+    }
+
+    @media (max-width: 1431px) {
+        max-width: 180px;
+        width: 100%;
+        height: 203px;
+        border-radius: 16px;
+    } 
 `
 
 export const BoxPostStyledSwiper = styled(Swiper)`
@@ -602,6 +693,10 @@ export const BoxPostStyledSwiper = styled(Swiper)`
         display: flex;
         justify-content: space-around;
         align-items: center;
+
+        @media (max-width: 1431px) {
+            margin-left: 60px;
+        } 
     }
 
     .swiper-pagination-bullet {
@@ -642,6 +737,13 @@ export const TitNotice = styled.div`
     font-size: 26px;
     font-weight: 500;
     margin: 0 auto;
+
+    @media (max-width: 1431px) {
+        max-width: 148px;
+        width: 100%;
+        font-size: 17px;
+        letter-spacing: -0.6px;
+    } 
  `   
 
 export const AreaLinks = styled.div`
@@ -652,11 +754,25 @@ export const AreaLinks = styled.div`
     display: flex;
     gap: 12px;
     margin-top: 12px;
+
+    @media (max-width: 1431px) {
+        max-width: 148px;
+        width: 100%;
+        height: 21px;
+        display: flex;
+        margin: 0 auto;
+        margin-top: 12px;
+    } 
 `
 
 export const LinkItemPdf = styled.div`
     width: max-content;
     height: 20px;
+    
+
+    @media (max-width: 1431px) {
+        font-size: 14px;
+    }   
 
     &::after {
         width: 20px;
@@ -666,6 +782,10 @@ export const LinkItemPdf = styled.div`
         vertical-align: top;
         background: url(https://t1.kakaocdn.net/kakaocorp/Ir/images/ico_download.svg) no-repeat;
         content: '';
+
+        @media (max-width: 1431px) {
+            margin-left: 4px;
+        }       
     }
    
 `
@@ -674,6 +794,10 @@ export const LinkItemMusic = styled.div`
     width: max-content;
     height: 20px;
 
+    @media (max-width: 1431px) {
+        font-size: 14px;
+    }  
+    
     &::after {
         width: 20px;
         height: 20px;
@@ -682,6 +806,10 @@ export const LinkItemMusic = styled.div`
         vertical-align: top;
         background-image: url(https://t1.kakaocdn.net/kakaocorp/Ir/images/ico_webcast.svg);
         content: '';
+
+        @media (max-width: 1431px) {
+            margin-left: 4px;
+        }   
     }
 `
 
@@ -690,6 +818,12 @@ export const CarouselPost = styled.div`
     width: 100%;
     height: 206px;
     border-radius: 24px;
+
+    @media (max-width: 1431px) {
+        max-width: 180px;
+        width: 100%;
+        height: 147px;
+    } 
 `
 
 export const BoxPost = styled.div`
@@ -697,6 +831,12 @@ export const BoxPost = styled.div`
     width: 100%;
     height: 206px;
     border-radius: 24px;
+
+    @media (max-width: 1431px) {
+        max-width: 180px;
+        width: 100%;
+        height: 147px;
+    } 
 `
 
 export const FirstInnerSlideLink = styled.a`
@@ -707,6 +847,14 @@ export const FirstInnerSlideLink = styled.a`
     border-radius: 24px;
     background: #FAE100;
     color: #000;
+
+    @media (max-width: 1431px) {
+        max-width: 180px;
+        width: 100%;
+        height: 147px;
+        border-radius: 16px;
+
+    } 
 `
 
 export const TwoInnerSlideLink = styled.a`
@@ -717,6 +865,15 @@ export const TwoInnerSlideLink = styled.a`
     border-radius: 24px;
     background: #0073FF;
     color: #fff;
+
+     @media (max-width: 1431px) {
+        max-width: 180px;
+        width: 100%;
+        height: 147px;
+        border-radius: 16px;
+        background: #0073FF;
+        color: #fff;
+    } 
 `
 
 
@@ -728,7 +885,16 @@ export const InnerPost = styled.div`
     padding: 20px 20px 16px;
     display: flex;
     flex-direction: column;
+    border-radius: 24px;
 
+    @media (max-width: 1431px) {
+        max-width: 180px;
+        width: 100%;
+        height: 147px;
+        padding: 16px 16px 12px;
+        border-radius: 16px;
+        box-sizing: border-box;
+    } 
 `
 
 export const TitPost = styled.strong`
@@ -740,6 +906,10 @@ export const TitPost = styled.strong`
     font-weight: 700;
     letter-spacing: -0.6px;
     overflow: hidden;
+
+    @media (max-width: 1431px) {
+        font-size: 18px;
+    }
 `
 
 export const BoxPostTxtDate = styled.div`
@@ -747,6 +917,10 @@ export const BoxPostTxtDate = styled.div`
     font-weight: 700;
     letter-spacing: -0.5px;
     overflow: hidden;
+
+    @media (max-width: 1431px) {
+        font-size: 14px;
+    }
 `
 
 
@@ -762,7 +936,6 @@ export const WrapMore = styled.div`
     padding: 24px 33px 30px 34px;
     box-sizing: border-box;
 
-
     &::before {
         position: absolute;
         left: -1px;
@@ -772,6 +945,19 @@ export const WrapMore = styled.div`
         height: 38px;
         background: url(https://t1.kakaocdn.net/kakaocorp/Ir/images/ico_mask_36.svg) no-repeat;
         content: '';
+
+        @media (max-width: 1431px) {
+            position: absolute;
+            width: 38px;
+            height: 38px;
+            z-index: 20;
+            left: -1px;
+            bottom: 58px;
+            background-size: 34px;
+            background-image: url(https://t1.kakaocdn.net/kakaocorp/Ir/images/ico_mask_20.svg) no-repeat
+            content: '';
+        }   
+       
     }
 
     &::after {
@@ -783,7 +969,30 @@ export const WrapMore = styled.div`
         height: 38px;
         background: url(https://t1.kakaocdn.net/kakaocorp/Ir/images/ico_mask_36.svg) no-repeat;
         content: '';
+
+        @media (max-width: 1431px) {
+            position: absolute;
+            z-index: 20;
+            width: 38px;
+            height: 38px;
+            left: 158px;
+            bottom: 4px;
+            background-size: 34px;
+            background-image: url(https://t1.kakaocdn.net/kakaocorp/Ir/images/ico_mask_20.svg);
+            content: '';
+        }
     }
+
+    @media (max-width: 1431px) {
+        position: absolute;
+        z-index: 10;
+        left: 1;
+        width: 160px;
+        height: 64px;
+        padding: 19px 30px 21px 30px;
+        bottom: 138px;
+        border-top-right-radius: 20px;
+    } 
 `
 
 export const LinkVideo = styled.a`
@@ -803,5 +1012,17 @@ export const LinkVideo = styled.a`
         margin-left: 20px;
         background: url(https://t1.kakaocdn.net/kakaocorp/Ir/images/ico_arrow_241212.png) 50%/20px no-repeat,#000;
         content: '';
+        
+        @media (max-width: 1431px) {
+            width: 24px;
+            height: 24px;
+            margin-left: 8px;
+            border-radius: 12px;
+            background-size: 10.8px;
+        }
+    }
+
+    @media (max-width: 1431px) {
+        font-size: 15px;
     }
 `
