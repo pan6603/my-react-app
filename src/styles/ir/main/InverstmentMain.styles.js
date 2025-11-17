@@ -185,9 +185,17 @@ export const SectionNews = styled.section`
     width: 100%;
     height: 1014px;
     margin: 120px auto;
+
+    @media (max-width: 1431px) {
+        max-width: 1355px;
+        width: 100%;
+        height: 708px;
+        padding-bottom: 80px;
+        margin: 0 auto;
+    }
 `
 
-export const SectionNewsTitle = styled.h4`
+export const SectionNewsTitle = styled.div`
     max-width: 1316px;
     width: 100%;
     height: 72px;
@@ -206,6 +214,20 @@ export const SectionNewsTitle = styled.h4`
         display: inline-block;
         vertical-align: top;
         background: url(https://t1.kakaocdn.net/kakaocorp/Ir/images/img_balloon.png) center/contain no-repeat;
+
+        @media (max-width: 1431px) {
+            width: 48px;
+            height: 48px;
+            margin-right: 4px;
+        }
+    }
+
+    @media (max-width: 1431px) {
+        max-width: 1355px;
+        width: 100%;
+        height: 48px;
+        margin-bottom: 24px;
+        font-size: 32px;
     }
 `
 
@@ -216,6 +238,12 @@ export const WrapBoard = styled.div`
     margin-bottom: 46px;
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: 1431px) {
+        max-width: 1355px;
+        width: 100%;
+        height: 162px;
+    }
 `
 
 export const BoxBoard = styled.div`
@@ -228,6 +256,16 @@ export const BoxBoard = styled.div`
     overflow: hidden;
     border-radius: 24px;
     background: #f3f3f3;
+
+    @media (max-width: 1431px) {
+        max-width: 443px;
+        width: 100%;
+        height: 162px;
+        padding: 24px 24px 12px;
+        box-sizing: border-box;
+    }
+
+
 `
 
 export const TitBoard = styled.div`
@@ -236,6 +274,11 @@ export const TitBoard = styled.div`
     letter-spacing: -0.8px;
     color: #000;
     font-weight: 700;
+
+    @media (max-width: 1431px) {
+        margin-bottom: 8px;
+        font-size: 18px;
+    }
 `
 
 
@@ -246,12 +289,29 @@ export const ListBoard = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @media (max-width: 1431px) {
+        max-width: 395px;
+        width: 100%;
+        height: 91px;
+    }
+
+    & > a:nth-of-type(2) {
+        border-top: 1px solid #d9d9d9;
+    }
+
 `
 
 export const LinkBoard = styled.a`
     max-width: 368px;
     width: 100%;
     height: 57px;
+
+    @media (max-width: 1431px) {
+        max-width: 395px;
+        width: 100%;
+        height: 45px;
+    }
 `
 
 export const InnerBoard = styled.div`
@@ -261,6 +321,13 @@ export const InnerBoard = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: 1431px) {
+        max-width: 395px;
+        width: 100%;
+        height: 45px;
+    }
+
 `
 
 export const TxtSubDiv = styled.div`
@@ -269,6 +336,10 @@ export const TxtSubDiv = styled.div`
     letter-spacing: -0.5px;
     font-size: 17px;
     font-weight: 400;
+
+    @media (max-width: 1431px) {
+        font-size: 14px;
+    }
 `
 
 export const TxtSubDate = styled.div`
@@ -280,20 +351,16 @@ export const TxtSubDate = styled.div`
 `
 
 
-export const BorderLine = styled.div`
-    border: 1px solid #D0D0D0;
-    max-width: 368px;
-    width: 100%;
-    height: 1px;
-`
-
-
 export const TxtEm = styled.em`
     font-style: normal;
     font-weight: 400;
     font-size: 17px;
     letter-spacing: -0.5px;
     color: #000;
+
+    @media (max-width: 1431px) {
+        font-size: 14px;
+    }
 `
 
 
@@ -303,6 +370,13 @@ export const WrapNews = styled.div`
     width: 100%;
     height: 360px;
     margin-bottom: 46px;
+
+    @media (max-width: 1431px) {
+        max-width: 1355px;
+        width: 100%;
+        height: 244px;
+        margin-bottom: 32px;
+    }
 `
 
 export const ListNews = styled.div`
@@ -311,6 +385,12 @@ export const ListNews = styled.div`
     height: 360px;
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: 1431px) {
+        max-width: 1355px;
+        width: 100%;
+        height: 244px;
+    }
 `
 
 export const LinkNewsDiv = styled.div`
@@ -318,6 +398,12 @@ export const LinkNewsDiv = styled.div`
     width: 100%;
     height: 360px;
     border-radius: 24px;
+
+    @media (max-width: 1431px) {
+        max-width: 441px;
+        width: 100%;
+        height: 244px;   
+    }
 `
 
 export const LinkNewsDivItem = styled.a`
@@ -343,6 +429,14 @@ export const InnerNews = styled.div`
     background: #f3f3f3;
     box-sizing: border-box;
     border-radius: 24px;
+
+    @media (max-width: 1431px) {
+        max-width: 441px;
+        width: 100%;
+        height: 244px;
+        padding: 24px 24px 20px;  
+        box-sizing: border-box;
+    }
 `
 
 export const BoxInfo = styled.div`
@@ -358,6 +452,18 @@ export const BoxInfo = styled.div`
         height: 46px;
         background: url(https://t1.kakaocdn.net/kakaocorp/Ir/images/img_notice.png) center / contain no-repeat;
         content: '';
+
+        @media (max-width: 1431px) {
+            width: 38px;
+            height: 38px;
+        }
+    }
+
+    @media (max-width: 1431px) {
+        max-width: 393px;
+        width: 100%;
+        height: 38px;
+        gap: 8px;
     }
 `
 
@@ -369,6 +475,15 @@ export const TitNews = styled.div`
     font-size: 30px;
     font-weight: 700;
     overflow: hidden;
+
+    @media (max-width: 1431px) {
+        max-width: 393px;
+        width: 100%;
+        height: max-content;
+        margin-top: 12px;
+        font-size: 18px;
+        line-height: 1.55;
+    }
 `
 
 export const ListTag = styled.div`
@@ -382,6 +497,13 @@ export const ListTag = styled.div`
     line-height: 1.1;
     display: flex;
     gap: 8px;
+
+    @media (max-width: 1431px) {
+        max-width: 393px;
+        width: 100%;
+        height: 15px;
+
+    }
 `
 
 export const ListTagItem = styled.div`
@@ -390,6 +512,10 @@ export const ListTagItem = styled.div`
     white-space: nowrap;
     width: max-content;
     height: 23px;
+
+    @media (max-width: 1431px) {
+        font-size: 13px;
+    }
 `
 
 
@@ -403,6 +529,15 @@ export const BadgeNews = styled.div`
     align-items: center;
     padding: 8px 16px;
     box-sizing: border-box;
+
+    @media (max-width: 1431px) {
+        max-width: 66px;
+        width: 100%;
+        height: 26px;
+        font-size: 12px;
+        padding: 4px 12px;
+        box-sizing: border-box;
+    }
 `
 
 export const TxtDate = styled.div`
@@ -410,6 +545,9 @@ export const TxtDate = styled.div`
     letter-spacing: -0.2px;
     color: #000;
 
+    @media (max-width: 1431px) {
+        font-size: 12px;
+    }
 `
 
 
@@ -424,6 +562,12 @@ export const LinkAllDiv = styled.div`
     background: #f3f3f3;
     font-size: 22px;
     letter-spacing: -0.6px;
+
+    @media (max-width: 1431px) {
+        max-width: 275px;
+        width: 100%;
+        height: 58px;
+    }
 `
 
 export const LinkAll = styled.a`
@@ -441,6 +585,12 @@ export const LinkAll = styled.a`
         margin: 0px 0 0 12px;
         background: url(https://t1.kakaocdn.net/kakaocorp/Ir/images/ico_arrow.svg) no-repeat;
         content: '';
+    }
+
+    @media (max-width: 1431px) {
+        width: max-content;
+        height: 58px;
+        font-size: 15px;
     }
 `
 

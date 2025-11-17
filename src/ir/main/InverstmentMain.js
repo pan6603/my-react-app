@@ -34,7 +34,6 @@ import {
     InnerBoard,
     TxtSubDiv,
     TxtEm,
-    BorderLine,
     TxtSubDate,
     WrapVisual,
     WrapBanner,
@@ -217,7 +216,7 @@ function InverstmentMain() {
                                     </TxtSubDiv>
                                 </InnerBoard>
                             </LinkBoard>
-                            <BorderLine />
+                            
                             <LinkBoard>
                                 <InnerBoard>
                                     <TxtEm>
@@ -245,7 +244,7 @@ function InverstmentMain() {
                                     </TxtSubDate>
                                 </InnerBoard>
                             </LinkBoard>
-                            <BorderLine />
+
                             <LinkBoard>
                                 <InnerBoard>
                                     <TxtEm>
@@ -273,7 +272,6 @@ function InverstmentMain() {
                                     </TxtSubDiv>
                                 </InnerBoard>
                             </LinkBoard>
-                            <BorderLine />
                             <LinkBoard>
                                 <InnerBoard>
                                     <TxtEm>
