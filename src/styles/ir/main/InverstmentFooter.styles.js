@@ -10,7 +10,14 @@ export const DocFooter = styled.footer`
     background: #fff;
     border-top: 1px solid #333;
     z-index: 90;
-    border-top: 1px solid #333;
+
+    @media (max-width: 1431px) {
+        max-width: 1431px;
+        width: 100%;
+        height: 330px;
+        padding: 0 38px 40px;
+        box-sizing: border-box;
+    }
 `
 
 export const ListMain = styled.div`
@@ -19,14 +26,30 @@ export const ListMain = styled.div`
     height: 200px;   
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    gap: 16px;
     align-items: center;
+
+    @media (max-width: 1431px) {
+        max-width: 1355px;
+        width: 100%;
+        height: 280px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
 `
 
 export const ListMainItem = styled.div`
     max-width: 206px;
     width: 100%;
     height: 200px;
+
+    @media (max-width: 1431px) {
+        min-width: 227px;
+        width: 100%;
+        margin-top: 40px;
+        height: 193px;
+    }
 `
 
 export const ListSubTitle = styled.div`
