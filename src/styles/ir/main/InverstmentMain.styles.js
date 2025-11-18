@@ -24,6 +24,14 @@ export const SectionRelation = styled.section`
     height: 552px;
     margin: 120px auto;
     
+    @media (max-width: 1431px) {
+        max-width: 1355px;
+        width: 100%;
+        height: 376px;
+        padding-bottom: 80px;
+        box-sizing: border-box;
+        margin: 0px auto;
+    }
 `
 
 export const ListRelation = styled.div`
@@ -32,7 +40,14 @@ export const ListRelation = styled.div`
     height: 308px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    gap: 16px;
+
+    @media (max-width: 1431px) {
+        max-width: 1355px;
+        width: 100%;
+        height: 224px;
+        gap: 12px;
+    }
 `
 
 export const ListRelationItem = styled.div`
@@ -41,6 +56,12 @@ export const ListRelationItem = styled.div`
     height: 308px;
     border-radius: 24px;
     background: #f3f3f3;
+
+    @media (max-width: 1431px) {
+        max-width: 443px;
+        width: 100%;
+        height: 224px;
+    }
 `
 
 export const LinkRelation = styled.a`
@@ -50,6 +71,12 @@ export const LinkRelation = styled.a`
     color: #000;
     text-decoration: none;
     cursor: pointer;
+
+    @media (max-width: 1431px) {
+        max-width: 443px;
+        width: 100%;
+        height: 224px;
+    }
 `
 
 export const WrapRelationFirst = styled.div`
@@ -59,6 +86,14 @@ export const WrapRelationFirst = styled.div`
     cursor: pointer;
     padding: 36px 36px 32px;
     box-sizing: border-box;
+
+    @media (max-width: 1431px) {
+        max-width: 443px;
+        width: 100%;
+        height: 224px;
+        padding: 24px 24px 20px;
+        box-sizing: border-box;
+    }
     
     &::before {
         content: '';
@@ -70,6 +105,12 @@ export const WrapRelationFirst = styled.div`
         width: 72px;
         height: 72px;
         font-size: 14px;
+
+        @media (max-width: 1431px) {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 12px;
+        }
     }
 `
 
@@ -80,6 +121,14 @@ export const WrapRelationTwo = styled.div`
     cursor: pointer;
     padding: 36px 36px 32px;
     box-sizing: border-box;
+
+    @media (max-width: 1431px) {
+        max-width: 443px;
+        width: 100%;
+        height: 224px;
+        padding: 24px 24px 20px;
+        box-sizing: border-box;
+    }
     
     &::before {
         content: '';
@@ -91,6 +140,12 @@ export const WrapRelationTwo = styled.div`
         width: 72px;
         height: 72px;
         font-size: 14px;
+
+        @media (max-width: 1431px) {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 12px;
+        }
     }
 `
 
@@ -101,6 +156,14 @@ export const WrapRelationThird = styled.div`
     cursor: pointer;
     padding: 36px 36px 32px;
     box-sizing: border-box;
+
+    @media (max-width: 1431px) {
+        max-width: 443px;
+        width: 100%;
+        height: 224px;
+        padding: 24px 24px 20px;
+        box-sizing: border-box;
+    }
     
     &::before {
         content: '';
@@ -112,6 +175,12 @@ export const WrapRelationThird = styled.div`
         width: 72px;
         height: 72px;
         font-size: 14px;
+
+        @media (max-width: 1431px) {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 12px;
+        }
     }
 `
 
@@ -124,6 +193,13 @@ export const TitRelation = styled.div`
     font-size: 26px;
     font-weight: 700;
     letter-spacing: -0.8px;
+
+    @media (max-width: 1431px) {
+        max-width: 395px;
+        width: 100%;
+        height: 27px;
+        font-size: 18px;
+    }
 `
 
 export const TxtSub = styled.div`
@@ -133,6 +209,13 @@ export const TxtSub = styled.div`
     font-size: 17px;
     letter-spacing: -0.6px;
     color: #000;
+
+    @media (max-width: 1431px) {
+        max-width: 395px;
+        width: 100%;
+        height: 21px;
+        font-size: 14px;
+    }
 `
 
 export const TxtGoto = styled.div`
@@ -145,6 +228,10 @@ export const TxtGoto = styled.div`
     display: flex;
     align-items: center;
 
+    @media (max-width: 1431px) {
+        font-size: 14px;
+    }
+
     &::after {
         display: inline-block;
         content: '';
@@ -153,12 +240,16 @@ export const TxtGoto = styled.div`
         margin-left: 8px;
         background: url(https://t1.kakaocdn.net/kakaocorp/Ir/images/ico_arrow.svg) right no-repeat;
         content: '';
+
+        @media (max-width: 1431px) {
+            font-size: 14px;
+        }
     }
 `
 
 
 
-export const SectionRelationTitle = styled.h4`
+export const SectionRelationTitle = styled.div`
     max-width: 1316px;
     width: 100%;
     height: 72px;
@@ -167,6 +258,14 @@ export const SectionRelationTitle = styled.h4`
     letter-spacing: -1px;
     font-weight: 400;
     color: #000;
+
+    @media (max-width: 1431px) {
+        max-width: 1355px;
+        width: 100%;
+        height: 48px;
+        margin-bottom: 24px;
+        font-size: 32px;
+    }
 
     &::before {
         content: '';
@@ -177,6 +276,12 @@ export const SectionRelationTitle = styled.h4`
         background: url(https://t1.kakaocdn.net/kakaocorp/Ir/images/img_heart.png) center/contain no-repeat;
         vertical-align: top;
         line-height: 1.5;
+
+        @media (max-width: 1431px) {
+            width: 48px;
+            height: 48px;
+            margin-right: 4px;
+        }
     }
 `
 
@@ -191,6 +296,7 @@ export const SectionNews = styled.section`
         width: 100%;
         height: 708px;
         padding-bottom: 80px;
+        box-sizing: border-box;
         margin: 0 auto;
     }
 `

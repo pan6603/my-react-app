@@ -349,6 +349,7 @@ function InverstmentMain() {
                     </LinkAll>
                 </LinkAllDiv>
             </SectionNews>
+
             <SectionRelation>
                 <SectionRelationTitle>
                     {t("section_relation.section_relation_title")}
@@ -363,6 +364,7 @@ function InverstmentMain() {
                             </WrapRelationFirst>
                         </LinkRelation>
                     </ListRelationItem>
+                    
                     <ListRelationItem>
                         <LinkRelation>
                             <WrapRelationTwo>
