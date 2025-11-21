@@ -69,6 +69,19 @@ function InverstmentHeader() {
         return () => window.removeEventListener('scroll', handleScroll); // 클린업
     }, []);
 
+    // 햄버거 메뉴 클릭시 스크롤 막기 
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "auto";
+        }
+    
+        return () => {
+            document.body.style.overflow = "auto";
+        };
+    }, [isOpen]);
+
     return (
         <>
             <DocHeader isScrolled={isScrolled}>
