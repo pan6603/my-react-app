@@ -1,15 +1,6 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-
-export const Overlay = styled.div`
-    position: fixed;       
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.5); 
-    z-index: 998;         
-`;
 
 export const DocHeader = styled.header`
     position: sticky;
@@ -188,3 +179,212 @@ export const BtnMenuIcon = styled.div`
         background-image: url(${props => props.bg});
     }
 `
+
+export const Overlay = styled.div`
+    position: fixed;       
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5); 
+    z-index: 998;         
+`;
+
+export const DocGnb = styled.nav`
+    @media (max-width: 1431px) {
+        max-width: 536px; 
+        width: 100%;
+        height: 100vh;
+        background-color: blue;
+        overflow-y: auto;
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        padding: 0 48px 48px;
+        box-sizing: border-box;
+        background: #fff;
+    } 
+`
+
+export const ContHead = styled.div`
+    max-width: 412px;
+    width: 100%;
+    height: 72px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+`
+
+export const HamBurgerBoxControls = styled.div`
+    max-width: 96px;
+    width: 100%;
+    height: 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+`
+
+export const BtnLang = styled.div`
+    @media (max-width: 1431px) {
+        max-width: 36px;
+        width: 100%;
+        height: 36px;
+        background: url(https://t1.kakaocdn.net/kakaocorp/Ir/images/btn_en.svg) no-repeat;
+    }
+` 
+
+export const BtnClose = styled.div`
+    @media (max-width: 1431px) {
+        max-width: 36px;
+        width: 100%;
+        height: 36px;
+        background-image: url(https://t1.kakaocdn.net/kakaocorp/Ir/images/ico_close.svg);
+    }
+`
+
+
+export const ListMain = styled.div`
+    @media (max-width: 1431px) {
+        min-width: 440px;
+        height: 514px;
+        margin-top: 126px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+`
+
+export const ListMainMenu = styled.div`
+    @media (max-width: 1431px) {
+        min-width: 440px;
+        width: 100%;
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+`
+
+export const MenuLink = styled(Link)`
+     @media (max-width: 1431px) {
+        min-width: 440px;
+        width: 100%;
+        height: 53px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0;
+        box-sinzing: border-box;
+        font-size: 26px;
+        color: #000;
+        font-weight: 700;
+        line-height: 1.3;
+        text-decoration: none;
+
+        &::after {
+            width: 14px;
+            height: 14px;
+            background: url(https://t1.kakaocdn.net/kakaocorp/Ir/images/ico_more.svg) no-repeat;
+            // transform: rotate(${props => (props.bg ? "180deg" : "0deg")});
+            // filter: brightness(${props => (props.bg ? "0" : "1")});
+            content: '';
+        }
+    }
+`
+
+
+export const ESGMenuLink = styled(Link)`
+     @media (max-width: 1431px) {
+        min-width: 440px;
+        width: 100%;
+        height: 53px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0;
+        box-sinzing: border-box;
+        font-size: 26px;
+        color: #000;
+        font-weight: 700;
+        line-height: 1.3;
+        text-decoration: none;
+
+        &::after {
+            content: '';
+            margin: 0;
+            width: 14px;
+            height: 14px;
+            background-image: url(https://t1.kakaocdn.net/kakaocorp/Ir/images/ico_outlink2.svg);
+        }
+    }
+`
+
+export const KaKaoMenuLink = styled(Link)`
+     @media (max-width: 1431px) {
+        min-width: 440px;
+        width: 100%;
+        height: 53px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0;
+        box-sinzing: border-box;
+        font-size: 26px;
+        color: #000;
+        font-weight: 700;
+        line-height: 1.3;
+        text-decoration: none;
+
+        &::after {
+            content: '';
+            margin: 0;
+            width: 14px;
+            height: 14px;
+            background-image: url(https://t1.kakaocdn.net/kakaocorp/Ir/images/ico_outlink2.svg);
+        }
+    }
+`
+
+export const ListSub = styled.div`
+    max-width: 440px;
+    width: 100%;
+    height: max-content; 
+    position: unset;
+    transform: none;
+    padding: 28px 36px;
+    box-sizing: border-box;
+    margin: 4px 0 10px;
+    border-radius: 16px;
+    border: none;
+    background: #f7f7f7;
+`
+
+export const ListSubItem = styled.div`
+    max-width: 368px;
+    width: 100%;
+    height: 41px;
+    display: flex;
+    align-items: center;
+`
+
+export const ListSubItemLink = styled(Link)`
+    width: max-content;
+    height: max-content;
+    font-size: 17px;
+    letter-spacing: -0.5px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+
+    &:hover {
+        border-bottom: 2px solid #000;
+    }
+`
+
+

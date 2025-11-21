@@ -12,7 +12,20 @@ import {
     BoxControls,
     BtnLangIcon,
     BtnMenuIcon,
-    Overlay
+    Overlay,
+    DocGnb,
+    ListMain,
+    ListMainMenu,
+    MenuLink,
+    ESGMenuLink,
+    KaKaoMenuLink,
+    ContHead,
+    HamBurgerBoxControls,
+    BtnLang,
+    BtnClose,
+    ListSub,
+    ListSubItem,
+    ListSubItemLink
 } from "../../styles/ir/main/InverstmentHeader.styles"
 import { useTranslation } from "react-i18next";
 import React, { useState, useEffect } from "react";
@@ -22,6 +35,14 @@ function InverstmentHeader() {
     const [lang, setLang] = useState(i18n.language || "en");
     const [isScrolled, setIsScrolled] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
+
+    // 햄버거 메뉴 > 각 메뉴 링크 상태 
+    const [isCorporationMenu, setIsCorporationMenu] = useState(false);
+    const [isStockMenu, setIsStockMenu] = useState(false);
+    const [isFinanceMenu, setIsFinanceMenu] = useState(false);
+    const [isIrMenu, setIsIrMenu] = useState(false);
+    const [isDisclosureInfoMenu, setIsDisclosureInfoMenu] = useState(false);
+    const [isOfficialMenu, setIsOfficialMenu] = useState(false);
 
     const toggleLanguage = () => {
         const newLang = i18n.language === "ko" ? "en" : "ko";
@@ -150,6 +171,128 @@ function InverstmentHeader() {
 
             {/* Overlay */}
             {isOpen && <Overlay />}
+
+            {/* 햄버거 메뉴 열때 */}
+            {isOpen &&
+                <DocGnb>
+                    <ContHead>
+                        <HamBurgerBoxControls>
+                            <BtnLang />
+                            <BtnClose onClick={() => setIsOpen(false)}/>
+                        </HamBurgerBoxControls>
+                    </ContHead>
+                    <ListMain>
+                        <ListMainMenu>
+                            <MenuLink onClick={() => setIsCorporationMenu(prev => !prev)}>기업지배구조</MenuLink>
+                            {isCorporationMenu && 
+                                <ListSub>
+                                    <ListSubItem>
+                                        <ListSubItemLink>주주구성</ListSubItemLink>
+                                    </ListSubItem>
+                                    <ListSubItem>
+                                        <ListSubItemLink>주주총회</ListSubItemLink>
+                                    </ListSubItem>
+                                    <ListSubItem>
+                                        <ListSubItemLink>이사회</ListSubItemLink>
+                                    </ListSubItem>
+                                    <ListSubItem>
+                                        <ListSubItemLink>규정</ListSubItemLink>
+                                    </ListSubItem>
+                                    <ListSubItem>
+                                        <ListSubItemLink>지배구조</ListSubItemLink>
+                                    </ListSubItem>
+                                </ListSub>
+                            }
+                        </ListMainMenu>
+                        <ListMainMenu>
+                            <MenuLink onClick={() => setIsStockMenu(prev => !prev)}>주식정보</MenuLink>
+                            {isStockMenu && 
+                            <ListSub>
+                                <ListSubItem>
+                                    <ListSubItemLink>주가정보</ListSubItemLink>
+                                </ListSubItem>
+                                <ListSubItem>
+                                    <ListSubItemLink>주주환원</ListSubItemLink>
+                                </ListSubItem>
+                            </ListSub>
+                            }
+                        </ListMainMenu>
+                        <ListMainMenu>
+                            <MenuLink onClick={() => setIsFinanceMenu(prev => !prev)}>재무정보</MenuLink>
+                            {isFinanceMenu && 
+                                <ListSub>
+                                    <ListSubItem>
+                                        <ListSubItemLink>연결재무제표</ListSubItemLink>
+                                    </ListSubItem>
+                                    <ListSubItem>
+                                        <ListSubItemLink>별도재무제표</ListSubItemLink>
+                                    </ListSubItem>
+                                    <ListSubItem>
+                                        <ListSubItemLink>신용등급</ListSubItemLink>
+                                    </ListSubItem>
+                                </ListSub>
+                            }
+                        </ListMainMenu>
+                        <ListMainMenu>
+                            <MenuLink onClick={() => setIsIrMenu(prev => !prev)}>IR 자료</MenuLink>
+                            {isIrMenu && 
+                                <ListSub>
+                                    <ListSubItem>
+                                        <ListSubItemLink>CEO 메세지</ListSubItemLink>
+                                    </ListSubItem>
+                                    <ListSubItem>
+                                        <ListSubItemLink>실적발표</ListSubItemLink>
+                                    </ListSubItem>
+                                    <ListSubItem>
+                                        <ListSubItemLink>IR 행사</ListSubItemLink>
+                                    </ListSubItem>
+                                    <ListSubItem>
+                                        <ListSubItemLink>IR 미팅예약</ListSubItemLink>
+                                    </ListSubItem>
+                                    <ListSubItem>
+                                        <ListSubItemLink>증권사커버리지</ListSubItemLink>
+                                    </ListSubItem>
+                                </ListSub>
+                            }
+                        </ListMainMenu>
+                        <ListMainMenu>
+                            <MenuLink onClick={() => setIsDisclosureInfoMenu(prev => !prev)}>공시정보</MenuLink>
+                            {isDisclosureInfoMenu && 
+                                <ListSub>
+                                    <ListSubItem>
+                                        <ListSubItemLink>공시사항</ListSubItemLink>
+                                    </ListSubItem>
+                                    <ListSubItem>
+                                        <ListSubItemLink>사업보고서</ListSubItemLink>
+                                    </ListSubItem>
+                                    <ListSubItem>
+                                        <ListSubItemLink>감사 및 검토보고서</ListSubItemLink>
+                                    </ListSubItem>
+                                </ListSub>
+                            }
+                        </ListMainMenu>
+                        <ListMainMenu>
+                            <MenuLink onClick={() => setIsOfficialMenu(prev => !prev)}>공고</MenuLink>
+                            {isOfficialMenu && 
+                                <ListSub>
+                                    <ListSubItem>
+                                        <ListSubItemLink>공고사항</ListSubItemLink>
+                                    </ListSubItem>
+                                    <ListSubItem>
+                                        <ListSubItemLink>주주제안권</ListSubItemLink>
+                                    </ListSubItem>
+                                </ListSub>
+                            }
+                        </ListMainMenu>
+                        <ListMainMenu>
+                            <ESGMenuLink>ESG</ESGMenuLink>
+                        </ListMainMenu>
+                        <ListMainMenu>
+                            <KaKaoMenuLink>kakao</KaKaoMenuLink>
+                        </ListMainMenu>
+                    </ListMain>
+                </DocGnb>
+            }
         </>
 
     )
