@@ -467,7 +467,7 @@ function Header ({openSearch}) {
                                 </ListGnbItem>
 
                                 <ListGnbItem>
-                                    <ListGnbItemLink>
+                                    <ListGnbItemLink to={"/ir/main"} target="_blank">
                                         <ListGnbItemText>투자정보</ListGnbItemText>
                                         <IcoOutlink viewBox="0 0 9 9" fill="none">
                                             <path
