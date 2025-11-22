@@ -349,6 +349,7 @@ export const WrapBoard = styled.div`
         max-width: 1355px;
         width: 100%;
         height: 162px;
+        gap: 12px;
     }
 `
 
@@ -496,6 +497,7 @@ export const ListNews = styled.div`
         max-width: 1355px;
         width: 100%;
         height: 244px;
+        gap: 12px;
     }
 `
 

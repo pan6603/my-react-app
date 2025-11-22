@@ -285,6 +285,7 @@ function InverstmentMain() {
                         </ListBoard>
                     </BoxBoard>
                 </WrapBoard>
+
                 <WrapNews>
                     <ListNews>
                         <LinkNewsDiv>
@@ -343,6 +344,7 @@ function InverstmentMain() {
                         </LinkNewsDiv>
                     </ListNews>
                 </WrapNews>
+                
                 <LinkAllDiv>
                     <LinkAll>
                         {t("link_all")}
