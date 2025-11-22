@@ -21,6 +21,14 @@ export const DocHeader = styled.header`
         padding: 0 38px;
         box-sizing: border-box;
     }  
+
+    @media (max-width: 1023px) {
+        max-width: 1023px;
+        width: 100%;
+        height: 72px;
+        padding: 0 28px;
+        box-sizing: border-box;
+    }
 `
 
 export const InnerHeader = styled.div`
@@ -39,6 +47,14 @@ export const InnerHeader = styled.div`
         padding: 0 38px;
         box-sizing: border-box;
     }  
+
+    @media (max-width: 1023px) {
+        max-width: 1023px;
+        width: 100%;
+        height: 72px;
+        padding: 0 28px;
+        box-sizing: border-box;
+    }
 `
 
 export const DocTitle = styled.div`
@@ -51,6 +67,13 @@ export const DocTitle = styled.div`
         width: 100%;
         height: 26px;
     }  
+
+    @media (max-width: 1023px) {
+        max-width: 132px;
+        width: 100%;
+        height: 26px;
+    }  
+
 `
 
 export const DocTitleLink = styled.a`
@@ -160,6 +183,7 @@ export const BoxControls = styled.div`
     @media (min-width: 1440px) {
         display: none;
     }  
+
 `
 
 export const BtnLangIcon = styled.div`
