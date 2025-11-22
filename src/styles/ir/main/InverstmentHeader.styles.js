@@ -290,8 +290,8 @@ export const MenuLink = styled(Link)`
             width: 14px;
             height: 14px;
             background: url(https://t1.kakaocdn.net/kakaocorp/Ir/images/ico_more.svg) no-repeat;
-            // transform: rotate(${props => (props.bg ? "180deg" : "0deg")});
-            // filter: brightness(${props => (props.bg ? "0" : "1")});
+            transform: rotate(${props => (props.bg ? "180deg" : "0deg")});
+            filter: brightness(${props => (props.bg ? "0" : "1")});
             content: '';
         }
     }

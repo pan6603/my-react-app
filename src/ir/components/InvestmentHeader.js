@@ -196,7 +196,7 @@ function InverstmentHeader() {
                     </ContHead>
                     <ListMain>
                         <ListMainMenu>
-                            <MenuLink onClick={() => setIsCorporationMenu(prev => !prev)}>기업지배구조</MenuLink>
+                            <MenuLink bg={isCorporationMenu} onClick={() => setIsCorporationMenu(prev => !prev)}>기업지배구조</MenuLink>
                             {isCorporationMenu && 
                                 <ListSub>
                                     <ListSubItem>
@@ -218,7 +218,7 @@ function InverstmentHeader() {
                             }
                         </ListMainMenu>
                         <ListMainMenu>
-                            <MenuLink onClick={() => setIsStockMenu(prev => !prev)}>주식정보</MenuLink>
+                            <MenuLink bg={isStockMenu} onClick={() => setIsStockMenu(prev => !prev)}>주식정보</MenuLink>
                             {isStockMenu && 
                             <ListSub>
                                 <ListSubItem>
@@ -231,7 +231,7 @@ function InverstmentHeader() {
                             }
                         </ListMainMenu>
                         <ListMainMenu>
-                            <MenuLink onClick={() => setIsFinanceMenu(prev => !prev)}>재무정보</MenuLink>
+                            <MenuLink bg={isFinanceMenu} onClick={() => setIsFinanceMenu(prev => !prev)}>재무정보</MenuLink>
                             {isFinanceMenu && 
                                 <ListSub>
                                     <ListSubItem>
@@ -247,7 +247,7 @@ function InverstmentHeader() {
                             }
                         </ListMainMenu>
                         <ListMainMenu>
-                            <MenuLink onClick={() => setIsIrMenu(prev => !prev)}>IR 자료</MenuLink>
+                            <MenuLink bg={isIrMenu} onClick={() => setIsIrMenu(prev => !prev)}>IR 자료</MenuLink>
                             {isIrMenu && 
                                 <ListSub>
                                     <ListSubItem>
@@ -269,7 +269,7 @@ function InverstmentHeader() {
                             }
                         </ListMainMenu>
                         <ListMainMenu>
-                            <MenuLink onClick={() => setIsDisclosureInfoMenu(prev => !prev)}>공시정보</MenuLink>
+                            <MenuLink bg={isDisclosureInfoMenu} onClick={() => setIsDisclosureInfoMenu(prev => !prev)}>공시정보</MenuLink>
                             {isDisclosureInfoMenu && 
                                 <ListSub>
                                     <ListSubItem>
@@ -285,7 +285,7 @@ function InverstmentHeader() {
                             }
                         </ListMainMenu>
                         <ListMainMenu>
-                            <MenuLink onClick={() => setIsOfficialMenu(prev => !prev)}>공고</MenuLink>
+                            <MenuLink bg={isOfficialMenu} onClick={() => setIsOfficialMenu(prev => !prev)}>공고</MenuLink>
                             {isOfficialMenu && 
                                 <ListSub>
                                     <ListSubItem>
