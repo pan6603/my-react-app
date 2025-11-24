@@ -16,6 +16,13 @@ export const DocMain = styled.main`
         padding: 0 38px;
         box-sizing: border-box;
     }
+
+    @media (max-width: 1023px) {
+        max-width: 1023px;
+        width: 100%;
+        height: 2081px;
+        margin: 0 auto;
+    }
 `
 
 export const SectionRelation = styled.section`
@@ -719,7 +726,16 @@ export const SectionVisual = styled.section`
         justify-content: space-between;
         padding-bottom: 80px;
         box-sizing: border-box;
-    }  
+    } 
+        
+    @media (max-width: 1023px) {
+        max-width: 964px;
+        width: 100%;
+        height: 737px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    } 
 `
 
 export const WrapVisual = styled.div`
@@ -737,10 +753,15 @@ export const WrapVisual = styled.div`
         width: calc(100% - 192px);
         border-radius: 20px;
     }  
+
+    @media (max-width: 1023px) {
+        max-width: 964px;
+        width: 100%;
+        height: 405px;
+    }
 `
 
 export const BgDimmed = styled.div`
-    max-width: 1094px;
     width: 100%;
     height: 621px;
     position: absolute;
@@ -751,6 +772,20 @@ export const BgDimmed = styled.div`
     z-index: 10;
     background: rgba(0,0,0,0.2);
     background-color: red;
+
+    @media (max-width: 1023px) {
+        width: 100%;
+        height: 405px;
+    }
+`
+
+export const BgDimmedVideo = styled.video`
+    object-fit: cover;
+
+    @media (max-width: 1023px) {
+        width: 100%;
+        height: 405px;
+    }
 `
 
 
@@ -771,6 +806,15 @@ export const WrapBanner = styled.div`
         justify-content: space-between;
     } 
 
+
+    @media (max-width: 1023px) {
+        max-width: unset;
+        width: 100%;
+        height: 232px;
+        flex-direction: row;
+        gap: 8px;
+    }
+
 `
 
 export const BoxStock = styled.div`
@@ -785,6 +829,12 @@ export const BoxStock = styled.div`
         width: 100%;
         height: 120px;
     } 
+
+    @media (max-width: 1023px) {
+        max-width: 311px;
+        width: 100%;
+        height: 232px;
+    }
 `
 
 export const BnrItem = styled.div`
@@ -805,6 +855,14 @@ export const BnrItem = styled.div`
         padding: 12px 16px;
         box-sizing: border-box;
     } 
+
+    @media (max-width: 1023px) {
+        max-width: 311px;
+        width: 100%;
+        height: 232px;
+        padding: 20px;
+        box-sizing: border-box;
+    }
 `
 
 export const TxtStock = styled.div`
@@ -855,7 +913,11 @@ export const EmphStockTxtSub = styled.div`
 
     @media (max-width: 1431px) {
         font-size: 12px;  
-    }             
+    }          
+        
+    @media (max-width: 1023px) {
+        font-size: 14px;
+    }
 `
 
 
@@ -874,16 +936,50 @@ export const CarouselNotice = styled.div`
         height: 203px;
         border-radius: 16px;
     } 
+
+    @media (max-width: 1023px) {
+        max-width: 311px;
+        width: 100%;
+        height: 232px;
+        border-radius: 16px;
+    }
 `
 
 export const SwiperSlideItem = styled.div`
     max-width: 206px;
     width: 100%;
-    height: 206px;
-    borderRadius: 24px;
+    height: 255px;
+    border-radius: 24px;
     display: flex;
-    alignItems: center;
-    justifyContent: center;
+    align-items: center;
+    justify-content: center;
+
+
+    @media (max-width: 1431px) {
+        max-width: 180px;
+        width: 100%;
+        height: 203px;
+        border-radius: 16px;
+    } 
+
+    @media (max-width: 1023px) {
+        max-width: 311px;
+        width: 100%;
+        height: 232px;
+        border-radius: 16px;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+`
+
+export const CarouselPostSwiperSlideItem = styled.div`
+    max-width: 206px;
+    width: 100%;
+    height: 206px;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 
     @media (max-width: 1431px) {
@@ -892,6 +988,15 @@ export const SwiperSlideItem = styled.div`
         height: 147px;
         border-radius: 16px;
     } 
+
+    @media (max-width: 1023px) {
+        max-width: 311px;
+        width: 100%;
+        height: 232px;
+        border-radius: 16px;
+        padding: 20px;
+        box-sizing: border-box;
+    }
 `
 
 export const StyledSwiper = styled(Swiper)`
@@ -906,11 +1011,23 @@ export const StyledSwiper = styled(Swiper)`
         height: 100%;
         margin-left: 70px;
         display: flex;
-        justify-content: space-around;
+        gap: 8px;
+        justify-content: center;
         align-items: center;
 
         @media (max-width: 1431px) {
-            margin-left: 60px;
+            max-width: 181px;
+            width: 100%;
+            height: 21px;
+            margin: 0 auto;
+        } 
+
+        @media (max-width: 1023px) {
+            max-width: 314px;
+            width: 100%;
+            height: 21px;
+            margin: 0 auto;
+            bottom: 20px;
         } 
     }
 
@@ -935,9 +1052,24 @@ export const StyledSwiper = styled(Swiper)`
         height: 203px;
         border-radius: 16px;
     } 
+
+
+    @media (max-width: 1023px) {
+        max-width: 311px;
+        width: 100%;
+        height: 232px;
+        border-radius: 16px;
+    }
 `
 
 export const BoxPostStyledSwiper = styled(Swiper)`
+    @media (max-width: 1023px) {
+        max-width: 311px;
+        width: 100%;
+        height: 232px;
+        border-radius: 16px;
+    }
+
     .swiper-slide {
         transition: opacity 500ms, visibility 500ms;
     }
@@ -949,11 +1081,23 @@ export const BoxPostStyledSwiper = styled(Swiper)`
         height: 100%;
         margin-left: 70px;
         display: flex;
-        justify-content: space-around;
+        gap: 8px;
+        justify-content: center;
         align-items: center;
 
         @media (max-width: 1431px) {
-            margin-left: 60px;
+            max-width: 181px;
+            width: 100%;
+            height: 21px;
+            margin: 0 auto;
+        } 
+
+        @media (max-width: 1023px) {
+            max-width: 311px;
+            width: 100%;
+            height: 21px;
+            bottom: 20px;
+            margin: 0 auto;
         } 
     }
 
@@ -962,13 +1106,14 @@ export const BoxPostStyledSwiper = styled(Swiper)`
         opacity: .45;
     }
 
-  .swiper-pagination-bullet-active {
+    .swiper-pagination-bullet-active {
         width: 25px;
         height: 8px;
         border-radius: 24px;
         background-color: #000;
         opacity: 1;
   }
+
 `
 
 export const InnerSlideLink = styled.a`
@@ -977,6 +1122,20 @@ export const InnerSlideLink = styled.a`
     height: 255px;
     cursor: pointer;
     border-radius: 24px;
+
+    @media (max-width: 1431px) {
+        max-width: 180px;
+        width: 100%;
+        height: 203px;
+        border-radius: 16px;
+    } 
+
+    @media (max-width: 1023px) {
+        max-width: 311px;
+        width: 100%;
+        height: 232px;
+        border-radius: 16px;
+    }
 `
 
 export const InnerSecond = styled.div`
@@ -985,6 +1144,20 @@ export const InnerSecond = styled.div`
     height: 255px;
     height: 100%;
     margin: 20px auto;
+
+    @media (max-width: 1431px) {
+        max-width: 180px;
+        width: 100%;
+        height: 203px;
+        border-radius: 16px;
+    } 
+
+    @media (max-width: 1023px) {
+        max-width: 311px;
+        width: 100%;
+        height: 232px;
+        border-radius: 16px;
+    }
 `
 
 export const TitNotice = styled.div`
@@ -995,13 +1168,24 @@ export const TitNotice = styled.div`
     font-size: 26px;
     font-weight: 500;
     margin: 0 auto;
+    white-space: pre-line;
 
     @media (max-width: 1431px) {
         max-width: 148px;
         width: 100%;
         font-size: 17px;
         letter-spacing: -0.6px;
+        white-space: pre-line;
     } 
+
+    @media (max-width: 1023px) {
+        max-width: 273px;
+        width: 100%;
+        height: max-content;
+        font-weight: 700;
+        font-size: 18px;
+        white-space: normal;
+    }
  `   
 
 export const AreaLinks = styled.div`
@@ -1021,6 +1205,14 @@ export const AreaLinks = styled.div`
         margin: 0 auto;
         margin-top: 12px;
     } 
+
+      @media (max-width: 1023px) {
+        max-width: 274px;
+        width: 100%;
+        height: max-content;
+        font-size: 18px;
+        white-space: normal;
+    }
 `
 
 export const LinkItemPdf = styled.div`
@@ -1076,12 +1268,19 @@ export const CarouselPost = styled.div`
     width: 100%;
     height: 206px;
     border-radius: 24px;
+    background-color: #f0f0f0;
 
     @media (max-width: 1431px) {
         max-width: 180px;
         width: 100%;
         height: 147px;
     } 
+
+    @media (max-width: 1023px) {
+        max-width: 311px;
+        width: 100%;
+        height: 232px;
+    }
 `
 
 export const BoxPost = styled.div`
@@ -1095,6 +1294,13 @@ export const BoxPost = styled.div`
         width: 100%;
         height: 147px;
     } 
+
+    @media (max-width: 1023px) {
+        max-width: 311px;
+        width: 100%;
+        height: 232px;
+
+    }
 `
 
 export const FirstInnerSlideLink = styled.a`
@@ -1103,7 +1309,7 @@ export const FirstInnerSlideLink = styled.a`
     height: 206px;
     cursor: pointer;
     border-radius: 24px;
-    background: #FAE100;
+    background-color: #FAE100;
     color: #000;
 
     @media (max-width: 1431px) {
@@ -1111,8 +1317,14 @@ export const FirstInnerSlideLink = styled.a`
         width: 100%;
         height: 147px;
         border-radius: 16px;
-
     } 
+
+    @media (max-width: 1023px) {
+        max-width: 311px;
+        width: 100%;
+        height: 232px;
+        border-radius: 16px;
+    }
 `
 
 export const TwoInnerSlideLink = styled.a`
@@ -1121,7 +1333,6 @@ export const TwoInnerSlideLink = styled.a`
     height: 206px;
     cursor: pointer;
     border-radius: 24px;
-    background: #0073FF;
     color: #fff;
 
      @media (max-width: 1431px) {
@@ -1129,9 +1340,14 @@ export const TwoInnerSlideLink = styled.a`
         width: 100%;
         height: 147px;
         border-radius: 16px;
-        background: #0073FF;
-        color: #fff;
     } 
+
+    @media (max-width: 1023px) {
+        max-width: 311px;
+        width: 100%;
+        height: 232px;
+        border-radius: 16px;
+    }
 `
 
 
@@ -1150,9 +1366,16 @@ export const InnerPost = styled.div`
         width: 100%;
         height: 147px;
         padding: 16px 16px 12px;
-        border-radius: 16px;
         box-sizing: border-box;
+        border-radius: 16px;
     } 
+
+    @media (max-width: 1023px) {
+        max-width: 311px;
+        width: 100%;
+        height: 232px;
+        border-radius: 16px;
+    }
 `
 
 export const TitPost = styled.strong`
@@ -1168,6 +1391,10 @@ export const TitPost = styled.strong`
     @media (max-width: 1431px) {
         font-size: 18px;
     }
+
+    @media (max-width: 1023px) {
+        font-size: 18px;
+    }
 `
 
 export const BoxPostTxtDate = styled.div`
@@ -1175,9 +1402,21 @@ export const BoxPostTxtDate = styled.div`
     font-weight: 700;
     letter-spacing: -0.5px;
     overflow: hidden;
+    white-space: pre-line;
 
     @media (max-width: 1431px) {
+        max-width: 148px;
+        width: 100%;
+        height: max-content;
         font-size: 14px;
+        white-space: pre-line;
+    }
+
+    @media (max-width: 1023px) {
+        max-width: 271px;
+        width: 100%;
+        height: max-content;
+        white-space: nowrap;
     }
 `
 
@@ -1214,7 +1453,7 @@ export const WrapMore = styled.div`
             background-size: 34px;
             background-image: url(https://t1.kakaocdn.net/kakaocorp/Ir/images/ico_mask_20.svg) no-repeat
             content: '';
-        }   
+        }
        
     }
 
@@ -1251,6 +1490,12 @@ export const WrapMore = styled.div`
         bottom: 138px;
         border-top-right-radius: 20px;
     } 
+
+    @media (max-width: 1023px) {
+        bottom: 230px;
+        left: 1;
+        padding: 14px 30px 16px 30px;
+    }
 `
 
 export const LinkVideo = styled.a`

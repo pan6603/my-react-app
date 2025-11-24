@@ -61,7 +61,9 @@ import {
     InnerPost,
     TitPost,
     BoxPostTxtDate,
-    BoxPostStyledSwiper
+    BoxPostStyledSwiper,
+    BgDimmedVideo,
+    CarouselPostSwiperSlideItem
 } from "../../styles/ir/main/InverstmentMain.styles"
 import CountUp from "react-countup"
 import { SwiperSlide } from 'swiper/react';
@@ -92,18 +94,18 @@ function InverstmentMain() {
                     <TitPost style={{ whiteSpace: 'pre-line' }}>{t("boxpostslides.ceo_titpost")}</TitPost>
                     <BoxPostTxtDate>2024.05.16</BoxPostTxtDate>
                 </InnerPost>
-            </FirstInnerSlideLink></>
+            </FirstInnerSlideLink></>,
+            bgColor: "#FAE100" // 노랑
         },
         {
             innerSlideLink: <>
             <TwoInnerSlideLink>
                 <InnerPost>
                     <TitPost>{t("boxpostslides.notice_titpost")}</TitPost>
-                    <BoxPostTxtDate style={{ whiteSpace: 'pre-line' }}>
-                        {t("boxpostslides.notice_boxpost_txtdate")}
-                    </BoxPostTxtDate>
+                    <BoxPostTxtDate>{t("boxpostslides.notice_boxpost_txtdate")}</BoxPostTxtDate>
                 </InnerPost>
-            </TwoInnerSlideLink></>
+            </TwoInnerSlideLink></>,
+            bgColor: "#0073FF" // 파랑
         }
     ]
 
@@ -112,7 +114,7 @@ function InverstmentMain() {
             <SectionVisual>
                 <WrapVisual>
                     <BgDimmed>
-                        <video data-v-85d56d7e="" data-v-bb1396d4="" src="https://t1.kakaocdn.net/kakaocorp/Ir/images/video_main_250522.mp4" poster="https://t1.kakaocdn.net/kakaocorp/Ir/images/poster_image_250522.png" autoplay="autoplay" muted="muted" loop="loop" playsinline="playsinline" type="video/mp4" class="item_visual"></video>
+                        <BgDimmedVideo data-v-85d56d7e="" data-v-bb1396d4="" src="https://t1.kakaocdn.net/kakaocorp/Ir/images/video_main_250522.mp4" poster="https://t1.kakaocdn.net/kakaocorp/Ir/images/poster_image_250522.png" autoplay="autoplay" muted="muted" loop="loop" playsinline="playsinline" type="video/mp4" class="item_visual"></BgDimmedVideo>
                     </BgDimmed>
                     
                 </WrapVisual>
@@ -131,6 +133,7 @@ function InverstmentMain() {
                             <EmphStockTxtSub>{t("boxstock.bnritem.emphstocktxtsub")}</EmphStockTxtSub>
                         </BnrItem>
                     </BoxStock>
+
                     <CarouselNotice>
                         <StyledSwiper
                             modules={[Autoplay, Pagination, EffectFade]}
@@ -144,19 +147,10 @@ function InverstmentMain() {
                         >
                             {twoSlides.map((item, index) => (
                                 <SwiperSlide key={index}>
-                                    <SwiperSlideItem
-                                        style={{
-                                            width: "206px",
-                                            height: "259px",
-                                            borderRadius: "24px",
-                                            display: "flex",
-                                            alignItems: "center",
-                                            justifyContent: "center"
-                                        }}    
-                                    >
+                                    <SwiperSlideItem>
                                         <InnerSlideLink>
                                             <InnerSecond>
-                                                <TitNotice style={{ whiteSpace: 'pre-line' }}>
+                                                <TitNotice>
                                                     {item.title}
                                                 </TitNotice>
                                                 <AreaLinks>
@@ -171,6 +165,7 @@ function InverstmentMain() {
                         
                         </StyledSwiper>
                     </CarouselNotice>
+
                     <CarouselPost>
                         <BoxPost>
                             <BoxPostStyledSwiper
@@ -185,10 +180,9 @@ function InverstmentMain() {
                             >
                                 {boxPostSlides.map((item, index) => (
                                     <SwiperSlide key={index}>
-                                        <SwiperSlideItem>
-                                            {item.innerSlideLink}         
-                                   
-                                        </SwiperSlideItem>   
+                                        <CarouselPostSwiperSlideItem style={{ backgroundColor: item.bgColor }}>
+                                            {item.innerSlideLink}
+                                        </CarouselPostSwiperSlideItem>   
                                     </SwiperSlide>  
                                 ))}
                        
