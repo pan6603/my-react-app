@@ -8,12 +8,19 @@ import {
     ListSubMenuLink
 } from "../../styles/ir/main/InverstmentFooter.styles"
 import { useTranslation } from "react-i18next";
+import InverstmentAccordionMenu from "./InverstmentAccordionMenu";
+import GithubFooterLink from "./GithubFooterLink";
 
 function InvestmentFooter() {
     const { t } = useTranslation();
 
     return (
         <DocFooter>
+            {/* 1023px 경우 아코디언 메뉴 만들기*/}
+            <InverstmentAccordionMenu />
+            <GithubFooterLink />
+
+
             <ListMain>
                 <ListMainItem>
                     <ListSubTitle>{t("investment_footer.governance")}</ListSubTitle>

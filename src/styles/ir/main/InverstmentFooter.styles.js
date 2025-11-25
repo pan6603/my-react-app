@@ -18,6 +18,14 @@ export const DocFooter = styled.footer`
         padding: 0 38px 40px;
         box-sizing: border-box;
     }
+
+    @media (max-width: 1023px) {
+        max-width: 1023px;
+        width: 100%;
+        height: 490px;
+        padding: 24px 28px 40px;
+        box-sizing: border-box;
+    }        
 `
 
 export const ListMain = styled.div`
@@ -37,6 +45,10 @@ export const ListMain = styled.div`
         flex-wrap: wrap;
         gap: 12px;
     }
+
+    @media (max-width: 1023px) {
+        display: none;
+    }
 `
 
 export const ListMainItem = styled.div`
@@ -49,6 +61,10 @@ export const ListMainItem = styled.div`
         width: 100%;
         margin-top: 40px;
         height: 193px;
+    }
+
+    @media (max-width: 1023px) {
+        display: none;
     }
 `
 

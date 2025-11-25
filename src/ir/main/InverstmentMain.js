@@ -300,6 +300,7 @@ function InverstmentMain() {
                                 </ListTag>
                             </InnerNews>
                         </LinkNewsDiv>
+                        
                         <LinkNewsDiv>
                             <InnerNews>
                                 <BoxInfo>
@@ -318,6 +319,7 @@ function InverstmentMain() {
                                 </ListTag>
                             </InnerNews>
                         </LinkNewsDiv>
+
                         <LinkNewsDiv>
                             <InnerNews>
                                 <BoxInfo>
