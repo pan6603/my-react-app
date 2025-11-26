@@ -219,7 +219,6 @@ export const DocGnb = styled.nav`
         max-width: 536px; 
         width: 100%;
         height: 100vh;
-        background-color: blue;
         overflow-y: auto;
         position: fixed;
         z-index: 1000;
@@ -230,6 +229,14 @@ export const DocGnb = styled.nav`
         box-sizing: border-box;
         background: #fff;
     } 
+
+    @media (max-width: 1023px) {
+        max-width: 408px; 
+        width: 100%;
+        height: 100vh;
+        padding: 0 35px 35px;
+        box-sizing: border-box;
+    }
 `
 
 export const ContHead = styled.div`
@@ -280,6 +287,16 @@ export const ListMain = styled.div`
         flex-direction: column;
         gap: 12px;
     }
+
+    @media (max-width: 1023px) {
+        min-width: 338px;
+        width: 100%;
+        height: 471px;
+        gap: 8px;
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+    }
 `
 
 export const ListMainMenu = styled.div`
@@ -292,6 +309,12 @@ export const ListMainMenu = styled.div`
         justify-content: center;
         align-items: center;
     }
+
+    @media (max-width: 1023px) {
+        min-width: 338px;
+        width: 100%;
+        height: max-content;
+    }
 `
 
 export const MenuLink = styled(Link)`
@@ -302,13 +325,13 @@ export const MenuLink = styled(Link)`
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 10px 0;
-        box-sinzing: border-box;
         font-size: 26px;
         color: #000;
         font-weight: 700;
         line-height: 1.3;
         text-decoration: none;
+        padding: 10px 0;
+        box-sizing: border-box;
 
         &::after {
             width: 14px;
@@ -318,6 +341,14 @@ export const MenuLink = styled(Link)`
             filter: brightness(${props => (props.bg ? "0" : "1")});
             content: '';
         }
+    }
+
+    @media (max-width: 1023px) {
+        min-width: 338px;
+        width: 100%;
+        height: 51px;
+        font-size: 22px;
+        line-height: 1.45;
     }
 `
 
@@ -331,7 +362,7 @@ export const ESGMenuLink = styled(Link)`
         align-items: center;
         justify-content: space-between;
         padding: 10px 0;
-        box-sinzing: border-box;
+        box-sizing: border-box;
         font-size: 26px;
         color: #000;
         font-weight: 700;
@@ -346,6 +377,14 @@ export const ESGMenuLink = styled(Link)`
             background-image: url(https://t1.kakaocdn.net/kakaocorp/Ir/images/ico_outlink2.svg);
         }
     }
+
+    @media (max-width: 1023px) {
+        min-width: 338px;
+        width: 100%;
+        height: 51px;
+        font-size: 22px;
+        line-height: 1.45;
+    }
 `
 
 export const KaKaoMenuLink = styled(Link)`
@@ -357,7 +396,7 @@ export const KaKaoMenuLink = styled(Link)`
         align-items: center;
         justify-content: space-between;
         padding: 10px 0;
-        box-sinzing: border-box;
+        box-sizing: border-box;
         font-size: 26px;
         color: #000;
         font-weight: 700;
@@ -371,6 +410,14 @@ export const KaKaoMenuLink = styled(Link)`
             height: 14px;
             background-image: url(https://t1.kakaocdn.net/kakaocorp/Ir/images/ico_outlink2.svg);
         }
+    }
+
+    @media (max-width: 1023px) {
+        min-width: 338px;
+        width: 100%;
+        height: 51px;
+        font-size: 22px;
+        line-height: 1.45;
     }
 `
 
@@ -386,6 +433,14 @@ export const ListSub = styled.div`
     border-radius: 16px;
     border: none;
     background: #f7f7f7;
+
+    @media (max-width: 1023px) {
+        min-width: 338px;
+        width: 100%;
+        height: max-content;
+        padding: 24px 32px;
+        box-sizing: border-box;
+    }
 `
 
 export const ListSubItem = styled.div`
@@ -394,6 +449,12 @@ export const ListSubItem = styled.div`
     height: 41px;
     display: flex;
     align-items: center;
+
+    @media (max-width: 1023px) {
+        max-width: 274px;
+        width: 100%;
+        height: 40px;
+    }
 `
 
 export const ListSubItemLink = styled(Link)`
