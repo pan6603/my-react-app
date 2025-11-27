@@ -145,11 +145,13 @@ function InverstmentHeader() {
 
                         </DocTitleLink>
                     </DocTitle>
+                    
                     {/* 1431px 경우 추가 */}
                     <BoxControls>
                         <BtnLangIcon bg={iconUrl} />
                         <BtnMenuIcon bg={btnMenuIcon} onClick={() => setIsOpen(prev => !prev)} />
                     </BoxControls>
+
                     <DocGnbNav>
                         <ListMainNav>
                             <NavItemMenu>
@@ -178,6 +180,7 @@ function InverstmentHeader() {
                             </NavItemMenu>
                         </ListMainNav>
                     </DocGnbNav>
+                    
                     <BtnLangViewPc onClick={toggleLanguage} bg={iconUrl} />
                 </InnerHeader>
             </DocHeader>

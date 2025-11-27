@@ -29,6 +29,14 @@ export const DocHeader = styled.header`
         padding: 0 28px;
         box-sizing: border-box;
     }
+
+    @media (max-width: 767px) {
+        max-width: 767px;
+        width: 100%;
+        height: 72px;
+        padding: 0 14px;
+        box-sizing: border-box;
+    }
 `
 
 export const InnerHeader = styled.div`
@@ -55,6 +63,13 @@ export const InnerHeader = styled.div`
         padding: 0 28px;
         box-sizing: border-box;
     }
+
+    @media (max-width: 767px) {
+        max-width: 767px;
+        width: 100%;
+        height: 72px;
+        padding: 0px;
+    }
 `
 
 export const DocTitle = styled.div`
@@ -74,12 +89,25 @@ export const DocTitle = styled.div`
         height: 26px;
     }  
 
+    @media (max-width: 767px) {
+        max-width: 132px;
+        width: 100%;
+        height: 26px;
+        z-index: 110;
+    }
 `
 
 export const DocTitleLink = styled.a`
     max-width: 154px;
     width: 100%;
     height: 29px;
+
+    @media (max-width: 767px) {
+        max-width: 132px;
+        width: 100%;
+        height: 26px;
+    }
+
 `
 
 
@@ -183,6 +211,12 @@ export const BoxControls = styled.div`
     @media (min-width: 1440px) {
         display: none;
     }  
+
+    @media (max-width: 767px) { 
+        max-width: 80px;
+        width: 100%;
+        height: 28px;
+    }
 
 `
 
