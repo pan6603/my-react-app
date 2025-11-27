@@ -12,6 +12,12 @@ export const ListMain = styled.div`
     @media(min-width: 1024px) {
         display: none;
     }
+
+    @media(max-width: 767px) {
+        max-width: 739px;
+        width: 100%;
+        height: max-content;
+    }
 `
 
 export const ListMainItem = styled.div`
@@ -20,6 +26,13 @@ export const ListMainItem = styled.div`
     height: max-content;
     margin: 0;
     border-bottom: 1px solid #E6E6E6;
+
+    @media(max-width: 767px) {
+        max-width: 739px;
+        width: 100%;
+        height: max-content;
+        border-color: #888;
+    }
 `
 
 export const ListSub = styled.div`
@@ -71,4 +84,6 @@ export const ListSubTitle = styled.div`
         transform: rotate(${props => (props.bg ? "180deg" : "0deg")});
         filter: brightness(${props => (props.bg ? "0" : "1")});
     }
+
+    
 `

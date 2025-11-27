@@ -25,7 +25,17 @@ export const DocFooter = styled.footer`
         height: 490px;
         padding: 24px 28px 40px;
         box-sizing: border-box;
-    }        
+    }      
+        
+    @media (max-width: 767px) {
+        max-width: 767px;
+        width: 100%;
+        height: 510px;
+        padding-left: 14px;
+        padding-right: 14px;
+        box-sizing: border-box;
+    }
+    
 `
 
 export const ListMain = styled.div`
