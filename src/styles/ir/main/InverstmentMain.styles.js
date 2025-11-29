@@ -1527,7 +1527,7 @@ export const WrapMore = styled.div`
             width: 38px;
             height: 38px;
             z-index: 20;
-            left: -1px;
+            left: 0px;
             bottom: 58px;
             background-size: 34px;
             background-image: url(https://t1.kakaocdn.net/kakaocorp/Ir/images/ico_mask_20.svg) no-repeat
@@ -1552,7 +1552,7 @@ export const WrapMore = styled.div`
             width: 38px;
             height: 38px;
             left: 158px;
-            bottom: 4px;
+            bottom: 58px;
             background-size: 34px;
             background-image: url(https://t1.kakaocdn.net/kakaocorp/Ir/images/ico_mask_20.svg);
             content: '';
@@ -1562,17 +1562,17 @@ export const WrapMore = styled.div`
     @media (max-width: 1431px) {
         position: absolute;
         z-index: 10;
-        left: 1;
+        left: 1px;
         width: 160px;
         height: 64px;
         padding: 19px 30px 21px 30px;
-        bottom: 138px;
+        bottom: 78px;
         border-top-right-radius: 20px;
     } 
 
     @media (max-width: 1023px) {
         bottom: 230px;
-        left: 1;
+        left: 1px;
         padding: 14px 30px 16px 30px;
     }
 `
